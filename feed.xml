@@ -3,8 +3,8 @@
 	<channel>
 		<title>{ Philipz }</title>
 		<description>Docker learning Blog and website of Philipz(鄭淳尹), blogging mainly for container and linux tech. Opinions expressed are mine.</description>
-		<link>https://philipz.github.io.</link>
-		<atom:link href="https://philipz.github.io./feed.xml" rel="self" type="application/rss+xml" />
+		<link>https://philipz.github.io</link>
+		<atom:link href="https://philipz.github.io/feed.xml" rel="self" type="application/rss+xml" />
 		
 			<item>
 				<title>Welcome to { Philipz } Docker Lab.!</title>
@@ -15,8 +15,8 @@
 </description>
 				
 				<pubDate>Thu, 28 Jul 2016 00:00:00 +0000</pubDate>
-				<link>https://philipz.github.io./tech/2016/07/28/welcome.html</link>
-				<guid isPermaLink="true">https://philipz.github.io./tech/2016/07/28/welcome.html</guid>
+				<link>https://philipz.github.io/tech/2016/07/28/welcome.html</link>
+				<guid isPermaLink="true">https://philipz.github.io/tech/2016/07/28/welcome.html</guid>
 			</item>
 		
 	</channel>
