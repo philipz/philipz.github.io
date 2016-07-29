@@ -10,8 +10,9 @@
 				<title>Welcome to { Philipz } Docker Lab.!</title>
 				
 				
-					<description>&lt;p&gt;請選「Already have an account? Log it here」，帳號：coscup.docker@gmail.com，密碼：dockerlab&lt;/p&gt;
-
+					<description>&lt;p&gt;請選「Already have an account? Log it here」，帳號：coscup.docker@gmail.com，密碼：dockerlab&lt;br /&gt;
+若不好操作，可改用 &lt;a href=&quot;/docker.html&quot;&gt;Full Page&lt;/a&gt;。&lt;/p&gt;
+&lt;iframe src=&quot;https://www.katacoda.com/philipz/scenarios/1&quot; frameborder=&quot;0&quot; scrolling=&quot;0&quot; width=&quot;100%&quot; height=&quot;600px&quot;&gt;&lt;/iframe&gt;
 </description>
 				
 				<pubDate>Thu, 28 Jul 2016 00:00:00 +0000</pubDate>
