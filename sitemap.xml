@@ -53,6 +53,15 @@
   
   
     <url>
+      <loc>https://philipz.github.io/tech/2016/08/09/compose_ci.html</loc>
+      
+        <lastmod>2016-08-09T00:00:00+00:00</lastmod>
+      
+      <changefreq>weekly</changefreq>
+      <priority>1.0</priority>
+    </url>
+  
+    <url>
       <loc>https://philipz.github.io/tech/2016/08/08/vote_microservice.html</loc>
       
         <lastmod>2016-08-08T00:00:00+00:00</lastmod>
