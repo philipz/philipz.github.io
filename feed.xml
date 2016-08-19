@@ -7,6 +7,20 @@
 		<atom:link href="https://philipz.github.io/feed.xml" rel="self" type="application/rss+xml" />
 		
 			<item>
+				<title>Welcome to { Philipz } Docker Lab. - Docker Swarm for MySQL Cluster &amp; WordPress</title>
+				
+				
+					<description>&lt;p&gt;請選「Already have an account? Log it here」，帳號：coscup.docker@gmail.com，密碼：dockerlab&lt;br /&gt;
+若不好操作，可改用 &lt;a href=&quot;/swarm_mysql_wp.html&quot;&gt;Full Page&lt;/a&gt;。&lt;/p&gt;
+&lt;iframe src=&quot;https://www.katacoda.com/philipz/courses/swarm/1&quot; frameborder=&quot;0&quot; scrolling=&quot;0&quot; width=&quot;100%&quot; height=&quot;600px&quot;&gt;&lt;/iframe&gt;
+</description>
+				
+				<pubDate>Fri, 19 Aug 2016 00:00:00 +0000</pubDate>
+				<link>https://philipz.github.io/tech/2016/08/19/swarm_mysql_wp.html</link>
+				<guid isPermaLink="true">https://philipz.github.io/tech/2016/08/19/swarm_mysql_wp.html</guid>
+			</item>
+		
+			<item>
 				<title>Welcome to { Philipz } Docker Lab. - Docker Compose &amp; CircleCI</title>
 				
 				
