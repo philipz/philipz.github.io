@@ -66,6 +66,15 @@
   
   
     <url>
+      <loc>https://philipz.github.io/tech/2016/08/20/coscup.html</loc>
+      
+        <lastmod>2016-08-20T00:00:00+00:00</lastmod>
+      
+      <changefreq>weekly</changefreq>
+      <priority>1.0</priority>
+    </url>
+  
+    <url>
       <loc>https://philipz.github.io/tech/2016/08/19/swarm_mysql_wp.html</loc>
       
         <lastmod>2016-08-19T00:00:00+00:00</lastmod>
