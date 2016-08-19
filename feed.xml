@@ -21,6 +21,20 @@
 			</item>
 		
 			<item>
+				<title>Welcome to { Philipz } Docker Lab. - Docker Compose for MySQL Cluster &amp; WordPress</title>
+				
+				
+					<description>&lt;p&gt;請選「Already have an account? Log it here」，帳號：coscup.docker@gmail.com，密碼：dockerlab&lt;br /&gt;
+若不好操作，可改用 &lt;a href=&quot;/compose_galera_wp.html&quot;&gt;Full Page&lt;/a&gt;。&lt;/p&gt;
+&lt;iframe src=&quot;https://editor.katacoda.com/editor/docker/courses/docker2016/4&quot; frameborder=&quot;0&quot; scrolling=&quot;0&quot; width=&quot;100%&quot; height=&quot;600px&quot;&gt;&lt;/iframe&gt;
+</description>
+				
+				<pubDate>Fri, 19 Aug 2016 00:00:00 +0000</pubDate>
+				<link>https://philipz.github.io/tech/2016/08/19/compose_galera_wp.html</link>
+				<guid isPermaLink="true">https://philipz.github.io/tech/2016/08/19/compose_galera_wp.html</guid>
+			</item>
+		
+			<item>
 				<title>Welcome to { Philipz } Docker Lab. - Docker Compose &amp; CircleCI</title>
 				
 				
