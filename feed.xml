@@ -12,6 +12,21 @@
 				
 					<description>&lt;p&gt;For 2016 COSCUP Advanced Docker Workshop&lt;/p&gt;
 
+&lt;p&gt;Supports by &lt;a href=&quot;https://www.katacoda.com/&quot;&gt;Katacoda&lt;/a&gt; &amp;amp; &lt;a href=&quot;https://portal.azure.com/&quot;&gt;Microsoft Azure&lt;/a&gt;, Thank you!!! m(_ _)m&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://goo.gl/GH7jTa&quot;&gt;Slide&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Workshop Lab. List:&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.katacoda.com/docker/courses/docker2016/1&quot;&gt;Docker 官方 Web 投票微服務範例&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.katacoda.com/philipz/scenarios/7&quot;&gt;Docker Compose &amp;amp; CircleCI&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.katacoda.com/philipz/scenarios/2&quot;&gt;Node.js 最精簡映像檔建置&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://www.katacoda.com/docker/courses/docker2016/2&quot;&gt;Docker Compose 和 Service Discovery&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://www.katacoda.com/docker/courses/docker2016/4&quot;&gt;Docker Compose for MySQL Cluster &amp;amp; WordPress&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.katacoda.com/philipz/courses/swarm/1&quot;&gt;Docker 1.12 Swarm 和 MySQL Cluster &amp;amp; WordPress&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.katacoda.com/philipz/scenarios/8&quot;&gt;Serverless 架構 &amp;amp; Docker (DockerCon 2016 Hackathon 作品)&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
 </description>
 				
 				<pubDate>Sat, 20 Aug 2016 00:00:00 +0000</pubDate>
