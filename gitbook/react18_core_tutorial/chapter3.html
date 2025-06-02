@@ -1,0 +1,486 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>第3章：React 元件詳解 · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    
+    <link rel="prev" href="chapter2.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    教程目錄
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="chapter1.html">
+            
+                <a href="chapter1.html">
+            
+                    
+                    第1章：React 簡介與前端開發環境回顧
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="chapter2.html">
+            
+                <a href="chapter2.html">
+            
+                    
+                    第2章：JSX 深度解析
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.4" data-path="chapter3.html">
+            
+                <a href="chapter3.html">
+            
+                    
+                    第3章：React 元件詳解
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="." >第3章：React 元件詳解</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="&#x7B2C;-3-&#x7AE0;&#xFF1A;react-&#x5143;&#x4EF6;&#x8A73;&#x89E3;">&#x7B2C; 3 &#x7AE0;&#xFF1A;React &#x5143;&#x4EF6;&#x8A73;&#x89E3;</h1>
+<p>&#x5143;&#x4EF6;&#x662F; React &#x61C9;&#x7528;&#x7A0B;&#x5F0F;&#x7684;&#x57FA;&#x77F3;&#x3002;&#x5B83;&#x5011;&#x662F;&#x7368;&#x7ACB;&#x4E14;&#x53EF;&#x91CD;&#x7528;&#x7684;&#x7A0B;&#x5F0F;&#x78BC;&#x7247;&#x6BB5;&#xFF0C;&#x7528;&#x65BC;&#x5B9A;&#x7FA9; UI &#x7684;&#x4E00;&#x90E8;&#x5206;&#x3002;&#x900F;&#x904E;&#x5C07; UI &#x62C6;&#x5206;&#x6210;&#x591A;&#x500B;&#x5143;&#x4EF6;&#xFF0C;&#x60A8;&#x53EF;&#x4EE5;&#x66F4;&#x8F15;&#x9B06;&#x5730;&#x7BA1;&#x7406;&#x3001;&#x6E2C;&#x8A66;&#x548C;&#x8907;&#x7528;&#x7A0B;&#x5F0F;&#x78BC;&#x3002;</p>
+<p><strong>3.1 &#x4EC0;&#x9EBC;&#x662F;&#x5143;&#x4EF6;&#xFF1F;</strong></p>
+<p>&#x5728;&#x6982;&#x5FF5;&#x4E0A;&#xFF0C;&#x5143;&#x4EF6;&#x5C31;&#x50CF; JavaScript &#x51FD;&#x5F0F;&#x3002;&#x5B83;&#x5011;&#x63A5;&#x53D7;&#x4EFB;&#x610F;&#x7684;&#x8F38;&#x5165; (&#x7A31;&#x70BA; &quot;props&quot;&#xFF0C;&#x5373;&#x5C6C;&#x6027;) &#x4E26;&#x56DE;&#x50B3;&#x63CF;&#x8FF0;&#x87A2;&#x5E55;&#x4E0A;&#x61C9;&#x8A72;&#x986F;&#x793A;&#x4EC0;&#x9EBC;&#x5167;&#x5BB9;&#x7684; React &#x5143;&#x7D20;&#x3002;</p>
+<p>React &#x4E3B;&#x8981;&#x6709;&#x5169;&#x7A2E;&#x578B;&#x5225;&#x7684;&#x5143;&#x4EF6;&#xFF1A;</p>
+<ol>
+<li><strong>&#x51FD;&#x5F0F;&#x5143;&#x4EF6; (Functional Components)</strong></li>
+<li><strong>&#x985E;&#x5225;&#x5143;&#x4EF6; (Class Components)</strong></li>
+</ol>
+<p>&#x5728;&#x73FE;&#x4EE3; React &#x958B;&#x767C;&#x4E2D; (&#x7279;&#x5225;&#x662F;&#x81EA; React 16.8 &#x5F15;&#x5165; Hooks &#x4E4B;&#x5F8C;)&#xFF0C;&#x51FD;&#x5F0F;&#x5143;&#x4EF6;&#x56E0;&#x5176;&#x7C21;&#x6F54;&#x6027;&#x548C;&#x6613;&#x7528;&#x6027;&#x800C;&#x6210;&#x70BA;&#x4E3B;&#x6D41;&#x3002;</p>
+<p><strong>3.2 &#x51FD;&#x5F0F;&#x5143;&#x4EF6; (Functional Components)</strong></p>
+<p><strong>3.2.1 &#x57FA;&#x672C;&#x8A9E;&#x6CD5;</strong></p>
+<p>&#x51FD;&#x5F0F;&#x5143;&#x4EF6;&#x662F;&#x6700;&#x7C21;&#x55AE;&#x7684;&#x5B9A;&#x7FA9;&#x5143;&#x4EF6;&#x7684;&#x65B9;&#x5F0F;&#x3002;&#x5B83;&#x662F;&#x4E00;&#x500B;&#x666E;&#x901A;&#x7684; JavaScript &#x51FD;&#x5F0F;&#xFF0C;&#x63A5;&#x6536;&#x4E00;&#x500B; <code>props</code> &#x7269;&#x4EF6;&#x4F5C;&#x70BA;&#x5176;&#x7B2C;&#x4E00;&#x500B;&#x53C3;&#x6578; (&#x6216;&#x8005;&#x4F7F;&#x7528;&#x89E3;&#x69CB;&#x8A9E;&#x6CD5;&#x76F4;&#x63A5;&#x7372;&#x53D6; props &#x4E2D;&#x7684;&#x7279;&#x5B9A;&#x5C6C;&#x6027;)&#xFF0C;&#x4E26;&#x56DE;&#x50B3;&#x4E00;&#x500B; React &#x5143;&#x7D20;&#x3002;</p>
+<pre><code class="lang-jsx"><span class="hljs-keyword">import</span> React <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;react&apos;</span>; <span class="hljs-comment">// &#x5728;&#x67D0;&#x4E9B;&#x820A;&#x8A2D;&#x5B9A;&#x4E2D;&#x6216;&#x70BA;&#x4E86;&#x660E;&#x78BA;&#x6027;&#xFF0C;&#x53EF;&#x80FD;&#x9700;&#x8981;&#x532F;&#x5165;</span>
+
+<span class="hljs-comment">// &#x4E00;&#x500B;&#x7C21;&#x55AE;&#x7684;&#x51FD;&#x5F0F;&#x5143;&#x4EF6;</span>
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">Welcome</span>(<span class="hljs-params">props</span>) </span>{
+  <span class="hljs-keyword">return</span> <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">h1</span>&gt;</span>Hello, {props.name}<span class="hljs-tag">&lt;/<span class="hljs-name">h1</span>&gt;</span></span>;
+}
+
+<span class="hljs-comment">// &#x4F7F;&#x7528; ES6&#x7BAD;&#x982D;&#x51FD;&#x5F0F;&#x5B9A;&#x7FA9;&#x51FD;&#x5F0F;&#x5143;&#x4EF6; (&#x66F4;&#x5E38;&#x898B;)</span>
+<span class="hljs-keyword">const</span> Greeting = (props) =&gt; {
+  <span class="hljs-keyword">return</span> <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>Greetings, {props.user}!<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span></span>;
+};
+
+<span class="hljs-comment">// &#x4F7F;&#x7528;&#x89E3;&#x69CB;&#x8CE6;&#x503C;&#x7372;&#x53D6; props</span>
+<span class="hljs-keyword">const</span> UserProfile = ({ name, age }) =&gt; {
+  <span class="hljs-keyword">return</span> (
+    <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>Name: {name}<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>Age: {age}<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></span>
+  );
+};
+
+<span class="hljs-comment">// &#x60A8;&#x53EF;&#x4EE5;&#x9019;&#x6A23;&#x4F7F;&#x7528;&#x9019;&#x4E9B;&#x5143;&#x4EF6;&#xFF1A;</span>
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">App</span>(<span class="hljs-params"></span>) </span>{
+  <span class="hljs-keyword">return</span> (
+    &lt;div&gt;
+      &lt;Welcome name=&quot;Alice&quot; /&gt;
+      &lt;Greeting user=&quot;Bob&quot; /&gt;
+      &lt;UserProfile name=&quot;Charlie&quot; age={30} /&gt;
+    &lt;/div&gt;
+  );
+}
+
+export default App;
+</code></pre>
+<p>&#x5728; <code>@learning-react-go.mdc</code> &#x6307;&#x5F15;&#x624B;&#x518A;&#x548C; <code>@memos</code> &#x5C08;&#x6848;&#x7684;&#x7BC4;&#x4F8B;&#x4E2D;&#xFF0C;&#x4F8B;&#x5982; <code>web/src/components/Common/Button.tsx</code>&#xFF0C;&#x60A8;&#x6703;&#x770B;&#x5230;&#x5927;&#x91CF;&#x4F7F;&#x7528;&#x7BAD;&#x982D;&#x51FD;&#x5F0F;&#x5B9A;&#x7FA9;&#x7684;&#x51FD;&#x5F0F;&#x5143;&#x4EF6;&#xFF1A;</p>
+<pre><code class="lang-tsx">// &#x6A94;&#x6848;: web/src/components/Common/Button.tsx (&#x6839;&#x64DA; mdc &#x7C21;&#x5316;&#x793A;&#x610F;)
+import { Button as JoyButton } from &apos;@mui/joy&apos;;
+
+interface ButtonProps {
+  children: React.ReactNode;
+  onClick?: () =&gt; void;
+  // ... &#x5176;&#x4ED6; props
+}
+
+// &#x9019;&#x5C31;&#x662F;&#x4E00;&#x500B;&#x51FD;&#x5F0F;&#x5143;&#x4EF6;
+export const Button = ({ children, onClick }: ButtonProps) =&gt; {
+  return (
+    &lt;JoyButton onClick={onClick}&gt;
+      {children}
+    &lt;/JoyButton&gt;
+  );
+};
+</code></pre>
+<p><strong>3.2.2 &#x70BA;&#x4EC0;&#x9EBC;&#x63A8;&#x85A6;&#x51FD;&#x5F0F;&#x5143;&#x4EF6;&#xFF1F;</strong></p>
+<ul>
+<li><strong>&#x66F4;&#x7C21;&#x6F54;&#x3001;&#x6613;&#x8B80;</strong>&#xFF1A;&#x76F8;&#x6BD4;&#x985E;&#x5225;&#x5143;&#x4EF6;&#xFF0C;&#x51FD;&#x5F0F;&#x5143;&#x4EF6;&#x7684;&#x8A9E;&#x6CD5;&#x66F4;&#x5C11;&#xFF0C;&#x7A0B;&#x5F0F;&#x78BC;&#x91CF;&#x66F4;&#x5C0F;&#xFF0C;&#x66F4;&#x5BB9;&#x6613;&#x7406;&#x89E3;&#x3002;</li>
+<li><strong>&#x6613;&#x65BC;&#x6E2C;&#x8A66;</strong>&#xFF1A;&#x51FD;&#x5F0F;&#x5143;&#x4EF6;&#x901A;&#x5E38;&#x662F;&#x7D14;&#x51FD;&#x5F0F; (&#x7D66;&#x5B9A;&#x76F8;&#x540C;&#x7684; props&#xFF0C;&#x56DE;&#x50B3;&#x76F8;&#x540C;&#x7684;&#x8F38;&#x51FA;)&#xFF0C;&#x9019;&#x4F7F;&#x5F97;&#x5B83;&#x5011;&#x975E;&#x5E38;&#x5BB9;&#x6613;&#x9032;&#x884C;&#x55AE;&#x5143;&#x6E2C;&#x8A66;&#x3002;</li>
+<li><strong>Hooks &#x7684;&#x652F;&#x63F4;</strong>&#xFF1A;React Hooks (&#x5982; <code>useState</code>, <code>useEffect</code> &#x7B49;) &#x8B93;&#x51FD;&#x5F0F;&#x5143;&#x4EF6;&#x4E5F;&#x80FD;&#x5920;&#x64C1;&#x6709;&#x72C0;&#x614B; (state) &#x548C;&#x751F;&#x547D;&#x9031;&#x671F;&#x7B49;&#x7279;&#x6027;&#xFF0C;&#x4F7F;&#x5176;&#x529F;&#x80FD;&#x8207;&#x985E;&#x5225;&#x5143;&#x4EF6;&#x76F8;&#x7576;&#xFF0C;&#x751A;&#x81F3;&#x5728;&#x67D0;&#x4E9B;&#x65B9;&#x9762;&#x66F4;&#x9748;&#x6D3B;&#x3002;</li>
+<li><strong>&#x6548;&#x80FD;&#x6F5B;&#x529B;</strong>&#xFF1A;&#x96D6;&#x7136;&#x5DEE;&#x7570;&#x53EF;&#x80FD;&#x5FAE;&#x4E4E;&#x5176;&#x5FAE;&#xFF0C;&#x4F46;&#x5728;&#x672A;&#x4F86; React &#x7684;&#x512A;&#x5316;&#x4E2D;&#xFF0C;&#x51FD;&#x5F0F;&#x5143;&#x4EF6;&#x53EF;&#x80FD;&#x6709;&#x66F4;&#x597D;&#x7684;&#x6548;&#x80FD;&#x6F5B;&#x529B;&#x3002;</li>
+<li><strong>&#x66F4;&#x597D;&#x7684; <code>this</code> &#x8655;&#x7406;</strong>&#xFF1A;&#x51FD;&#x5F0F;&#x5143;&#x4EF6;&#x4E2D;&#x6C92;&#x6709; <code>this</code> &#x95DC;&#x9375;&#x5B57;&#x7684;&#x554F;&#x984C;&#xFF0C;&#x907F;&#x514D;&#x4E86;&#x985E;&#x5225;&#x5143;&#x4EF6;&#x4E2D;&#x5E38;&#x898B;&#x7684; <code>this</code> &#x7D81;&#x5B9A;&#x56F0;&#x64FE;&#x3002;</li>
+</ul>
+<p>&#x7531;&#x65BC;&#x9019;&#x4E9B;&#x512A;&#x52E2;&#xFF0C;React &#x793E;&#x7FA4;&#x548C;&#x5B98;&#x65B9;&#x6587;&#x4EF6;&#x90FD;&#x63A8;&#x85A6;&#x5728;&#x65B0;&#x5C08;&#x6848;&#x4E2D;&#x512A;&#x5148;&#x4F7F;&#x7528;&#x51FD;&#x5F0F;&#x5143;&#x4EF6;&#x548C; Hooks&#x3002;</p>
+<p><strong>3.3 &#x985E;&#x5225;&#x5143;&#x4EF6; (Class Components)</strong></p>
+<p>&#x5118;&#x7BA1;&#x51FD;&#x5F0F;&#x5143;&#x4EF6;&#x662F;&#x4E3B;&#x6D41;&#xFF0C;&#x4F46;&#x4E86;&#x89E3;&#x985E;&#x5225;&#x5143;&#x4EF6;&#x4ECD;&#x7136;&#x6709;&#x5176;&#x50F9;&#x503C;&#xFF0C;&#x56E0;&#x70BA;&#x60A8;&#x53EF;&#x80FD;&#x6703;&#x5728;&#x820A;&#x5C08;&#x6848;&#x4E2D;&#x9047;&#x5230;&#x5B83;&#x5011;&#xFF0C;&#x6216;&#x8005;&#x5728;&#x6975;&#x5C11;&#x6578;&#x7279;&#x5B9A;&#x60C5;&#x6CC1;&#x4E0B;&#x9700;&#x8981;&#x4F7F;&#x7528;&#x5B83;&#x5011;&#x3002;</p>
+<p><strong>3.3.1 &#x57FA;&#x672C;&#x8A9E;&#x6CD5;&#x8207; <code>render()</code> &#x65B9;&#x6CD5;</strong></p>
+<p>&#x985E;&#x5225;&#x5143;&#x4EF6;&#x662F;&#x4F7F;&#x7528; ES6 &#x7684; <code>class</code> &#x8A9E;&#x6CD5;&#x5B9A;&#x7FA9;&#x7684;&#xFF0C;&#x4E26;&#x4E14;&#x5FC5;&#x9808;&#x7E7C;&#x627F;&#x81EA; <code>React.Component</code>&#x3002;&#x985E;&#x5225;&#x5143;&#x4EF6;&#x81F3;&#x5C11;&#x9700;&#x8981;&#x5BE6;&#x4F5C;&#x4E00;&#x500B;&#x540D;&#x70BA; <code>render()</code> &#x7684;&#x65B9;&#x6CD5;&#xFF0C;&#x8A72;&#x65B9;&#x6CD5;&#x56DE;&#x50B3;&#x4E00;&#x500B; React &#x5143;&#x7D20;&#x3002;</p>
+<pre><code class="lang-jsx"><span class="hljs-keyword">import</span> React <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;react&apos;</span>;
+
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">WelcomeMessage</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">React</span>.<span class="hljs-title">Component</span> </span>{
+  render() {
+    <span class="hljs-comment">// Props &#x662F;&#x900F;&#x904E; this.props &#x5B58;&#x53D6;&#x7684;</span>
+    <span class="hljs-keyword">return</span> <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">h1</span>&gt;</span>Hello, {this.props.name} from Class Component!<span class="hljs-tag">&lt;/<span class="hljs-name">h1</span>&gt;</span></span>;
+  }
+}
+
+<span class="hljs-comment">// &#x4F7F;&#x7528;</span>
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">App</span>(<span class="hljs-params"></span>) </span>{
+  <span class="hljs-keyword">return</span> <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">WelcomeMessage</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;Class User&quot;</span> /&gt;</span>;
+}
+
+export default App;
+</span></code></pre>
+<p>&#x5728;&#x985E;&#x5225;&#x5143;&#x4EF6;&#x4E2D;&#xFF1A;</p>
+<ul>
+<li>Props &#x900F;&#x904E; <code>this.props</code> &#x5B58;&#x53D6;&#x3002;</li>
+<li>&#x72C0;&#x614B; (State) &#x900F;&#x904E; <code>this.state</code> &#x5B58;&#x53D6;&#xFF0C;&#x4E26;&#x900F;&#x904E; <code>this.setState()</code> &#x65B9;&#x6CD5;&#x66F4;&#x65B0; (&#x6211;&#x5011;&#x5C07;&#x5728;&#x5F8C;&#x7E8C;&#x7AE0;&#x7BC0;&#x8A73;&#x7D30;&#x8A0E;&#x8AD6; State)&#x3002;</li>
+<li>&#x751F;&#x547D;&#x9031;&#x671F;&#x65B9;&#x6CD5; (&#x5982; <code>componentDidMount</code>, <code>componentWillUnmount</code> &#x7B49;) &#x4E5F;&#x662F;&#x985E;&#x5225;&#x5143;&#x4EF6;&#x7684;&#x7279;&#x6027; (&#x73FE;&#x5728;&#x5927;&#x591A;&#x53EF;&#x4EE5;&#x7528; <code>useEffect</code> &#x5728;&#x51FD;&#x5F0F;&#x5143;&#x4EF6;&#x4E2D;&#x5BE6;&#x73FE;)&#x3002;</li>
+</ul>
+<p><strong>3.3.2 &#x4F55;&#x6642;&#x53EF;&#x80FD;&#x4ECD;&#x9700;&#x4F7F;&#x7528;&#x985E;&#x5225;&#x5143;&#x4EF6; (&#x5982;&#x932F;&#x8AA4;&#x908A;&#x754C;)</strong></p>
+<p>&#x96D6;&#x7136; Hooks &#x7684;&#x51FA;&#x73FE;&#x5927;&#x5927;&#x6E1B;&#x5C11;&#x4E86;&#x5C0D;&#x985E;&#x5225;&#x5143;&#x4EF6;&#x7684;&#x9700;&#x6C42;&#xFF0C;&#x4F46;&#x6709;&#x4E00;&#x500B;&#x91CD;&#x8981;&#x7684;&#x7279;&#x6027;&#x76EE;&#x524D;&#x4ECD;&#x7136;&#x53EA;&#x80FD;&#x900F;&#x904E;&#x985E;&#x5225;&#x5143;&#x4EF6;&#x5BE6;&#x73FE;&#xFF1A;<strong>&#x932F;&#x8AA4;&#x908A;&#x754C; (Error Boundaries)</strong>&#x3002;</p>
+<p>&#x932F;&#x8AA4;&#x908A;&#x754C;&#x662F;&#x4E00;&#x7A2E;&#x7279;&#x6B8A;&#x7684; React &#x5143;&#x4EF6;&#xFF0C;&#x5B83;&#x53EF;&#x4EE5;&#x6355;&#x7372;&#x5176;&#x5B50;&#x5143;&#x4EF6;&#x6A39;&#x4E2D;&#x767C;&#x751F;&#x7684; JavaScript &#x932F;&#x8AA4;&#xFF0C;&#x8A18;&#x9304;&#x9019;&#x4E9B;&#x932F;&#x8AA4;&#xFF0C;&#x4E26;&#x986F;&#x793A;&#x4E00;&#x500B;&#x5099;&#x7528;&#x7684; UI&#xFF0C;&#x800C;&#x4E0D;&#x662F;&#x8B93;&#x6574;&#x500B;&#x61C9;&#x7528;&#x7A0B;&#x5F0F;&#x5D29;&#x6F70;&#x3002;</p>
+<pre><code class="lang-jsx"><span class="hljs-keyword">import</span> React <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;react&apos;</span>;
+
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">ErrorBoundary</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">React</span>.<span class="hljs-title">Component</span> </span>{
+  <span class="hljs-keyword">constructor</span>(props) {
+    <span class="hljs-keyword">super</span>(props);
+    <span class="hljs-keyword">this</span>.state = { hasError: <span class="hljs-literal">false</span>, errorInfo: <span class="hljs-literal">null</span> };
+  }
+
+  <span class="hljs-keyword">static</span> getDerivedStateFromError(error) {
+    <span class="hljs-comment">// &#x66F4;&#x65B0; state &#x4F7F;&#x4E0B;&#x4E00;&#x6B21;&#x6E32;&#x67D3;&#x53EF;&#x4EE5;&#x986F;&#x793A;&#x5099;&#x7528; UI</span>
+    <span class="hljs-keyword">return</span> { hasError: <span class="hljs-literal">true</span> };
+  }
+
+  componentDidCatch(error, errorInfo) {
+    <span class="hljs-comment">// &#x60A8;&#x4E5F;&#x53EF;&#x4EE5;&#x5C07;&#x932F;&#x8AA4;&#x8A18;&#x9304;&#x5230;&#x932F;&#x8AA4;&#x56DE;&#x5831;&#x670D;&#x52D9;</span>
+    <span class="hljs-built_in">console</span>.error(<span class="hljs-string">&quot;Uncaught error:&quot;</span>, error, errorInfo);
+    <span class="hljs-keyword">this</span>.setState({ errorInfo: errorInfo });
+  }
+
+  render() {
+    <span class="hljs-keyword">if</span> (<span class="hljs-keyword">this</span>.state.hasError) {
+      <span class="hljs-comment">// &#x60A8;&#x53EF;&#x4EE5;&#x6E32;&#x67D3;&#x4EFB;&#x4F55;&#x81EA;&#x8A02;&#x7684;&#x5099;&#x7528; UI</span>
+      <span class="hljs-keyword">return</span> (
+        <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-name">h2</span>&gt;</span>Something went wrong.<span class="hljs-tag">&lt;/<span class="hljs-name">h2</span>&gt;</span>
+          {this.state.errorInfo &amp;&amp; (
+            <span class="hljs-tag">&lt;<span class="hljs-name">details</span> <span class="hljs-attr">style</span>=<span class="hljs-string">{{</span> <span class="hljs-attr">whiteSpace:</span> &apos;<span class="hljs-attr">pre-wrap</span>&apos; }}&gt;</span>
+              {this.state.errorInfo.componentStack}
+            <span class="hljs-tag">&lt;/<span class="hljs-name">details</span>&gt;</span>
+          )}
+        <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></span>
+      );
+    }
+    <span class="hljs-comment">// &#x901A;&#x5E38;&#x60C5;&#x6CC1;&#x4E0B;&#xFF0C;&#x53EA;&#x9700;&#x6E32;&#x67D3;&#x5B50;&#x5143;&#x4EF6;&#x5373;&#x53EF;</span>
+    <span class="hljs-keyword">return</span> <span class="hljs-keyword">this</span>.props.children;
+  }
+}
+
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> ErrorBoundary;
+</code></pre>
+<p>&#x7136;&#x5F8C;&#x60A8;&#x53EF;&#x4EE5;&#x9019;&#x6A23;&#x4F7F;&#x7528;&#x5B83;&#xFF1A;</p>
+<pre><code class="lang-jsx">&lt;ErrorBoundary&gt;
+  <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">MyWidget</span> /&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">ErrorBoundary</span>&gt;</span></span>
+</code></pre>
+<p>&#x5982;&#x679C; <code>&lt;MyWidget /&gt;</code> &#x6216;&#x5176;&#x4EFB;&#x4F55;&#x5B50;&#x5143;&#x4EF6;&#x62CB;&#x51FA;&#x932F;&#x8AA4;&#xFF0C;<code>ErrorBoundary</code> &#x5C07;&#x6703;&#x6355;&#x7372;&#x5B83;&#x4E26;&#x986F;&#x793A;&#x5099;&#x7528; UI&#x3002;</p>
+<p><strong>3.4 &#x5143;&#x4EF6;&#x7684;&#x547D;&#x540D;&#x7D04;&#x5B9A;</strong></p>
+<p>React &#x5143;&#x4EF6;&#x7684;&#x540D;&#x7A31;&#x5FC5;&#x9808;&#x4EE5;<strong>&#x5927;&#x5BEB;&#x5B57;&#x6BCD;&#x958B;&#x982D;</strong>&#x3002;&#x9019;&#x662F;&#x56E0;&#x70BA; React &#x5C07;&#x4EE5;&#x5C0F;&#x5BEB;&#x5B57;&#x6BCD;&#x958B;&#x982D;&#x7684;&#x6A19;&#x7C64;&#x8996;&#x70BA;&#x539F;&#x751F;&#x7684; DOM &#x6A19;&#x7C64; (&#x5982; <code>&lt;div&gt;</code>, <code>&lt;span&gt;</code> &#x7B49;)&#xFF0C;&#x800C;&#x5C07;&#x4EE5;&#x5927;&#x5BEB;&#x5B57;&#x6BCD;&#x958B;&#x982D;&#x7684;&#x6A19;&#x7C64;&#x8996;&#x70BA; React &#x5143;&#x4EF6;&#x3002;</p>
+<pre><code class="lang-jsx"><span class="hljs-comment">// &#x6B63;&#x78BA;: &#x5143;&#x4EF6;&#x540D;&#x4EE5;&#x5927;&#x5BEB;&#x5B57;&#x6BCD;&#x958B;&#x982D;</span>
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">MyComponent</span>(<span class="hljs-params"></span>) </span>{
+  <span class="hljs-keyword">return</span> <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>This is my component.<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span></span>;
+}
+<span class="hljs-keyword">const</span> element1 = &lt;MyComponent /&gt;;
+
+// &#x932F;&#x8AA4;: &#x5982;&#x679C; MyComponent &#x4EE5;&#x5C0F;&#x5BEB; myComponent &#x958B;&#x982D;&#xFF0C;React &#x6703;&#x8A8D;&#x70BA;&#x5B83;&#x662F;&#x4E00;&#x500B; HTML &#x6A19;&#x7C64;
+// function myComponent() { ... }
+// const element2 = &lt;myComponent /&gt;; // &#x9019;&#x6703;&#x5C0E;&#x81F4;&#x932F;&#x8AA4;&#x6216;&#x975E;&#x9810;&#x671F;&#x884C;&#x70BA;
+</code></pre>
+<p><strong>3.5 &#x5143;&#x4EF6;&#x7684;&#x7D44;&#x5408;&#x8207;&#x62C6;&#x5206;</strong></p>
+<p>&#x5143;&#x4EF6;&#x6700;&#x91CD;&#x8981;&#x7684;&#x7279;&#x6027;&#x4E4B;&#x4E00;&#x662F;&#x5176;&#x53EF;&#x7D44;&#x5408;&#x6027;&#x3002;&#x60A8;&#x53EF;&#x4EE5;&#x5C07;&#x7C21;&#x55AE;&#x7684;&#x5143;&#x4EF6;&#x7D44;&#x5408;&#x6210;&#x66F4;&#x8907;&#x96DC;&#x7684;&#x5143;&#x4EF6;&#xFF0C;&#x5C31;&#x50CF;&#x642D;&#x5EFA;&#x7A4D;&#x6728;&#x4E00;&#x6A23;&#x3002;</p>
+<p>&#x540C;&#x6642;&#xFF0C;&#x5C07;&#x8907;&#x96DC;&#x7684; UI &#x62C6;&#x5206;&#x6210;&#x66F4;&#x5C0F;&#x3001;&#x66F4;&#x6613;&#x65BC;&#x7BA1;&#x7406;&#x7684;&#x5143;&#x4EF6;&#x4E5F;&#x662F;&#x4E00;&#x7A2E;&#x975E;&#x5E38;&#x597D;&#x7684;&#x5BE6;&#x8E10;&#x3002;&#x9075;&#x5FAA;<strong>&#x55AE;&#x4E00;&#x8077;&#x8CAC;&#x539F;&#x5247; (Single Responsibility Principle)</strong>&#xFF0C;&#x8B93;&#x6BCF;&#x500B;&#x5143;&#x4EF6;&#x53EA;&#x505A;&#x597D;&#x4E00;&#x4EF6;&#x4E8B;&#x3002;</p>
+<p><strong>&#x7D44;&#x5408;&#x7BC4;&#x4F8B;&#xFF1A;</strong></p>
+<pre><code class="lang-jsx"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">UserAvatar</span>(<span class="hljs-params">props</span>) </span>{
+  <span class="hljs-keyword">return</span> &lt;img src={props.user.avatarUrl} alt={props.user.name} style={{width: 50, height: 50, borderRadius: &apos;50%&apos;}} /&gt;;
+}
+
+function UserInfo(props) {
+  return (
+    &lt;div className=&quot;UserInfo&quot;&gt;
+      &lt;UserAvatar user={props.user} /&gt;
+      &lt;div className=&quot;UserInfo-name&quot;&gt;{props.user.name}&lt;/div&gt;
+    &lt;/div&gt;
+  );
+}
+
+function Comment(props) {
+  return (
+    &lt;div className=&quot;Comment&quot;&gt;
+      &lt;UserInfo user={props.author} /&gt; {/* &#x7D44;&#x5408; UserInfo &#x5143;&#x4EF6; */}
+      &lt;div className=&quot;Comment-text&quot;&gt;{props.text}&lt;/div&gt;
+      &lt;div className=&quot;Comment-date&quot;&gt;{/* ...&#x65E5;&#x671F;... */}&lt;/div&gt;
+    &lt;/div&gt;
+  );
+}
+
+// &#x4F7F;&#x7528; Comment &#x5143;&#x4EF6;
+const commentData = {
+  author: { name: &apos;Alice&apos;, avatarUrl: &apos;...&apos; },
+  text: &apos;Hope you enjoy learning React!&apos;,
+  date: new Date()
+};
+
+function App() {
+  return &lt;Comment author={commentData.author} text={commentData.text} date={commentData.date} /&gt;;
+}
+</code></pre>
+<p>&#x5728;&#x4E0A;&#x9762;&#x7684;&#x4F8B;&#x5B50;&#x4E2D;&#xFF0C;<code>Comment</code> &#x5143;&#x4EF6;&#x7D44;&#x5408;&#x4E86; <code>UserInfo</code> &#x5143;&#x4EF6;&#xFF0C;&#x800C; <code>UserInfo</code> &#x5143;&#x4EF6;&#x53C8;&#x7D44;&#x5408;&#x4E86; <code>UserAvatar</code> &#x5143;&#x4EF6;&#x3002;</p>
+<p><strong>&#x62C6;&#x5206;&#x539F;&#x5247;&#xFF1A;</strong></p>
+<ul>
+<li><strong>&#x53EF;&#x8907;&#x7528;&#x6027;</strong>&#xFF1A;&#x5982;&#x679C; UI &#x7684;&#x67D0;&#x4E00;&#x90E8;&#x5206;&#x5728;&#x591A;&#x500B;&#x5730;&#x65B9;&#x4F7F;&#x7528;&#xFF0C;&#x6216;&#x8005;&#x5B83;&#x672C;&#x8EAB;&#x8DB3;&#x5920;&#x8907;&#x96DC;&#xFF0C;&#x53EF;&#x4EE5;&#x5C07;&#x5176;&#x63D0;&#x53D6;&#x70BA;&#x4E00;&#x500B;&#x7368;&#x7ACB;&#x7684;&#x5143;&#x4EF6;&#x3002;</li>
+<li><strong>&#x55AE;&#x4E00;&#x8077;&#x8CAC;</strong>&#xFF1A;&#x4E00;&#x500B;&#x5143;&#x4EF6;&#x61C9;&#x8A72;&#x53EA;&#x95DC;&#x5FC3;&#x4E00;&#x4EF6;&#x4E8B;&#x60C5;&#x3002;&#x5982;&#x679C;&#x4E00;&#x500B;&#x5143;&#x4EF6;&#x505A;&#x4E86;&#x592A;&#x591A;&#x4E8B;&#x60C5;&#xFF0C;&#x8003;&#x616E;&#x5C07;&#x5176;&#x62C6;&#x5206;&#x3002;</li>
+<li><strong>&#x7A0B;&#x5F0F;&#x78BC;&#x884C;&#x6578;</strong>&#xFF1A;&#x5982;&#x679C;&#x4E00;&#x500B;&#x5143;&#x4EF6;&#x7684;&#x7A0B;&#x5F0F;&#x78BC;&#x8B8A;&#x5F97;&#x904E;&#x9577; (&#x4F8B;&#x5982;&#x8D85;&#x904E; 100-200 &#x884C;&#xFF0C;&#x9019;&#x53EA;&#x662F;&#x4E00;&#x500B;&#x5927;&#x81F4;&#x7684;&#x53C3;&#x8003;)&#xFF0C;&#x4E5F;&#x53EF;&#x80FD;&#x662F;&#x62C6;&#x5206;&#x5B83;&#x7684;&#x597D;&#x6642;&#x6A5F;&#x3002;</li>
+</ul>
+<p><strong>3.6 &#x6E32;&#x67D3;&#x5143;&#x4EF6;</strong></p>
+<p>&#x7576; React &#x9047;&#x5230;&#x4E00;&#x500B;&#x4F7F;&#x7528;&#x8005;&#x5B9A;&#x7FA9;&#x7684;&#x5143;&#x4EF6; (&#x5982; <code>&lt;Welcome name=&quot;Sara&quot; /&gt;</code>) &#x6642;&#xFF0C;&#x5B83;&#x6703;&#x5C07; JSX &#x5C6C;&#x6027; (&#x4EE5;&#x53CA; <code>children</code>) &#x4F5C;&#x70BA;&#x4E00;&#x500B;&#x55AE;&#x4E00;&#x7684;&#x7269;&#x4EF6; (&#x5373; <code>props</code>) &#x50B3;&#x905E;&#x7D66;&#x8A72;&#x5143;&#x4EF6;&#x3002;&#x5143;&#x4EF6;&#x63A5;&#x8457;&#x56DE;&#x50B3; React &#x5143;&#x7D20;&#xFF0C;React &#x6703;&#x5C07;&#x9019;&#x4E9B;&#x5143;&#x7D20;&#x6E32;&#x67D3;&#x5230; DOM &#x4E2D;&#x3002;</p>
+<pre><code class="lang-jsx"><span class="hljs-comment">// 1. &#x6211;&#x5011;&#x547C;&#x53EB; ReactDOM.createRoot().render() &#x4E26;&#x50B3;&#x5165; &lt;Welcome name=&quot;Sara&quot; /&gt;&#x3002;</span>
+<span class="hljs-comment">// const root = ReactDOM.createRoot(document.getElementById(&apos;root&apos;));</span>
+<span class="hljs-comment">// root.render(&lt;Welcome name=&quot;Sara&quot; /&gt;);</span>
+
+<span class="hljs-comment">// 2. React &#x547C;&#x53EB; Welcome &#x5143;&#x4EF6;&#xFF0C;&#x4E26;&#x5C07; {name: &apos;Sara&apos;} &#x4F5C;&#x70BA; props &#x50B3;&#x5165;&#x3002;</span>
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">Welcome</span>(<span class="hljs-params">props</span>) </span>{
+  <span class="hljs-comment">// props is {name: &apos;Sara&apos;}</span>
+  <span class="hljs-comment">// 3. Welcome &#x5143;&#x4EF6;&#x56DE;&#x50B3;&#x4E00;&#x500B; &lt;h1&gt;Hello, Sara&lt;/h1&gt; &#x5143;&#x7D20;&#x4F5C;&#x70BA;&#x7D50;&#x679C;&#x3002;</span>
+  <span class="hljs-keyword">return</span> <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">h1</span>&gt;</span>Hello, {props.name}<span class="hljs-tag">&lt;/<span class="hljs-name">h1</span>&gt;</span></span>;
+}
+
+<span class="hljs-comment">// 4. React DOM &#x9AD8;&#x6548;&#x5730;&#x66F4;&#x65B0; DOM &#x4EE5;&#x5339;&#x914D; &lt;h1&gt;Hello, Sara&lt;/h1&gt;&#x3002;</span>
+</code></pre>
+<p>&#x7B2C; 3 &#x7AE0;&#x300C;React &#x5143;&#x4EF6;&#x8A73;&#x89E3;&#x300D;&#x5DF2;&#x5B8C;&#x6210;&#x3002;&#x9019;&#x4E00;&#x7AE0;&#x4ECB;&#x7D39;&#x4E86; React &#x5143;&#x4EF6;&#x7684;&#x57FA;&#x790E;&#x77E5;&#x8B58;&#x3001;&#x51FD;&#x5F0F;&#x5143;&#x4EF6;&#x8207;&#x985E;&#x5225;&#x5143;&#x4EF6;&#x7684;&#x5340;&#x5225;&#x548C;&#x7528;&#x6CD5;&#x3001;&#x547D;&#x540D;&#x7D04;&#x5B9A;&#x4EE5;&#x53CA;&#x5143;&#x4EF6;&#x7684;&#x7D44;&#x5408;&#x8207;&#x62C6;&#x5206;&#x3002;</p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="chapter2.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page: 第2章：JSX 深度解析">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"第3章：React 元件詳解","level":"1.4","depth":1,"previous":{"title":"第2章：JSX 深度解析","level":"1.3","depth":1,"path":"chapter2.md","ref":"chapter2.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css","website":"styles/website.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css","website":"styles/website.css"}},"file":{"path":"chapter3.md","mtime":"2025-06-02T01:23:17.500Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2025-06-02T01:44:50.288Z"},"basePath":".","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="gitbook/gitbook.js"></script>
+    <script src="gitbook/theme.js"></script>
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
