@@ -1,0 +1,1233 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>第10章：列表與 Keys (Lists and Keys) · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="chapter11.html" />
+    
+    
+    <link rel="prev" href="chapter9.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    教程目錄
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="chapter1.html">
+            
+                <a href="chapter1.html">
+            
+                    
+                    第1章：React 簡介與前端開發環境回顧
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="chapter2.html">
+            
+                <a href="chapter2.html">
+            
+                    
+                    第2章：JSX 深度解析
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="chapter3.html">
+            
+                <a href="chapter3.html">
+            
+                    
+                    第3章：React 元件詳解
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="chapter4.html">
+            
+                <a href="chapter4.html">
+            
+                    
+                    第4章：Props (屬性) 的運用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="chapter5.html">
+            
+                <a href="chapter5.html">
+            
+                    
+                    第5章：State (狀態) 的介紹與使用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="chapter6.html">
+            
+                <a href="chapter6.html">
+            
+                    
+                    第6章：元件生命週期與 useEffect Hook
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="chapter7.html">
+            
+                <a href="chapter7.html">
+            
+                    
+                    第7章：自訂 Hooks (Custom Hooks)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="chapter8.html">
+            
+                <a href="chapter8.html">
+            
+                    
+                    第8章：事件處理 (Handling Events)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10" data-path="chapter9.html">
+            
+                <a href="chapter9.html">
+            
+                    
+                    第9章：條件渲染 (Conditional Rendering)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.11" data-path="chapter10.html">
+            
+                <a href="chapter10.html">
+            
+                    
+                    第10章：列表與 Keys (Lists and Keys)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12" data-path="chapter11.html">
+            
+                <a href="chapter11.html">
+            
+                    
+                    第11章：表單處理 (Forms)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13" data-path="chapter12.html">
+            
+                <a href="chapter12.html">
+            
+                    
+                    第12章：狀態提升 (Lifting State Up)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14" data-path="chapter13.html">
+            
+                <a href="chapter13.html">
+            
+                    
+                    第13章：組合 vs 繼承
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15" data-path="chapter14.html">
+            
+                <a href="chapter14.html">
+            
+                    
+                    第14章：React 哲學與最佳實踐
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="." >第10章：列表與 Keys (Lists and Keys)</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="&#x7B2C;-10-&#x7AE0;&#xFF1A;&#x5217;&#x8868;&#x8207;-keys-lists-and-keys">&#x7B2C; 10 &#x7AE0;&#xFF1A;&#x5217;&#x8868;&#x8207; Keys (Lists and Keys)</h1>
+<p>&#x5728;&#x8A31;&#x591A;&#x61C9;&#x7528;&#x7A0B;&#x5F0F;&#x4E2D;&#xFF0C;&#x6211;&#x5011;&#x9700;&#x8981;&#x6E32;&#x67D3;&#x8CC7;&#x6599;&#x5217;&#x8868;&#xFF0C;&#x4F8B;&#x5982;&#x4F7F;&#x7528;&#x8005;&#x5217;&#x8868;&#x3001;&#x5546;&#x54C1;&#x5217;&#x8868;&#x3001;&#x5F85;&#x8FA6;&#x4E8B;&#x9805;&#x7B49;&#x3002;React &#x63D0;&#x4F9B;&#x4E86;&#x5F37;&#x5927;&#x7684;&#x5217;&#x8868;&#x6E32;&#x67D3;&#x529F;&#x80FD;&#xFF0C;&#x8B93;&#x6211;&#x5011;&#x53EF;&#x4EE5;&#x4F7F;&#x7528; JavaScript &#x7684;&#x9663;&#x5217;&#x65B9;&#x6CD5;&#x4F86;&#x52D5;&#x614B;&#x751F;&#x6210; UI &#x5143;&#x7D20;&#x3002;&#x5728;&#x9019;&#x4E00;&#x7AE0;&#x4E2D;&#xFF0C;&#x6211;&#x5011;&#x5C07;&#x5B78;&#x7FD2;&#x5982;&#x4F55;&#x6E32;&#x67D3;&#x5217;&#x8868;&#xFF0C;&#x4EE5;&#x53CA;&#x70BA;&#x4EC0;&#x9EBC; Keys &#x5C0D;&#x65BC;&#x6548;&#x80FD;&#x548C;&#x6B63;&#x78BA;&#x6027;&#x5982;&#x6B64;&#x91CD;&#x8981;&#x3002;</p>
+<h3 id="101-&#x57FA;&#x672C;&#x5217;&#x8868;&#x6E32;&#x67D3;">10.1 &#x57FA;&#x672C;&#x5217;&#x8868;&#x6E32;&#x67D3;</h3>
+<p>&#x5728; React &#x4E2D;&#xFF0C;&#x6700;&#x5E38;&#x7528;&#x7684;&#x5217;&#x8868;&#x6E32;&#x67D3;&#x65B9;&#x6CD5;&#x662F;&#x4F7F;&#x7528; <code>map()</code> &#x51FD;&#x5F0F;&#xFF1A;</p>
+<pre><code class="lang-javascript"><span class="hljs-keyword">import</span> React, { useState } <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;react&apos;</span>;
+
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">BasicList</span>(<span class="hljs-params"></span>) </span>{
+  <span class="hljs-keyword">const</span> fruits = [<span class="hljs-string">&apos;&#x860B;&#x679C;&apos;</span>, <span class="hljs-string">&apos;&#x9999;&#x8549;&apos;</span>, <span class="hljs-string">&apos;&#x6A59;&#x5B50;&apos;</span>, <span class="hljs-string">&apos;&#x8461;&#x8404;&apos;</span>, <span class="hljs-string">&apos;&#x8349;&#x8393;&apos;</span>];
+
+  <span class="hljs-keyword">return</span> (
+    <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">h2</span>&gt;</span>&#x6C34;&#x679C;&#x5217;&#x8868;<span class="hljs-tag">&lt;/<span class="hljs-name">h2</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">ul</span>&gt;</span>
+        {fruits.map((fruit, index) =&gt; (
+          <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">key</span>=<span class="hljs-string">{index}</span>&gt;</span>{fruit}<span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+        ))}
+      <span class="hljs-tag">&lt;/<span class="hljs-name">ul</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></span>
+  );
+}
+
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> BasicList;
+</code></pre>
+<h3 id="102-&#x6E32;&#x67D3;&#x7269;&#x4EF6;&#x9663;&#x5217;">10.2 &#x6E32;&#x67D3;&#x7269;&#x4EF6;&#x9663;&#x5217;</h3>
+<p>&#x66F4;&#x5E38;&#x898B;&#x7684;&#x60C5;&#x6CC1;&#x662F;&#x6E32;&#x67D3;&#x7269;&#x4EF6;&#x9663;&#x5217;&#xFF1A;</p>
+<pre><code class="lang-javascript"><span class="hljs-keyword">import</span> React, { useState } <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;react&apos;</span>;
+
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">ProductList</span>(<span class="hljs-params"></span>) </span>{
+  <span class="hljs-keyword">const</span> [products] = useState([
+    { id: <span class="hljs-number">1</span>, name: <span class="hljs-string">&apos;iPhone 15&apos;</span>, price: <span class="hljs-number">32900</span>, category: <span class="hljs-string">&apos;&#x624B;&#x6A5F;&apos;</span>, inStock: <span class="hljs-literal">true</span> },
+    { id: <span class="hljs-number">2</span>, name: <span class="hljs-string">&apos;MacBook Pro&apos;</span>, price: <span class="hljs-number">59900</span>, category: <span class="hljs-string">&apos;&#x7B46;&#x8A18;&#x578B;&#x96FB;&#x8166;&apos;</span>, inStock: <span class="hljs-literal">true</span> },
+    { id: <span class="hljs-number">3</span>, name: <span class="hljs-string">&apos;iPad Air&apos;</span>, price: <span class="hljs-number">19900</span>, category: <span class="hljs-string">&apos;&#x5E73;&#x677F;&apos;</span>, inStock: <span class="hljs-literal">false</span> },
+    { id: <span class="hljs-number">4</span>, name: <span class="hljs-string">&apos;AirPods Pro&apos;</span>, price: <span class="hljs-number">7490</span>, category: <span class="hljs-string">&apos;&#x8033;&#x6A5F;&apos;</span>, inStock: <span class="hljs-literal">true</span> },
+    { id: <span class="hljs-number">5</span>, name: <span class="hljs-string">&apos;Apple Watch&apos;</span>, price: <span class="hljs-number">12900</span>, category: <span class="hljs-string">&apos;&#x667A;&#x6167;&#x624B;&#x9336;&apos;</span>, inStock: <span class="hljs-literal">true</span> }
+  ]);
+
+  <span class="hljs-keyword">return</span> (
+    <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">style</span>=<span class="hljs-string">{{</span> <span class="hljs-attr">maxWidth:</span> &apos;<span class="hljs-attr">800px</span>&apos;, <span class="hljs-attr">margin:</span> &apos;<span class="hljs-attr">0</span> <span class="hljs-attr">auto</span>&apos;, <span class="hljs-attr">padding:</span> &apos;<span class="hljs-attr">20px</span>&apos; }}&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">h2</span>&gt;</span>&#x7522;&#x54C1;&#x5217;&#x8868;<span class="hljs-tag">&lt;/<span class="hljs-name">h2</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">style</span>=<span class="hljs-string">{{</span>
+        <span class="hljs-attr">display:</span> &apos;<span class="hljs-attr">grid</span>&apos;,
+        <span class="hljs-attr">gridTemplateColumns:</span> &apos;<span class="hljs-attr">repeat</span>(<span class="hljs-attr">auto-fill</span>, <span class="hljs-attr">minmax</span>(<span class="hljs-attr">300px</span>, <span class="hljs-attr">1fr</span>))&apos;,
+        <span class="hljs-attr">gap:</span> &apos;<span class="hljs-attr">20px</span>&apos;
+      }}&gt;</span>
+        {products.map(product =&gt; (
+          <span class="hljs-tag">&lt;<span class="hljs-name">div</span>
+            <span class="hljs-attr">key</span>=<span class="hljs-string">{product.id}</span> // &#x4F7F;&#x7528;&#x552F;&#x4E00;&#x7684; <span class="hljs-attr">id</span> &#x4F5C;&#x70BA; <span class="hljs-attr">key</span>
+            <span class="hljs-attr">style</span>=<span class="hljs-string">{{</span>
+              <span class="hljs-attr">border:</span> &apos;<span class="hljs-attr">1px</span> <span class="hljs-attr">solid</span> #<span class="hljs-attr">ddd</span>&apos;,
+              <span class="hljs-attr">borderRadius:</span> &apos;<span class="hljs-attr">8px</span>&apos;,
+              <span class="hljs-attr">padding:</span> &apos;<span class="hljs-attr">15px</span>&apos;,
+              <span class="hljs-attr">backgroundColor:</span> <span class="hljs-attr">product.inStock</span> ? &apos;#<span class="hljs-attr">fff</span>&apos; <span class="hljs-attr">:</span> &apos;#<span class="hljs-attr">f5f5f5</span>&apos;
+            }}
+          &gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">h3</span> <span class="hljs-attr">style</span>=<span class="hljs-string">{{</span> <span class="hljs-attr">margin:</span> &apos;<span class="hljs-attr">0</span> <span class="hljs-attr">0</span> <span class="hljs-attr">10px</span> <span class="hljs-attr">0</span>&apos; }}&gt;</span>{product.name}<span class="hljs-tag">&lt;/<span class="hljs-name">h3</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">style</span>=<span class="hljs-string">{{</span> <span class="hljs-attr">color:</span> &apos;#<span class="hljs-attr">666</span>&apos;, <span class="hljs-attr">margin:</span> &apos;<span class="hljs-attr">5px</span> <span class="hljs-attr">0</span>&apos; }}&gt;</span>
+              &#x5206;&#x985E;: {product.category}
+            <span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">style</span>=<span class="hljs-string">{{</span>
+              <span class="hljs-attr">fontSize:</span> &apos;<span class="hljs-attr">1.2em</span>&apos;,
+              <span class="hljs-attr">fontWeight:</span> &apos;<span class="hljs-attr">bold</span>&apos;,
+              <span class="hljs-attr">color:</span> &apos;#<span class="hljs-attr">2196F3</span>&apos;,
+              <span class="hljs-attr">margin:</span> &apos;<span class="hljs-attr">10px</span> <span class="hljs-attr">0</span>&apos;
+            }}&gt;</span>
+              NT$ {product.price.toLocaleString()}
+            <span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">style</span>=<span class="hljs-string">{{</span>
+              <span class="hljs-attr">color:</span> <span class="hljs-attr">product.inStock</span> ? &apos;#<span class="hljs-attr">4CAF50</span>&apos; <span class="hljs-attr">:</span> &apos;#<span class="hljs-attr">f44336</span>&apos;,
+              <span class="hljs-attr">fontWeight:</span> &apos;<span class="hljs-attr">bold</span>&apos;
+            }}&gt;</span>
+              {product.inStock ? &apos;&#x6709;&#x73FE;&#x8CA8;&apos; : &apos;&#x7F3A;&#x8CA8;&apos;}
+            <span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+          <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+        ))}
+      <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></span>
+  );
+}
+
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> ProductList;
+</code></pre>
+<h3 id="103-&#x70BA;&#x4EC0;&#x9EBC;&#x9700;&#x8981;-keys&#xFF1F;">10.3 &#x70BA;&#x4EC0;&#x9EBC;&#x9700;&#x8981; Keys&#xFF1F;</h3>
+<p>Keys &#x662F; React &#x7528;&#x4F86;&#x8B58;&#x5225;&#x5217;&#x8868;&#x4E2D;&#x54EA;&#x4E9B;&#x9805;&#x76EE;&#x767C;&#x751F;&#x8B8A;&#x5316;&#x3001;&#x88AB;&#x65B0;&#x589E;&#x6216;&#x88AB;&#x79FB;&#x9664;&#x7684;&#x7279;&#x6B8A;&#x5C6C;&#x6027;&#x3002;&#x6B63;&#x78BA;&#x4F7F;&#x7528; Keys &#x5C0D;&#x65BC;&#x61C9;&#x7528;&#x7A0B;&#x5F0F;&#x7684;&#x6548;&#x80FD;&#x548C;&#x6B63;&#x78BA;&#x6027;&#x81F3;&#x95DC;&#x91CD;&#x8981;&#x3002;</p>
+<h4 id="1031-&#x6C92;&#x6709;-key-&#x6642;&#x7684;&#x554F;&#x984C;">10.3.1 &#x6C92;&#x6709; Key &#x6642;&#x7684;&#x554F;&#x984C;</h4>
+<pre><code class="lang-javascript"><span class="hljs-keyword">import</span> React, { useState } <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;react&apos;</span>;
+
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">ProblematicList</span>(<span class="hljs-params"></span>) </span>{
+  <span class="hljs-keyword">const</span> [items, setItems] = useState([
+    { id: <span class="hljs-number">1</span>, text: <span class="hljs-string">&apos;&#x9805;&#x76EE; 1&apos;</span> },
+    { id: <span class="hljs-number">2</span>, text: <span class="hljs-string">&apos;&#x9805;&#x76EE; 2&apos;</span> },
+    { id: <span class="hljs-number">3</span>, text: <span class="hljs-string">&apos;&#x9805;&#x76EE; 3&apos;</span> }
+  ]);
+
+  <span class="hljs-keyword">const</span> addItemToStart = () =&gt; {
+    <span class="hljs-keyword">const</span> newItem = {
+      id: <span class="hljs-built_in">Date</span>.now(),
+      text: <span class="hljs-string">`&#x65B0;&#x9805;&#x76EE; <span class="hljs-subst">${items.length + 1}</span>`</span>
+    };
+    setItems([newItem, ...items]);
+  };
+
+  <span class="hljs-keyword">const</span> removeFirstItem = () =&gt; {
+    setItems(items.slice(<span class="hljs-number">1</span>));
+  };
+
+  <span class="hljs-keyword">return</span> (
+    &lt;div&gt;
+      &lt;h3&gt;&#x274C; &#x554F;&#x984C;&#x793A;&#x7BC4;&#xFF1A;&#x4F7F;&#x7528;&#x7D22;&#x5F15;&#x4F5C;&#x70BA; Key&lt;/h3&gt;
+      &lt;button onClick={addItemToStart} style={{ marginRight: &apos;10px&apos; }}&gt;
+        &#x5728;&#x958B;&#x982D;&#x65B0;&#x589E;&#x9805;&#x76EE;
+      &lt;/button&gt;
+      &lt;button onClick={removeFirstItem}&gt;
+        &#x79FB;&#x9664;&#x7B2C;&#x4E00;&#x500B;&#x9805;&#x76EE;
+      &lt;/button&gt;
+
+      &lt;ul&gt;
+        {items.map((item, index) =&gt; (
+          &lt;li key={index}&gt; {/* &#x4F7F;&#x7528;&#x7D22;&#x5F15;&#x4F5C;&#x70BA; key - &#x9019;&#x662F;&#x932F;&#x8AA4;&#x7684;&#x505A;&#x6CD5; */}
+            &lt;input type=&quot;text&quot; defaultValue={item.text} /&gt;
+            &lt;span&gt; - ID: {item.id}&lt;/span&gt;
+          &lt;/li&gt;
+        ))}
+      &lt;/ul&gt;
+
+      &lt;p style={{ color: &apos;red&apos;, fontSize: &apos;0.9em&apos; }}&gt;
+        &#x8A66;&#x8A66;&#x5728;&#x8F38;&#x5165;&#x6846;&#x4E2D;&#x8F38;&#x5165;&#x4E00;&#x4E9B;&#x6587;&#x5B57;&#xFF0C;&#x7136;&#x5F8C;&#x9EDE;&#x64CA;&#x6309;&#x9215;&#x3002;&#x6CE8;&#x610F;&#x8F38;&#x5165;&#x7684;&#x5167;&#x5BB9;&#x6703;&#x51FA;&#x73FE;&#x5728;&#x932F;&#x8AA4;&#x7684;&#x9805;&#x76EE;&#x4E0A;&#xFF01;
+      &lt;/p&gt;
+    &lt;/div&gt;
+  );
+}
+
+function CorrectList() {
+  const [items, setItems] = useState([
+    { id: 1, text: &apos;&#x9805;&#x76EE; 1&apos; },
+    { id: 2, text: &apos;&#x9805;&#x76EE; 2&apos; },
+    { id: 3, text: &apos;&#x9805;&#x76EE; 3&apos; }
+  ]);
+
+  const addItemToStart = () =&gt; {
+    const newItem = {
+      id: Date.now(),
+      text: `&#x65B0;&#x9805;&#x76EE; ${items.length + 1}`
+    };
+    setItems([newItem, ...items]);
+  };
+
+  const removeFirstItem = () =&gt; {
+    setItems(items.slice(1));
+  };
+
+  return (
+    &lt;div&gt;
+      &lt;h3&gt;&#x2705; &#x6B63;&#x78BA;&#x793A;&#x7BC4;&#xFF1A;&#x4F7F;&#x7528;&#x552F;&#x4E00; ID &#x4F5C;&#x70BA; Key&lt;/h3&gt;
+      &lt;button onClick={addItemToStart} style={{ marginRight: &apos;10px&apos; }}&gt;
+        &#x5728;&#x958B;&#x982D;&#x65B0;&#x589E;&#x9805;&#x76EE;
+      &lt;/button&gt;
+      &lt;button onClick={removeFirstItem}&gt;
+        &#x79FB;&#x9664;&#x7B2C;&#x4E00;&#x500B;&#x9805;&#x76EE;
+      &lt;/button&gt;
+
+      &lt;ul&gt;
+        {items.map(item =&gt; (
+          &lt;li key={item.id}&gt; {/* &#x4F7F;&#x7528;&#x552F;&#x4E00;&#x7684; id &#x4F5C;&#x70BA; key - &#x9019;&#x662F;&#x6B63;&#x78BA;&#x7684;&#x505A;&#x6CD5; */}
+            &lt;input type=&quot;text&quot; defaultValue={item.text} /&gt;
+            &lt;span&gt; - ID: {item.id}&lt;/span&gt;
+          &lt;/li&gt;
+        ))}
+      &lt;/ul&gt;
+
+      &lt;p style={{ color: &apos;green&apos;, fontSize: &apos;0.9em&apos; }}&gt;
+        &#x73FE;&#x5728;&#x8F38;&#x5165;&#x7684;&#x5167;&#x5BB9;&#x6703;&#x6B63;&#x78BA;&#x5730;&#x4FDD;&#x6301;&#x5728;&#x5C0D;&#x61C9;&#x7684;&#x9805;&#x76EE;&#x4E0A;&#x3002;
+      &lt;/p&gt;
+    &lt;/div&gt;
+  );
+}
+
+function KeyExample() {
+  return (
+    &lt;div style={{ maxWidth: &apos;600px&apos;, margin: &apos;0 auto&apos;, padding: &apos;20px&apos; }}&gt;
+      &lt;ProblematicList /&gt;
+      &lt;hr style={{ margin: &apos;40px 0&apos; }} /&gt;
+      &lt;CorrectList /&gt;
+    &lt;/div&gt;
+  );
+}
+
+export default KeyExample;
+</code></pre>
+<h3 id="104-&#x9078;&#x64C7;&#x5408;&#x9069;&#x7684;-key">10.4 &#x9078;&#x64C7;&#x5408;&#x9069;&#x7684; Key</h3>
+<h4 id="1041-key-&#x7684;&#x9078;&#x64C7;&#x539F;&#x5247;">10.4.1 Key &#x7684;&#x9078;&#x64C7;&#x539F;&#x5247;</h4>
+<ol>
+<li><strong>&#x552F;&#x4E00;&#x6027;</strong>: Key &#x5728;&#x540C;&#x7D1A;&#x5143;&#x7D20;&#x4E2D;&#x5FC5;&#x9808;&#x662F;&#x552F;&#x4E00;&#x7684;</li>
+<li><strong>&#x7A69;&#x5B9A;&#x6027;</strong>: Key &#x4E0D;&#x61C9;&#x8A72;&#x5728;&#x91CD;&#x65B0;&#x6E32;&#x67D3;&#x6642;&#x6539;&#x8B8A;</li>
+<li><strong>&#x53EF;&#x9810;&#x6E2C;&#x6027;</strong>: Key &#x61C9;&#x8A72;&#x8207;&#x8CC7;&#x6599;&#x7684;&#x8EAB;&#x4EFD;&#x76F8;&#x95DC;&#xFF0C;&#x800C;&#x4E0D;&#x662F;&#x4F4D;&#x7F6E;</li>
+</ol>
+<pre><code class="lang-javascript"><span class="hljs-keyword">import</span> React, { useState } <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;react&apos;</span>;
+
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">KeySelectionExamples</span>(<span class="hljs-params"></span>) </span>{
+  <span class="hljs-keyword">const</span> [users] = useState([
+    { id: <span class="hljs-string">&apos;user_001&apos;</span>, name: <span class="hljs-string">&apos;&#x5F35;&#x4E09;&apos;</span>, email: <span class="hljs-string">&apos;zhang@example.com&apos;</span> },
+    { id: <span class="hljs-string">&apos;user_002&apos;</span>, name: <span class="hljs-string">&apos;&#x674E;&#x56DB;&apos;</span>, email: <span class="hljs-string">&apos;li@example.com&apos;</span> },
+    { id: <span class="hljs-string">&apos;user_003&apos;</span>, name: <span class="hljs-string">&apos;&#x738B;&#x4E94;&apos;</span>, email: <span class="hljs-string">&apos;wang@example.com&apos;</span> }
+  ]);
+
+  <span class="hljs-keyword">const</span> [todos] = useState([
+    { id: <span class="hljs-number">1</span>, text: <span class="hljs-string">&apos;&#x5B78;&#x7FD2; React&apos;</span>, completed: <span class="hljs-literal">false</span>, createdAt: <span class="hljs-string">&apos;2024-01-01&apos;</span> },
+    { id: <span class="hljs-number">2</span>, text: <span class="hljs-string">&apos;&#x5BEB;&#x7A0B;&#x5F0F;&#x78BC;&apos;</span>, completed: <span class="hljs-literal">true</span>, createdAt: <span class="hljs-string">&apos;2024-01-02&apos;</span> },
+    { id: <span class="hljs-number">3</span>, text: <span class="hljs-string">&apos;&#x6E2C;&#x8A66;&#x61C9;&#x7528;&apos;</span>, completed: <span class="hljs-literal">false</span>, createdAt: <span class="hljs-string">&apos;2024-01-03&apos;</span> }
+  ]);
+
+  <span class="hljs-keyword">const</span> mixedData = [
+    { type: <span class="hljs-string">&apos;header&apos;</span>, content: <span class="hljs-string">&apos;&#x6B61;&#x8FCE;&#x4F86;&#x5230;&#x6211;&#x5011;&#x7684;&#x7DB2;&#x7AD9;&apos;</span> },
+    { type: <span class="hljs-string">&apos;user&apos;</span>, id: <span class="hljs-string">&apos;user_001&apos;</span>, name: <span class="hljs-string">&apos;&#x5F35;&#x4E09;&apos;</span> },
+    { type: <span class="hljs-string">&apos;user&apos;</span>, id: <span class="hljs-string">&apos;user_002&apos;</span>, name: <span class="hljs-string">&apos;&#x674E;&#x56DB;&apos;</span> },
+    { type: <span class="hljs-string">&apos;footer&apos;</span>, content: <span class="hljs-string">&apos;&#x7248;&#x6B0A;&#x6240;&#x6709; &#xA9; 2024&apos;</span> }
+  ];
+
+  <span class="hljs-keyword">return</span> (
+    <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">style</span>=<span class="hljs-string">{{</span> <span class="hljs-attr">maxWidth:</span> &apos;<span class="hljs-attr">600px</span>&apos;, <span class="hljs-attr">margin:</span> &apos;<span class="hljs-attr">0</span> <span class="hljs-attr">auto</span>&apos;, <span class="hljs-attr">padding:</span> &apos;<span class="hljs-attr">20px</span>&apos; }}&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">h2</span>&gt;</span>Key &#x9078;&#x64C7;&#x7BC4;&#x4F8B;<span class="hljs-tag">&lt;/<span class="hljs-name">h2</span>&gt;</span>
+
+      {/* &#x7BC4;&#x4F8B; 1: &#x4F7F;&#x7528;&#x8CC7;&#x6599;&#x5EAB; ID */}
+      <span class="hljs-tag">&lt;<span class="hljs-name">section</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">h3</span>&gt;</span>&#x2705; &#x4F7F;&#x7528;&#x8CC7;&#x6599;&#x5EAB; ID<span class="hljs-tag">&lt;/<span class="hljs-name">h3</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">ul</span>&gt;</span>
+          {users.map(user =&gt; (
+            <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">key</span>=<span class="hljs-string">{user.id}</span>&gt;</span>
+              {user.name} ({user.email})
+            <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+          ))}
+        <span class="hljs-tag">&lt;/<span class="hljs-name">ul</span>&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-name">section</span>&gt;</span>
+
+      {/* &#x7BC4;&#x4F8B; 2: &#x4F7F;&#x7528;&#x8907;&#x5408; Key */}
+      <span class="hljs-tag">&lt;<span class="hljs-name">section</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">h3</span>&gt;</span>&#x2705; &#x4F7F;&#x7528;&#x8907;&#x5408; Key&#xFF08;&#x9069;&#x7528;&#x65BC;&#x6DF7;&#x5408;&#x8CC7;&#x6599;&#xFF09;<span class="hljs-tag">&lt;/<span class="hljs-name">h3</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
+          {mixedData.map((item, index) =&gt; {
+            // &#x70BA;&#x4E0D;&#x540C;&#x985E;&#x578B;&#x7684;&#x8CC7;&#x6599;&#x5275;&#x5EFA;&#x4E0D;&#x540C;&#x7684; key &#x7B56;&#x7565;
+            const key = item.type === &apos;user&apos; ? `user-${item.id}` : `${item.type}-${index}`;
+
+            return (
+              <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">key</span>=<span class="hljs-string">{key}</span> <span class="hljs-attr">style</span>=<span class="hljs-string">{{</span>
+                <span class="hljs-attr">padding:</span> &apos;<span class="hljs-attr">10px</span>&apos;,
+                <span class="hljs-attr">margin:</span> &apos;<span class="hljs-attr">5px</span> <span class="hljs-attr">0</span>&apos;,
+                <span class="hljs-attr">backgroundColor:</span> <span class="hljs-attr">item.type</span> =<span class="hljs-string">==</span> &apos;<span class="hljs-attr">user</span>&apos; ? &apos;#<span class="hljs-attr">e3f2fd</span>&apos; <span class="hljs-attr">:</span> &apos;#<span class="hljs-attr">f5f5f5</span>&apos;,
+                <span class="hljs-attr">borderRadius:</span> &apos;<span class="hljs-attr">4px</span>&apos;
+              }}&gt;</span>
+                {item.type === &apos;user&apos; ? `&#x4F7F;&#x7528;&#x8005;: ${item.name}` : item.content}
+              <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+            );
+          })}
+        <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-name">section</span>&gt;</span>
+
+      {/* &#x7BC4;&#x4F8B; 3: &#x4EC0;&#x9EBC;&#x6642;&#x5019;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;&#x7D22;&#x5F15; */}
+      <span class="hljs-tag">&lt;<span class="hljs-name">section</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">h3</span>&gt;</span>&#x26A0;&#xFE0F; &#x4F55;&#x6642;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;&#x7D22;&#x5F15;&#x4F5C;&#x70BA; Key<span class="hljs-tag">&lt;/<span class="hljs-name">h3</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">style</span>=<span class="hljs-string">{{</span> <span class="hljs-attr">fontSize:</span> &apos;<span class="hljs-attr">0.9em</span>&apos;, <span class="hljs-attr">color:</span> &apos;#<span class="hljs-attr">666</span>&apos; }}&gt;</span>
+          &#x53EA;&#x6709;&#x5728;&#x4EE5;&#x4E0B;&#x6240;&#x6709;&#x689D;&#x4EF6;&#x90FD;&#x6EFF;&#x8DB3;&#x6642;&#x624D;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;&#x7D22;&#x5F15;&#xFF1A;
+        <span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">ul</span> <span class="hljs-attr">style</span>=<span class="hljs-string">{{</span> <span class="hljs-attr">fontSize:</span> &apos;<span class="hljs-attr">0.9em</span>&apos;, <span class="hljs-attr">color:</span> &apos;#<span class="hljs-attr">666</span>&apos; }}&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span>&#x5217;&#x8868;&#x662F;&#x975C;&#x614B;&#x7684;&#xFF08;&#x4E0D;&#x6703;&#x6539;&#x8B8A;&#xFF09;<span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span>&#x5217;&#x8868;&#x9805;&#x76EE;&#x6C92;&#x6709; ID<span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span>&#x5217;&#x8868;&#x4E0D;&#x6703;&#x91CD;&#x65B0;&#x6392;&#x5E8F;&#x6216;&#x904E;&#x6FFE;<span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">ul</span>&gt;</span>
+
+        {/* &#x9019;&#x662F;&#x4E00;&#x500B;&#x975C;&#x614B;&#x5217;&#x8868;&#xFF0C;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;&#x7D22;&#x5F15; */}
+        <span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-name">strong</span>&gt;</span>&#x7BC4;&#x4F8B;&#xFF1A;&#x975C;&#x614B;&#x5217;&#x8868;<span class="hljs-tag">&lt;/<span class="hljs-name">strong</span>&gt;</span>
+          {[&apos;&#x9996;&#x9801;&apos;, &apos;&#x95DC;&#x65BC;&#x6211;&#x5011;&apos;, &apos;&#x670D;&#x52D9;&#x9805;&#x76EE;&apos;, &apos;&#x806F;&#x7D61;&#x6211;&#x5011;&apos;].map((item, index) =&gt; (
+            <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">key</span>=<span class="hljs-string">{index}</span> <span class="hljs-attr">style</span>=<span class="hljs-string">{{</span>
+              <span class="hljs-attr">display:</span> &apos;<span class="hljs-attr">inline-block</span>&apos;,
+              <span class="hljs-attr">padding:</span> &apos;<span class="hljs-attr">5px</span> <span class="hljs-attr">10px</span>&apos;,
+              <span class="hljs-attr">margin:</span> &apos;<span class="hljs-attr">0</span> <span class="hljs-attr">5px</span>&apos;,
+              <span class="hljs-attr">backgroundColor:</span> &apos;#<span class="hljs-attr">f0f0f0</span>&apos;,
+              <span class="hljs-attr">borderRadius:</span> &apos;<span class="hljs-attr">3px</span>&apos;
+            }}&gt;</span>
+              {item}
+            <span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+          ))}
+        <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-name">section</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></span>
+  );
+}
+
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> KeySelectionExamples;
+</code></pre>
+<h3 id="105-&#x52D5;&#x614B;&#x5217;&#x8868;&#x64CD;&#x4F5C;">10.5 &#x52D5;&#x614B;&#x5217;&#x8868;&#x64CD;&#x4F5C;</h3>
+<pre><code class="lang-javascript"><span class="hljs-keyword">import</span> React, { useState } <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;react&apos;</span>;
+
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">TodoApp</span>(<span class="hljs-params"></span>) </span>{
+  <span class="hljs-keyword">const</span> [todos, setTodos] = useState([
+    { id: <span class="hljs-number">1</span>, text: <span class="hljs-string">&apos;&#x5B78;&#x7FD2; React Hooks&apos;</span>, completed: <span class="hljs-literal">false</span>, priority: <span class="hljs-string">&apos;high&apos;</span> },
+    { id: <span class="hljs-number">2</span>, text: <span class="hljs-string">&apos;&#x5EFA;&#x7ACB; Todo &#x61C9;&#x7528;&apos;</span>, completed: <span class="hljs-literal">true</span>, priority: <span class="hljs-string">&apos;medium&apos;</span> },
+    { id: <span class="hljs-number">3</span>, text: <span class="hljs-string">&apos;&#x90E8;&#x7F72;&#x5230;&#x751F;&#x7522;&#x74B0;&#x5883;&apos;</span>, completed: <span class="hljs-literal">false</span>, priority: <span class="hljs-string">&apos;low&apos;</span> }
+  ]);
+
+  <span class="hljs-keyword">const</span> [newTodo, setNewTodo] = useState(<span class="hljs-string">&apos;&apos;</span>);
+  <span class="hljs-keyword">const</span> [filter, setFilter] = useState(<span class="hljs-string">&apos;all&apos;</span>); <span class="hljs-comment">// all, active, completed</span>
+  <span class="hljs-keyword">const</span> [sortBy, setSortBy] = useState(<span class="hljs-string">&apos;id&apos;</span>); <span class="hljs-comment">// id, priority, text</span>
+
+  <span class="hljs-comment">// &#x65B0;&#x589E; Todo</span>
+  <span class="hljs-keyword">const</span> addTodo = () =&gt; {
+    <span class="hljs-keyword">if</span> (newTodo.trim()) {
+      <span class="hljs-keyword">const</span> todo = {
+        id: <span class="hljs-built_in">Date</span>.now(),
+        text: newTodo.trim(),
+        completed: <span class="hljs-literal">false</span>,
+        priority: <span class="hljs-string">&apos;medium&apos;</span>
+      };
+      setTodos([...todos, todo]);
+      setNewTodo(<span class="hljs-string">&apos;&apos;</span>);
+    }
+  };
+
+  <span class="hljs-comment">// &#x5207;&#x63DB;&#x5B8C;&#x6210;&#x72C0;&#x614B;</span>
+  <span class="hljs-keyword">const</span> toggleTodo = (id) =&gt; {
+    setTodos(todos.map(todo =&gt;
+      todo.id === id ? { ...todo, completed: !todo.completed } : todo
+    ));
+  };
+
+  <span class="hljs-comment">// &#x522A;&#x9664; Todo</span>
+  <span class="hljs-keyword">const</span> deleteTodo = (id) =&gt; {
+    setTodos(todos.filter(todo =&gt; todo.id !== id));
+  };
+
+  <span class="hljs-comment">// &#x66F4;&#x65B0;&#x512A;&#x5148;&#x7D1A;</span>
+  <span class="hljs-keyword">const</span> updatePriority = (id, priority) =&gt; {
+    setTodos(todos.map(todo =&gt;
+      todo.id === id ? { ...todo, priority } : todo
+    ));
+  };
+
+  <span class="hljs-comment">// &#x904E;&#x6FFE; Todos</span>
+  <span class="hljs-keyword">const</span> getFilteredTodos = () =&gt; {
+    <span class="hljs-keyword">let</span> filtered = todos;
+
+    <span class="hljs-keyword">switch</span> (filter) {
+      <span class="hljs-keyword">case</span> <span class="hljs-string">&apos;active&apos;</span>:
+        filtered = todos.filter(todo =&gt; !todo.completed);
+        <span class="hljs-keyword">break</span>;
+      <span class="hljs-keyword">case</span> <span class="hljs-string">&apos;completed&apos;</span>:
+        filtered = todos.filter(todo =&gt; todo.completed);
+        <span class="hljs-keyword">break</span>;
+      <span class="hljs-keyword">default</span>:
+        filtered = todos;
+    }
+
+    <span class="hljs-comment">// &#x6392;&#x5E8F;</span>
+    <span class="hljs-keyword">return</span> filtered.sort((a, b) =&gt; {
+      <span class="hljs-keyword">switch</span> (sortBy) {
+        <span class="hljs-keyword">case</span> <span class="hljs-string">&apos;priority&apos;</span>:
+          <span class="hljs-keyword">const</span> priorityOrder = { high: <span class="hljs-number">3</span>, medium: <span class="hljs-number">2</span>, low: <span class="hljs-number">1</span> };
+          <span class="hljs-keyword">return</span> priorityOrder[b.priority] - priorityOrder[a.priority];
+        <span class="hljs-keyword">case</span> <span class="hljs-string">&apos;text&apos;</span>:
+          <span class="hljs-keyword">return</span> a.text.localeCompare(b.text);
+        <span class="hljs-keyword">default</span>:
+          <span class="hljs-keyword">return</span> a.id - b.id;
+      }
+    });
+  };
+
+  <span class="hljs-keyword">const</span> priorityColors = {
+    high: <span class="hljs-string">&apos;#ffebee&apos;</span>,
+    medium: <span class="hljs-string">&apos;#fff3e0&apos;</span>,
+    low: <span class="hljs-string">&apos;#e8f5e8&apos;</span>
+  };
+
+  <span class="hljs-keyword">const</span> priorityLabels = {
+    high: <span class="hljs-string">&apos;&#x9AD8;&apos;</span>,
+    medium: <span class="hljs-string">&apos;&#x4E2D;&apos;</span>,
+    low: <span class="hljs-string">&apos;&#x4F4E;&apos;</span>
+  };
+
+  <span class="hljs-keyword">return</span> (
+    &lt;div style={{ maxWidth: &apos;600px&apos;, margin: &apos;0 auto&apos;, padding: &apos;20px&apos; }}&gt;
+      &lt;h2&gt;Todo &#x61C9;&#x7528;&#x7A0B;&#x5F0F;&lt;/h2&gt;
+
+      {/* &#x65B0;&#x589E; Todo */}
+      &lt;div style={{ marginBottom: &apos;20px&apos; }}&gt;
+        &lt;input
+          type=&quot;text&quot;
+          value={newTodo}
+          onChange={(e) =&gt; setNewTodo(e.target.value)}
+          onKeyPress={(e) =&gt; e.key === &apos;Enter&apos; &amp;&amp; addTodo()}
+          placeholder=&quot;&#x8F38;&#x5165;&#x65B0;&#x7684;&#x5F85;&#x8FA6;&#x4E8B;&#x9805;...&quot;
+          style={{
+            padding: &apos;8px&apos;,
+            width: &apos;70%&apos;,
+            marginRight: &apos;10px&apos;,
+            border: &apos;1px solid #ddd&apos;,
+            borderRadius: &apos;4px&apos;
+          }}
+        /&gt;
+        &lt;button
+          onClick={addTodo}
+          style={{
+            padding: &apos;8px 16px&apos;,
+            backgroundColor: &apos;#4CAF50&apos;,
+            color: &apos;white&apos;,
+            border: &apos;none&apos;,
+            borderRadius: &apos;4px&apos;,
+            cursor: &apos;pointer&apos;
+          }}
+        &gt;
+          &#x65B0;&#x589E;
+        &lt;/button&gt;
+      &lt;/div&gt;
+
+      {/* &#x904E;&#x6FFE;&#x548C;&#x6392;&#x5E8F;&#x63A7;&#x5236; */}
+      &lt;div style={{
+        display: &apos;flex&apos;,
+        justifyContent: &apos;space-between&apos;,
+        marginBottom: &apos;20px&apos;,
+        padding: &apos;10px&apos;,
+        backgroundColor: &apos;#f5f5f5&apos;,
+        borderRadius: &apos;4px&apos;
+      }}&gt;
+        &lt;div&gt;
+          &lt;label&gt;&#x904E;&#x6FFE;: &lt;/label&gt;
+          &lt;select value={filter} onChange={(e) =&gt; setFilter(e.target.value)}&gt;
+            &lt;option value=&quot;all&quot;&gt;&#x5168;&#x90E8;&lt;/option&gt;
+            &lt;option value=&quot;active&quot;&gt;&#x672A;&#x5B8C;&#x6210;&lt;/option&gt;
+            &lt;option value=&quot;completed&quot;&gt;&#x5DF2;&#x5B8C;&#x6210;&lt;/option&gt;
+          &lt;/select&gt;
+        &lt;/div&gt;
+        &lt;div&gt;
+          &lt;label&gt;&#x6392;&#x5E8F;: &lt;/label&gt;
+          &lt;select value={sortBy} onChange={(e) =&gt; setSortBy(e.target.value)}&gt;
+            &lt;option value=&quot;id&quot;&gt;&#x5EFA;&#x7ACB;&#x9806;&#x5E8F;&lt;/option&gt;
+            &lt;option value=&quot;priority&quot;&gt;&#x512A;&#x5148;&#x7D1A;&lt;/option&gt;
+            &lt;option value=&quot;text&quot;&gt;&#x540D;&#x7A31;&lt;/option&gt;
+          &lt;/select&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+
+      {/* Todo &#x5217;&#x8868; */}
+      &lt;div&gt;
+        {getFilteredTodos().length === 0 ? (
+          &lt;p style={{ textAlign: &apos;center&apos;, color: &apos;#666&apos; }}&gt;
+            {filter === &apos;all&apos; ? &apos;&#x6C92;&#x6709;&#x5F85;&#x8FA6;&#x4E8B;&#x9805;&apos; : `&#x6C92;&#x6709;${filter === &apos;active&apos; ? &apos;&#x672A;&#x5B8C;&#x6210;&apos; : &apos;&#x5DF2;&#x5B8C;&#x6210;&apos;}&#x7684;&#x4E8B;&#x9805;`}
+          &lt;/p&gt;
+        ) : (
+          getFilteredTodos().map(todo =&gt; (
+            &lt;div
+              key={todo.id} // &#x4F7F;&#x7528;&#x552F;&#x4E00; ID
+              style={{
+                display: &apos;flex&apos;,
+                alignItems: &apos;center&apos;,
+                padding: &apos;10px&apos;,
+                margin: &apos;5px 0&apos;,
+                backgroundColor: priorityColors[todo.priority],
+                border: &apos;1px solid #ddd&apos;,
+                borderRadius: &apos;4px&apos;,
+                opacity: todo.completed ? 0.7 : 1
+              }}
+            &gt;
+              &lt;input
+                type=&quot;checkbox&quot;
+                checked={todo.completed}
+                onChange={() =&gt; toggleTodo(todo.id)}
+                style={{ marginRight: &apos;10px&apos; }}
+              /&gt;
+
+              &lt;span
+                style={{
+                  flex: 1,
+                  textDecoration: todo.completed ? &apos;line-through&apos; : &apos;none&apos;,
+                  color: todo.completed ? &apos;#666&apos; : &apos;#000&apos;
+                }}
+              &gt;
+                {todo.text}
+              &lt;/span&gt;
+
+              &lt;select
+                value={todo.priority}
+                onChange={(e) =&gt; updatePriority(todo.id, e.target.value)}
+                style={{ margin: &apos;0 10px&apos;, padding: &apos;2px&apos; }}
+                disabled={todo.completed}
+              &gt;
+                &lt;option value=&quot;high&quot;&gt;&#x9AD8;&#x512A;&#x5148;&#x7D1A;&lt;/option&gt;
+                &lt;option value=&quot;medium&quot;&gt;&#x4E2D;&#x512A;&#x5148;&#x7D1A;&lt;/option&gt;
+                &lt;option value=&quot;low&quot;&gt;&#x4F4E;&#x512A;&#x5148;&#x7D1A;&lt;/option&gt;
+              &lt;/select&gt;
+
+              &lt;span style={{
+                padding: &apos;2px 6px&apos;,
+                borderRadius: &apos;3px&apos;,
+                fontSize: &apos;0.8em&apos;,
+                backgroundColor: &apos;rgba(0,0,0,0.1)&apos;,
+                marginRight: &apos;10px&apos;
+              }}&gt;
+                {priorityLabels[todo.priority]}
+              &lt;/span&gt;
+
+              &lt;button
+                onClick={() =&gt; deleteTodo(todo.id)}
+                style={{
+                  padding: &apos;4px 8px&apos;,
+                  backgroundColor: &apos;#f44336&apos;,
+                  color: &apos;white&apos;,
+                  border: &apos;none&apos;,
+                  borderRadius: &apos;3px&apos;,
+                  cursor: &apos;pointer&apos;,
+                  fontSize: &apos;0.8em&apos;
+                }}
+              &gt;
+                &#x522A;&#x9664;
+              &lt;/button&gt;
+            &lt;/div&gt;
+          ))
+        )}
+      &lt;/div&gt;
+
+      {/* &#x7D71;&#x8A08;&#x8CC7;&#x8A0A; */}
+      &lt;div style={{
+        marginTop: &apos;20px&apos;,
+        padding: &apos;10px&apos;,
+        backgroundColor: &apos;#f9f9f9&apos;,
+        borderRadius: &apos;4px&apos;,
+        fontSize: &apos;0.9em&apos;,
+        color: &apos;#666&apos;
+      }}&gt;
+        &#x7E3D;&#x8A08;: {todos.length} &#x9805; | 
+        &#x5DF2;&#x5B8C;&#x6210;: {todos.filter(t =&gt; t.completed).length} &#x9805; | 
+        &#x672A;&#x5B8C;&#x6210;: {todos.filter(t =&gt; !t.completed).length} &#x9805;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  );
+}
+
+export default TodoApp;
+</code></pre>
+<h3 id="106-&#x5DE2;&#x72C0;&#x5217;&#x8868;">10.6 &#x5DE2;&#x72C0;&#x5217;&#x8868;</h3>
+<p>&#x7576;&#x8655;&#x7406;&#x5DE2;&#x72C0;&#x8CC7;&#x6599;&#x7D50;&#x69CB;&#x6642;&#xFF0C;&#x6BCF;&#x4E00;&#x5C64;&#x90FD;&#x9700;&#x8981;&#x9069;&#x7576;&#x7684; Keys&#xFF1A;</p>
+<pre><code class="lang-javascript"><span class="hljs-keyword">import</span> React, { useState } <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;react&apos;</span>;
+
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">NestedList</span>(<span class="hljs-params"></span>) </span>{
+  <span class="hljs-keyword">const</span> [departments] = useState([
+    {
+      id: <span class="hljs-string">&apos;dept_1&apos;</span>,
+      name: <span class="hljs-string">&apos;&#x6280;&#x8853;&#x90E8;&apos;</span>,
+      employees: [
+        { id: <span class="hljs-string">&apos;emp_1&apos;</span>, name: <span class="hljs-string">&apos;&#x5F35;&#x5DE5;&#x7A0B;&#x5E2B;&apos;</span>, position: <span class="hljs-string">&apos;&#x524D;&#x7AEF;&#x5DE5;&#x7A0B;&#x5E2B;&apos;</span> },
+        { id: <span class="hljs-string">&apos;emp_2&apos;</span>, name: <span class="hljs-string">&apos;&#x674E;&#x5DE5;&#x7A0B;&#x5E2B;&apos;</span>, position: <span class="hljs-string">&apos;&#x5F8C;&#x7AEF;&#x5DE5;&#x7A0B;&#x5E2B;&apos;</span> },
+        { id: <span class="hljs-string">&apos;emp_3&apos;</span>, name: <span class="hljs-string">&apos;&#x738B;&#x5DE5;&#x7A0B;&#x5E2B;&apos;</span>, position: <span class="hljs-string">&apos;DevOps &#x5DE5;&#x7A0B;&#x5E2B;&apos;</span> }
+      ]
+    },
+    {
+      id: <span class="hljs-string">&apos;dept_2&apos;</span>,
+      name: <span class="hljs-string">&apos;&#x8A2D;&#x8A08;&#x90E8;&apos;</span>,
+      employees: [
+        { id: <span class="hljs-string">&apos;emp_4&apos;</span>, name: <span class="hljs-string">&apos;&#x9673;&#x8A2D;&#x8A08;&#x5E2B;&apos;</span>, position: <span class="hljs-string">&apos;UI &#x8A2D;&#x8A08;&#x5E2B;&apos;</span> },
+        { id: <span class="hljs-string">&apos;emp_5&apos;</span>, name: <span class="hljs-string">&apos;&#x6797;&#x8A2D;&#x8A08;&#x5E2B;&apos;</span>, position: <span class="hljs-string">&apos;UX &#x8A2D;&#x8A08;&#x5E2B;&apos;</span> }
+      ]
+    },
+    {
+      id: <span class="hljs-string">&apos;dept_3&apos;</span>,
+      name: <span class="hljs-string">&apos;&#x884C;&#x92B7;&#x90E8;&apos;</span>,
+      employees: [
+        { id: <span class="hljs-string">&apos;emp_6&apos;</span>, name: <span class="hljs-string">&apos;&#x9EC3;&#x7D93;&#x7406;&apos;</span>, position: <span class="hljs-string">&apos;&#x884C;&#x92B7;&#x7D93;&#x7406;&apos;</span> },
+        { id: <span class="hljs-string">&apos;emp_7&apos;</span>, name: <span class="hljs-string">&apos;&#x5433;&#x5C08;&#x54E1;&apos;</span>, position: <span class="hljs-string">&apos;&#x884C;&#x92B7;&#x5C08;&#x54E1;&apos;</span> },
+        { id: <span class="hljs-string">&apos;emp_8&apos;</span>, name: <span class="hljs-string">&apos;&#x8A31;&#x5C08;&#x54E1;&apos;</span>, position: <span class="hljs-string">&apos;&#x793E;&#x7FA4;&#x7D93;&#x7406;&apos;</span> }
+      ]
+    }
+  ]);
+
+  <span class="hljs-keyword">const</span> [expandedDepts, setExpandedDepts] = useState(<span class="hljs-keyword">new</span> <span class="hljs-built_in">Set</span>([<span class="hljs-string">&apos;dept_1&apos;</span>]));
+
+  <span class="hljs-keyword">const</span> toggleDepartment = (deptId) =&gt; {
+    <span class="hljs-keyword">const</span> newExpanded = <span class="hljs-keyword">new</span> <span class="hljs-built_in">Set</span>(expandedDepts);
+    <span class="hljs-keyword">if</span> (newExpanded.has(deptId)) {
+      newExpanded.delete(deptId);
+    } <span class="hljs-keyword">else</span> {
+      newExpanded.add(deptId);
+    }
+    setExpandedDepts(newExpanded);
+  };
+
+  <span class="hljs-keyword">return</span> (
+    &lt;div style={{ maxWidth: &apos;500px&apos;, margin: &apos;0 auto&apos;, padding: &apos;20px&apos; }}&gt;
+      &lt;h2&gt;&#x516C;&#x53F8;&#x7D44;&#x7E54;&#x67B6;&#x69CB;&lt;/h2&gt;
+
+      {departments.map(department =&gt; (
+        &lt;div
+          key={department.id} // &#x90E8;&#x9580;&#x5C64;&#x7D1A;&#x7684; key
+          style={{
+            border: &apos;1px solid #ddd&apos;,
+            borderRadius: &apos;8px&apos;,
+            marginBottom: &apos;10px&apos;,
+            overflow: &apos;hidden&apos;
+          }}
+        &gt;
+          {/* &#x90E8;&#x9580;&#x6A19;&#x984C; */}
+          &lt;div
+            onClick={() =&gt; toggleDepartment(department.id)}
+            style={{
+              padding: &apos;15px&apos;,
+              backgroundColor: &apos;#f5f5f5&apos;,
+              cursor: &apos;pointer&apos;,
+              display: &apos;flex&apos;,
+              justifyContent: &apos;space-between&apos;,
+              alignItems: &apos;center&apos;
+            }}
+          &gt;
+            &lt;h3 style={{ margin: 0 }}&gt;{department.name}&lt;/h3&gt;
+            &lt;span style={{ fontSize: &apos;1.2em&apos; }}&gt;
+              {expandedDepts.has(department.id) ? &apos;&#x25BC;&apos; : &apos;&#x25B6;&apos;}
+            &lt;/span&gt;
+          &lt;/div&gt;
+
+          {/* &#x54E1;&#x5DE5;&#x5217;&#x8868; */}
+          {expandedDepts.has(department.id) &amp;&amp; (
+            &lt;div style={{ padding: &apos;10px&apos; }}&gt;
+              {department.employees.length === 0 ? (
+                &lt;p style={{ color: &apos;#666&apos;, fontStyle: &apos;italic&apos; }}&gt;
+                  &#x66AB;&#x7121;&#x54E1;&#x5DE5;
+                &lt;/p&gt;
+              ) : (
+                department.employees.map(employee =&gt; (
+                  &lt;div
+                    key={employee.id} // &#x54E1;&#x5DE5;&#x5C64;&#x7D1A;&#x7684; key
+                    style={{
+                      display: &apos;flex&apos;,
+                      justifyContent: &apos;space-between&apos;,
+                      alignItems: &apos;center&apos;,
+                      padding: &apos;8px 12px&apos;,
+                      margin: &apos;5px 0&apos;,
+                      backgroundColor: &apos;#f9f9f9&apos;,
+                      borderRadius: &apos;4px&apos;
+                    }}
+                  &gt;
+                    &lt;span style={{ fontWeight: &apos;bold&apos; }}&gt;
+                      {employee.name}
+                    &lt;/span&gt;
+                    &lt;span style={{ color: &apos;#666&apos;, fontSize: &apos;0.9em&apos; }}&gt;
+                      {employee.position}
+                    &lt;/span&gt;
+                  &lt;/div&gt;
+                ))
+              )}
+            &lt;/div&gt;
+          )}
+        &lt;/div&gt;
+      ))}
+
+      &lt;div style={{
+        marginTop: &apos;20px&apos;,
+        padding: &apos;10px&apos;,
+        backgroundColor: &apos;#e3f2fd&apos;,
+        borderRadius: &apos;4px&apos;,
+        fontSize: &apos;0.9em&apos;
+      }}&gt;
+        &lt;strong&gt;&#x7D71;&#x8A08;:&lt;/strong&gt;
+        &lt;br /&gt;
+        &#x90E8;&#x9580;&#x6578;: {departments.length}
+        &lt;br /&gt;
+        &#x7E3D;&#x54E1;&#x5DE5;&#x6578;: {departments.reduce((total, dept) =&gt; total + dept.employees.length, 0)}
+      &lt;/div&gt;
+    &lt;/div&gt;
+  );
+}
+
+export default NestedList;
+</code></pre>
+<h3 id="107-&#x6548;&#x80FD;&#x512A;&#x5316;">10.7 &#x6548;&#x80FD;&#x512A;&#x5316;</h3>
+<h4 id="1071-&#x4F7F;&#x7528;-reactmemo-&#x512A;&#x5316;&#x5217;&#x8868;&#x9805;&#x76EE;">10.7.1 &#x4F7F;&#x7528; React.memo &#x512A;&#x5316;&#x5217;&#x8868;&#x9805;&#x76EE;</h4>
+<pre><code class="lang-javascript"><span class="hljs-keyword">import</span> React, { useState, memo, useCallback } <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;react&apos;</span>;
+
+<span class="hljs-comment">// &#x4F7F;&#x7528; memo &#x512A;&#x5316;&#x5217;&#x8868;&#x9805;&#x76EE;</span>
+<span class="hljs-keyword">const</span> ListItem = memo(<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">ListItem</span>(<span class="hljs-params">{ item, onToggle, onDelete, onUpdate }</span>) </span>{
+  <span class="hljs-built_in">console</span>.log(<span class="hljs-string">`&#x6E32;&#x67D3;&#x9805;&#x76EE;: <span class="hljs-subst">${item.name}</span>`</span>); <span class="hljs-comment">// &#x7528;&#x65BC;&#x89C0;&#x5BDF;&#x91CD;&#x65B0;&#x6E32;&#x67D3;</span>
+
+  <span class="hljs-keyword">return</span> (
+    &lt;div style={{
+      display: &apos;flex&apos;,
+      alignItems: &apos;center&apos;,
+      padding: &apos;10px&apos;,
+      border: &apos;1px solid #ddd&apos;,
+      borderRadius: &apos;4px&apos;,
+      margin: &apos;5px 0&apos;,
+      backgroundColor: item.completed ? &apos;#f0f8ff&apos; : &apos;#fff&apos;
+    }}&gt;
+      &lt;input
+        type=&quot;checkbox&quot;
+        checked={item.completed}
+        onChange={() =&gt; onToggle(item.id)}
+        style={{ marginRight: &apos;10px&apos; }}
+      /&gt;
+
+      &lt;input
+        type=&quot;text&quot;
+        value={item.name}
+        onChange={(e) =&gt; onUpdate(item.id, e.target.value)}
+        style={{
+          flex: 1,
+          border: &apos;none&apos;,
+          backgroundColor: &apos;transparent&apos;,
+          textDecoration: item.completed ? &apos;line-through&apos; : &apos;none&apos;
+        }}
+      /&gt;
+
+      &lt;button
+        onClick={() =&gt; onDelete(item.id)}
+        style={{
+          marginLeft: &apos;10px&apos;,
+          padding: &apos;4px 8px&apos;,
+          backgroundColor: &apos;#f44336&apos;,
+          color: &apos;white&apos;,
+          border: &apos;none&apos;,
+          borderRadius: &apos;3px&apos;,
+          cursor: &apos;pointer&apos;
+        }}
+      &gt;
+        &#x522A;&#x9664;
+      &lt;/button&gt;
+    &lt;/div&gt;
+  );
+});
+
+function OptimizedList() {
+  const [items, setItems] = useState([
+    { id: 1, name: &apos;&#x5B78;&#x7FD2; React&apos;, completed: false },
+    { id: 2, name: &apos;&#x5EFA;&#x7ACB;&#x5C08;&#x6848;&apos;, completed: true },
+    { id: 3, name: &apos;&#x512A;&#x5316;&#x6548;&#x80FD;&apos;, completed: false }
+  ]);
+
+  // &#x4F7F;&#x7528; useCallback &#x78BA;&#x4FDD;&#x51FD;&#x5F0F;&#x5F15;&#x7528;&#x7A69;&#x5B9A;
+  const handleToggle = useCallback((id) =&gt; {
+    setItems(prev =&gt; prev.map(item =&gt;
+      item.id === id ? { ...item, completed: !item.completed } : item
+    ));
+  }, []);
+
+  const handleDelete = useCallback((id) =&gt; {
+    setItems(prev =&gt; prev.filter(item =&gt; item.id !== id));
+  }, []);
+
+  const handleUpdate = useCallback((id, newName) =&gt; {
+    setItems(prev =&gt; prev.map(item =&gt;
+      item.id === id ? { ...item, name: newName } : item
+    ));
+  }, []);
+
+  const addItem = () =&gt; {
+    const newItem = {
+      id: Date.now(),
+      name: `&#x65B0;&#x9805;&#x76EE; ${items.length + 1}`,
+      completed: false
+    };
+    setItems(prev =&gt; [...prev, newItem]);
+  };
+
+  return (
+    &lt;div style={{ maxWidth: &apos;500px&apos;, margin: &apos;0 auto&apos;, padding: &apos;20px&apos; }}&gt;
+      &lt;h2&gt;&#x6548;&#x80FD;&#x512A;&#x5316;&#x7684;&#x5217;&#x8868;&lt;/h2&gt;
+
+      &lt;button
+        onClick={addItem}
+        style={{
+          marginBottom: &apos;10px&apos;,
+          padding: &apos;8px 16px&apos;,
+          backgroundColor: &apos;#4CAF50&apos;,
+          color: &apos;white&apos;,
+          border: &apos;none&apos;,
+          borderRadius: &apos;4px&apos;,
+          cursor: &apos;pointer&apos;
+        }}
+      &gt;
+        &#x65B0;&#x589E;&#x9805;&#x76EE;
+      &lt;/button&gt;
+
+      &lt;div&gt;
+        {items.map(item =&gt; (
+          &lt;ListItem
+            key={item.id}
+            item={item}
+            onToggle={handleToggle}
+            onDelete={handleDelete}
+            onUpdate={handleUpdate}
+          /&gt;
+        ))}
+      &lt;/div&gt;
+
+      &lt;p style={{ fontSize: &apos;0.9em&apos;, color: &apos;#666&apos;, marginTop: &apos;20px&apos; }}&gt;
+        &#x6253;&#x958B;&#x958B;&#x767C;&#x8005;&#x5DE5;&#x5177;&#x7684; Console &#x67E5;&#x770B;&#x91CD;&#x65B0;&#x6E32;&#x67D3;&#x60C5;&#x6CC1;&#x3002;
+        &#x4F7F;&#x7528; React.memo &#x548C; useCallback &#x53EF;&#x4EE5;&#x907F;&#x514D;&#x4E0D;&#x5FC5;&#x8981;&#x7684;&#x91CD;&#x65B0;&#x6E32;&#x67D3;&#x3002;
+      &lt;/p&gt;
+    &lt;/div&gt;
+  );
+}
+
+export default OptimizedList;
+</code></pre>
+<h3 id="108-&#x7E3D;&#x7D50;">10.8 &#x7E3D;&#x7D50;</h3>
+<p>&#x5217;&#x8868;&#x6E32;&#x67D3;&#x548C; Keys &#x662F; React &#x958B;&#x767C;&#x4E2D;&#x7684;&#x57FA;&#x790E;&#x6982;&#x5FF5;&#xFF0C;&#x4F46;&#x5B83;&#x5011;&#x5C0D;&#x61C9;&#x7528;&#x7A0B;&#x5F0F;&#x7684;&#x6548;&#x80FD;&#x548C;&#x6B63;&#x78BA;&#x6027;&#x6709;&#x91CD;&#x8981;&#x5F71;&#x97FF;&#x3002;</p>
+<p><strong>&#x672C;&#x7AE0;&#x91CD;&#x9EDE;&#xFF1A;</strong></p>
+<ul>
+<li><strong>&#x5217;&#x8868;&#x6E32;&#x67D3;&#x57FA;&#x790E;</strong>&#xFF1A;&#x4F7F;&#x7528; <code>map()</code> &#x51FD;&#x5F0F;&#x6E32;&#x67D3;&#x52D5;&#x614B;&#x5217;&#x8868;</li>
+<li><strong>Keys &#x7684;&#x91CD;&#x8981;&#x6027;</strong>&#xFF1A;&#x8B58;&#x5225;&#x5217;&#x8868;&#x9805;&#x76EE;&#x8B8A;&#x5316;&#xFF0C;&#x78BA;&#x4FDD;&#x6B63;&#x78BA;&#x7684;&#x66F4;&#x65B0;&#x884C;&#x70BA;</li>
+<li><strong>Key &#x9078;&#x64C7;&#x539F;&#x5247;</strong>&#xFF1A;&#x552F;&#x4E00;&#x6027;&#x3001;&#x7A69;&#x5B9A;&#x6027;&#x3001;&#x53EF;&#x9810;&#x6E2C;&#x6027;</li>
+<li><strong>&#x52D5;&#x614B;&#x5217;&#x8868;&#x64CD;&#x4F5C;</strong>&#xFF1A;&#x65B0;&#x589E;&#x3001;&#x522A;&#x9664;&#x3001;&#x6392;&#x5E8F;&#x3001;&#x904E;&#x6FFE;</li>
+<li><strong>&#x5DE2;&#x72C0;&#x5217;&#x8868;</strong>&#xFF1A;&#x8655;&#x7406;&#x8907;&#x96DC;&#x7684;&#x8CC7;&#x6599;&#x7D50;&#x69CB;</li>
+<li><strong>&#x6548;&#x80FD;&#x512A;&#x5316;</strong>&#xFF1A;&#x4F7F;&#x7528; React.memo &#x548C; useCallback</li>
+</ul>
+<p><strong>Key &#x7684;&#x6700;&#x4F73;&#x5BE6;&#x8E10;&#xFF1A;</strong></p>
+<ol>
+<li><strong>&#x512A;&#x5148;&#x4F7F;&#x7528;&#x552F;&#x4E00;&#x4E14;&#x7A69;&#x5B9A;&#x7684; ID</strong>&#xFF1A;&#x5982;&#x8CC7;&#x6599;&#x5EAB;&#x4E3B;&#x9375;</li>
+<li><strong>&#x907F;&#x514D;&#x4F7F;&#x7528;&#x9663;&#x5217;&#x7D22;&#x5F15;</strong>&#xFF1A;&#x9664;&#x975E;&#x5217;&#x8868;&#x662F;&#x975C;&#x614B;&#x4E14;&#x4E0D;&#x6703;&#x6539;&#x8B8A;</li>
+<li><strong>&#x7D44;&#x5408; Key</strong>&#xFF1A;&#x5C0D;&#x65BC;&#x8907;&#x96DC;&#x7684;&#x8CC7;&#x6599;&#x7D50;&#x69CB;&#xFF0C;&#x53EF;&#x4EE5;&#x7D44;&#x5408;&#x591A;&#x500B;&#x503C;</li>
+<li><strong>&#x4FDD;&#x6301; Key &#x7C21;&#x55AE;</strong>&#xFF1A;&#x4E0D;&#x8981;&#x5728; Key &#x4E2D;&#x5305;&#x542B;&#x904E;&#x65BC;&#x8907;&#x96DC;&#x7684;&#x908F;&#x8F2F;</li>
+</ol>
+<p><strong>&#x6548;&#x80FD;&#x512A;&#x5316;&#x6280;&#x5DE7;&#xFF1A;</strong></p>
+<ol>
+<li><strong>&#x4F7F;&#x7528; React.memo</strong>&#xFF1A;&#x907F;&#x514D;&#x4E0D;&#x5FC5;&#x8981;&#x7684;&#x91CD;&#x65B0;&#x6E32;&#x67D3;</li>
+<li><strong>&#x7A69;&#x5B9A;&#x7684;&#x51FD;&#x5F0F;&#x5F15;&#x7528;</strong>&#xFF1A;&#x4F7F;&#x7528; useCallback &#x5275;&#x5EFA;&#x7A69;&#x5B9A;&#x7684;&#x4E8B;&#x4EF6;&#x8655;&#x7406;&#x51FD;&#x5F0F;</li>
+<li><strong>&#x5408;&#x7406;&#x7684;&#x8CC7;&#x6599;&#x7D50;&#x69CB;</strong>&#xFF1A;&#x8A2D;&#x8A08;&#x4FBF;&#x65BC;&#x6E32;&#x67D3;&#x548C;&#x66F4;&#x65B0;&#x7684;&#x8CC7;&#x6599;&#x683C;&#x5F0F;</li>
+</ol>
+<p>&#x638C;&#x63E1;&#x5217;&#x8868;&#x6E32;&#x67D3;&#x548C; Keys &#x7684;&#x6B63;&#x78BA;&#x7528;&#x6CD5;&#xFF0C;&#x80FD;&#x8B93;&#x4F60;&#x5EFA;&#x7ACB;&#x9AD8;&#x6548;&#x80FD;&#x3001;&#x884C;&#x70BA;&#x6B63;&#x78BA;&#x7684; React &#x61C9;&#x7528;&#x7A0B;&#x5F0F;&#x3002;&#x5728;&#x4E0B;&#x4E00;&#x7AE0;&#x4E2D;&#xFF0C;&#x6211;&#x5011;&#x5C07;&#x5B78;&#x7FD2;&#x8868;&#x55AE;&#x8655;&#x7406;&#xFF0C;&#x9019;&#x662F;&#x5EFA;&#x7ACB;&#x4E92;&#x52D5;&#x5F0F;&#x61C9;&#x7528;&#x7A0B;&#x5F0F;&#x7684;&#x53E6;&#x4E00;&#x500B;&#x91CD;&#x8981;&#x4E3B;&#x984C;&#x3002;</p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="chapter9.html" class="navigation navigation-prev " aria-label="Previous page: 第9章：條件渲染 (Conditional Rendering)">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="chapter11.html" class="navigation navigation-next " aria-label="Next page: 第11章：表單處理 (Forms)">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"第10章：列表與 Keys (Lists and Keys)","level":"1.11","depth":1,"next":{"title":"第11章：表單處理 (Forms)","level":"1.12","depth":1,"path":"chapter11.md","ref":"chapter11.md","articles":[]},"previous":{"title":"第9章：條件渲染 (Conditional Rendering)","level":"1.10","depth":1,"path":"chapter9.md","ref":"chapter9.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css","website":"styles/website.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css","website":"styles/website.css"}},"file":{"path":"chapter10.md","mtime":"2025-06-02T12:05:31.330Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2025-06-02T17:15:06.817Z"},"basePath":".","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="gitbook/gitbook.js"></script>
+    <script src="gitbook/theme.js"></script>
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

@@ -1,0 +1,1152 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>第12章：狀態提升 (Lifting State Up) · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="chapter13.html" />
+    
+    
+    <link rel="prev" href="chapter11.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    教程目錄
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="chapter1.html">
+            
+                <a href="chapter1.html">
+            
+                    
+                    第1章：React 簡介與前端開發環境回顧
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="chapter2.html">
+            
+                <a href="chapter2.html">
+            
+                    
+                    第2章：JSX 深度解析
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="chapter3.html">
+            
+                <a href="chapter3.html">
+            
+                    
+                    第3章：React 元件詳解
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="chapter4.html">
+            
+                <a href="chapter4.html">
+            
+                    
+                    第4章：Props (屬性) 的運用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="chapter5.html">
+            
+                <a href="chapter5.html">
+            
+                    
+                    第5章：State (狀態) 的介紹與使用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="chapter6.html">
+            
+                <a href="chapter6.html">
+            
+                    
+                    第6章：元件生命週期與 useEffect Hook
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="chapter7.html">
+            
+                <a href="chapter7.html">
+            
+                    
+                    第7章：自訂 Hooks (Custom Hooks)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="chapter8.html">
+            
+                <a href="chapter8.html">
+            
+                    
+                    第8章：事件處理 (Handling Events)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10" data-path="chapter9.html">
+            
+                <a href="chapter9.html">
+            
+                    
+                    第9章：條件渲染 (Conditional Rendering)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11" data-path="chapter10.html">
+            
+                <a href="chapter10.html">
+            
+                    
+                    第10章：列表與 Keys (Lists and Keys)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12" data-path="chapter11.html">
+            
+                <a href="chapter11.html">
+            
+                    
+                    第11章：表單處理 (Forms)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.13" data-path="chapter12.html">
+            
+                <a href="chapter12.html">
+            
+                    
+                    第12章：狀態提升 (Lifting State Up)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14" data-path="chapter13.html">
+            
+                <a href="chapter13.html">
+            
+                    
+                    第13章：組合 vs 繼承
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15" data-path="chapter14.html">
+            
+                <a href="chapter14.html">
+            
+                    
+                    第14章：React 哲學與最佳實踐
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="." >第12章：狀態提升 (Lifting State Up)</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="&#x7B2C;-12-&#x7AE0;&#xFF1A;&#x72C0;&#x614B;&#x63D0;&#x5347;-lifting-state-up">&#x7B2C; 12 &#x7AE0;&#xFF1A;&#x72C0;&#x614B;&#x63D0;&#x5347; (Lifting State Up)</h1>
+<p>&#x72C0;&#x614B;&#x63D0;&#x5347;&#x662F; React &#x4E2D;&#x4E00;&#x500B;&#x6838;&#x5FC3;&#x6982;&#x5FF5;&#xFF0C;&#x7576;&#x591A;&#x500B;&#x5143;&#x4EF6;&#x9700;&#x8981;&#x5171;&#x4EAB;&#x76F8;&#x540C;&#x7684;&#x72C0;&#x614B;&#x6642;&#xFF0C;&#x6211;&#x5011;&#x9700;&#x8981;&#x5C07;&#x9019;&#x500B;&#x72C0;&#x614B;&#x63D0;&#x5347;&#x5230;&#x5B83;&#x5011;&#x6700;&#x8FD1;&#x7684;&#x5171;&#x540C;&#x7236;&#x5143;&#x4EF6;&#x4E2D;&#x3002;&#x9019;&#x6A23;&#x53EF;&#x4EE5;&#x78BA;&#x4FDD;&#x8CC7;&#x6599;&#x7684;&#x4E00;&#x81F4;&#x6027;&#xFF0C;&#x4E26;&#x9075;&#x5FAA; React &#x7684;&#x55AE;&#x5411;&#x8CC7;&#x6599;&#x6D41;&#x539F;&#x5247;&#x3002;&#x5728;&#x9019;&#x4E00;&#x7AE0;&#x4E2D;&#xFF0C;&#x6211;&#x5011;&#x5C07;&#x6DF1;&#x5165;&#x5B78;&#x7FD2;&#x4F55;&#x6642;&#x4EE5;&#x53CA;&#x5982;&#x4F55;&#x9032;&#x884C;&#x72C0;&#x614B;&#x63D0;&#x5347;&#x3002;</p>
+<h3 id="121-&#x7576;&#x591A;&#x500B;&#x5143;&#x4EF6;&#x9700;&#x8981;&#x5171;&#x4EAB;&#x72C0;&#x614B;&#x6642;">12.1 &#x7576;&#x591A;&#x500B;&#x5143;&#x4EF6;&#x9700;&#x8981;&#x5171;&#x4EAB;&#x72C0;&#x614B;&#x6642;</h3>
+<h4 id="1211-&#x8B58;&#x5225;&#x5171;&#x4EAB;&#x72C0;&#x614B;&#x7684;&#x9700;&#x6C42;">12.1.1 &#x8B58;&#x5225;&#x5171;&#x4EAB;&#x72C0;&#x614B;&#x7684;&#x9700;&#x6C42;</h4>
+<p>&#x7576;&#x6211;&#x5011;&#x9047;&#x5230;&#x4EE5;&#x4E0B;&#x60C5;&#x6CC1;&#x6642;&#xFF0C;&#x901A;&#x5E38;&#x9700;&#x8981;&#x8003;&#x616E;&#x72C0;&#x614B;&#x63D0;&#x5347;&#xFF1A;</p>
+<ol>
+<li><strong>&#x591A;&#x500B;&#x5B50;&#x5143;&#x4EF6;&#x9700;&#x8981;&#x5B58;&#x53D6;&#x76F8;&#x540C;&#x7684;&#x8CC7;&#x6599;</strong></li>
+<li><strong>&#x4E00;&#x500B;&#x5143;&#x4EF6;&#x7684;&#x8B8A;&#x66F4;&#x9700;&#x8981;&#x5F71;&#x97FF;&#x53E6;&#x4E00;&#x500B;&#x5143;&#x4EF6;</strong></li>
+<li><strong>&#x5143;&#x4EF6;&#x4E4B;&#x9593;&#x9700;&#x8981;&#x540C;&#x6B65;&#x72C0;&#x614B;</strong></li>
+<li><strong>&#x9700;&#x8981;&#x5728;&#x591A;&#x500B;&#x5143;&#x4EF6;&#x9593;&#x50B3;&#x905E;&#x76F8;&#x540C;&#x7684;&#x8CC7;&#x6599;</strong></li>
+</ol>
+<h4 id="1212-&#x554F;&#x984C;&#x793A;&#x4F8B;&#xFF1A;&#x5206;&#x96E2;&#x7684;&#x6EAB;&#x5EA6;&#x8F38;&#x5165;">12.1.2 &#x554F;&#x984C;&#x793A;&#x4F8B;&#xFF1A;&#x5206;&#x96E2;&#x7684;&#x6EAB;&#x5EA6;&#x8F38;&#x5165;</h4>
+<p>&#x8B93;&#x6211;&#x5011;&#x770B;&#x4E00;&#x500B;&#x5178;&#x578B;&#x7684;&#x4F8B;&#x5B50;&#xFF0C;&#x5169;&#x500B;&#x6EAB;&#x5EA6;&#x8F38;&#x5165;&#x5143;&#x4EF6;&#x9700;&#x8981;&#x4FDD;&#x6301;&#x540C;&#x6B65;&#xFF1A;</p>
+<pre><code class="lang-javascript"><span class="hljs-comment">// &#x274C; &#x554F;&#x984C;&#x7248;&#x672C;&#xFF1A;&#x5404;&#x81EA;&#x7DAD;&#x8B77;&#x72C0;&#x614B;&#xFF0C;&#x7121;&#x6CD5;&#x540C;&#x6B65;</span>
+<span class="hljs-keyword">import</span> React, { useState } <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;react&apos;</span>;
+
+<span class="hljs-comment">// &#x651D;&#x6C0F;&#x6EAB;&#x5EA6;&#x8F38;&#x5165;&#x5143;&#x4EF6;</span>
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">CelsiusInput</span>(<span class="hljs-params"></span>) </span>{
+  <span class="hljs-keyword">const</span> [temperature, setTemperature] = useState(<span class="hljs-string">&apos;&apos;</span>);
+
+  <span class="hljs-keyword">const</span> handleChange = (e) =&gt; {
+    setTemperature(e.target.value);
+  };
+
+  <span class="hljs-keyword">return</span> (
+    &lt;fieldset&gt;
+      &lt;legend&gt;&#x8ACB;&#x8F38;&#x5165;&#x651D;&#x6C0F;&#x6EAB;&#x5EA6;&#xFF1A;&lt;/legend&gt;
+      &lt;input 
+        value={temperature}
+        onChange={handleChange}
+        placeholder=&quot;&#x651D;&#x6C0F;&#x6EAB;&#x5EA6;&quot;
+      /&gt;
+    &lt;/fieldset&gt;
+  );
+}
+
+// &#x83EF;&#x6C0F;&#x6EAB;&#x5EA6;&#x8F38;&#x5165;&#x5143;&#x4EF6;
+function FahrenheitInput() {
+  const [temperature, setTemperature] = useState(&apos;&apos;);
+
+  const handleChange = (e) =&gt; {
+    setTemperature(e.target.value);
+  };
+
+  return (
+    &lt;fieldset&gt;
+      &lt;legend&gt;&#x8ACB;&#x8F38;&#x5165;&#x83EF;&#x6C0F;&#x6EAB;&#x5EA6;&#xFF1A;&lt;/legend&gt;
+      &lt;input 
+        value={temperature}
+        onChange={handleChange}
+        placeholder=&quot;&#x83EF;&#x6C0F;&#x6EAB;&#x5EA6;&quot;
+      /&gt;
+    &lt;/fieldset&gt;
+  );
+}
+
+// &#x4E3B;&#x8981;&#x5143;&#x4EF6;
+function TemperatureApp() {
+  return (
+    &lt;div&gt;
+      &lt;h2&gt;&#x6EAB;&#x5EA6;&#x8F49;&#x63DB;&#x5668;&lt;/h2&gt;
+      &lt;CelsiusInput /&gt;
+      &lt;FahrenheitInput /&gt;
+    &lt;/div&gt;
+  );
+}
+</code></pre>
+<p>&#x5728;&#x4E0A;&#x9762;&#x7684;&#x4F8B;&#x5B50;&#x4E2D;&#xFF0C;&#x5169;&#x500B;&#x6EAB;&#x5EA6;&#x8F38;&#x5165;&#x5143;&#x4EF6;&#x7121;&#x6CD5;&#x76F8;&#x4E92;&#x540C;&#x6B65;&#xFF0C;&#x9019;&#x4E0D;&#x7B26;&#x5408;&#x6211;&#x5011;&#x7684;&#x9700;&#x6C42;&#x3002;</p>
+<h3 id="122-&#x5C07;&#x72C0;&#x614B;&#x63D0;&#x5347;&#x5230;&#x6700;&#x8FD1;&#x7684;&#x5171;&#x540C;&#x7236;&#x5143;&#x4EF6;">12.2 &#x5C07;&#x72C0;&#x614B;&#x63D0;&#x5347;&#x5230;&#x6700;&#x8FD1;&#x7684;&#x5171;&#x540C;&#x7236;&#x5143;&#x4EF6;</h3>
+<h4 id="1221-&#x72C0;&#x614B;&#x63D0;&#x5347;&#x7684;&#x6B65;&#x9A5F;">12.2.1 &#x72C0;&#x614B;&#x63D0;&#x5347;&#x7684;&#x6B65;&#x9A5F;</h4>
+<ol>
+<li><strong>&#x79FB;&#x9664;&#x5B50;&#x5143;&#x4EF6;&#x4E2D;&#x7684; state</strong></li>
+<li><strong>&#x5C07;&#x5171;&#x4EAB;&#x7684;&#x8CC7;&#x6599;&#x901A;&#x904E; props &#x50B3;&#x905E;&#x7D66;&#x5B50;&#x5143;&#x4EF6;</strong></li>
+<li><strong>&#x5C07;&#x66F4;&#x65B0;&#x72C0;&#x614B;&#x7684;&#x51FD;&#x5F0F;&#x4F5C;&#x70BA; props &#x50B3;&#x905E;&#x7D66;&#x5B50;&#x5143;&#x4EF6;</strong></li>
+<li><strong>&#x5728;&#x7236;&#x5143;&#x4EF6;&#x4E2D;&#x7D71;&#x4E00;&#x7BA1;&#x7406;&#x5171;&#x4EAB;&#x7684;&#x72C0;&#x614B;</strong></li>
+</ol>
+<h4 id="1222-&#x6539;&#x9032;&#x7684;&#x6EAB;&#x5EA6;&#x8F49;&#x63DB;&#x5668;">12.2.2 &#x6539;&#x9032;&#x7684;&#x6EAB;&#x5EA6;&#x8F49;&#x63DB;&#x5668;</h4>
+<pre><code class="lang-javascript"><span class="hljs-keyword">import</span> React, { useState } <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;react&apos;</span>;
+
+<span class="hljs-comment">// &#x6EAB;&#x5EA6;&#x8F49;&#x63DB;&#x51FD;&#x5F0F;</span>
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">toCelsius</span>(<span class="hljs-params">fahrenheit</span>) </span>{
+  <span class="hljs-keyword">return</span> ((fahrenheit - <span class="hljs-number">32</span>) * <span class="hljs-number">5</span>) / <span class="hljs-number">9</span>;
+}
+
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">toFahrenheit</span>(<span class="hljs-params">celsius</span>) </span>{
+  <span class="hljs-keyword">return</span> (celsius * <span class="hljs-number">9</span>) / <span class="hljs-number">5</span> + <span class="hljs-number">32</span>;
+}
+
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">tryConvert</span>(<span class="hljs-params">temperature, convert</span>) </span>{
+  <span class="hljs-keyword">const</span> input = <span class="hljs-built_in">parseFloat</span>(temperature);
+  <span class="hljs-keyword">if</span> (<span class="hljs-built_in">Number</span>.isNaN(input)) {
+    <span class="hljs-keyword">return</span> <span class="hljs-string">&apos;&apos;</span>;
+  }
+  <span class="hljs-keyword">const</span> output = convert(input);
+  <span class="hljs-keyword">const</span> rounded = <span class="hljs-built_in">Math</span>.round(output * <span class="hljs-number">1000</span>) / <span class="hljs-number">1000</span>;
+  <span class="hljs-keyword">return</span> rounded.toString();
+}
+
+<span class="hljs-comment">// &#x2705; &#x6539;&#x9032;&#x7248;&#x672C;&#xFF1A;&#x53D7;&#x63A7;&#x5143;&#x4EF6;&#xFF0C;&#x901A;&#x904E; props &#x63A5;&#x6536;&#x72C0;&#x614B;&#x548C;&#x66F4;&#x65B0;&#x51FD;&#x5F0F;</span>
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">TemperatureInput</span>(<span class="hljs-params">{ scale, temperature, onTemperatureChange }</span>) </span>{
+  <span class="hljs-keyword">const</span> handleChange = (e) =&gt; {
+    onTemperatureChange(e.target.value);
+  };
+
+  <span class="hljs-keyword">const</span> scaleNames = {
+    c: <span class="hljs-string">&apos;&#x651D;&#x6C0F;&apos;</span>,
+    f: <span class="hljs-string">&apos;&#x83EF;&#x6C0F;&apos;</span>
+  };
+
+  <span class="hljs-keyword">return</span> (
+    &lt;fieldset&gt;
+      &lt;legend&gt;&#x8ACB;&#x8F38;&#x5165;{scaleNames[scale]}&#x6EAB;&#x5EA6;&#xFF1A;&lt;/legend&gt;
+      &lt;input 
+        value={temperature}
+        onChange={handleChange}
+        placeholder={`${scaleNames[scale]}&#x6EAB;&#x5EA6;`}
+      /&gt;
+    &lt;/fieldset&gt;
+  );
+}
+
+// &#x6C34;&#x6CB8;&#x9A30;&#x5224;&#x65B7;&#x5143;&#x4EF6;
+function BoilingVerdict({ celsius }) {
+  if (celsius &gt;= 100) {
+    return &lt;p style={{color: &apos;red&apos;, fontWeight: &apos;bold&apos;}}&gt;&#x6C34;&#x6703;&#x6CB8;&#x9A30;&#xFF01;&#x1F525;&lt;/p&gt;;
+  }
+  return &lt;p style={{color: &apos;blue&apos;}}&gt;&#x6C34;&#x4E0D;&#x6703;&#x6CB8;&#x9A30;&#x3002;&#x2744;&#xFE0F;&lt;/p&gt;;
+}
+
+// &#x2705; &#x7236;&#x5143;&#x4EF6;&#x7D71;&#x4E00;&#x7BA1;&#x7406;&#x72C0;&#x614B;
+function TemperatureCalculator() {
+  const [temperature, setTemperature] = useState(&apos;&apos;);
+  const [scale, setScale] = useState(&apos;c&apos;);
+
+  const handleCelsiusChange = (temperature) =&gt; {
+    setScale(&apos;c&apos;);
+    setTemperature(temperature);
+  };
+
+  const handleFahrenheitChange = (temperature) =&gt; {
+    setScale(&apos;f&apos;);
+    setTemperature(temperature);
+  };
+
+  const celsius = scale === &apos;f&apos; 
+    ? tryConvert(temperature, toCelsius) 
+    : temperature;
+
+  const fahrenheit = scale === &apos;c&apos; 
+    ? tryConvert(temperature, toFahrenheit) 
+    : temperature;
+
+  return (
+    &lt;div&gt;
+      &lt;h2&gt;&#x6EAB;&#x5EA6;&#x8F49;&#x63DB;&#x5668;&lt;/h2&gt;
+      &lt;TemperatureInput
+        scale=&quot;c&quot;
+        temperature={celsius}
+        onTemperatureChange={handleCelsiusChange}
+      /&gt;
+      &lt;TemperatureInput
+        scale=&quot;f&quot;
+        temperature={fahrenheit}
+        onTemperatureChange={handleFahrenheitChange}
+      /&gt;
+      &lt;BoilingVerdict celsius={parseFloat(celsius)} /&gt;
+    &lt;/div&gt;
+  );
+}
+</code></pre>
+<h4 id="1223-&#x8CFC;&#x7269;&#x8ECA;&#x7BC4;&#x4F8B;">12.2.3 &#x8CFC;&#x7269;&#x8ECA;&#x7BC4;&#x4F8B;</h4>
+<p>&#x8B93;&#x6211;&#x5011;&#x770B;&#x53E6;&#x4E00;&#x500B;&#x5BE6;&#x969B;&#x7684;&#x4F8B;&#x5B50;&#xFF1A;&#x8CFC;&#x7269;&#x8ECA;&#x7CFB;&#x7D71;</p>
+<pre><code class="lang-javascript"><span class="hljs-keyword">import</span> React, { useState } <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;react&apos;</span>;
+
+<span class="hljs-comment">// &#x5546;&#x54C1;&#x5361;&#x7247;&#x5143;&#x4EF6;</span>
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">ProductCard</span>(<span class="hljs-params">{ product, onAddToCart }</span>) </span>{
+  <span class="hljs-keyword">return</span> (
+    <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">style</span>=<span class="hljs-string">{{</span>
+      <span class="hljs-attr">border:</span> &apos;<span class="hljs-attr">1px</span> <span class="hljs-attr">solid</span> #<span class="hljs-attr">ddd</span>&apos;,
+      <span class="hljs-attr">borderRadius:</span> &apos;<span class="hljs-attr">8px</span>&apos;,
+      <span class="hljs-attr">padding:</span> &apos;<span class="hljs-attr">16px</span>&apos;,
+      <span class="hljs-attr">margin:</span> &apos;<span class="hljs-attr">8px</span>&apos;,
+      <span class="hljs-attr">maxWidth:</span> &apos;<span class="hljs-attr">200px</span>&apos;
+    }}&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">h3</span>&gt;</span>{product.name}<span class="hljs-tag">&lt;/<span class="hljs-name">h3</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>&#x50F9;&#x683C;: ${product.price}<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>&#x5EAB;&#x5B58;: {product.stock}<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">button</span> 
+        <span class="hljs-attr">onClick</span>=<span class="hljs-string">{()</span> =&gt;</span> onAddToCart(product)}
+        disabled={product.stock === 0}
+        style={{
+          backgroundColor: product.stock &gt; 0 ? &apos;#007bff&apos; : &apos;#6c757d&apos;,
+          color: &apos;white&apos;,
+          border: &apos;none&apos;,
+          padding: &apos;8px 16px&apos;,
+          borderRadius: &apos;4px&apos;,
+          cursor: product.stock &gt; 0 ? &apos;pointer&apos; : &apos;not-allowed&apos;
+        }}
+      &gt;
+        {product.stock &gt; 0 ? &apos;&#x52A0;&#x5165;&#x8CFC;&#x7269;&#x8ECA;&apos; : &apos;&#x7F3A;&#x8CA8;&apos;}
+      <span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></span>
+  );
+}
+
+<span class="hljs-comment">// &#x8CFC;&#x7269;&#x8ECA;&#x5143;&#x4EF6;</span>
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">ShoppingCart</span>(<span class="hljs-params">{ items, onUpdateQuantity, onRemoveItem }</span>) </span>{
+  <span class="hljs-keyword">const</span> total = items.reduce((sum, item) =&gt; sum + (item.price * item.quantity), <span class="hljs-number">0</span>);
+
+  <span class="hljs-keyword">if</span> (items.length === <span class="hljs-number">0</span>) {
+    <span class="hljs-keyword">return</span> (
+      <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">style</span>=<span class="hljs-string">{{</span> <span class="hljs-attr">padding:</span> &apos;<span class="hljs-attr">16px</span>&apos;, <span class="hljs-attr">border:</span> &apos;<span class="hljs-attr">1px</span> <span class="hljs-attr">solid</span> #<span class="hljs-attr">ddd</span>&apos;, <span class="hljs-attr">borderRadius:</span> &apos;<span class="hljs-attr">8px</span>&apos; }}&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">h3</span>&gt;</span>&#x8CFC;&#x7269;&#x8ECA;<span class="hljs-tag">&lt;/<span class="hljs-name">h3</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>&#x8CFC;&#x7269;&#x8ECA;&#x662F;&#x7A7A;&#x7684;<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></span>
+    );
+  }
+
+  <span class="hljs-keyword">return</span> (
+    <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">style</span>=<span class="hljs-string">{{</span> <span class="hljs-attr">padding:</span> &apos;<span class="hljs-attr">16px</span>&apos;, <span class="hljs-attr">border:</span> &apos;<span class="hljs-attr">1px</span> <span class="hljs-attr">solid</span> #<span class="hljs-attr">ddd</span>&apos;, <span class="hljs-attr">borderRadius:</span> &apos;<span class="hljs-attr">8px</span>&apos; }}&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">h3</span>&gt;</span>&#x8CFC;&#x7269;&#x8ECA; ({items.length} &#x9805;&#x5546;&#x54C1;)<span class="hljs-tag">&lt;/<span class="hljs-name">h3</span>&gt;</span>
+      {items.map(item =&gt; (
+        <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">key</span>=<span class="hljs-string">{item.id}</span> <span class="hljs-attr">style</span>=<span class="hljs-string">{{</span> 
+          <span class="hljs-attr">display:</span> &apos;<span class="hljs-attr">flex</span>&apos;, 
+          <span class="hljs-attr">justifyContent:</span> &apos;<span class="hljs-attr">space-between</span>&apos;, 
+          <span class="hljs-attr">alignItems:</span> &apos;<span class="hljs-attr">center</span>&apos;,
+          <span class="hljs-attr">padding:</span> &apos;<span class="hljs-attr">8px</span> <span class="hljs-attr">0</span>&apos;,
+          <span class="hljs-attr">borderBottom:</span> &apos;<span class="hljs-attr">1px</span> <span class="hljs-attr">solid</span> #<span class="hljs-attr">eee</span>&apos;
+        }}&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-name">span</span>&gt;</span>{item.name}<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">style</span>=<span class="hljs-string">{{</span> <span class="hljs-attr">display:</span> &apos;<span class="hljs-attr">flex</span>&apos;, <span class="hljs-attr">alignItems:</span> &apos;<span class="hljs-attr">center</span>&apos;, <span class="hljs-attr">gap:</span> &apos;<span class="hljs-attr">8px</span>&apos; }}&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">button</span> 
+              <span class="hljs-attr">onClick</span>=<span class="hljs-string">{()</span> =&gt;</span> onUpdateQuantity(item.id, item.quantity - 1)}
+              disabled={item.quantity <span class="hljs-tag">&lt;<span class="hljs-name">=</span> <span class="hljs-attr">1</span>}
+            &gt;</span>
+              -
+            <span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">span</span>&gt;</span>{item.quantity}<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">button</span> 
+              <span class="hljs-attr">onClick</span>=<span class="hljs-string">{()</span> =&gt;</span> onUpdateQuantity(item.id, item.quantity + 1)}
+            &gt;
+              +
+            <span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">span</span>&gt;</span>${(item.price * item.quantity).toFixed(2)}<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">button</span> 
+              <span class="hljs-attr">onClick</span>=<span class="hljs-string">{()</span> =&gt;</span> onRemoveItem(item.id)}
+              style={{ color: &apos;red&apos;, marginLeft: &apos;8px&apos; }}
+            &gt;
+              &#x79FB;&#x9664;
+            <span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+          <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+      ))}
+      <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">style</span>=<span class="hljs-string">{{</span> <span class="hljs-attr">marginTop:</span> &apos;<span class="hljs-attr">16px</span>&apos;, <span class="hljs-attr">fontWeight:</span> &apos;<span class="hljs-attr">bold</span>&apos; }}&gt;</span>
+        &#x7E3D;&#x8A08;: ${total.toFixed(2)}
+      <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></span>
+  );
+}
+
+<span class="hljs-comment">// &#x4E3B;&#x8981;&#x7684;&#x8CFC;&#x7269;&#x61C9;&#x7528;&#x7A0B;&#x5F0F;</span>
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">ShoppingApp</span>(<span class="hljs-params"></span>) </span>{
+  <span class="hljs-keyword">const</span> [products] = useState([
+    { id: <span class="hljs-number">1</span>, name: <span class="hljs-string">&apos;iPhone 15&apos;</span>, price: <span class="hljs-number">999</span>, stock: <span class="hljs-number">5</span> },
+    { id: <span class="hljs-number">2</span>, name: <span class="hljs-string">&apos;MacBook Pro&apos;</span>, price: <span class="hljs-number">1999</span>, stock: <span class="hljs-number">3</span> },
+    { id: <span class="hljs-number">3</span>, name: <span class="hljs-string">&apos;AirPods&apos;</span>, price: <span class="hljs-number">179</span>, stock: <span class="hljs-number">0</span> },
+    { id: <span class="hljs-number">4</span>, name: <span class="hljs-string">&apos;iPad&apos;</span>, price: <span class="hljs-number">599</span>, stock: <span class="hljs-number">8</span> }
+  ]);
+
+  <span class="hljs-keyword">const</span> [cartItems, setCartItems] = useState([]);
+
+  <span class="hljs-comment">// &#x6DFB;&#x52A0;&#x5546;&#x54C1;&#x5230;&#x8CFC;&#x7269;&#x8ECA;</span>
+  <span class="hljs-keyword">const</span> handleAddToCart = (product) =&gt; {
+    setCartItems(prevItems =&gt; {
+      <span class="hljs-keyword">const</span> existingItem = prevItems.find(item =&gt; item.id === product.id);
+
+      <span class="hljs-keyword">if</span> (existingItem) {
+        <span class="hljs-comment">// &#x5982;&#x679C;&#x5546;&#x54C1;&#x5DF2;&#x5B58;&#x5728;&#xFF0C;&#x589E;&#x52A0;&#x6578;&#x91CF;</span>
+        <span class="hljs-keyword">return</span> prevItems.map(item =&gt;
+          item.id === product.id
+            ? { ...item, quantity: item.quantity + <span class="hljs-number">1</span> }
+            : item
+        );
+      } <span class="hljs-keyword">else</span> {
+        <span class="hljs-comment">// &#x5982;&#x679C;&#x662F;&#x65B0;&#x5546;&#x54C1;&#xFF0C;&#x6DFB;&#x52A0;&#x5230;&#x8CFC;&#x7269;&#x8ECA;</span>
+        <span class="hljs-keyword">return</span> [...prevItems, { ...product, quantity: <span class="hljs-number">1</span> }];
+      }
+    });
+  };
+
+  <span class="hljs-comment">// &#x66F4;&#x65B0;&#x5546;&#x54C1;&#x6578;&#x91CF;</span>
+  <span class="hljs-keyword">const</span> handleUpdateQuantity = (productId, newQuantity) =&gt; {
+    <span class="hljs-keyword">if</span> (newQuantity &lt;= <span class="hljs-number">0</span>) {
+      handleRemoveItem(productId);
+      <span class="hljs-keyword">return</span>;
+    }
+
+    setCartItems(prevItems =&gt;
+      prevItems.map(item =&gt;
+        item.id === productId
+          ? { ...item, quantity: newQuantity }
+          : item
+      )
+    );
+  };
+
+  <span class="hljs-comment">// &#x79FB;&#x9664;&#x5546;&#x54C1;</span>
+  <span class="hljs-keyword">const</span> handleRemoveItem = (productId) =&gt; {
+    setCartItems(prevItems =&gt;
+      prevItems.filter(item =&gt; item.id !== productId)
+    );
+  };
+
+  <span class="hljs-keyword">return</span> (
+    &lt;div style={{ padding: &apos;20px&apos; }}&gt;
+      &lt;h1&gt;&#x7DDA;&#x4E0A;&#x5546;&#x5E97;&lt;/h1&gt;
+      &lt;div style={{ display: &apos;flex&apos;, gap: &apos;20px&apos; }}&gt;
+        &lt;div&gt;
+          &lt;h2&gt;&#x5546;&#x54C1;&#x5217;&#x8868;&lt;/h2&gt;
+          &lt;div style={{ display: &apos;flex&apos;, flexWrap: &apos;wrap&apos; }}&gt;
+            {products.map(product =&gt; (
+              &lt;ProductCard
+                key={product.id}
+                product={product}
+                onAddToCart={handleAddToCart}
+              /&gt;
+            ))}
+          &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div style={{ minWidth: &apos;300px&apos; }}&gt;
+          &lt;ShoppingCart
+            items={cartItems}
+            onUpdateQuantity={handleUpdateQuantity}
+            onRemoveItem={handleRemoveItem}
+          /&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  );
+}
+</code></pre>
+<h3 id="123-&#x55AE;&#x5411;&#x8CC7;&#x6599;&#x6D41;&#x7684;&#x56DE;&#x9867;">12.3 &#x55AE;&#x5411;&#x8CC7;&#x6599;&#x6D41;&#x7684;&#x56DE;&#x9867;</h3>
+<h4 id="1231-react-&#x7684;&#x8CC7;&#x6599;&#x6D41;&#x539F;&#x5247;">12.3.1 React &#x7684;&#x8CC7;&#x6599;&#x6D41;&#x539F;&#x5247;</h4>
+<p>React &#x9075;&#x5FAA;<strong>&#x55AE;&#x5411;&#x8CC7;&#x6599;&#x6D41;</strong>&#xFF08;One-Way Data Flow&#xFF09;&#x7684;&#x539F;&#x5247;&#xFF1A;</p>
+<ol>
+<li><strong>&#x72C0;&#x614B;&#x5411;&#x4E0B;&#x6D41;&#x52D5;</strong>&#xFF1A;&#x7236;&#x5143;&#x4EF6;&#x901A;&#x904E; props &#x5C07;&#x8CC7;&#x6599;&#x50B3;&#x905E;&#x7D66;&#x5B50;&#x5143;&#x4EF6;</li>
+<li><strong>&#x4E8B;&#x4EF6;&#x5411;&#x4E0A;&#x5192;&#x6CE1;</strong>&#xFF1A;&#x5B50;&#x5143;&#x4EF6;&#x901A;&#x904E;&#x56DE;&#x8ABF;&#x51FD;&#x5F0F;&#x5C07;&#x4E8B;&#x4EF6;&#x50B3;&#x905E;&#x7D66;&#x7236;&#x5143;&#x4EF6;</li>
+<li><strong>&#x72C0;&#x614B;&#x96C6;&#x4E2D;&#x7BA1;&#x7406;</strong>&#xFF1A;&#x5171;&#x4EAB;&#x72C0;&#x614B;&#x5B58;&#x653E;&#x5728;&#x5171;&#x540C;&#x7684;&#x7236;&#x5143;&#x4EF6;&#x4E2D;</li>
+</ol>
+<pre><code class="lang-javascript"><span class="hljs-comment">// &#x8CC7;&#x6599;&#x6D41;&#x793A;&#x610F;&#x5716;&#xFF1A;</span>
+<span class="hljs-comment">// Parent Component (&#x72C0;&#x614B;&#x5B58;&#x653E;&#x8655;)</span>
+<span class="hljs-comment">//     &#x2193; props (&#x8CC7;&#x6599;&#x5411;&#x4E0B;&#x6D41;&#x52D5;)</span>
+<span class="hljs-comment">// Child Component A    Child Component B</span>
+<span class="hljs-comment">//     &#x2191; callback        &#x2191; callback</span>
+<span class="hljs-comment">// (&#x4E8B;&#x4EF6;&#x5411;&#x4E0A;&#x5192;&#x6CE1;)    (&#x4E8B;&#x4EF6;&#x5411;&#x4E0A;&#x5192;&#x6CE1;)</span>
+</code></pre>
+<h4 id="1232-&#x55AE;&#x5411;&#x8CC7;&#x6599;&#x6D41;&#x7684;&#x512A;&#x52E2;">12.3.2 &#x55AE;&#x5411;&#x8CC7;&#x6599;&#x6D41;&#x7684;&#x512A;&#x52E2;</h4>
+<pre><code class="lang-javascript"><span class="hljs-keyword">import</span> React, { useState } <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;react&apos;</span>;
+
+<span class="hljs-comment">// &#x5C55;&#x793A;&#x55AE;&#x5411;&#x8CC7;&#x6599;&#x6D41;&#x7684;&#x5B8C;&#x6574;&#x7BC4;&#x4F8B;</span>
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">DataFlowExample</span>(<span class="hljs-params"></span>) </span>{
+  <span class="hljs-comment">// 1. &#x72C0;&#x614B;&#x96C6;&#x4E2D;&#x5728;&#x7236;&#x5143;&#x4EF6;</span>
+  <span class="hljs-keyword">const</span> [users, setUsers] = useState([
+    { id: <span class="hljs-number">1</span>, name: <span class="hljs-string">&apos;&#x5F35;&#x4E09;&apos;</span>, active: <span class="hljs-literal">true</span> },
+    { id: <span class="hljs-number">2</span>, name: <span class="hljs-string">&apos;&#x674E;&#x56DB;&apos;</span>, active: <span class="hljs-literal">false</span> },
+    { id: <span class="hljs-number">3</span>, name: <span class="hljs-string">&apos;&#x738B;&#x4E94;&apos;</span>, active: <span class="hljs-literal">true</span> }
+  ]);
+
+  <span class="hljs-keyword">const</span> [selectedUserId, setSelectedUserId] = useState(<span class="hljs-literal">null</span>);
+
+  <span class="hljs-comment">// 2. &#x4E8B;&#x4EF6;&#x8655;&#x7406;&#x51FD;&#x5F0F;&#x5728;&#x7236;&#x5143;&#x4EF6;&#x5B9A;&#x7FA9;</span>
+  <span class="hljs-keyword">const</span> handleUserToggle = (userId) =&gt; {
+    setUsers(prevUsers =&gt;
+      prevUsers.map(user =&gt;
+        user.id === userId
+          ? { ...user, active: !user.active }
+          : user
+      )
+    );
+  };
+
+  <span class="hljs-keyword">const</span> handleUserSelect = (userId) =&gt; {
+    setSelectedUserId(userId);
+  };
+
+  <span class="hljs-keyword">const</span> selectedUser = users.find(user =&gt; user.id === selectedUserId);
+  <span class="hljs-keyword">const</span> activeUsers = users.filter(user =&gt; user.active);
+
+  <span class="hljs-keyword">return</span> (
+    &lt;div style={{ padding: &apos;20px&apos; }}&gt;
+      &lt;h2&gt;&#x55AE;&#x5411;&#x8CC7;&#x6599;&#x6D41;&#x793A;&#x4F8B;&lt;/h2&gt;
+
+      {/* 3. &#x5C07;&#x8CC7;&#x6599;&#x548C;&#x51FD;&#x5F0F;&#x901A;&#x904E; props &#x50B3;&#x905E;&#x7D66;&#x5B50;&#x5143;&#x4EF6; */}
+      &lt;UserStats users={users} activeCount={activeUsers.length} /&gt;
+
+      &lt;UserList 
+        users={users}
+        selectedUserId={selectedUserId}
+        onUserToggle={handleUserToggle}
+        onUserSelect={handleUserSelect}
+      /&gt;
+
+      &lt;UserDetail user={selectedUser} /&gt;
+    &lt;/div&gt;
+  );
+}
+
+// &#x4F7F;&#x7528;&#x8005;&#x7D71;&#x8A08;&#x5143;&#x4EF6;&#xFF08;&#x7D14;&#x986F;&#x793A;&#xFF0C;&#x63A5;&#x6536; props&#xFF09;
+function UserStats({ users, activeCount }) {
+  return (
+    &lt;div style={{ 
+      backgroundColor: &apos;#f8f9fa&apos;, 
+      padding: &apos;16px&apos;, 
+      borderRadius: &apos;8px&apos;,
+      marginBottom: &apos;16px&apos;
+    }}&gt;
+      &lt;h3&gt;&#x4F7F;&#x7528;&#x8005;&#x7D71;&#x8A08;&lt;/h3&gt;
+      &lt;p&gt;&#x7E3D;&#x4F7F;&#x7528;&#x8005;&#x6578;: {users.length}&lt;/p&gt;
+      &lt;p&gt;&#x6D3B;&#x8E8D;&#x4F7F;&#x7528;&#x8005;&#x6578;: {activeCount}&lt;/p&gt;
+      &lt;p&gt;&#x975E;&#x6D3B;&#x8E8D;&#x4F7F;&#x7528;&#x8005;&#x6578;: {users.length - activeCount}&lt;/p&gt;
+    &lt;/div&gt;
+  );
+}
+
+// &#x4F7F;&#x7528;&#x8005;&#x5217;&#x8868;&#x5143;&#x4EF6;
+function UserList({ users, selectedUserId, onUserToggle, onUserSelect }) {
+  return (
+    &lt;div style={{ marginBottom: &apos;16px&apos; }}&gt;
+      &lt;h3&gt;&#x4F7F;&#x7528;&#x8005;&#x5217;&#x8868;&lt;/h3&gt;
+      {users.map(user =&gt; (
+        &lt;UserItem
+          key={user.id}
+          user={user}
+          isSelected={user.id === selectedUserId}
+          onToggle={() =&gt; onUserToggle(user.id)}
+          onSelect={() =&gt; onUserSelect(user.id)}
+        /&gt;
+      ))}
+    &lt;/div&gt;
+  );
+}
+
+// &#x4F7F;&#x7528;&#x8005;&#x9805;&#x76EE;&#x5143;&#x4EF6;
+function UserItem({ user, isSelected, onToggle, onSelect }) {
+  return (
+    &lt;div style={{
+      display: &apos;flex&apos;,
+      alignItems: &apos;center&apos;,
+      padding: &apos;8px&apos;,
+      backgroundColor: isSelected ? &apos;#e3f2fd&apos; : &apos;transparent&apos;,
+      border: &apos;1px solid #ddd&apos;,
+      borderRadius: &apos;4px&apos;,
+      marginBottom: &apos;4px&apos;
+    }}&gt;
+      &lt;button 
+        onClick={onSelect}
+        style={{
+          marginRight: &apos;12px&apos;,
+          padding: &apos;4px 8px&apos;,
+          backgroundColor: isSelected ? &apos;#2196f3&apos; : &apos;#f5f5f5&apos;
+        }}
+      &gt;
+        {isSelected ? &apos;&#x5DF2;&#x9078;&#x4E2D;&apos; : &apos;&#x9078;&#x64C7;&apos;}
+      &lt;/button&gt;
+
+      &lt;span style={{ 
+        flex: 1,
+        color: user.active ? &apos;#000&apos; : &apos;#999&apos;,
+        textDecoration: user.active ? &apos;none&apos; : &apos;line-through&apos;
+      }}&gt;
+        {user.name}
+      &lt;/span&gt;
+
+      &lt;button 
+        onClick={onToggle}
+        style={{
+          padding: &apos;4px 8px&apos;,
+          backgroundColor: user.active ? &apos;#4caf50&apos; : &apos;#f44336&apos;,
+          color: &apos;white&apos;,
+          border: &apos;none&apos;,
+          borderRadius: &apos;4px&apos;
+        }}
+      &gt;
+        {user.active ? &apos;&#x505C;&#x7528;&apos; : &apos;&#x555F;&#x7528;&apos;}
+      &lt;/button&gt;
+    &lt;/div&gt;
+  );
+}
+
+// &#x4F7F;&#x7528;&#x8005;&#x8A73;&#x60C5;&#x5143;&#x4EF6;
+function UserDetail({ user }) {
+  if (!user) {
+    return (
+      &lt;div style={{ 
+        padding: &apos;16px&apos;, 
+        border: &apos;1px solid #ddd&apos;, 
+        borderRadius: &apos;8px&apos;,
+        backgroundColor: &apos;#f9f9f9&apos;
+      }}&gt;
+        &lt;p&gt;&#x8ACB;&#x9078;&#x64C7;&#x4E00;&#x500B;&#x4F7F;&#x7528;&#x8005;&#x4EE5;&#x67E5;&#x770B;&#x8A73;&#x60C5;&lt;/p&gt;
+      &lt;/div&gt;
+    );
+  }
+
+  return (
+    &lt;div style={{ 
+      padding: &apos;16px&apos;, 
+      border: &apos;1px solid #ddd&apos;, 
+      borderRadius: &apos;8px&apos;,
+      backgroundColor: &apos;#fff&apos;
+    }}&gt;
+      &lt;h3&gt;&#x4F7F;&#x7528;&#x8005;&#x8A73;&#x60C5;&lt;/h3&gt;
+      &lt;p&gt;&lt;strong&gt;ID:&lt;/strong&gt; {user.id}&lt;/p&gt;
+      &lt;p&gt;&lt;strong&gt;&#x59D3;&#x540D;:&lt;/strong&gt; {user.name}&lt;/p&gt;
+      &lt;p&gt;&lt;strong&gt;&#x72C0;&#x614B;:&lt;/strong&gt; 
+        &lt;span style={{ 
+          color: user.active ? &apos;#4caf50&apos; : &apos;#f44336&apos;,
+          fontWeight: &apos;bold&apos;
+        }}&gt;
+          {user.active ? &apos; &#x6D3B;&#x8E8D;&apos; : &apos; &#x975E;&#x6D3B;&#x8E8D;&apos;}
+        &lt;/span&gt;
+      &lt;/p&gt;
+    &lt;/div&gt;
+  );
+}
+</code></pre>
+<h3 id="124-&#x72C0;&#x614B;&#x63D0;&#x5347;&#x7684;&#x6700;&#x4F73;&#x5BE6;&#x8E10;">12.4 &#x72C0;&#x614B;&#x63D0;&#x5347;&#x7684;&#x6700;&#x4F73;&#x5BE6;&#x8E10;</h3>
+<h4 id="1241-&#x4F55;&#x6642;&#x9032;&#x884C;&#x72C0;&#x614B;&#x63D0;&#x5347;">12.4.1 &#x4F55;&#x6642;&#x9032;&#x884C;&#x72C0;&#x614B;&#x63D0;&#x5347;</h4>
+<ol>
+<li><strong>&#x5144;&#x5F1F;&#x5143;&#x4EF6;&#x9700;&#x8981;&#x5171;&#x4EAB;&#x8CC7;&#x6599;&#x6642;</strong></li>
+<li><strong>&#x591A;&#x500B;&#x5143;&#x4EF6;&#x9700;&#x8981;&#x53CD;&#x6620;&#x76F8;&#x540C;&#x7684;&#x8CC7;&#x6599;&#x8B8A;&#x5316;&#x6642;</strong></li>
+<li><strong>&#x9700;&#x8981;&#x5728;&#x591A;&#x500B;&#x5143;&#x4EF6;&#x9593;&#x540C;&#x6B65;&#x72C0;&#x614B;&#x6642;</strong></li>
+<li><strong>&#x4E00;&#x500B;&#x5143;&#x4EF6;&#x7684;&#x64CD;&#x4F5C;&#x9700;&#x8981;&#x5F71;&#x97FF;&#x53E6;&#x4E00;&#x500B;&#x5143;&#x4EF6;&#x6642;</strong></li>
+</ol>
+<h4 id="1242-&#x5BE6;&#x65BD;&#x539F;&#x5247;">12.4.2 &#x5BE6;&#x65BD;&#x539F;&#x5247;</h4>
+<ul>
+<li><strong>&#x6700;&#x5C0F;&#x5171;&#x540C;&#x7236;&#x5143;&#x4EF6;&#x539F;&#x5247;</strong>&#xFF1A;&#x53EA;&#x5C07;&#x72C0;&#x614B;&#x63D0;&#x5347;&#x5230;&#x5FC5;&#x8981;&#x7684;&#x5C64;&#x7D1A;</li>
+<li><strong>&#x907F;&#x514D;&#x904E;&#x5EA6;&#x63D0;&#x5347;</strong>&#xFF1A;&#x4E0D;&#x8981;&#x5C07;&#x6240;&#x6709;&#x72C0;&#x614B;&#x90FD;&#x653E;&#x5728;&#x6700;&#x9802;&#x5C64;</li>
+<li><strong>&#x4F7F;&#x7528;&#x7D44;&#x5408;</strong>&#xFF1A;&#x901A;&#x904E;&#x7D44;&#x5408;&#x907F;&#x514D;&#x4E0D;&#x5FC5;&#x8981;&#x7684;&#x72C0;&#x614B;&#x63D0;&#x5347;</li>
+<li><strong>&#x5584;&#x7528; Custom Hooks</strong>&#xFF1A;&#x5C01;&#x88DD;&#x76F8;&#x95DC;&#x7684;&#x72C0;&#x614B;&#x908F;&#x8F2F;</li>
+</ul>
+<p>function MinimalLiftingExample() {
+  // &#x9019;&#x500B;&#x72C0;&#x614B;&#x53EA;&#x88AB; ComponentA &#x548C; ComponentB &#x4F7F;&#x7528;
+  const [sharedState, setSharedState] = useState(&apos;&apos;);</p>
+<p>  return (
+    <div>
+      <componenta value="{sharedState}" onchange="{setSharedState}">
+      <componentb value="{sharedState}">
+      <componentc> {/* &#x4E0D;&#x9700;&#x8981; sharedState */}
+    </componentc></componentb></componenta></div>
+  );
+}</p>
+<p>// &#x1F4A1; &#x7B56;&#x7565; 2: &#x4F7F;&#x7528;&#x7D44;&#x5408;&#x4F86;&#x907F;&#x514D;&#x904E;&#x5EA6;&#x63D0;&#x5347;
+function CompositionExample() {
+  return (
+    <div>
+      {/* &#x5C07;&#x76F8;&#x95DC;&#x5143;&#x4EF6;&#x7D44;&#x5408;&#x5728;&#x4E00;&#x8D77; */}
+      <usersection>
+      <productsection>
+    </productsection></usersection></div>
+  );
+}</p>
+<p>function UserSection() {
+  const [userState, setUserState] = useState({});</p>
+<p>  return (
+    <section>
+      <userprofile user="{userState}">
+      <usersettings user="{userState}" onupdate="{setUserState}">
+    </usersettings></userprofile></section>
+  );
+}</p>
+<p>// &#x1F4A1; &#x7B56;&#x7565; 3: &#x4F7F;&#x7528; Custom Hook &#x5C01;&#x88DD;&#x76F8;&#x95DC;&#x908F;&#x8F2F;
+function useSharedCounter(initialValue = 0) {
+  const [count, setCount] = useState(initialValue);</p>
+<p>  const increment = () =&gt; setCount(prev =&gt; prev + 1);
+  const decrement = () =&gt; setCount(prev =&gt; prev - 1);
+  const reset = () =&gt; setCount(initialValue);</p>
+<p>  return {
+    count,
+    increment,
+    decrement,
+    reset
+  };
+}</p>
+<p>function SharedCounterExample() {
+  const { count, increment, decrement, reset } = useSharedCounter(0);</p>
+<p>  return (
+    <div>
+      <counter value="{count}" onincrement="{increment}" ondecrement="{decrement}">
+      <counterdisplay value="{count}">
+      <resetbutton onreset="{reset}">
+    </resetbutton></counterdisplay></counter></div>
+  );
+}</p>
+<pre><code>
+#### 12.4.3 &#x907F;&#x514D;&#x904E;&#x5EA6;&#x63D0;&#x5347;
+
+```javascript
+// &#x274C; &#x904E;&#x5EA6;&#x63D0;&#x5347;&#xFF1A;&#x5C07;&#x6240;&#x6709;&#x72C0;&#x614B;&#x90FD;&#x653E;&#x5728;&#x6700;&#x9802;&#x5C64;
+function OverLiftedExample() {
+  const [userProfile, setUserProfile] = useState({});
+  const [shoppingCart, setShoppingCart] = useState([]);
+  const [searchQuery, setSearchQuery] = useState(&apos;&apos;);
+  const [modalOpen, setModalOpen] = useState(false);
+  const [notifications, setNotifications] = useState([]);
+  // &#x592A;&#x591A;&#x4E0D;&#x76F8;&#x95DC;&#x7684;&#x72C0;&#x614B;...
+
+  return (
+    &lt;div&gt;
+      &lt;Header 
+        searchQuery={searchQuery} 
+        onSearchChange={setSearchQuery}
+        notifications={notifications}
+      /&gt;
+      &lt;UserSection 
+        profile={userProfile} 
+        onProfileUpdate={setUserProfile}
+      /&gt;
+      &lt;ProductSection 
+        cart={shoppingCart}
+        onCartUpdate={setShoppingCart}
+      /&gt;
+      &lt;Modal 
+        isOpen={modalOpen} 
+        onClose={() =&gt; setModalOpen(false)}
+      /&gt;
+    &lt;/div&gt;
+  );
+}
+
+// &#x2705; &#x9069;&#x7576;&#x7684;&#x72C0;&#x614B;&#x5206;&#x96E2;
+function WellStructuredExample() {
+  return (
+    &lt;div&gt;
+      &lt;HeaderSection /&gt;
+      &lt;UserSection /&gt;
+      &lt;ShoppingSection /&gt;
+      &lt;ModalProvider&gt;
+        &lt;App /&gt;
+      &lt;/ModalProvider&gt;
+    &lt;/div&gt;
+  );
+}
+
+function HeaderSection() {
+  const [searchQuery, setSearchQuery] = useState(&apos;&apos;);
+  const [notifications, setNotifications] = useState([]);
+
+  return (
+    &lt;Header 
+      searchQuery={searchQuery} 
+      onSearchChange={setSearchQuery}
+      notifications={notifications}
+    /&gt;
+  );
+}
+</code></pre><h3 id="125-&#x72C0;&#x614B;&#x63D0;&#x5347;&#x8207;&#x6548;&#x80FD;&#x8003;&#x616E;">12.5 &#x72C0;&#x614B;&#x63D0;&#x5347;&#x8207;&#x6548;&#x80FD;&#x8003;&#x616E;</h3>
+<h4 id="1251-&#x4F7F;&#x7528;-reactmemo-&#x907F;&#x514D;&#x4E0D;&#x5FC5;&#x8981;&#x7684;&#x91CD;&#x65B0;&#x6E32;&#x67D3;">12.5.1 &#x4F7F;&#x7528; React.memo &#x907F;&#x514D;&#x4E0D;&#x5FC5;&#x8981;&#x7684;&#x91CD;&#x65B0;&#x6E32;&#x67D3;</h4>
+<pre><code class="lang-javascript"><span class="hljs-keyword">import</span> React, { useState, memo, useCallback } <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;react&apos;</span>;
+
+<span class="hljs-comment">// &#x4F7F;&#x7528; memo &#x5305;&#x88DD;&#x5143;&#x4EF6;&#xFF0C;&#x907F;&#x514D;&#x4E0D;&#x5FC5;&#x8981;&#x7684;&#x91CD;&#x65B0;&#x6E32;&#x67D3;</span>
+<span class="hljs-keyword">const</span> ExpensiveComponent = memo(<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">ExpensiveComponent</span>(<span class="hljs-params">{ 
+  data, 
+  onUpdate 
+}</span>) </span>{
+  <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&apos;ExpensiveComponent &#x91CD;&#x65B0;&#x6E32;&#x67D3;&apos;</span>);
+
+  <span class="hljs-keyword">return</span> (
+    <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">h3</span>&gt;</span>&#x8907;&#x96DC;&#x5143;&#x4EF6;<span class="hljs-tag">&lt;/<span class="hljs-name">h3</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>&#x8CC7;&#x6599;: {JSON.stringify(data)}<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">onClick</span>=<span class="hljs-string">{()</span> =&gt;</span> onUpdate(&apos;new value&apos;)}&gt;
+        &#x66F4;&#x65B0;&#x8CC7;&#x6599;
+      <span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></span>
+  );
+});
+
+<span class="hljs-keyword">const</span> SimpleComponent = memo(<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">SimpleComponent</span>(<span class="hljs-params">{ count }</span>) </span>{
+  <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&apos;SimpleComponent &#x91CD;&#x65B0;&#x6E32;&#x67D3;&apos;</span>);
+
+  <span class="hljs-keyword">return</span> (
+    <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">h3</span>&gt;</span>&#x7C21;&#x55AE;&#x5143;&#x4EF6;<span class="hljs-tag">&lt;/<span class="hljs-name">h3</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>&#x8A08;&#x6578;: {count}<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></span>
+  );
+});
+
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">OptimizedParent</span>(<span class="hljs-params"></span>) </span>{
+  <span class="hljs-keyword">const</span> [count, setCount] = useState(<span class="hljs-number">0</span>);
+  <span class="hljs-keyword">const</span> [expensiveData, setExpensiveData] = useState({ value: <span class="hljs-string">&apos;initial&apos;</span> });
+
+  <span class="hljs-comment">// &#x4F7F;&#x7528; useCallback &#x78BA;&#x4FDD;&#x51FD;&#x5F0F;&#x5F15;&#x7528;&#x7A69;&#x5B9A;</span>
+  <span class="hljs-keyword">const</span> handleExpensiveUpdate = useCallback((newValue) =&gt; {
+    setExpensiveData({ value: newValue });
+  }, []);
+
+  <span class="hljs-keyword">return</span> (
+    &lt;div&gt;
+      &lt;h2&gt;&#x6548;&#x80FD;&#x512A;&#x5316;&#x7BC4;&#x4F8B;&lt;/h2&gt;
+
+      &lt;button onClick={() =&gt; setCount(count + 1)}&gt;
+        &#x589E;&#x52A0;&#x8A08;&#x6578;: {count}
+      &lt;/button&gt;
+
+      {/* SimpleComponent &#x53EA;&#x6703;&#x5728; count &#x6539;&#x8B8A;&#x6642;&#x91CD;&#x65B0;&#x6E32;&#x67D3; */}
+      &lt;SimpleComponent count={count} /&gt;
+
+      {/* ExpensiveComponent &#x53EA;&#x6703;&#x5728; expensiveData &#x6216; handleExpensiveUpdate &#x6539;&#x8B8A;&#x6642;&#x91CD;&#x65B0;&#x6E32;&#x67D3; */}
+      &lt;ExpensiveComponent 
+        data={expensiveData} 
+        onUpdate={handleExpensiveUpdate} 
+      /&gt;
+    &lt;/div&gt;
+  );
+}
+</code></pre>
+<h3 id="126-&#x7E3D;&#x7D50;">12.6 &#x7E3D;&#x7D50;</h3>
+<p>&#x72C0;&#x614B;&#x63D0;&#x5347;&#x662F; React &#x958B;&#x767C;&#x4E2D;&#x7684;&#x4E00;&#x500B;&#x91CD;&#x8981;&#x6982;&#x5FF5;&#xFF0C;&#x5B83;&#x5E6B;&#x52A9;&#x6211;&#x5011;&#xFF1A;</p>
+<h4 id="&#x4E3B;&#x8981;&#x512A;&#x52E2;&#xFF1A;">&#x4E3B;&#x8981;&#x512A;&#x52E2;&#xFF1A;</h4>
+<ol>
+<li><strong>&#x8CC7;&#x6599;&#x4E00;&#x81F4;&#x6027;</strong> - &#x78BA;&#x4FDD;&#x591A;&#x500B;&#x5143;&#x4EF6;&#x986F;&#x793A;&#x7684;&#x8CC7;&#x6599;&#x4FDD;&#x6301;&#x540C;&#x6B65;</li>
+<li><strong>&#x55AE;&#x4E00;&#x771F;&#x76F8;&#x4F86;&#x6E90;</strong> - &#x907F;&#x514D;&#x8CC7;&#x6599;&#x91CD;&#x8907;&#x548C;&#x4E0D;&#x4E00;&#x81F4;&#x7684;&#x554F;&#x984C;</li>
+<li><strong>&#x6E05;&#x6670;&#x7684;&#x8CC7;&#x6599;&#x6D41;</strong> - &#x9075;&#x5FAA;&#x55AE;&#x5411;&#x8CC7;&#x6599;&#x6D41;&#xFF0C;&#x8B93;&#x61C9;&#x7528;&#x7A0B;&#x5F0F;&#x66F4;&#x5BB9;&#x6613;&#x7406;&#x89E3;&#x548C;&#x9664;&#x932F;</li>
+<li><strong>&#x5143;&#x4EF6;&#x91CD;&#x7528;&#x6027;</strong> - &#x5B50;&#x5143;&#x4EF6;&#x8B8A;&#x6210;&#x53D7;&#x63A7;&#x5143;&#x4EF6;&#xFF0C;&#x66F4;&#x5BB9;&#x6613;&#x91CD;&#x7528;</li>
+</ol>
+<h4 id="&#x5BE6;&#x65BD;&#x539F;&#x5247;&#xFF1A;">&#x5BE6;&#x65BD;&#x539F;&#x5247;&#xFF1A;</h4>
+<ol>
+<li><strong>&#x8B58;&#x5225;&#x5171;&#x4EAB;&#x72C0;&#x614B;</strong> - &#x7576;&#x591A;&#x500B;&#x5143;&#x4EF6;&#x9700;&#x8981;&#x76F8;&#x540C;&#x8CC7;&#x6599;&#x6642;</li>
+<li><strong>&#x627E;&#x5230;&#x6700;&#x8FD1;&#x5171;&#x540C;&#x7236;&#x5143;&#x4EF6;</strong> - &#x5C07;&#x72C0;&#x614B;&#x63D0;&#x5347;&#x5230;&#x9069;&#x7576;&#x7684;&#x5C64;&#x7D1A;</li>
+<li><strong>&#x901A;&#x904E; props &#x50B3;&#x905E;&#x8CC7;&#x6599;</strong> - &#x4FDD;&#x6301;&#x55AE;&#x5411;&#x8CC7;&#x6599;&#x6D41;</li>
+<li><strong>&#x5408;&#x7406;&#x7684;&#x72C0;&#x614B;&#x5206;&#x96E2;</strong> - &#x907F;&#x514D;&#x904E;&#x5EA6;&#x63D0;&#x5347;&#xFF0C;&#x4FDD;&#x6301;&#x6548;&#x80FD;</li>
+</ol>
+<h4 id="&#x9032;&#x968E;&#x6280;&#x5DE7;&#xFF1A;">&#x9032;&#x968E;&#x6280;&#x5DE7;&#xFF1A;</h4>
+<ol>
+<li><strong>&#x4F7F;&#x7528; Custom Hooks</strong> - &#x5C01;&#x88DD;&#x76F8;&#x95DC;&#x7684;&#x72C0;&#x614B;&#x908F;&#x8F2F;</li>
+<li><strong>&#x5143;&#x4EF6;&#x7D44;&#x5408;</strong> - &#x901A;&#x904E;&#x7D44;&#x5408;&#x907F;&#x514D;&#x4E0D;&#x5FC5;&#x8981;&#x7684;&#x72C0;&#x614B;&#x63D0;&#x5347;</li>
+<li><strong>&#x6548;&#x80FD;&#x512A;&#x5316;</strong> - &#x4F7F;&#x7528; React.memo &#x548C; useCallback &#x907F;&#x514D;&#x4E0D;&#x5FC5;&#x8981;&#x7684;&#x91CD;&#x65B0;&#x6E32;&#x67D3;</li>
+</ol>
+<p>&#x638C;&#x63E1;&#x72C0;&#x614B;&#x63D0;&#x5347;&#x8B93;&#x4F60;&#x80FD;&#x5920;&#x5EFA;&#x7ACB;&#x66F4;&#x597D;&#x7684;&#x5143;&#x4EF6;&#x67B6;&#x69CB;&#xFF0C;&#x5275;&#x9020;&#x51FA;&#x66F4;&#x7DAD;&#x8B77;&#x53CB;&#x597D;&#x548C;&#x9AD8;&#x6548;&#x80FD;&#x7684; React &#x61C9;&#x7528;&#x7A0B;&#x5F0F;&#x3002;&#x5728;&#x4E0B;&#x4E00;&#x7AE0;&#x4E2D;&#xFF0C;&#x6211;&#x5011;&#x5C07;&#x5B78;&#x7FD2; Context API&#xFF0C;&#x9019;&#x662F;&#x8655;&#x7406;&#x6DF1;&#x5C64;&#x5143;&#x4EF6;&#x6A39;&#x4E2D;&#x72C0;&#x614B;&#x5171;&#x4EAB;&#x7684;&#x53E6;&#x4E00;&#x500B;&#x91CD;&#x8981;&#x5DE5;&#x5177;&#x3002;</p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="chapter11.html" class="navigation navigation-prev " aria-label="Previous page: 第11章：表單處理 (Forms)">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="chapter13.html" class="navigation navigation-next " aria-label="Next page: 第13章：組合 vs 繼承">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"第12章：狀態提升 (Lifting State Up)","level":"1.13","depth":1,"next":{"title":"第13章：組合 vs 繼承","level":"1.14","depth":1,"path":"chapter13.md","ref":"chapter13.md","articles":[]},"previous":{"title":"第11章：表單處理 (Forms)","level":"1.12","depth":1,"path":"chapter11.md","ref":"chapter11.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css","website":"styles/website.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css","website":"styles/website.css"}},"file":{"path":"chapter12.md","mtime":"2025-06-02T16:31:12.946Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2025-06-02T17:15:06.817Z"},"basePath":".","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="gitbook/gitbook.js"></script>
+    <script src="gitbook/theme.js"></script>
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

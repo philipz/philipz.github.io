@@ -1,0 +1,774 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>第4章：Props (屬性) 的運用 · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="chapter5.html" />
+    
+    
+    <link rel="prev" href="chapter3.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    教程目錄
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="chapter1.html">
+            
+                <a href="chapter1.html">
+            
+                    
+                    第1章：React 簡介與前端開發環境回顧
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="chapter2.html">
+            
+                <a href="chapter2.html">
+            
+                    
+                    第2章：JSX 深度解析
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="chapter3.html">
+            
+                <a href="chapter3.html">
+            
+                    
+                    第3章：React 元件詳解
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.5" data-path="chapter4.html">
+            
+                <a href="chapter4.html">
+            
+                    
+                    第4章：Props (屬性) 的運用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="chapter5.html">
+            
+                <a href="chapter5.html">
+            
+                    
+                    第5章：State (狀態) 的介紹與使用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="chapter6.html">
+            
+                <a href="chapter6.html">
+            
+                    
+                    第6章：元件生命週期與 useEffect Hook
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="chapter7.html">
+            
+                <a href="chapter7.html">
+            
+                    
+                    第7章：自訂 Hooks (Custom Hooks)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="chapter8.html">
+            
+                <a href="chapter8.html">
+            
+                    
+                    第8章：事件處理 (Handling Events)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10" data-path="chapter9.html">
+            
+                <a href="chapter9.html">
+            
+                    
+                    第9章：條件渲染 (Conditional Rendering)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11" data-path="chapter10.html">
+            
+                <a href="chapter10.html">
+            
+                    
+                    第10章：列表與 Keys (Lists and Keys)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12" data-path="chapter11.html">
+            
+                <a href="chapter11.html">
+            
+                    
+                    第11章：表單處理 (Forms)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13" data-path="chapter12.html">
+            
+                <a href="chapter12.html">
+            
+                    
+                    第12章：狀態提升 (Lifting State Up)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14" data-path="chapter13.html">
+            
+                <a href="chapter13.html">
+            
+                    
+                    第13章：組合 vs 繼承
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15" data-path="chapter14.html">
+            
+                <a href="chapter14.html">
+            
+                    
+                    第14章：React 哲學與最佳實踐
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="." >第4章：Props (屬性) 的運用</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="&#x7B2C;-4-&#x7AE0;&#xFF1A;props-&#x5C6C;&#x6027;-&#x7684;&#x904B;&#x7528;">&#x7B2C; 4 &#x7AE0;&#xFF1A;Props (&#x5C6C;&#x6027;) &#x7684;&#x904B;&#x7528;</h1>
+<p>&#x5728; React &#x4E2D;&#xFF0C;Props (Properties &#x7684;&#x7E2E;&#x5BEB;) &#x662F;&#x5C07;&#x8CC7;&#x6599;&#x5F9E;&#x7236;&#x5143;&#x4EF6;&#x50B3;&#x905E;&#x5230;&#x5B50;&#x5143;&#x4EF6;&#x7684;&#x4E3B;&#x8981;&#x65B9;&#x5F0F;&#x3002;&#x5B83;&#x5011;&#x662F;&#x552F;&#x8B80;&#x7684;&#xFF0C;&#x9019;&#x610F;&#x5473;&#x8457;&#x5B50;&#x5143;&#x4EF6;&#x4E0D;&#x80FD;&#x76F4;&#x63A5;&#x4FEE;&#x6539;&#x63A5;&#x6536;&#x5230;&#x7684; Props&#x3002;&#x9019;&#x7A2E;&#x55AE;&#x5411;&#x8CC7;&#x6599;&#x6D41;&#x7684;&#x7279;&#x6027;&#x4F7F;&#x5F97;&#x61C9;&#x7528;&#x7A0B;&#x5F0F;&#x7684;&#x72C0;&#x614B;&#x66F4;&#x5BB9;&#x6613;&#x8FFD;&#x8E64;&#x548C;&#x7406;&#x89E3;&#x3002;</p>
+<h3 id="41-&#x4EC0;&#x9EBC;&#x662F;-props&#xFF1F;">4.1 &#x4EC0;&#x9EBC;&#x662F; Props&#xFF1F;</h3>
+<p>&#x60F3;&#x50CF;&#x4E00;&#x4E0B; HTML &#x6A19;&#x7C64;&#x7684;&#x5C6C;&#x6027;&#xFF0C;&#x4F8B;&#x5982; <code>&lt;img src=&quot;image.jpg&quot; alt=&quot;An image&quot;&gt;</code> &#x4E2D;&#x7684; <code>src</code> &#x548C; <code>alt</code>&#x3002;&#x5728; React &#x5143;&#x4EF6;&#x4E2D;&#xFF0C;Props &#x7684;&#x4F5C;&#x7528;&#x8207;&#x6B64;&#x985E;&#x4F3C;&#x3002;&#x5B83;&#x5011;&#x5141;&#x8A31;&#x4F60;&#x5728;&#x5EFA;&#x7ACB;&#x5143;&#x4EF6;&#x5BE6;&#x4F8B;&#x6642;&#xFF0C;&#x5411;&#x5143;&#x4EF6;&#x50B3;&#x905E;&#x81EA;&#x8A02;&#x7684;&#x8CC7;&#x6599;&#x3002;</p>
+<p>Props &#x53EF;&#x4EE5;&#x662F;&#x4EFB;&#x4F55; JavaScript &#x8CC7;&#x6599;&#x578B;&#x5225;&#xFF0C;&#x5305;&#x62EC;&#xFF1A;</p>
+<ul>
+<li>&#x5B57;&#x4E32; (String)</li>
+<li>&#x6578;&#x5B57; (Number)</li>
+<li>&#x5E03;&#x6797;&#x503C; (Boolean)</li>
+<li>&#x9663;&#x5217; (Array)</li>
+<li>&#x7269;&#x4EF6; (Object)</li>
+<li>&#x51FD;&#x5F0F; (Function)</li>
+<li>&#x751A;&#x81F3;&#x662F;&#x5176;&#x4ED6;&#x7684; React &#x5143;&#x6848; (React Element)</li>
+</ul>
+<h3 id="42-&#x5982;&#x4F55;&#x50B3;&#x905E;-props&#xFF1F;">4.2 &#x5982;&#x4F55;&#x50B3;&#x905E; Props&#xFF1F;</h3>
+<p>&#x5728; JSX &#x4E2D;&#xFF0C;&#x4F60;&#x53EF;&#x4EE5;&#x50CF;&#x8A2D;&#x5B9A; HTML &#x5C6C;&#x6027;&#x4E00;&#x6A23;&#xFF0C;&#x5C07; Props &#x50B3;&#x905E;&#x7D66;&#x5B50;&#x5143;&#x4EF6;&#x3002;</p>
+<p><strong>&#x7236;&#x5143;&#x4EF6; (<code>App.js</code>)&#xFF1A;</strong></p>
+<pre><code class="lang-javascript"><span class="hljs-keyword">import</span> React <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;react&apos;</span>;
+<span class="hljs-keyword">import</span> Greeting <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;./Greeting&apos;</span>; <span class="hljs-comment">// &#x5047;&#x8A2D; Greeting &#x5143;&#x4EF6;&#x5728; Greeting.js &#x4E2D;</span>
+
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">App</span>(<span class="hljs-params"></span>) </span>{
+  <span class="hljs-keyword">const</span> userName = <span class="hljs-string">&quot;React &#x958B;&#x767C;&#x8005;&quot;</span>;
+  <span class="hljs-keyword">return</span> (
+    &lt;div&gt;
+      &lt;h1&gt;&#x6B61;&#x8FCE;&#x4F86;&#x5230;&#x6211;&#x7684;&#x61C9;&#x7528;&#x7A0B;&#x5F0F;&lt;/h1&gt;
+      &lt;Greeting name=&quot;&#x8A2A;&#x5BA2;&quot; message=&quot;&#x4F60;&#x597D;&#xFF01;&quot; /&gt;
+      &lt;Greeting name={userName} message=&quot;&#x4ECA;&#x5929;&#x5929;&#x6C23;&#x771F;&#x597D;&#xFF01;&quot; /&gt;
+      &lt;Greeting name=&quot;&#x4F7F;&#x7528;&#x8005;&quot; /&gt; {/* message prop &#x5C07;&#x662F; undefined */}
+    &lt;/div&gt;
+  );
+}
+
+export default App;
+</code></pre>
+<p><strong>&#x5B50;&#x5143;&#x4EF6; (<code>Greeting.js</code>)&#xFF1A;</strong></p>
+<pre><code class="lang-javascript"><span class="hljs-keyword">import</span> React <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;react&apos;</span>;
+
+<span class="hljs-comment">// &#x4F7F;&#x7528;&#x51FD;&#x5F0F;&#x5143;&#x4EF6;&#x63A5;&#x6536; props</span>
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">Greeting</span>(<span class="hljs-params">props</span>) </span>{
+  <span class="hljs-keyword">return</span> (
+    <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">h2</span>&gt;</span>{props.message || &quot;&#x9810;&#x8A2D;&#x8A0A;&#x606F;&quot;}&#xFF0C;{props.name}&#xFF01;<span class="hljs-tag">&lt;/<span class="hljs-name">h2</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>&#x5F88;&#x9AD8;&#x8208;&#x898B;&#x5230;&#x4F60;&#x3002;<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></span>
+  );
+}
+
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> Greeting;
+</code></pre>
+<p>&#x5728;&#x9019;&#x500B;&#x4F8B;&#x5B50;&#x4E2D;&#xFF1A;</p>
+<ol>
+<li><code>App</code> &#x5143;&#x4EF6;&#x662F;&#x7236;&#x5143;&#x4EF6;&#x3002;</li>
+<li><code>Greeting</code> &#x5143;&#x4EF6;&#x662F;&#x5B50;&#x5143;&#x4EF6;&#x3002;</li>
+<li>&#x6211;&#x5011;&#x5728; <code>App</code> &#x5143;&#x4EF6;&#x4E2D;&#x4E09;&#x6B21;&#x4F7F;&#x7528;&#x4E86; <code>&lt;Greeting /&gt;</code> &#x5143;&#x4EF6;&#xFF0C;&#x6BCF;&#x6B21;&#x90FD;&#x50B3;&#x905E;&#x4E86;&#x4E0D;&#x540C;&#x7684; <code>name</code> &#x548C; <code>message</code> Props&#x3002;<ul>
+<li>&#x7B2C;&#x4E00;&#x500B; <code>&lt;Greeting name=&quot;&#x8A2A;&#x5BA2;&quot; message=&quot;&#x4F60;&#x597D;&#xFF01;&quot; /&gt;</code>&#xFF1A;<code>name</code> &#x662F; &quot;&#x8A2A;&#x5BA2;&quot;&#xFF0C;<code>message</code> &#x662F; &quot;&#x4F60;&#x597D;&#xFF01;&quot;&#x3002;</li>
+<li>&#x7B2C;&#x4E8C;&#x500B; <code>&lt;Greeting name={userName} message=&quot;&#x4ECA;&#x5929;&#x5929;&#x6C23;&#x771F;&#x597D;&#xFF01;&quot; /&gt;</code>&#xFF1A;<code>name</code> &#x7684;&#x503C;&#x4F86;&#x81EA; <code>userName</code> &#x8B8A;&#x6578; (&quot;React &#x958B;&#x767C;&#x8005;&quot;)&#xFF0C;<code>message</code> &#x662F; &quot;&#x4ECA;&#x5929;&#x5929;&#x6C23;&#x771F;&#x597D;&#xFF01;&quot;&#x3002;&#x6CE8;&#x610F;&#xFF0C;&#x7576; Prop &#x7684;&#x503C;&#x662F; JavaScript &#x8868;&#x9054;&#x5F0F; (&#x5982;&#x8B8A;&#x6578;&#x3001;&#x51FD;&#x5F0F;&#x547C;&#x53EB;&#x7B49;) &#x6642;&#xFF0C;&#x9700;&#x8981;&#x7528;&#x5927;&#x62EC;&#x865F; <code>{}</code> &#x5305;&#x8D77;&#x4F86;&#x3002;</li>
+<li>&#x7B2C;&#x4E09;&#x500B; <code>&lt;Greeting name=&quot;&#x4F7F;&#x7528;&#x8005;&quot; /&gt;</code>&#xFF1A;&#x53EA;&#x50B3;&#x905E;&#x4E86; <code>name</code> Prop&#xFF0C;<code>message</code> Prop &#x6C92;&#x6709;&#x88AB;&#x50B3;&#x905E;&#x3002;</li>
+</ul>
+</li>
+</ol>
+<h3 id="43-&#x5982;&#x4F55;&#x5728;&#x5B50;&#x5143;&#x4EF6;&#x4E2D;&#x8B80;&#x53D6;-props&#xFF1F;">4.3 &#x5982;&#x4F55;&#x5728;&#x5B50;&#x5143;&#x4EF6;&#x4E2D;&#x8B80;&#x53D6; Props&#xFF1F;</h3>
+<p>&#x5B50;&#x5143;&#x4EF6;&#x900F;&#x904E;&#x5176;&#x51FD;&#x5F0F;&#x53C3;&#x6578; (&#x5C0D;&#x65BC;&#x51FD;&#x5F0F;&#x5143;&#x4EF6;) &#x6216; <code>this.props</code> (&#x5C0D;&#x65BC;&#x985E;&#x5225;&#x5143;&#x4EF6;) &#x4F86;&#x63A5;&#x6536; Props&#x3002;</p>
+<p><strong>&#x51FD;&#x5F0F;&#x5143;&#x4EF6; (Function Component)&#xFF1A;</strong></p>
+<p>&#x5982;&#x4E0A;&#x65B9;&#x7684; <code>Greeting.js</code> &#x6240;&#x793A;&#xFF0C;&#x51FD;&#x5F0F;&#x5143;&#x4EF6;&#x63A5;&#x6536;&#x4E00;&#x500B; <code>props</code> &#x7269;&#x4EF6;&#x4F5C;&#x70BA;&#x5176;&#x7B2C;&#x4E00;&#x500B;&#x53C3;&#x6578;&#x3002;&#x4F60;&#x53EF;&#x4EE5;&#x900F;&#x904E; <code>props.propertyName</code> &#x4F86;&#x5B58;&#x53D6;&#x50B3;&#x905E;&#x904E;&#x4F86;&#x7684;&#x5C6C;&#x6027;&#x3002;</p>
+<pre><code class="lang-javascript"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">Greeting</span>(<span class="hljs-params">props</span>) </span>{
+  <span class="hljs-built_in">console</span>.log(props); <span class="hljs-comment">// &#x6703;&#x5370;&#x51FA;&#x985E;&#x4F3C; { name: &quot;&#x8A2A;&#x5BA2;&quot;, message: &quot;&#x4F60;&#x597D;&#xFF01;&quot; } &#x7684;&#x7269;&#x4EF6;</span>
+  <span class="hljs-keyword">return</span> (
+    <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">h2</span>&gt;</span>{props.message}&#xFF0C;{props.name}&#xFF01;<span class="hljs-tag">&lt;/<span class="hljs-name">h2</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></span>
+  );
+}
+</code></pre>
+<p><strong>&#x985E;&#x5225;&#x5143;&#x4EF6; (Class Component)&#xFF1A;</strong></p>
+<p>&#x5C0D;&#x65BC;&#x985E;&#x5225;&#x5143;&#x4EF6;&#xFF0C;Props &#x6703;&#x88AB;&#x5132;&#x5B58;&#x5728;&#x5143;&#x4EF6;&#x5BE6;&#x4F8B;&#x7684; <code>this.props</code> &#x5C6C;&#x6027;&#x4E2D;&#x3002;</p>
+<pre><code class="lang-javascript"><span class="hljs-keyword">import</span> React <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;react&apos;</span>;
+
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Welcome</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">React</span>.<span class="hljs-title">Component</span> </span>{
+  render() {
+    <span class="hljs-built_in">console</span>.log(<span class="hljs-keyword">this</span>.props); <span class="hljs-comment">// &#x540C;&#x6A23;&#x6703;&#x5370;&#x51FA; props &#x7269;&#x4EF6;</span>
+    <span class="hljs-keyword">return</span> (
+      <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">h2</span>&gt;</span>{this.props.message}&#xFF0C;{this.props.name}&#xFF01;<span class="hljs-tag">&lt;/<span class="hljs-name">h2</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>&#x9019;&#x662F;&#x4E00;&#x500B;&#x985E;&#x5225;&#x5143;&#x4EF6;&#x3002;<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></span>
+    );
+  }
+}
+
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> Welcome;
+</code></pre>
+<p><strong>&#x5728; <code>App.js</code> &#x4E2D;&#x4F7F;&#x7528; <code>Welcome</code> &#x5143;&#x4EF6;&#xFF1A;</strong></p>
+<pre><code class="lang-javascript"><span class="hljs-keyword">import</span> React <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;react&apos;</span>;
+<span class="hljs-keyword">import</span> Welcome <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;./Welcome&apos;</span>; <span class="hljs-comment">// &#x5047;&#x8A2D; Welcome &#x5143;&#x4EF6;&#x5728; Welcome.js &#x4E2D;</span>
+
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">App</span>(<span class="hljs-params"></span>) </span>{
+  <span class="hljs-keyword">return</span> (
+    <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">h1</span>&gt;</span>&#x6B61;&#x8FCE;&#x4F86;&#x5230;&#x6211;&#x7684;&#x61C9;&#x7528;&#x7A0B;&#x5F0F;<span class="hljs-tag">&lt;/<span class="hljs-name">h1</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">Welcome</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;&#x985E;&#x5225;&#x4F7F;&#x7528;&#x8005;&quot;</span> <span class="hljs-attr">message</span>=<span class="hljs-string">&quot;&#x54C8;&#x56C9;&#xFF01;&quot;</span> /&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+  );
+}
+
+export default App;
+</span></code></pre>
+<h3 id="44-props-&#x662F;&#x552F;&#x8B80;&#x7684;-read-only">4.4 Props &#x662F;&#x552F;&#x8B80;&#x7684; (Read-Only)</h3>
+<p>&#x4E00;&#x500B;&#x91CD;&#x8981;&#x7684;&#x539F;&#x5247;&#x662F;&#xFF1A;<strong>&#x5143;&#x4EF6;&#x6C38;&#x9060;&#x4E0D;&#x61C9;&#x8A72;&#x4FEE;&#x6539;&#x81EA;&#x5DF1;&#x7684; Props&#x3002;</strong> &#x7121;&#x8AD6;&#x662F;&#x51FD;&#x5F0F;&#x5143;&#x4EF6;&#x9084;&#x662F;&#x985E;&#x5225;&#x5143;&#x4EF6;&#xFF0C;&#x90FD;&#x61C9;&#x8A72;&#x5C07;&#x5176; Props &#x8996;&#x70BA;&#x552F;&#x8B80;&#x7684;&#x3002;</p>
+<p>React &#x7684;&#x6838;&#x5FC3;&#x7406;&#x5FF5;&#x4E4B;&#x4E00;&#x662F;&#x300C;&#x55AE;&#x5411;&#x8CC7;&#x6599;&#x6D41;&#x300D;(unidirectional data flow)&#x3002;&#x8CC7;&#x6599;&#x5F9E;&#x7236;&#x5143;&#x4EF6;&#x6D41;&#x5411;&#x5B50;&#x5143;&#x4EF6;&#x3002;&#x5982;&#x679C;&#x5B50;&#x5143;&#x4EF6;&#x53EF;&#x4EE5;&#x4FEE;&#x6539; Props&#xFF0C;&#x90A3;&#x9EBC;&#x8CC7;&#x6599;&#x6D41;&#x5C31;&#x6703;&#x8B8A;&#x5F97;&#x6DF7;&#x4E82;&#xFF0C;&#x96E3;&#x4EE5;&#x8FFD;&#x8E64;&#x548C;&#x9664;&#x932F;&#x3002;</p>
+<p>&#x5982;&#x679C;&#x4F60;&#x9700;&#x8981;&#x5728;&#x5143;&#x4EF6;&#x5167;&#x90E8;&#x8655;&#x7406;&#x6703;&#x96A8;&#x6642;&#x9593;&#x8B8A;&#x5316;&#x7684;&#x8CC7;&#x6599;&#xFF0C;&#x61C9;&#x8A72;&#x4F7F;&#x7528; <code>State</code> (&#x6211;&#x5011;&#x5C07;&#x5728;&#x4E0B;&#x4E00;&#x7AE0;&#x8A73;&#x7D30;&#x4ECB;&#x7D39;)&#x3002;</p>
+<p><strong>&#x932F;&#x8AA4;&#x7684;&#x793A;&#x7BC4; (&#x4E0D;&#x8981;&#x9019;&#x6A23;&#x505A;)&#xFF1A;</strong></p>
+<pre><code class="lang-javascript"><span class="hljs-comment">// Greeting.js - &#x932F;&#x8AA4;&#x793A;&#x7BC4;</span>
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">Greeting</span>(<span class="hljs-params">props</span>) </span>{
+  <span class="hljs-comment">// &#x932F;&#x8AA4;&#xFF01;&#x8A66;&#x5716;&#x4FEE;&#x6539; props</span>
+  <span class="hljs-comment">// props.name = &quot;&#x65B0;&#x7684;&#x540D;&#x5B57;&quot;; // &#x9019;&#x6703;&#x5C0E;&#x81F4;&#x932F;&#x8AA4;&#x6216;&#x975E;&#x9810;&#x671F;&#x7684;&#x884C;&#x70BA;</span>
+
+  <span class="hljs-keyword">return</span> (
+    <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">h2</span>&gt;</span>&#x4F60;&#x597D;&#xFF0C;{props.name}&#xFF01;<span class="hljs-tag">&lt;/<span class="hljs-name">h2</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></span>
+  );
+}
+</code></pre>
+<p>React &#x8981;&#x6C42;&#x6240;&#x6709;&#x7684;&#x5143;&#x4EF6;&#x90FD;&#x50CF;&#x300C;&#x7D14;&#x51FD;&#x5F0F;&#x300D;(pure functions) &#x4E00;&#x6A23;&#x5C0D;&#x5F85;&#x5B83;&#x5011;&#x7684; Props&#x3002;&#x7D14;&#x51FD;&#x5F0F;&#x662F;&#x6307;&#x5728;&#x7D66;&#x5B9A;&#x76F8;&#x540C;&#x8F38;&#x5165;&#x7684;&#x60C5;&#x6CC1;&#x4E0B;&#xFF0C;&#x7E3D;&#x662F;&#x8FD4;&#x56DE;&#x76F8;&#x540C;&#x7684;&#x8F38;&#x51FA;&#xFF0C;&#x4E26;&#x4E14;&#x4E0D;&#x6703;&#x7522;&#x751F;&#x4EFB;&#x4F55;&#x526F;&#x4F5C;&#x7528; (&#x4F8B;&#x5982;&#x4FEE;&#x6539;&#x5916;&#x90E8;&#x8B8A;&#x6578;&#x6216;&#x8F38;&#x5165;&#x53C3;&#x6578;)&#x3002;</p>
+<h3 id="45-&#x9810;&#x8A2D;-props-default-props">4.5 &#x9810;&#x8A2D; Props (Default Props)</h3>
+<p>&#x6709;&#x6642;&#x5019;&#xFF0C;&#x4F60;&#x5E0C;&#x671B;&#x70BA; Props &#x63D0;&#x4F9B;&#x9810;&#x8A2D;&#x503C;&#xFF0C;&#x4EE5;&#x9632;&#x7236;&#x5143;&#x4EF6;&#x6C92;&#x6709;&#x50B3;&#x905E;&#x8A72; Prop&#x3002;&#x4F60;&#x53EF;&#x4EE5;&#x4F7F;&#x7528; <code>defaultProps</code> (&#x5C0D;&#x65BC;&#x985E;&#x5225;&#x5143;&#x4EF6;) &#x6216;&#x5728;&#x51FD;&#x5F0F;&#x5143;&#x4EF6;&#x5167;&#x90E8;&#x76F4;&#x63A5;&#x8655;&#x7406;&#x3002;</p>
+<p><strong>&#x51FD;&#x5F0F;&#x5143;&#x4EF6;&#x4E2D;&#x4F7F;&#x7528;&#x9810;&#x8A2D;&#x503C;&#xFF1A;</strong></p>
+<p>&#x4F60;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;&#x908F;&#x8F2F; OR &#x904B;&#x7B97;&#x5B50; <code>||</code> &#x6216; ES6 &#x7684;&#x9810;&#x8A2D;&#x53C3;&#x6578;&#x8A9E;&#x6CD5;&#x3002;</p>
+<pre><code class="lang-javascript"><span class="hljs-comment">// Greeting.js - &#x4F7F;&#x7528;&#x908F;&#x8F2F; OR</span>
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">Greeting</span>(<span class="hljs-params">props</span>) </span>{
+  <span class="hljs-keyword">const</span> message = props.message || <span class="hljs-string">&quot;&#x9810;&#x8A2D;&#x7684;&#x554F;&#x5019;&#xFF01;&quot;</span>;
+  <span class="hljs-keyword">const</span> name = props.name || <span class="hljs-string">&quot;&#x9810;&#x8A2D;&#x4F7F;&#x7528;&#x8005;&quot;</span>;
+  <span class="hljs-keyword">return</span> (
+    <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">h2</span>&gt;</span>{message}&#xFF0C;{name}&#xFF01;<span class="hljs-tag">&lt;/<span class="hljs-name">h2</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></span>
+  );
+}
+
+<span class="hljs-comment">// Greeting.js - &#x4F7F;&#x7528; ES6 &#x9810;&#x8A2D;&#x53C3;&#x6578; (&#x66F4;&#x63A8;&#x85A6;)</span>
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">Greeting</span>(<span class="hljs-params">{ name = &quot;&#x9810;&#x8A2D;&#x4F7F;&#x7528;&#x8005;&quot;, message = &quot;&#x9810;&#x8A2D;&#x7684;&#x554F;&#x5019;&#xFF01;&quot; }</span>) </span>{
+  <span class="hljs-keyword">return</span> (
+    <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">h2</span>&gt;</span>{message}&#xFF0C;{name}&#xFF01;<span class="hljs-tag">&lt;/<span class="hljs-name">h2</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></span>
+  );
+}
+</code></pre>
+<p><strong>&#x985E;&#x5225;&#x5143;&#x4EF6;&#x4E2D;&#x4F7F;&#x7528; <code>defaultProps</code>&#xFF1A;</strong></p>
+<pre><code class="lang-javascript"><span class="hljs-comment">// Welcome.js</span>
+<span class="hljs-keyword">import</span> React <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;react&apos;</span>;
+
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Welcome</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">React</span>.<span class="hljs-title">Component</span> </span>{
+  render() {
+    <span class="hljs-keyword">return</span> (
+      <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">h2</span>&gt;</span>{this.props.message}&#xFF0C;{this.props.name}&#xFF01;<span class="hljs-tag">&lt;/<span class="hljs-name">h2</span>&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></span>
+    );
+  }
+}
+
+<span class="hljs-comment">// &#x8A2D;&#x5B9A; defaultProps</span>
+Welcome.defaultProps = {
+  name: <span class="hljs-string">&quot;&#x9810;&#x8A2D;&#x985E;&#x5225;&#x4F7F;&#x7528;&#x8005;&quot;</span>,
+  message: <span class="hljs-string">&quot;&#x4F86;&#x81EA;&#x985E;&#x5225;&#x5143;&#x4EF6;&#x7684;&#x9810;&#x8A2D;&#x554F;&#x5019;&#xFF01;&quot;</span>
+};
+
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> Welcome;
+</code></pre>
+<p>&#x73FE;&#x5728;&#xFF0C;&#x5982;&#x679C;&#x5728; <code>App.js</code> &#x4E2D;&#x9019;&#x6A23;&#x4F7F;&#x7528; <code>Welcome</code> &#x5143;&#x4EF6;&#xFF0C;&#x5B83;&#x5C07;&#x4F7F;&#x7528;&#x9810;&#x8A2D;&#x503C;&#xFF1A;</p>
+<pre><code class="lang-javascript">&lt;Welcome /&gt; <span class="hljs-comment">// name &#x6703;&#x662F; &quot;&#x9810;&#x8A2D;&#x985E;&#x5225;&#x4F7F;&#x7528;&#x8005;&quot;, message &#x6703;&#x662F; &quot;&#x4F86;&#x81EA;&#x985E;&#x5225;&#x5143;&#x4EF6;&#x7684;&#x9810;&#x8A2D;&#x554F;&#x5019;&#xFF01;&quot;</span>
+&lt;Welcome name=<span class="hljs-string">&quot;&#x5C0F;&#x660E;&quot;</span> /&gt; <span class="hljs-comment">// message &#x6703;&#x4F7F;&#x7528;&#x9810;&#x8A2D;&#x503C;</span>
+</code></pre>
+<h3 id="46-props-&#x89E3;&#x69CB;-destructuring-props">4.6 Props &#x89E3;&#x69CB; (Destructuring Props)</h3>
+<p>&#x70BA;&#x4E86;&#x8B93;&#x7A0B;&#x5F0F;&#x78BC;&#x66F4;&#x7C21;&#x6F54;&#xFF0C;&#x4F60;&#x53EF;&#x4EE5;&#x5728;&#x51FD;&#x5F0F;&#x5143;&#x4EF6;&#x7684;&#x53C3;&#x6578;&#x4E2D;&#x6216;&#x985E;&#x5225;&#x5143;&#x4EF6;&#x7684; <code>render</code> &#x65B9;&#x6CD5;&#x4E2D;&#x5C0D; Props &#x9032;&#x884C;&#x89E3;&#x69CB;&#x3002;</p>
+<p><strong>&#x51FD;&#x5F0F;&#x5143;&#x4EF6;&#x89E3;&#x69CB; Props&#xFF1A;</strong></p>
+<pre><code class="lang-javascript"><span class="hljs-comment">// Greeting.js - &#x89E3;&#x69CB; props</span>
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">Greeting</span>(<span class="hljs-params">{ name, message }</span>) </span>{ <span class="hljs-comment">// &#x76F4;&#x63A5;&#x5728;&#x53C3;&#x6578;&#x4E2D;&#x89E3;&#x69CB;</span>
+  <span class="hljs-keyword">return</span> (
+    <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">h2</span>&gt;</span>{message || &quot;&#x9810;&#x8A2D;&#x8A0A;&#x606F;&quot;}&#xFF0C;{name}&#xFF01;<span class="hljs-tag">&lt;/<span class="hljs-name">h2</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></span>
+  );
+}
+
+<span class="hljs-comment">// &#x6216;&#x8005;&#x5728;&#x51FD;&#x5F0F;&#x5167;&#x90E8;&#x89E3;&#x69CB;</span>
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">Greeting</span>(<span class="hljs-params">props</span>) </span>{
+  <span class="hljs-keyword">const</span> { name, message } = props;
+  <span class="hljs-keyword">return</span> (
+    <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">h2</span>&gt;</span>{message || &quot;&#x9810;&#x8A2D;&#x8A0A;&#x606F;&quot;}&#xFF0C;{name}&#xFF01;<span class="hljs-tag">&lt;/<span class="hljs-name">h2</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></span>
+  );
+}
+</code></pre>
+<p><strong>&#x985E;&#x5225;&#x5143;&#x4EF6;&#x89E3;&#x69CB; Props&#xFF1A;</strong></p>
+<pre><code class="lang-javascript"><span class="hljs-comment">// Welcome.js - &#x5728; render &#x65B9;&#x6CD5;&#x4E2D;&#x89E3;&#x69CB; props</span>
+<span class="hljs-keyword">import</span> React <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;react&apos;</span>;
+
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Welcome</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">React</span>.<span class="hljs-title">Component</span> </span>{
+  render() {
+    <span class="hljs-keyword">const</span> { name, message } = <span class="hljs-keyword">this</span>.props; <span class="hljs-comment">// &#x5728; render &#x65B9;&#x6CD5;&#x9802;&#x90E8;&#x89E3;&#x69CB;</span>
+    <span class="hljs-keyword">return</span> (
+      <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">h2</span>&gt;</span>{message || &quot;&#x9810;&#x8A2D;&#x8A0A;&#x606F;&quot;}&#xFF0C;{name}&#xFF01;<span class="hljs-tag">&lt;/<span class="hljs-name">h2</span>&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></span>
+    );
+  }
+}
+
+Welcome.defaultProps = {
+  name: <span class="hljs-string">&quot;&#x9810;&#x8A2D;&#x985E;&#x5225;&#x4F7F;&#x7528;&#x8005;&quot;</span>,
+  message: <span class="hljs-string">&quot;&#x9810;&#x8A2D;&#x554F;&#x5019;&#xFF01;&quot;</span>
+};
+
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> Welcome;
+</code></pre>
+<p>&#x89E3;&#x69CB;&#x53EF;&#x4EE5;&#x8B93;&#x4F60;&#x5728;&#x4F7F;&#x7528; Props &#x6642;&#x7701;&#x7565; <code>props.</code> &#x6216; <code>this.props.</code> &#x524D;&#x7DB4;&#xFF0C;&#x4F7F;&#x7A0B;&#x5F0F;&#x78BC;&#x66F4;&#x6613;&#x8B80;&#x3002;</p>
+<h3 id="47-propschildren">4.7 <code>props.children</code></h3>
+<p>&#x6BCF;&#x500B;&#x5143;&#x4EF6;&#x90FD;&#x6709;&#x4E00;&#x500B;&#x7279;&#x6B8A;&#x7684; Prop&#xFF1A;<code>props.children</code>&#x3002;&#x5B83;&#x5305;&#x542B;&#x4E86;&#x5143;&#x4EF6;&#x7684;&#x300C;&#x5B50;&#x5167;&#x5BB9;&#x300D;&#x3002;&#x7576;&#x4F60;&#x5728; JSX &#x4E2D;&#x50CF;&#x9019;&#x6A23;&#x5DE2;&#x72C0;&#x5143;&#x4EF6;&#x6642;&#xFF1A;</p>
+<pre><code class="lang-javascript">&lt;Card title=&quot;&#x6211;&#x7684;&#x5361;&#x7247;&quot;&gt;
+  &lt;p&gt;&#x9019;&#x662F;&#x5361;&#x7247;&#x7684;&#x5167;&#x5BB9;&#x3002;&lt;/p&gt;
+  &lt;button&gt;&#x9EDE;&#x64CA;&#x6211;&lt;/button&gt;
+&lt;/Card&gt;
+</code></pre>
+<p><code>Card</code> &#x5143;&#x4EF6;&#x7684; <code>props.children</code> &#x5C31;&#x6703;&#x662F;&#xFF1A;</p>
+<pre><code class="lang-javascript">[
+  <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>&#x9019;&#x662F;&#x5361;&#x7247;&#x7684;&#x5167;&#x5BB9;&#x3002;<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span></span>,
+  <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">button</span>&gt;</span>&#x9EDE;&#x64CA;&#x6211;<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span></span>
+]
+</code></pre>
+<p>&#x9019;&#x5728;&#x4F60;&#x60F3;&#x8981;&#x5EFA;&#x7ACB;&#x53EF;&#x91CD;&#x7528;&#x7684;&#x5BB9;&#x5668;&#x5143;&#x4EF6; (&#x5982; <code>Card</code>, <code>Dialog</code>, <code>Sidebar</code> &#x7B49;) &#x6642;&#x975E;&#x5E38;&#x6709;&#x7528;&#x3002;</p>
+<p><strong><code>Card.js</code> &#x5143;&#x4EF6;&#x7BC4;&#x4F8B;&#xFF1A;</strong></p>
+<pre><code class="lang-javascript"><span class="hljs-keyword">import</span> React <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;react&apos;</span>;
+<span class="hljs-keyword">import</span> <span class="hljs-string">&apos;./Card.css&apos;</span>; <span class="hljs-comment">// &#x5047;&#x8A2D;&#x6709;&#x4E00;&#x500B; Card.css &#x6A94;&#x6848;&#x4F86;&#x8A2D;&#x5B9A;&#x6A23;&#x5F0F;</span>
+
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">Card</span>(<span class="hljs-params">props</span>) </span>{
+  <span class="hljs-keyword">return</span> (
+    <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">className</span>=<span class="hljs-string">&quot;card&quot;</span>&gt;</span>
+      {props.title &amp;&amp; <span class="hljs-tag">&lt;<span class="hljs-name">h3</span> <span class="hljs-attr">className</span>=<span class="hljs-string">&quot;card-title&quot;</span>&gt;</span>{props.title}<span class="hljs-tag">&lt;/<span class="hljs-name">h3</span>&gt;</span>}
+      <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">className</span>=<span class="hljs-string">&quot;card-content&quot;</span>&gt;</span>
+        {props.children} {/* &#x6E32;&#x67D3;&#x5B50;&#x5167;&#x5BB9; */}
+      <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></span>
+  );
+}
+
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> Card;
+</code></pre>
+<p><strong>&#x4F7F;&#x7528; <code>Card</code> &#x5143;&#x4EF6;&#xFF1A;</strong></p>
+<pre><code class="lang-javascript"><span class="hljs-comment">// App.js</span>
+<span class="hljs-keyword">import</span> React <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;react&apos;</span>;
+<span class="hljs-keyword">import</span> Card <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;./Card&apos;</span>;
+
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">App</span>(<span class="hljs-params"></span>) </span>{
+  <span class="hljs-keyword">return</span> (
+    <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">Card</span> <span class="hljs-attr">title</span>=<span class="hljs-string">&quot;&#x8CC7;&#x8A0A;&#x5361;&#x7247;&quot;</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>&#x9019;&#x662F;&#x4E00;&#x4E9B;&#x91CD;&#x8981;&#x7684;&#x8CC7;&#x8A0A;&#x3002;<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">ul</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span>&#x9805;&#x76EE;&#x4E00;<span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span>&#x9805;&#x76EE;&#x4E8C;<span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">ul</span>&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-name">Card</span>&gt;</span>
+
+      <span class="hljs-tag">&lt;<span class="hljs-name">Card</span>&gt;</span> {/* &#x6C92;&#x6709; title prop */}
+        <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>&#x6C92;&#x6709;&#x6A19;&#x984C;&#x7684;&#x5361;&#x7247;&#x5167;&#x5BB9;&#x3002;<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">img</span> <span class="hljs-attr">src</span>=<span class="hljs-string">&quot;image.png&quot;</span> <span class="hljs-attr">alt</span>=<span class="hljs-string">&quot;&#x7BC4;&#x4F8B;&#x5716;&#x7247;&quot;</span> <span class="hljs-attr">style</span>=<span class="hljs-string">{{</span> <span class="hljs-attr">maxWidth:</span> &apos;<span class="hljs-attr">100</span>%&apos; }} /&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-name">Card</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+  );
+}
+
+export default App;
+</span></code></pre>
+<p><code>props.children</code> &#x53EF;&#x4EE5;&#x662F;&#x4EFB;&#x4F55;&#x6709;&#x6548;&#x7684; JSX &#x5167;&#x5BB9;&#xFF1A;&#x6587;&#x5B57;&#x3001;React &#x5143;&#x7D20;&#x3001;JavaScript &#x8868;&#x9054;&#x5F0F;&#xFF0C;&#x751A;&#x81F3;&#x662F; <code>undefined</code> (&#x5982;&#x679C;&#x6C92;&#x6709;&#x50B3;&#x905E;&#x5B50;&#x5167;&#x5BB9;)&#x3002;</p>
+<h3 id="48-&#x4F7F;&#x7528;-proptypes-&#x9032;&#x884C;&#x578B;&#x5225;&#x6AA2;&#x67E5;-type-checking-with-proptypes">4.8 &#x4F7F;&#x7528; PropTypes &#x9032;&#x884C;&#x578B;&#x5225;&#x6AA2;&#x67E5; (Type Checking with PropTypes)</h3>
+<p>&#x96A8;&#x8457;&#x61C9;&#x7528;&#x7A0B;&#x5F0F;&#x898F;&#x6A21;&#x7684;&#x64F4;&#x5927;&#xFF0C;&#x624B;&#x52D5;&#x8FFD;&#x8E64;&#x6BCF;&#x500B;&#x5143;&#x4EF6;&#x7684; Props &#x548C;&#x5B83;&#x5011;&#x7684;&#x9810;&#x671F;&#x578B;&#x5225;&#x53EF;&#x80FD;&#x6703;&#x8B8A;&#x5F97;&#x56F0;&#x96E3;&#x3002;<code>PropTypes</code> &#x662F;&#x4E00;&#x500B; React &#x5167;&#x5EFA; (&#x5728; React 15.5 &#x4E4B;&#x5F8C;&#x5206;&#x96E2;&#x70BA;&#x7368;&#x7ACB;&#x5957;&#x4EF6; <code>prop-types</code>) &#x7684;&#x6A5F;&#x5236;&#xFF0C;&#x7528;&#x65BC;&#x5728;&#x958B;&#x767C;&#x6A21;&#x5F0F;&#x4E0B;&#x6AA2;&#x67E5;&#x50B3;&#x905E;&#x7D66;&#x5143;&#x4EF6;&#x7684; Props &#x662F;&#x5426;&#x7B26;&#x5408;&#x9810;&#x671F;&#x7684;&#x578B;&#x5225;&#x3002;</p>
+<p>&#x96D6;&#x7136;&#x5728;&#x73FE;&#x4EE3; React &#x958B;&#x767C;&#x4E2D;&#xFF0C;&#x8A31;&#x591A;&#x4EBA;&#x8F49;&#x5411;&#x4F7F;&#x7528; TypeScript &#x4F86;&#x9032;&#x884C;&#x66F4;&#x5F37;&#x5927;&#x7684;&#x975C;&#x614B;&#x578B;&#x5225;&#x6AA2;&#x67E5;&#xFF0C;&#x4F46; <code>PropTypes</code> &#x4ECD;&#x7136;&#x662F;&#x4E00;&#x500B;&#x6709;&#x7528;&#x7684;&#x5DE5;&#x5177;&#xFF0C;&#x7279;&#x5225;&#x662F;&#x5728;&#x4E0D;&#x4F7F;&#x7528; TypeScript &#x7684;&#x5C08;&#x6848;&#x4E2D;&#x3002;</p>
+<p><strong>&#x5B89;&#x88DD; <code>prop-types</code>&#xFF1A;</strong></p>
+<pre><code class="lang-bash">npm install prop-types
+<span class="hljs-comment"># &#x6216;&#x8005;</span>
+yarn add prop-types
+</code></pre>
+<p><strong>&#x4F7F;&#x7528; <code>PropTypes</code>&#xFF1A;</strong></p>
+<pre><code class="lang-javascript"><span class="hljs-comment">// Greeting.js</span>
+<span class="hljs-keyword">import</span> React <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;react&apos;</span>;
+<span class="hljs-keyword">import</span> PropTypes <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;prop-types&apos;</span>; <span class="hljs-comment">// &#x5F15;&#x5165; PropTypes</span>
+
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">Greeting</span>(<span class="hljs-params">{ name, message, count, isActive, user, onGreet }</span>) </span>{
+  <span class="hljs-keyword">return</span> (
+    <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">h2</span>&gt;</span>{message}&#xFF0C;{name}&#xFF01;<span class="hljs-tag">&lt;/<span class="hljs-name">h2</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>&#x8A08;&#x6578;: {count}<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>&#x72C0;&#x614B;: {isActive ? &quot;&#x6D3B;&#x8E8D;&quot; : &quot;&#x975E;&#x6D3B;&#x8E8D;&quot;}<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>&#x4F7F;&#x7528;&#x8005;&#x90F5;&#x7BB1;: {user.email}<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">onClick</span>=<span class="hljs-string">{onGreet}</span>&gt;</span>&#x554F;&#x5019;<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></span>
+  );
+}
+
+<span class="hljs-comment">// &#x5B9A;&#x7FA9; propTypes</span>
+Greeting.propTypes = {
+  name: PropTypes.string.isRequired, <span class="hljs-comment">// &#x5B57;&#x4E32;&#xFF0C;&#x4E14;&#x5FC5;&#x586B;</span>
+  message: PropTypes.string,        <span class="hljs-comment">// &#x5B57;&#x4E32;&#xFF0C;&#x9078;&#x586B;</span>
+  count: PropTypes.number,          <span class="hljs-comment">// &#x6578;&#x5B57;</span>
+  isActive: PropTypes.bool,         <span class="hljs-comment">// &#x5E03;&#x6797;&#x503C;</span>
+  user: PropTypes.shape({           <span class="hljs-comment">// &#x7279;&#x5B9A;&#x5F62;&#x72C0;&#x7684;&#x7269;&#x4EF6;</span>
+    id: PropTypes.number.isRequired,
+    name: PropTypes.string.isRequired,
+    email: PropTypes.string
+  }),
+  onGreet: PropTypes.func,          <span class="hljs-comment">// &#x51FD;&#x5F0F;</span>
+  <span class="hljs-comment">// &#x4F60;&#x4E5F;&#x53EF;&#x4EE5;&#x6307;&#x5B9A;&#x4E00;&#x500B; React &#x5143;&#x7D20;</span>
+  <span class="hljs-comment">// customElement: PropTypes.element</span>
+  <span class="hljs-comment">// &#x6216;&#x8005;&#x4E00;&#x500B;&#x7BC0;&#x9EDE; (&#x4EFB;&#x4F55;&#x53EF;&#x4EE5;&#x88AB;&#x6E32;&#x67D3;&#x7684;&#x6771;&#x897F;&#xFF1A;&#x6578;&#x5B57;&#x3001;&#x5B57;&#x4E32;&#x3001;&#x5143;&#x7D20;&#x6216;&#x5305;&#x542B;&#x9019;&#x4E9B;&#x578B;&#x5225;&#x7684;&#x9663;&#x5217;)</span>
+  <span class="hljs-comment">// children: PropTypes.node</span>
+};
+
+<span class="hljs-comment">// &#x8A2D;&#x5B9A;&#x9810;&#x8A2D;&#x503C;</span>
+Greeting.defaultProps = {
+  message: <span class="hljs-string">&quot;&#x4F60;&#x597D;&quot;</span>,
+  count: <span class="hljs-number">0</span>,
+  isActive: <span class="hljs-literal">false</span>,
+  user: { id: <span class="hljs-number">0</span>, name: <span class="hljs-string">&quot;&#x533F;&#x540D;&quot;</span>, email: <span class="hljs-string">&quot;n/a&quot;</span> },
+  onGreet: () =&gt; <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&quot;&#x9810;&#x8A2D;&#x554F;&#x5019;&#x51FD;&#x5F0F;&quot;</span>)
+};
+
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> Greeting;
+</code></pre>
+<p><strong><code>PropTypes</code> &#x63D0;&#x4F9B;&#x7684;&#x5E38;&#x7528;&#x578B;&#x5225;&#x6AA2;&#x67E5;&#x5668;&#xFF1A;</strong></p>
+<ul>
+<li><code>PropTypes.array</code></li>
+<li><code>PropTypes.bool</code></li>
+<li><code>PropTypes.func</code></li>
+<li><code>PropTypes.number</code></li>
+<li><code>PropTypes.object</code></li>
+<li><code>PropTypes.string</code></li>
+<li><code>PropTypes.symbol</code></li>
+<li><code>PropTypes.node</code> (&#x4EFB;&#x4F55;&#x53EF;&#x6E32;&#x67D3;&#x7684;&#x5167;&#x5BB9;&#xFF1A;&#x6578;&#x5B57;&#x3001;&#x5B57;&#x4E32;&#x3001;&#x5143;&#x7D20;&#x6216;&#x9663;&#x5217;)</li>
+<li><code>PropTypes.element</code> (&#x4E00;&#x500B; React &#x5143;&#x7D20;)</li>
+<li><code>PropTypes.instanceOf(Constructor)</code> (&#x67D0;&#x500B;&#x985E;&#x5225;&#x7684;&#x5BE6;&#x4F8B;)</li>
+<li><code>PropTypes.oneOf([&apos;News&apos;, &apos;Photos&apos;])</code> (&#x679A;&#x8209;&#xFF0C;&#x503C;&#x5FC5;&#x9808;&#x662F;&#x5176;&#x4E2D;&#x4E4B;&#x4E00;)</li>
+<li><code>PropTypes.oneOfType([PropTypes.string, PropTypes.number])</code> (&#x591A;&#x7A2E;&#x985E;&#x578B;&#x4E4B;&#x4E00;)</li>
+<li><code>PropTypes.arrayOf(PropTypes.number)</code> (&#x7279;&#x5B9A;&#x578B;&#x5225;&#x7684;&#x9663;&#x5217;)</li>
+<li><code>PropTypes.objectOf(PropTypes.number)</code> (&#x5177;&#x6709;&#x7279;&#x5B9A;&#x578B;&#x5225;&#x503C;&#x7684;&#x7269;&#x4EF6;)</li>
+<li><code>PropTypes.shape({ color: PropTypes.string, fontSize: PropTypes.number })</code> (&#x7279;&#x5B9A;&#x5F62;&#x72C0;&#x7684;&#x7269;&#x4EF6;)</li>
+<li><code>PropTypes.exact({ name: PropTypes.string, quantity: PropTypes.number })</code> (&#x7CBE;&#x78BA;&#x5F62;&#x72C0;&#x7684;&#x7269;&#x4EF6;&#xFF0C;&#x4E0D;&#x5141;&#x8A31;&#x984D;&#x5916;&#x5C6C;&#x6027;)</li>
+</ul>
+<p>&#x4F60;&#x53EF;&#x4EE5;&#x5728;&#x4EFB;&#x4F55;&#x578B;&#x5225;&#x6AA2;&#x67E5;&#x5668;&#x5F8C;&#x9762;&#x52A0;&#x4E0A; <code>.isRequired</code> &#x4F86;&#x8868;&#x793A;&#x8A72; Prop &#x662F;&#x5FC5;&#x586B;&#x7684;&#x3002;</p>
+<p>&#x5982;&#x679C;&#x5728;&#x958B;&#x767C;&#x6A21;&#x5F0F;&#x4E0B;&#x50B3;&#x905E;&#x4E86;&#x932F;&#x8AA4;&#x578B;&#x5225;&#x7684; Prop&#xFF0C;&#x6216;&#x8005;&#x7F3A;&#x5C11;&#x4E86; <code>isRequired</code> &#x7684; Prop&#xFF0C;React &#x6703;&#x5728;&#x700F;&#x89BD;&#x5668;&#x63A7;&#x5236;&#x53F0;&#x4E2D;&#x986F;&#x793A;&#x8B66;&#x544A;&#x8A0A;&#x606F;&#xFF0C;&#x5E6B;&#x52A9;&#x4F60;&#x53CA;&#x65E9;&#x767C;&#x73FE;&#x554F;&#x984C;&#x3002;&#x5728;&#x751F;&#x7522;&#x6A21;&#x5F0F;&#x4E0B;&#xFF0C;&#x70BA;&#x4E86;&#x6548;&#x80FD;&#xFF0C;<code>PropTypes</code> &#x6AA2;&#x67E5;&#x6703;&#x88AB;&#x8DF3;&#x904E;&#x3002;</p>
+<h3 id="49-&#x7E3D;&#x7D50;">4.9 &#x7E3D;&#x7D50;</h3>
+<p>Props &#x662F; React &#x4E2D;&#x5143;&#x4EF6;&#x9593;&#x901A;&#x8A0A;&#x7684;&#x57FA;&#x77F3;&#x3002;&#x5B83;&#x5011;&#x4F7F;&#x5F97;&#x6211;&#x5011;&#x53EF;&#x4EE5;&#x5EFA;&#x7ACB;&#x53EF;&#x91CD;&#x7528;&#x3001;&#x53EF;&#x914D;&#x7F6E;&#x7684;&#x5143;&#x4EF6;&#x3002;</p>
+<ul>
+<li>Props &#x7528;&#x65BC;&#x5F9E;&#x7236;&#x5143;&#x4EF6;&#x5411;&#x5B50;&#x5143;&#x4EF6;&#x50B3;&#x905E;&#x8CC7;&#x6599;&#x3002;</li>
+<li>Props &#x662F;&#x552F;&#x8B80;&#x7684;&#xFF0C;&#x5B50;&#x5143;&#x4EF6;&#x4E0D;&#x61C9;&#x4FEE;&#x6539;&#x5B83;&#x5011;&#x3002;</li>
+<li>&#x53EF;&#x4EE5;&#x4F7F;&#x7528;&#x9810;&#x8A2D; Props &#x4F86;&#x70BA;&#x672A;&#x50B3;&#x905E;&#x7684; Props &#x63D0;&#x4F9B;&#x9810;&#x8A2D;&#x503C;&#x3002;</li>
+<li>&#x89E3;&#x69CB; Props &#x53EF;&#x4EE5;&#x8B93;&#x7A0B;&#x5F0F;&#x78BC;&#x66F4;&#x7C21;&#x6F54;&#x3002;</li>
+<li><code>props.children</code> &#x7528;&#x65BC;&#x5B58;&#x53D6;&#x5143;&#x4EF6;&#x7684;&#x5B50;&#x5167;&#x5BB9;&#x3002;</li>
+<li><code>PropTypes</code> (&#x6216; TypeScript) &#x53EF;&#x4EE5;&#x5E6B;&#x52A9;&#x6211;&#x5011;&#x5728;&#x958B;&#x767C;&#x904E;&#x7A0B;&#x4E2D;&#x9A57;&#x8B49; Props &#x7684;&#x578B;&#x5225;&#xFF0C;&#x63D0;&#x9AD8;&#x7A0B;&#x5F0F;&#x78BC;&#x7684;&#x5065;&#x58EF;&#x6027;&#x3002;</li>
+</ul>
+<p>&#x7406;&#x89E3; Props &#x7684;&#x5DE5;&#x4F5C;&#x539F;&#x7406;&#x5C0D;&#x65BC;&#x638C;&#x63E1; React &#x81F3;&#x95DC;&#x91CD;&#x8981;&#x3002;&#x5728;&#x4E0B;&#x4E00;&#x7AE0;&#xFF0C;&#x6211;&#x5011;&#x5C07;&#x5B78;&#x7FD2;&#x53E6;&#x4E00;&#x500B;&#x6838;&#x5FC3;&#x6982;&#x5FF5;&#xFF1A;State&#xFF0C;&#x4EE5;&#x53CA;&#x5B83;&#x5982;&#x4F55;&#x8207; Props &#x5354;&#x540C;&#x5DE5;&#x4F5C;&#x4F86;&#x7BA1;&#x7406;&#x5143;&#x4EF6;&#x7684;&#x52D5;&#x614B;&#x8CC7;&#x6599;&#x3002; </p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="chapter3.html" class="navigation navigation-prev " aria-label="Previous page: 第3章：React 元件詳解">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="chapter5.html" class="navigation navigation-next " aria-label="Next page: 第5章：State (狀態) 的介紹與使用">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"第4章：Props (屬性) 的運用","level":"1.5","depth":1,"next":{"title":"第5章：State (狀態) 的介紹與使用","level":"1.6","depth":1,"path":"chapter5.md","ref":"chapter5.md","articles":[]},"previous":{"title":"第3章：React 元件詳解","level":"1.4","depth":1,"path":"chapter3.md","ref":"chapter3.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css","website":"styles/website.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css","website":"styles/website.css"}},"file":{"path":"chapter4.md","mtime":"2025-06-02T06:14:41.002Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2025-06-02T17:15:06.817Z"},"basePath":".","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="gitbook/gitbook.js"></script>
+    <script src="gitbook/theme.js"></script>
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

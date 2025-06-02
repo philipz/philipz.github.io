@@ -1,0 +1,2026 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>第11章：表單處理 (Forms) · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="chapter12.html" />
+    
+    
+    <link rel="prev" href="chapter10.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    教程目錄
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="chapter1.html">
+            
+                <a href="chapter1.html">
+            
+                    
+                    第1章：React 簡介與前端開發環境回顧
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="chapter2.html">
+            
+                <a href="chapter2.html">
+            
+                    
+                    第2章：JSX 深度解析
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="chapter3.html">
+            
+                <a href="chapter3.html">
+            
+                    
+                    第3章：React 元件詳解
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="chapter4.html">
+            
+                <a href="chapter4.html">
+            
+                    
+                    第4章：Props (屬性) 的運用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="chapter5.html">
+            
+                <a href="chapter5.html">
+            
+                    
+                    第5章：State (狀態) 的介紹與使用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="chapter6.html">
+            
+                <a href="chapter6.html">
+            
+                    
+                    第6章：元件生命週期與 useEffect Hook
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="chapter7.html">
+            
+                <a href="chapter7.html">
+            
+                    
+                    第7章：自訂 Hooks (Custom Hooks)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="chapter8.html">
+            
+                <a href="chapter8.html">
+            
+                    
+                    第8章：事件處理 (Handling Events)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10" data-path="chapter9.html">
+            
+                <a href="chapter9.html">
+            
+                    
+                    第9章：條件渲染 (Conditional Rendering)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11" data-path="chapter10.html">
+            
+                <a href="chapter10.html">
+            
+                    
+                    第10章：列表與 Keys (Lists and Keys)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.12" data-path="chapter11.html">
+            
+                <a href="chapter11.html">
+            
+                    
+                    第11章：表單處理 (Forms)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13" data-path="chapter12.html">
+            
+                <a href="chapter12.html">
+            
+                    
+                    第12章：狀態提升 (Lifting State Up)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14" data-path="chapter13.html">
+            
+                <a href="chapter13.html">
+            
+                    
+                    第13章：組合 vs 繼承
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15" data-path="chapter14.html">
+            
+                <a href="chapter14.html">
+            
+                    
+                    第14章：React 哲學與最佳實踐
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="." >第11章：表單處理 (Forms)</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="&#x7B2C;-11-&#x7AE0;&#xFF1A;&#x8868;&#x55AE;&#x8655;&#x7406;-forms">&#x7B2C; 11 &#x7AE0;&#xFF1A;&#x8868;&#x55AE;&#x8655;&#x7406; (Forms)</h1>
+<p>&#x8868;&#x55AE;&#x662F; Web &#x61C9;&#x7528;&#x7A0B;&#x5F0F;&#x4E2D;&#x6536;&#x96C6;&#x4F7F;&#x7528;&#x8005;&#x8F38;&#x5165;&#x7684;&#x4E3B;&#x8981;&#x65B9;&#x5F0F;&#x3002;&#x5728; React &#x4E2D;&#xFF0C;&#x8655;&#x7406;&#x8868;&#x55AE;&#x6709;&#x5176;&#x7279;&#x6B8A;&#x7684;&#x6A21;&#x5F0F;&#x548C;&#x6700;&#x4F73;&#x5BE6;&#x8E10;&#x3002;React &#x7684;&#x8868;&#x55AE;&#x8655;&#x7406;&#x4E3B;&#x8981;&#x5206;&#x70BA;&#x5169;&#x7A2E;&#x65B9;&#x5F0F;&#xFF1A;&#x53D7;&#x63A7;&#x5143;&#x4EF6; (Controlled Components) &#x548C;&#x4E0D;&#x53D7;&#x63A7;&#x5143;&#x4EF6; (Uncontrolled Components)&#x3002;&#x5728;&#x9019;&#x4E00;&#x7AE0;&#x4E2D;&#xFF0C;&#x6211;&#x5011;&#x5C07;&#x6DF1;&#x5165;&#x5B78;&#x7FD2;&#x5982;&#x4F55;&#x5728; React &#x4E2D;&#x6709;&#x6548;&#x5730;&#x8655;&#x7406;&#x8868;&#x55AE;&#x3002;</p>
+<h3 id="111-&#x53D7;&#x63A7;&#x5143;&#x4EF6;-vs-&#x4E0D;&#x53D7;&#x63A7;&#x5143;&#x4EF6;">11.1 &#x53D7;&#x63A7;&#x5143;&#x4EF6; vs &#x4E0D;&#x53D7;&#x63A7;&#x5143;&#x4EF6;</h3>
+<h4 id="1111-&#x53D7;&#x63A7;&#x5143;&#x4EF6;-controlled-components">11.1.1 &#x53D7;&#x63A7;&#x5143;&#x4EF6; (Controlled Components)</h4>
+<p>&#x5728;&#x53D7;&#x63A7;&#x5143;&#x4EF6;&#x4E2D;&#xFF0C;&#x8868;&#x55AE;&#x5143;&#x7D20;&#x7684;&#x503C;&#x7531; React &#x7684; state &#x63A7;&#x5236;&#x3002;&#x9019;&#x610F;&#x5473;&#x8457;&#x8868;&#x55AE;&#x5143;&#x7D20;&#x7684;&#x7576;&#x524D;&#x503C;&#x7E3D;&#x662F;&#x7531; state &#x6C7A;&#x5B9A;&#xFF0C;&#x4E26;&#x4E14;&#x6240;&#x6709;&#x7684;&#x8F38;&#x5165;&#x8B8A;&#x5316;&#x90FD;&#x6703;&#x89F8;&#x767C; state &#x66F4;&#x65B0;&#x3002;</p>
+<pre><code class="lang-javascript"><span class="hljs-keyword">import</span> React, { useState } <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;react&apos;</span>;
+
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">ControlledForm</span>(<span class="hljs-params"></span>) </span>{
+  <span class="hljs-keyword">const</span> [formData, setFormData] = useState({
+    username: <span class="hljs-string">&apos;&apos;</span>,
+    email: <span class="hljs-string">&apos;&apos;</span>,
+    message: <span class="hljs-string">&apos;&apos;</span>
+  });
+
+  <span class="hljs-keyword">const</span> handleChange = (e) =&gt; {
+    <span class="hljs-keyword">const</span> { name, value } = e.target;
+    setFormData(prev =&gt; ({
+      ...prev,
+      [name]: value
+    }));
+  };
+
+  <span class="hljs-keyword">const</span> handleSubmit = (e) =&gt; {
+    e.preventDefault();
+    <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&apos;&#x63D0;&#x4EA4;&#x7684;&#x8CC7;&#x6599;:&apos;</span>, formData);
+    alert(<span class="hljs-string">`&#x4F7F;&#x7528;&#x8005;&#x540D;&#x7A31;: <span class="hljs-subst">${formData.username}</span>\n&#x4FE1;&#x7BB1;: <span class="hljs-subst">${formData.email}</span>\n&#x8A0A;&#x606F;: <span class="hljs-subst">${formData.message}</span>`</span>);
+  };
+
+  <span class="hljs-keyword">return</span> (
+    &lt;div style={{ maxWidth: &apos;400px&apos;, margin: &apos;0 auto&apos;, padding: &apos;20px&apos; }}&gt;
+      &lt;h3&gt;&#x53D7;&#x63A7;&#x5143;&#x4EF6;&#x7BC4;&#x4F8B;&lt;/h3&gt;
+      &lt;form onSubmit={handleSubmit}&gt;
+        &lt;div style={{ marginBottom: &apos;15px&apos; }}&gt;
+          &lt;label htmlFor=&quot;username&quot;&gt;&#x4F7F;&#x7528;&#x8005;&#x540D;&#x7A31;:&lt;/label&gt;
+          &lt;input
+            type=&quot;text&quot;
+            id=&quot;username&quot;
+            name=&quot;username&quot;
+            value={formData.username}
+            onChange={handleChange}
+            style={{
+              width: &apos;100%&apos;,
+              padding: &apos;8px&apos;,
+              marginTop: &apos;5px&apos;,
+              border: &apos;1px solid #ddd&apos;,
+              borderRadius: &apos;4px&apos;
+            }}
+          /&gt;
+        &lt;/div&gt;
+
+        &lt;div style={{ marginBottom: &apos;15px&apos; }}&gt;
+          &lt;label htmlFor=&quot;email&quot;&gt;&#x96FB;&#x5B50;&#x4FE1;&#x7BB1;:&lt;/label&gt;
+          &lt;input
+            type=&quot;email&quot;
+            id=&quot;email&quot;
+            name=&quot;email&quot;
+            value={formData.email}
+            onChange={handleChange}
+            style={{
+              width: &apos;100%&apos;,
+              padding: &apos;8px&apos;,
+              marginTop: &apos;5px&apos;,
+              border: &apos;1px solid #ddd&apos;,
+              borderRadius: &apos;4px&apos;
+            }}
+          /&gt;
+        &lt;/div&gt;
+
+        &lt;div style={{ marginBottom: &apos;15px&apos; }}&gt;
+          &lt;label htmlFor=&quot;message&quot;&gt;&#x8A0A;&#x606F;:&lt;/label&gt;
+          &lt;textarea
+            id=&quot;message&quot;
+            name=&quot;message&quot;
+            value={formData.message}
+            onChange={handleChange}
+            rows=&quot;4&quot;
+            style={{
+              width: &apos;100%&apos;,
+              padding: &apos;8px&apos;,
+              marginTop: &apos;5px&apos;,
+              border: &apos;1px solid #ddd&apos;,
+              borderRadius: &apos;4px&apos;,
+              resize: &apos;vertical&apos;
+            }}
+          /&gt;
+        &lt;/div&gt;
+
+        &lt;button
+          type=&quot;submit&quot;
+          style={{
+            width: &apos;100%&apos;,
+            padding: &apos;10px&apos;,
+            backgroundColor: &apos;#4CAF50&apos;,
+            color: &apos;white&apos;,
+            border: &apos;none&apos;,
+            borderRadius: &apos;4px&apos;,
+            cursor: &apos;pointer&apos;,
+            fontSize: &apos;16px&apos;
+          }}
+        &gt;
+          &#x63D0;&#x4EA4;
+        &lt;/button&gt;
+      &lt;/form&gt;
+
+      &lt;div style={{ marginTop: &apos;20px&apos;, padding: &apos;10px&apos;, backgroundColor: &apos;#f9f9f9&apos;, borderRadius: &apos;4px&apos; }}&gt;
+        &lt;h4&gt;&#x5373;&#x6642;&#x9810;&#x89BD;:&lt;/h4&gt;
+        &lt;p&gt;&lt;strong&gt;&#x4F7F;&#x7528;&#x8005;&#x540D;&#x7A31;:&lt;/strong&gt; {formData.username || &apos;(&#x672A;&#x586B;&#x5BEB;)&apos;}&lt;/p&gt;
+        &lt;p&gt;&lt;strong&gt;&#x4FE1;&#x7BB1;:&lt;/strong&gt; {formData.email || &apos;(&#x672A;&#x586B;&#x5BEB;)&apos;}&lt;/p&gt;
+        &lt;p&gt;&lt;strong&gt;&#x8A0A;&#x606F;:&lt;/strong&gt; {formData.message || &apos;(&#x672A;&#x586B;&#x5BEB;)&apos;}&lt;/p&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  );
+}
+
+export default ControlledForm;
+</code></pre>
+<h4 id="1112-&#x4E0D;&#x53D7;&#x63A7;&#x5143;&#x4EF6;-uncontrolled-components">11.1.2 &#x4E0D;&#x53D7;&#x63A7;&#x5143;&#x4EF6; (Uncontrolled Components)</h4>
+<p>&#x5728;&#x4E0D;&#x53D7;&#x63A7;&#x5143;&#x4EF6;&#x4E2D;&#xFF0C;&#x8868;&#x55AE;&#x5143;&#x7D20;&#x81EA;&#x5DF1;&#x7DAD;&#x8B77;&#x5176;&#x5167;&#x90E8; state&#xFF0C;React &#x900F;&#x904E; ref &#x4F86;&#x53D6;&#x5F97;&#x8868;&#x55AE;&#x7684;&#x503C;&#x3002;</p>
+<pre><code class="lang-javascript"><span class="hljs-keyword">import</span> React, { useRef } <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;react&apos;</span>;
+
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">UncontrolledForm</span>(<span class="hljs-params"></span>) </span>{
+  <span class="hljs-keyword">const</span> usernameRef = useRef();
+  <span class="hljs-keyword">const</span> emailRef = useRef();
+  <span class="hljs-keyword">const</span> messageRef = useRef();
+
+  <span class="hljs-keyword">const</span> handleSubmit = (e) =&gt; {
+    e.preventDefault();
+
+    <span class="hljs-keyword">const</span> formData = {
+      username: usernameRef.current.value,
+      email: emailRef.current.value,
+      message: messageRef.current.value
+    };
+
+    <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&apos;&#x63D0;&#x4EA4;&#x7684;&#x8CC7;&#x6599;:&apos;</span>, formData);
+    alert(<span class="hljs-string">`&#x4F7F;&#x7528;&#x8005;&#x540D;&#x7A31;: <span class="hljs-subst">${formData.username}</span>\n&#x4FE1;&#x7BB1;: <span class="hljs-subst">${formData.email}</span>\n&#x8A0A;&#x606F;: <span class="hljs-subst">${formData.message}</span>`</span>);
+
+    <span class="hljs-comment">// &#x6E05;&#x7A7A;&#x8868;&#x55AE;</span>
+    usernameRef.current.value = <span class="hljs-string">&apos;&apos;</span>;
+    emailRef.current.value = <span class="hljs-string">&apos;&apos;</span>;
+    messageRef.current.value = <span class="hljs-string">&apos;&apos;</span>;
+  };
+
+  <span class="hljs-keyword">return</span> (
+    &lt;div style={{ maxWidth: &apos;400px&apos;, margin: &apos;0 auto&apos;, padding: &apos;20px&apos; }}&gt;
+      &lt;h3&gt;&#x4E0D;&#x53D7;&#x63A7;&#x5143;&#x4EF6;&#x7BC4;&#x4F8B;&lt;/h3&gt;
+      &lt;form onSubmit={handleSubmit}&gt;
+        &lt;div style={{ marginBottom: &apos;15px&apos; }}&gt;
+          &lt;label htmlFor=&quot;username&quot;&gt;&#x4F7F;&#x7528;&#x8005;&#x540D;&#x7A31;:&lt;/label&gt;
+          &lt;input
+            type=&quot;text&quot;
+            id=&quot;username&quot;
+            ref={usernameRef}
+            defaultValue=&quot;&quot; // &#x4F7F;&#x7528; defaultValue &#x800C;&#x4E0D;&#x662F; value
+            style={{
+              width: &apos;100%&apos;,
+              padding: &apos;8px&apos;,
+              marginTop: &apos;5px&apos;,
+              border: &apos;1px solid #ddd&apos;,
+              borderRadius: &apos;4px&apos;
+            }}
+          /&gt;
+        &lt;/div&gt;
+
+        &lt;div style={{ marginBottom: &apos;15px&apos; }}&gt;
+          &lt;label htmlFor=&quot;email&quot;&gt;&#x96FB;&#x5B50;&#x4FE1;&#x7BB1;:&lt;/label&gt;
+          &lt;input
+            type=&quot;email&quot;
+            id=&quot;email&quot;
+            ref={emailRef}
+            defaultValue=&quot;&quot;
+            style={{
+              width: &apos;100%&apos;,
+              padding: &apos;8px&apos;,
+              marginTop: &apos;5px&apos;,
+              border: &apos;1px solid #ddd&apos;,
+              borderRadius: &apos;4px&apos;
+            }}
+          /&gt;
+        &lt;/div&gt;
+
+        &lt;div style={{ marginBottom: &apos;15px&apos; }}&gt;
+          &lt;label htmlFor=&quot;message&quot;&gt;&#x8A0A;&#x606F;:&lt;/label&gt;
+          &lt;textarea
+            id=&quot;message&quot;
+            ref={messageRef}
+            defaultValue=&quot;&quot;
+            rows=&quot;4&quot;
+            style={{
+              width: &apos;100%&apos;,
+              padding: &apos;8px&apos;,
+              marginTop: &apos;5px&apos;,
+              border: &apos;1px solid #ddd&apos;,
+              borderRadius: &apos;4px&apos;,
+              resize: &apos;vertical&apos;
+            }}
+          /&gt;
+        &lt;/div&gt;
+
+        &lt;button
+          type=&quot;submit&quot;
+          style={{
+            width: &apos;100%&apos;,
+            padding: &apos;10px&apos;,
+            backgroundColor: &apos;#2196F3&apos;,
+            color: &apos;white&apos;,
+            border: &apos;none&apos;,
+            borderRadius: &apos;4px&apos;,
+            cursor: &apos;pointer&apos;,
+            fontSize: &apos;16px&apos;
+          }}
+        &gt;
+          &#x63D0;&#x4EA4;
+        &lt;/button&gt;
+      &lt;/form&gt;
+    &lt;/div&gt;
+  );
+}
+
+export default UncontrolledForm;
+</code></pre>
+<h3 id="112-&#x8655;&#x7406;&#x4E0D;&#x540C;&#x985E;&#x578B;&#x7684;&#x8868;&#x55AE;&#x5143;&#x7D20;">11.2 &#x8655;&#x7406;&#x4E0D;&#x540C;&#x985E;&#x578B;&#x7684;&#x8868;&#x55AE;&#x5143;&#x7D20;</h3>
+<h4 id="1121-&#x6587;&#x5B57;&#x8F38;&#x5165;&#x548C;&#x6587;&#x5B57;&#x5340;&#x57DF;">11.2.1 &#x6587;&#x5B57;&#x8F38;&#x5165;&#x548C;&#x6587;&#x5B57;&#x5340;&#x57DF;</h4>
+<pre><code class="lang-javascript"><span class="hljs-keyword">import</span> React, { useState } <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;react&apos;</span>;
+
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">TextInputs</span>(<span class="hljs-params"></span>) </span>{
+  <span class="hljs-keyword">const</span> [formData, setFormData] = useState({
+    firstName: <span class="hljs-string">&apos;&apos;</span>,
+    lastName: <span class="hljs-string">&apos;&apos;</span>,
+    biography: <span class="hljs-string">&apos;&apos;</span>,
+    password: <span class="hljs-string">&apos;&apos;</span>,
+    confirmPassword: <span class="hljs-string">&apos;&apos;</span>
+  });
+
+  <span class="hljs-keyword">const</span> handleChange = (e) =&gt; {
+    <span class="hljs-keyword">const</span> { name, value } = e.target;
+    setFormData(prev =&gt; ({
+      ...prev,
+      [name]: value
+    }));
+  };
+
+  <span class="hljs-keyword">const</span> passwordsMatch = formData.password === formData.confirmPassword;
+  <span class="hljs-keyword">const</span> passwordValid = formData.password.length &gt;= <span class="hljs-number">6</span>;
+
+  <span class="hljs-keyword">return</span> (
+    &lt;div style={{ maxWidth: &apos;500px&apos;, margin: &apos;0 auto&apos;, padding: &apos;20px&apos; }}&gt;
+      &lt;h3&gt;&#x6587;&#x5B57;&#x8F38;&#x5165;&#x7BC4;&#x4F8B;&lt;/h3&gt;
+      &lt;form&gt;
+        &lt;div style={{ display: &apos;grid&apos;, gridTemplateColumns: &apos;1fr 1fr&apos;, gap: &apos;10px&apos;, marginBottom: &apos;15px&apos; }}&gt;
+          &lt;div&gt;
+            &lt;label htmlFor=&quot;firstName&quot;&gt;&#x540D;&#x5B57;:&lt;/label&gt;
+            &lt;input
+              type=&quot;text&quot;
+              id=&quot;firstName&quot;
+              name=&quot;firstName&quot;
+              value={formData.firstName}
+              onChange={handleChange}
+              placeholder=&quot;&#x8ACB;&#x8F38;&#x5165;&#x540D;&#x5B57;&quot;
+              style={{
+                width: &apos;100%&apos;,
+                padding: &apos;8px&apos;,
+                marginTop: &apos;5px&apos;,
+                border: &apos;1px solid #ddd&apos;,
+                borderRadius: &apos;4px&apos;
+              }}
+            /&gt;
+          &lt;/div&gt;
+
+          &lt;div&gt;
+            &lt;label htmlFor=&quot;lastName&quot;&gt;&#x59D3;&#x6C0F;:&lt;/label&gt;
+            &lt;input
+              type=&quot;text&quot;
+              id=&quot;lastName&quot;
+              name=&quot;lastName&quot;
+              value={formData.lastName}
+              onChange={handleChange}
+              placeholder=&quot;&#x8ACB;&#x8F38;&#x5165;&#x59D3;&#x6C0F;&quot;
+              style={{
+                width: &apos;100%&apos;,
+                padding: &apos;8px&apos;,
+                marginTop: &apos;5px&apos;,
+                border: &apos;1px solid #ddd&apos;,
+                borderRadius: &apos;4px&apos;
+              }}
+            /&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+
+        &lt;div style={{ marginBottom: &apos;15px&apos; }}&gt;
+          &lt;label htmlFor=&quot;password&quot;&gt;&#x5BC6;&#x78BC;:&lt;/label&gt;
+          &lt;input
+            type=&quot;password&quot;
+            id=&quot;password&quot;
+            name=&quot;password&quot;
+            value={formData.password}
+            onChange={handleChange}
+            placeholder=&quot;&#x81F3;&#x5C11; 6 &#x500B;&#x5B57;&#x5143;&quot;
+            style={{
+              width: &apos;100%&apos;,
+              padding: &apos;8px&apos;,
+              marginTop: &apos;5px&apos;,
+              border: `1px solid ${passwordValid || !formData.password ? &apos;#ddd&apos; : &apos;#f44336&apos;}`,
+              borderRadius: &apos;4px&apos;
+            }}
+          /&gt;
+          {formData.password &amp;&amp; !passwordValid &amp;&amp; (
+            &lt;small style={{ color: &apos;#f44336&apos; }}&gt;&#x5BC6;&#x78BC;&#x81F3;&#x5C11;&#x9700;&#x8981; 6 &#x500B;&#x5B57;&#x5143;&lt;/small&gt;
+          )}
+        &lt;/div&gt;
+
+        &lt;div style={{ marginBottom: &apos;15px&apos; }}&gt;
+          &lt;label htmlFor=&quot;confirmPassword&quot;&gt;&#x78BA;&#x8A8D;&#x5BC6;&#x78BC;:&lt;/label&gt;
+          &lt;input
+            type=&quot;password&quot;
+            id=&quot;confirmPassword&quot;
+            name=&quot;confirmPassword&quot;
+            value={formData.confirmPassword}
+            onChange={handleChange}
+            placeholder=&quot;&#x8ACB;&#x518D;&#x6B21;&#x8F38;&#x5165;&#x5BC6;&#x78BC;&quot;
+            style={{
+              width: &apos;100%&apos;,
+              padding: &apos;8px&apos;,
+              marginTop: &apos;5px&apos;,
+              border: `1px solid ${passwordsMatch || !formData.confirmPassword ? &apos;#ddd&apos; : &apos;#f44336&apos;}`,
+              borderRadius: &apos;4px&apos;
+            }}
+          /&gt;
+          {formData.confirmPassword &amp;&amp; !passwordsMatch &amp;&amp; (
+            &lt;small style={{ color: &apos;#f44336&apos; }}&gt;&#x5BC6;&#x78BC;&#x4E0D;&#x4E00;&#x81F4;&lt;/small&gt;
+          )}
+        &lt;/div&gt;
+
+        &lt;div style={{ marginBottom: &apos;15px&apos; }}&gt;
+          &lt;label htmlFor=&quot;biography&quot;&gt;&#x500B;&#x4EBA;&#x7C21;&#x4ECB;:&lt;/label&gt;
+          &lt;textarea
+            id=&quot;biography&quot;
+            name=&quot;biography&quot;
+            value={formData.biography}
+            onChange={handleChange}
+            placeholder=&quot;&#x8ACB;&#x7C21;&#x55AE;&#x4ECB;&#x7D39;&#x81EA;&#x5DF1;...&quot;
+            rows=&quot;4&quot;
+            maxLength=&quot;500&quot;
+            style={{
+              width: &apos;100%&apos;,
+              padding: &apos;8px&apos;,
+              marginTop: &apos;5px&apos;,
+              border: &apos;1px solid #ddd&apos;,
+              borderRadius: &apos;4px&apos;,
+              resize: &apos;vertical&apos;
+            }}
+          /&gt;
+          &lt;small style={{ color: &apos;#666&apos; }}&gt;
+            {formData.biography.length}/500 &#x5B57;&#x5143;
+          &lt;/small&gt;
+        &lt;/div&gt;
+
+        &lt;div style={{ padding: &apos;15px&apos;, backgroundColor: &apos;#f5f5f5&apos;, borderRadius: &apos;4px&apos; }}&gt;
+          &lt;h4&gt;&#x8868;&#x55AE;&#x8CC7;&#x6599;&#x9810;&#x89BD;:&lt;/h4&gt;
+          &lt;p&gt;&lt;strong&gt;&#x5168;&#x540D;:&lt;/strong&gt; {formData.firstName} {formData.lastName}&lt;/p&gt;
+          &lt;p&gt;&lt;strong&gt;&#x5BC6;&#x78BC;&#x72C0;&#x614B;:&lt;/strong&gt; 
+            {!formData.password ? &apos;&#x672A;&#x8A2D;&#x5B9A;&apos; : 
+             !passwordValid ? &apos;&#x592A;&#x77ED;&apos; :
+             !passwordsMatch ? &apos;&#x4E0D;&#x4E00;&#x81F4;&apos; : &apos;&#x2713; &#x6709;&#x6548;&apos;}
+          &lt;/p&gt;
+          &lt;p&gt;&lt;strong&gt;&#x7C21;&#x4ECB;&#x9577;&#x5EA6;:&lt;/strong&gt; {formData.biography.length} &#x5B57;&#x5143;&lt;/p&gt;
+        &lt;/div&gt;
+      &lt;/form&gt;
+    &lt;/div&gt;
+  );
+}
+
+export default TextInputs;
+</code></pre>
+<h4 id="1122-&#x9078;&#x64C7;&#x5143;&#x7D20;-select-radio-checkbox">11.2.2 &#x9078;&#x64C7;&#x5143;&#x7D20; (Select, Radio, Checkbox)</h4>
+<pre><code class="lang-javascript"><span class="hljs-keyword">import</span> React, { useState } <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;react&apos;</span>;
+
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">SelectionInputs</span>(<span class="hljs-params"></span>) </span>{
+  <span class="hljs-keyword">const</span> [formData, setFormData] = useState({
+    country: <span class="hljs-string">&apos;&apos;</span>,
+    gender: <span class="hljs-string">&apos;&apos;</span>,
+    hobbies: [],
+    newsletter: <span class="hljs-literal">false</span>,
+    terms: <span class="hljs-literal">false</span>,
+    experience: <span class="hljs-string">&apos;&apos;</span>
+  });
+
+  <span class="hljs-keyword">const</span> handleChange = (e) =&gt; {
+    <span class="hljs-keyword">const</span> { name, value, type, checked } = e.target;
+
+    <span class="hljs-keyword">if</span> (type === <span class="hljs-string">&apos;checkbox&apos;</span>) {
+      <span class="hljs-keyword">if</span> (name === <span class="hljs-string">&apos;hobbies&apos;</span>) {
+        <span class="hljs-comment">// &#x8655;&#x7406;&#x591A;&#x9078; checkbox</span>
+        setFormData(prev =&gt; ({
+          ...prev,
+          hobbies: checked 
+            ? [...prev.hobbies, value]
+            : prev.hobbies.filter(hobby =&gt; hobby !== value)
+        }));
+      } <span class="hljs-keyword">else</span> {
+        <span class="hljs-comment">// &#x8655;&#x7406;&#x55AE;&#x4E00; checkbox</span>
+        setFormData(prev =&gt; ({
+          ...prev,
+          [name]: checked
+        }));
+      }
+    } <span class="hljs-keyword">else</span> {
+      setFormData(prev =&gt; ({
+        ...prev,
+        [name]: value
+      }));
+    }
+  };
+
+  <span class="hljs-keyword">const</span> countries = [
+    { value: <span class="hljs-string">&apos;&apos;</span>, label: <span class="hljs-string">&apos;&#x8ACB;&#x9078;&#x64C7;&#x570B;&#x5BB6;&apos;</span> },
+    { value: <span class="hljs-string">&apos;tw&apos;</span>, label: <span class="hljs-string">&apos;&#x53F0;&#x7063;&apos;</span> },
+    { value: <span class="hljs-string">&apos;cn&apos;</span>, label: <span class="hljs-string">&apos;&#x4E2D;&#x570B;&apos;</span> },
+    { value: <span class="hljs-string">&apos;jp&apos;</span>, label: <span class="hljs-string">&apos;&#x65E5;&#x672C;&apos;</span> },
+    { value: <span class="hljs-string">&apos;kr&apos;</span>, label: <span class="hljs-string">&apos;&#x97D3;&#x570B;&apos;</span> },
+    { value: <span class="hljs-string">&apos;us&apos;</span>, label: <span class="hljs-string">&apos;&#x7F8E;&#x570B;&apos;</span> },
+    { value: <span class="hljs-string">&apos;other&apos;</span>, label: <span class="hljs-string">&apos;&#x5176;&#x4ED6;&apos;</span> }
+  ];
+
+  <span class="hljs-keyword">const</span> hobbyOptions = [
+    { value: <span class="hljs-string">&apos;reading&apos;</span>, label: <span class="hljs-string">&apos;&#x95B1;&#x8B80;&apos;</span> },
+    { value: <span class="hljs-string">&apos;sports&apos;</span>, label: <span class="hljs-string">&apos;&#x904B;&#x52D5;&apos;</span> },
+    { value: <span class="hljs-string">&apos;music&apos;</span>, label: <span class="hljs-string">&apos;&#x97F3;&#x6A02;&apos;</span> },
+    { value: <span class="hljs-string">&apos;travel&apos;</span>, label: <span class="hljs-string">&apos;&#x65C5;&#x884C;&apos;</span> },
+    { value: <span class="hljs-string">&apos;cooking&apos;</span>, label: <span class="hljs-string">&apos;&#x70F9;&#x98EA;&apos;</span> },
+    { value: <span class="hljs-string">&apos;gaming&apos;</span>, label: <span class="hljs-string">&apos;&#x904A;&#x6232;&apos;</span> }
+  ];
+
+  <span class="hljs-keyword">return</span> (
+    &lt;div style={{ maxWidth: &apos;500px&apos;, margin: &apos;0 auto&apos;, padding: &apos;20px&apos; }}&gt;
+      &lt;h3&gt;&#x9078;&#x64C7;&#x5143;&#x7D20;&#x7BC4;&#x4F8B;&lt;/h3&gt;
+      &lt;form&gt;
+        {/* &#x4E0B;&#x62C9;&#x9078;&#x55AE; */}
+        &lt;div style={{ marginBottom: &apos;20px&apos; }}&gt;
+          &lt;label htmlFor=&quot;country&quot;&gt;&#x570B;&#x5BB6;:&lt;/label&gt;
+          &lt;select
+            id=&quot;country&quot;
+            name=&quot;country&quot;
+            value={formData.country}
+            onChange={handleChange}
+            style={{
+              width: &apos;100%&apos;,
+              padding: &apos;8px&apos;,
+              marginTop: &apos;5px&apos;,
+              border: &apos;1px solid #ddd&apos;,
+              borderRadius: &apos;4px&apos;
+            }}
+          &gt;
+            {countries.map(country =&gt; (
+              &lt;option key={country.value} value={country.value}&gt;
+                {country.label}
+              &lt;/option&gt;
+            ))}
+          &lt;/select&gt;
+        &lt;/div&gt;
+
+        {/* &#x55AE;&#x9078;&#x6309;&#x9215; */}
+        &lt;div style={{ marginBottom: &apos;20px&apos; }}&gt;
+          &lt;label&gt;&#x6027;&#x5225;:&lt;/label&gt;
+          &lt;div style={{ marginTop: &apos;5px&apos; }}&gt;
+            &lt;label style={{ display: &apos;block&apos;, marginBottom: &apos;5px&apos; }}&gt;
+              &lt;input
+                type=&quot;radio&quot;
+                name=&quot;gender&quot;
+                value=&quot;male&quot;
+                checked={formData.gender === &apos;male&apos;}
+                onChange={handleChange}
+                style={{ marginRight: &apos;8px }}
+              /&gt;
+              &#x7537;&#x6027;
+            &lt;/label&gt;
+            &lt;label style={{ display: &apos;block&apos;, marginBottom: &apos;5px&apos; }}&gt;
+              &lt;input
+                type=&quot;radio&quot;
+                name=&quot;gender&quot;
+                value=&quot;female&quot;
+                checked={formData.gender === &apos;female&apos;}
+                onChange={handleChange}
+                style={{ marginRight: &apos;8px }}
+              /&gt;
+              &#x5973;&#x6027;
+            &lt;/label&gt;
+            &lt;label style={{ display: &apos;block&apos; }}&gt;
+              &lt;input
+                type=&quot;radio&quot;
+                name=&quot;gender&quot;
+                value=&quot;other&quot;
+                checked={formData.gender === &apos;other&apos;}
+                onChange={handleChange}
+                style={{ marginRight: &apos;8px }}
+              /&gt;
+              &#x5176;&#x4ED6;
+            &lt;/label&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+
+        {/* &#x7D93;&#x9A57;&#x7B49;&#x7D1A; (Range) */}
+        &lt;div style={{ marginBottom: &apos;20px&apos; }}&gt;
+          &lt;label htmlFor=&quot;experience&quot;&gt;&#x7A0B;&#x5F0F;&#x8A2D;&#x8A08;&#x7D93;&#x9A57; ({formData.experience || 0} &#x5E74;):&lt;/label&gt;
+          &lt;input
+            type=&quot;range&quot;
+            id=&quot;experience&quot;
+            name=&quot;experience&quot;
+            min=&quot;0&quot;
+            max=&quot;20&quot;
+            value={formData.experience}
+            onChange={handleChange}
+            style={{
+              width: &apos;100%&apos;,
+              marginTop: &apos;5px&quot;
+            }}
+          /&gt;
+          &lt;div style={{ display: &apos;flex&apos;, justifyContent: &apos;space-between&apos;, fontSize: &apos;0.8em&apos;, color: &apos;#666&apos; }}&gt;
+            &lt;span&gt;0&#x5E74;&lt;/span&gt;
+            &lt;span&gt;10&#x5E74;&lt;/span&gt;
+            &lt;span&gt;20&#x5E74;+&lt;/span&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+
+        {/* &#x591A;&#x9078; Checkbox */}
+        &lt;div style={{ marginBottom: &apos;20px&apos; }}&gt;
+          &lt;label&gt;&#x8208;&#x8DA3;&#x611B;&#x597D; (&#x53EF;&#x591A;&#x9078;):&lt;/label&gt;
+          &lt;div style={{ marginTop: &apos;5px&apos;, display: &apos;grid&apos;, gridTemplateColumns: &apos;1fr 1fr&apos;, gap: &apos;5px&apos; }}&gt;
+            {hobbyOptions.map(hobby =&gt; (
+              &lt;label key={hobby.value} style={{ display: &apos;flex&apos;, alignItems: &apos;center&apos; }}&gt;
+                &lt;input
+                  type=&quot;checkbox&quot;
+                  name=&quot;hobbies&quot;
+                  value={hobby.value}
+                  checked={formData.hobbies.includes(hobby.value)}
+                  onChange={handleChange}
+                  style={{ marginRight: &apos;8px }}
+                /&gt;
+                {hobby.label}
+              &lt;/label&gt;
+            ))}
+          &lt;/div&gt;
+        &lt;/div&gt;
+
+        {/* &#x55AE;&#x4E00; Checkbox */}
+        &lt;div style={{ marginBottom: &apos;20px&apos; }}&gt;
+          &lt;label style={{ display: &apos;flex&apos;, alignItems: &apos;center&apos;, marginBottom: &apos;10px&apos; }}&gt;
+            &lt;input
+              type=&quot;checkbox&quot;
+              name=&quot;newsletter&quot;
+              checked={formData.newsletter}
+              onChange={handleChange}
+              style={{ marginRight: &apos;8px }}
+            /&gt;
+            &#x8A02;&#x95B1;&#x96FB;&#x5B50;&#x5831;
+          &lt;/label&gt;
+
+          &lt;label style={{ display: &apos;flex&apos;, alignItems: &apos;center&apos; }}&gt;
+            &lt;input
+              type=&quot;checkbox&quot;
+              name=&quot;terms&quot;
+              checked={formData.terms}
+              onChange={handleChange}
+              style={{ marginRight: &apos;8px }}
+            /&gt;
+            &#x6211;&#x540C;&#x610F;&lt;a href=&quot;#&quot; style={{ color: &apos;#2196F3&apos; }}&gt;&#x670D;&#x52D9;&#x689D;&#x6B3E;&lt;/a&gt;
+          &lt;/label&gt;
+        &lt;/div&gt;
+
+        &lt;button
+          type=&quot;submit&quot;
+          disabled={!formData.terms}
+          style={{
+            width: &apos;100%&apos;,
+            padding: &apos;10px&apos;,
+            backgroundColor: formData.terms ? &apos;#4CAF50&apos; : &apos;#ccc&apos;,
+            color: &apos;white&apos;,
+            border: &apos;none&apos;,
+            borderRadius: &apos;4px&apos;,
+            cursor: formData.terms ? &apos;pointer&apos; : &apos;not-allowed&apos;,
+            fontSize: &apos;16px&apos;
+          }}
+        &gt;
+          &#x63D0;&#x4EA4;&#x8868;&#x55AE;
+        &lt;/button&gt;
+
+        &lt;div style={{ marginTop: &apos;20px&apos;, padding: &apos;15px&apos;, backgroundColor: &apos;#f9f9f9&apos;, borderRadius: &apos;4px&apos; }}&gt;
+          &lt;h4&gt;&#x9078;&#x64C7;&#x7D50;&#x679C;:&lt;/h4&gt;
+          &lt;p&gt;&lt;strong&gt;&#x570B;&#x5BB6;:&lt;/strong&gt; {formData.country || &apos;&#x672A;&#x9078;&#x64C7;&apos;}&lt;/p&gt;
+          &lt;p&gt;&lt;strong&gt;&#x6027;&#x5225;:&lt;/strong&gt; {formData.gender || &apos;&#x672A;&#x9078;&#x64C7;&apos;}&lt;/p&gt;
+          &lt;p&gt;&lt;strong&gt;&#x7D93;&#x9A57;:&lt;/strong&gt; {formData.experience || 0} &#x5E74;&lt;/p&gt;
+          &lt;p&gt;&lt;strong&gt;&#x8208;&#x8DA3;:&lt;/strong&gt; {formData.hobbies.length &gt; 0 ? formData.hobbies.join(&apos;, &apos;) : &apos;&#x672A;&#x9078;&#x64C7;&apos;}&lt;/p&gt;
+          &lt;p&gt;&lt;strong&gt;&#x96FB;&#x5B50;&#x5831;:&lt;/strong&gt; {formData.newsletter ? &apos;&#x5DF2;&#x8A02;&#x95B1;&apos; : &apos;&#x672A;&#x8A02;&#x95B1;&apos;}&lt;/p&gt;
+          &lt;p&gt;&lt;strong&gt;&#x689D;&#x6B3E;:&lt;/strong&gt; {formData.terms ? &apos;&#x5DF2;&#x540C;&#x610F;&apos; : &apos;&#x672A;&#x540C;&#x610F;&apos;}&lt;/p&gt;
+        &lt;/div&gt;
+      &lt;/form&gt;
+    &lt;/div&gt;
+  );
+}
+
+export default SelectionInputs;
+</code></pre>
+<h3 id="113-&#x8868;&#x55AE;&#x9A57;&#x8B49;">11.3 &#x8868;&#x55AE;&#x9A57;&#x8B49;</h3>
+<pre><code class="lang-javascript"><span class="hljs-keyword">import</span> React, { useState } <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;react&apos;</span>;
+
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">FormValidation</span>(<span class="hljs-params"></span>) </span>{
+  <span class="hljs-keyword">const</span> [formData, setFormData] = useState({
+    email: <span class="hljs-string">&apos;&apos;</span>,
+    username: <span class="hljs-string">&apos;&apos;</span>,
+    password: <span class="hljs-string">&apos;&apos;</span>,
+    confirmPassword: <span class="hljs-string">&apos;&apos;</span>,
+    age: <span class="hljs-string">&apos;&apos;</span>,
+    website: <span class="hljs-string">&apos;&apos;</span>
+  });
+
+  <span class="hljs-keyword">const</span> [errors, setErrors] = useState({});
+  <span class="hljs-keyword">const</span> [touched, setTouched] = useState({});
+
+  <span class="hljs-comment">// &#x9A57;&#x8B49;&#x898F;&#x5247;</span>
+  <span class="hljs-keyword">const</span> validateField = (name, value) =&gt; {
+    <span class="hljs-keyword">switch</span> (name) {
+      <span class="hljs-keyword">case</span> <span class="hljs-string">&apos;email&apos;</span>:
+        <span class="hljs-keyword">if</span> (!value) <span class="hljs-keyword">return</span> <span class="hljs-string">&apos;&#x96FB;&#x5B50;&#x4FE1;&#x7BB1;&#x70BA;&#x5FC5;&#x586B;&#x6B04;&#x4F4D;&apos;</span>;
+        <span class="hljs-keyword">if</span> (!<span class="hljs-regexp">/^[^\s@]+@[^\s@]+\.[^\s@]+$/</span>.test(value)) <span class="hljs-keyword">return</span> <span class="hljs-string">&apos;&#x8ACB;&#x8F38;&#x5165;&#x6709;&#x6548;&#x7684;&#x96FB;&#x5B50;&#x4FE1;&#x7BB1;&apos;</span>;
+        <span class="hljs-keyword">return</span> <span class="hljs-string">&apos;&apos;</span>;
+
+      <span class="hljs-keyword">case</span> <span class="hljs-string">&apos;username&apos;</span>:
+        <span class="hljs-keyword">if</span> (!value) <span class="hljs-keyword">return</span> <span class="hljs-string">&apos;&#x4F7F;&#x7528;&#x8005;&#x540D;&#x7A31;&#x70BA;&#x5FC5;&#x586B;&#x6B04;&#x4F4D;&apos;</span>;
+        <span class="hljs-keyword">if</span> (value.length &lt; <span class="hljs-number">3</span>) <span class="hljs-keyword">return</span> <span class="hljs-string">&apos;&#x4F7F;&#x7528;&#x8005;&#x540D;&#x7A31;&#x81F3;&#x5C11;&#x9700;&#x8981; 3 &#x500B;&#x5B57;&#x5143;&apos;</span>;
+        <span class="hljs-keyword">if</span> (!<span class="hljs-regexp">/^[a-zA-Z0-9_]+$/</span>.test(value)) <span class="hljs-keyword">return</span> <span class="hljs-string">&apos;&#x53EA;&#x80FD;&#x5305;&#x542B;&#x5B57;&#x6BCD;&#x3001;&#x6578;&#x5B57;&#x548C;&#x4E0B;&#x5E95;&#x7DDA;&apos;</span>;
+        <span class="hljs-keyword">return</span> <span class="hljs-string">&apos;&apos;</span>;
+
+      <span class="hljs-keyword">case</span> <span class="hljs-string">&apos;password&apos;</span>:
+        <span class="hljs-keyword">if</span> (!value) <span class="hljs-keyword">return</span> <span class="hljs-string">&apos;&#x5BC6;&#x78BC;&#x70BA;&#x5FC5;&#x586B;&#x6B04;&#x4F4D;&apos;</span>;
+        <span class="hljs-keyword">if</span> (value.length &lt; <span class="hljs-number">8</span>) <span class="hljs-keyword">return</span> <span class="hljs-string">&apos;&#x5BC6;&#x78BC;&#x81F3;&#x5C11;&#x9700;&#x8981; 8 &#x500B;&#x5B57;&#x5143;&apos;</span>;
+        <span class="hljs-keyword">if</span> (!<span class="hljs-regexp">/(?=.*[a-z])(?=.*[A-Z])(?=.*\d)/</span>.test(value)) {
+          <span class="hljs-keyword">return</span> <span class="hljs-string">&apos;&#x5BC6;&#x78BC;&#x5FC5;&#x9808;&#x5305;&#x542B;&#x5927;&#x5C0F;&#x5BEB;&#x5B57;&#x6BCD;&#x548C;&#x6578;&#x5B57;&apos;</span>;
+        }
+        <span class="hljs-keyword">return</span> <span class="hljs-string">&apos;&apos;</span>;
+
+      <span class="hljs-keyword">case</span> <span class="hljs-string">&apos;confirmPassword&apos;</span>:
+        <span class="hljs-keyword">if</span> (!value) <span class="hljs-keyword">return</span> <span class="hljs-string">&apos;&#x8ACB;&#x78BA;&#x8A8D;&#x5BC6;&#x78BC;&apos;</span>;
+        <span class="hljs-keyword">if</span> (value !== formData.password) <span class="hljs-keyword">return</span> <span class="hljs-string">&apos;&#x5BC6;&#x78BC;&#x4E0D;&#x4E00;&#x81F4;&apos;</span>;
+        <span class="hljs-keyword">return</span> <span class="hljs-string">&apos;&apos;</span>;
+
+      <span class="hljs-keyword">case</span> <span class="hljs-string">&apos;age&apos;</span>:
+        <span class="hljs-keyword">if</span> (!value) <span class="hljs-keyword">return</span> <span class="hljs-string">&apos;&#x5E74;&#x9F61;&#x70BA;&#x5FC5;&#x586B;&#x6B04;&#x4F4D;&apos;</span>;
+        <span class="hljs-keyword">if</span> (<span class="hljs-built_in">isNaN</span>(value) || value &lt; <span class="hljs-number">1</span> || value &gt; <span class="hljs-number">120</span>) <span class="hljs-keyword">return</span> <span class="hljs-string">&apos;&#x8ACB;&#x8F38;&#x5165;&#x6709;&#x6548;&#x7684;&#x5E74;&#x9F61; (1-120)&apos;</span>;
+        <span class="hljs-keyword">return</span> <span class="hljs-string">&apos;&apos;</span>;
+
+      <span class="hljs-keyword">case</span> <span class="hljs-string">&apos;website&apos;</span>:
+        <span class="hljs-keyword">if</span> (value &amp;&amp; !<span class="hljs-regexp">/^https?:\/\/.+/</span>.test(value)) <span class="hljs-keyword">return</span> <span class="hljs-string">&apos;&#x8ACB;&#x8F38;&#x5165;&#x6709;&#x6548;&#x7684;&#x7DB2;&#x5740; (&#x9700;&#x5305;&#x542B; http:// &#x6216; https://)&apos;</span>;
+        <span class="hljs-keyword">return</span> <span class="hljs-string">&apos;&apos;</span>;
+
+      <span class="hljs-keyword">default</span>:
+        <span class="hljs-keyword">return</span> <span class="hljs-string">&apos;&apos;</span>;
+    }
+  };
+
+  <span class="hljs-keyword">const</span> handleChange = (e) =&gt; {
+    <span class="hljs-keyword">const</span> { name, value } = e.target;
+
+    setFormData(prev =&gt; ({
+      ...prev,
+      [name]: value
+    }));
+
+    <span class="hljs-comment">// &#x5373;&#x6642;&#x9A57;&#x8B49;</span>
+    <span class="hljs-keyword">if</span> (touched[name]) {
+      <span class="hljs-keyword">const</span> error = validateField(name, value);
+      setErrors(prev =&gt; ({
+        ...prev,
+        [name]: error
+      }));
+    }
+  };
+
+  <span class="hljs-keyword">const</span> handleBlur = (e) =&gt; {
+    <span class="hljs-keyword">const</span> { name, value } = e.target;
+
+    setTouched(prev =&gt; ({
+      ...prev,
+      [name]: <span class="hljs-literal">true</span>
+    }));
+
+    <span class="hljs-keyword">const</span> error = validateField(name, value);
+    setErrors(prev =&gt; ({
+      ...prev,
+      [name]: error
+    }));
+  };
+
+  <span class="hljs-keyword">const</span> handleSubmit = (e) =&gt; {
+    e.preventDefault();
+
+    <span class="hljs-comment">// &#x9A57;&#x8B49;&#x6240;&#x6709;&#x6B04;&#x4F4D;</span>
+    <span class="hljs-keyword">const</span> newErrors = {};
+    <span class="hljs-keyword">const</span> newTouched = {};
+
+    <span class="hljs-built_in">Object</span>.keys(formData).forEach(key =&gt; {
+      newTouched[key] = <span class="hljs-literal">true</span>;
+      <span class="hljs-keyword">const</span> error = validateField(key, formData[key]);
+      <span class="hljs-keyword">if</span> (error) newErrors[key] = error;
+    });
+
+    setTouched(newTouched);
+    setErrors(newErrors);
+
+    <span class="hljs-comment">// &#x5982;&#x679C;&#x6C92;&#x6709;&#x932F;&#x8AA4;&#xFF0C;&#x63D0;&#x4EA4;&#x8868;&#x55AE;</span>
+    <span class="hljs-keyword">if</span> (<span class="hljs-built_in">Object</span>.keys(newErrors).length === <span class="hljs-number">0</span>) {
+      alert(<span class="hljs-string">&apos;&#x8868;&#x55AE;&#x9A57;&#x8B49;&#x901A;&#x904E;&#xFF01;&#x8CC7;&#x6599;&#x5DF2;&#x63D0;&#x4EA4;&#x3002;&apos;</span>);
+      <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&apos;&#x63D0;&#x4EA4;&#x7684;&#x8CC7;&#x6599;:&apos;</span>, formData);
+    }
+  };
+
+  <span class="hljs-keyword">const</span> getFieldStyle = (fieldName) =&gt; ({
+    width: <span class="hljs-string">&apos;100%&apos;</span>,
+    padding: <span class="hljs-string">&apos;8px&apos;</span>,
+    marginTop: <span class="hljs-string">&apos;5px&apos;</span>,
+    border: <span class="hljs-string">`1px solid <span class="hljs-subst">${errors[fieldName] &amp;&amp; touched[fieldName] ? &apos;#f44336&apos; : &apos;#ddd&apos;}</span>`</span>,
+    borderRadius: <span class="hljs-string">&apos;4px&apos;</span>,
+    backgroundColor: errors[fieldName] &amp;&amp; touched[fieldName] ? <span class="hljs-string">&apos;#ffebee&apos;</span> : <span class="hljs-string">&apos;white&apos;</span>
+  });
+
+  <span class="hljs-keyword">const</span> isFormValid = <span class="hljs-built_in">Object</span>.keys(formData).every(key =&gt; 
+    !validateField(key, formData[key]) &amp;&amp; formData[key] !== <span class="hljs-string">&apos;&apos;</span>
+  );
+
+  <span class="hljs-keyword">return</span> (
+    &lt;div style={{ maxWidth: &apos;500px&apos;, margin: &apos;0 auto&apos;, padding: &apos;20px&apos; }}&gt;
+      &lt;h3&gt;&#x8868;&#x55AE;&#x9A57;&#x8B49;&#x7BC4;&#x4F8B;&lt;/h3&gt;
+      &lt;form onSubmit={handleSubmit}&gt;
+        &lt;div style={{ marginBottom: &apos;15px&apos; }}&gt;
+          &lt;label htmlFor=&quot;email&quot;&gt;&#x96FB;&#x5B50;&#x4FE1;&#x7BB1; *:&lt;/label&gt;
+          &lt;input
+            type=&quot;email&quot;
+            id=&quot;email&quot;
+            name=&quot;email&quot;
+            value={formData.email}
+            onChange={handleChange}
+            onBlur={handleBlur}
+            style={getFieldStyle(&apos;email&apos;)}
+            placeholder=&quot;example@email.com&quot;
+          /&gt;
+          {errors.email &amp;&amp; touched.email &amp;&amp; (
+            &lt;small style={{ color: &apos;#f44336&apos;, display: &apos;block&apos;, marginTop: &apos;5px&apos; }}&gt;
+              {errors.email}
+            &lt;/small&gt;
+          )}
+        &lt;/div&gt;
+
+        &lt;div style={{ marginBottom: &apos;15px&apos; }}&gt;
+          &lt;label htmlFor=&quot;username&quot;&gt;&#x4F7F;&#x7528;&#x8005;&#x540D;&#x7A31; *:&lt;/label&gt;
+          &lt;input
+            type=&quot;text&quot;
+            id=&quot;username&quot;
+            name=&quot;username&quot;
+            value={formData.username}
+            onChange={handleChange}
+            onBlur={handleBlur}
+            style={getFieldStyle(&apos;username&apos;)}
+            placeholder=&quot;&#x81F3;&#x5C11; 3 &#x500B;&#x5B57;&#x5143;&#xFF0C;&#x53EA;&#x80FD;&#x5305;&#x542B;&#x5B57;&#x6BCD;&#x3001;&#x6578;&#x5B57;&#x548C;&#x4E0B;&#x5E95;&#x7DDA;&quot;
+          /&gt;
+          {errors.username &amp;&amp; touched.username &amp;&amp; (
+            &lt;small style={{ color: &apos;#f44336&apos;, display: &apos;block&apos;, marginTop: &apos;5px&apos; }}&gt;
+              {errors.username}
+            &lt;/small&gt;
+          )}
+        &lt;/div&gt;
+
+        &lt;div style={{ marginBottom: &apos;15px&apos; }}&gt;
+          &lt;label htmlFor=&quot;password&quot;&gt;&#x5BC6;&#x78BC; *:&lt;/label&gt;
+          &lt;input
+            type=&quot;password&quot;
+            id=&quot;password&quot;
+            name=&quot;password&quot;
+            value={formData.password}
+            onChange={handleChange}
+            onBlur={handleBlur}
+            style={getFieldStyle(&apos;password&apos;)}
+            placeholder=&quot;&#x81F3;&#x5C11; 8 &#x500B;&#x5B57;&#x5143;&#xFF0C;&#x5305;&#x542B;&#x5927;&#x5C0F;&#x5BEB;&#x5B57;&#x6BCD;&#x548C;&#x6578;&#x5B57;&quot;
+          /&gt;
+          {errors.password &amp;&amp; touched.password &amp;&amp; (
+            &lt;small style={{ color: &apos;#f44336&apos;, display: &apos;block&apos;, marginTop: &apos;5px&apos; }}&gt;
+              {errors.password}
+            &lt;/small&gt;
+          )}
+        &lt;/div&gt;
+
+        &lt;div style={{ marginBottom: &apos;15px&apos; }}&gt;
+          &lt;label htmlFor=&quot;confirmPassword&quot;&gt;&#x78BA;&#x8A8D;&#x5BC6;&#x78BC; *:&lt;/label&gt;
+          &lt;input
+            type=&quot;password&quot;
+            id=&quot;confirmPassword&quot;
+            name=&quot;confirmPassword&quot;
+            value={formData.confirmPassword}
+            onChange={handleChange}
+            onBlur={handleBlur}
+            style={getFieldStyle(&apos;confirmPassword&apos;)}
+            placeholder=&quot;&#x8ACB;&#x518D;&#x6B21;&#x8F38;&#x5165;&#x5BC6;&#x78BC;&quot;
+          /&gt;
+          {errors.confirmPassword &amp;&amp; touched.confirmPassword &amp;&amp; (
+            &lt;small style={{ color: &apos;#f44336&apos;, display: &apos;block&apos;, marginTop: &apos;5px&apos; }}&gt;
+              {errors.confirmPassword}
+            &lt;/small&gt;
+          )}
+        &lt;/div&gt;
+
+        &lt;div style={{ marginBottom: &apos;15px&apos; }}&gt;
+          &lt;label htmlFor=&quot;age&quot;&gt;&#x5E74;&#x9F61; *:&lt;/label&gt;
+          &lt;input
+            type=&quot;number&quot;
+            id=&quot;age&quot;
+            name=&quot;age&quot;
+            value={formData.age}
+            onChange={handleChange}
+            onBlur={handleBlur}
+            style={getFieldStyle(&apos;age&apos;)}
+            placeholder=&quot;&#x8ACB;&#x8F38;&#x5165;&#x60A8;&#x7684;&#x5E74;&#x9F61;&quot;
+            min=&quot;1&quot;
+            max=&quot;120&quot;
+          /&gt;
+          {errors.age &amp;&amp; touched.age &amp;&amp; (
+            &lt;small style={{ color: &apos;#f44336&apos;, display: &apos;block&apos;, marginTop: &apos;5px&apos; }}&gt;
+              {errors.age}
+            &lt;/small&gt;
+          )}
+        &lt;/div&gt;
+
+        &lt;div style={{ marginBottom: &apos;15px&apos; }}&gt;
+          &lt;label htmlFor=&quot;website&quot;&gt;&#x500B;&#x4EBA;&#x7DB2;&#x7AD9; (&#x9078;&#x586B;):&lt;/label&gt;
+          &lt;input
+            type=&quot;url&quot;
+            id=&quot;website&quot;
+            name=&quot;website&quot;
+            value={formData.website}
+            onChange={handleChange}
+            onBlur={handleBlur}
+            style={getFieldStyle(&apos;website&apos;)}
+            placeholder=&quot;https://example.com&quot;
+          /&gt;
+          {errors.website &amp;&amp; touched.website &amp;&amp; (
+            &lt;small style={{ color: &apos;#f44336&apos;, display: &apos;block&apos;, marginTop: &apos;5px&apos; }}&gt;
+              {errors.website}
+            &lt;/small&gt;
+          )}
+        &lt;/div&gt;
+
+        &lt;button
+          type=&quot;submit&quot;
+          style={{
+            width: &apos;100%&apos;,
+            padding: &apos;12px&apos;,
+            backgroundColor: isFormValid ? &apos;#4CAF50&apos; : &apos;#ccc&apos;,
+            color: &apos;white&apos;,
+            border: &apos;none&apos;,
+            borderRadius: &apos;4px&apos;,
+            cursor: isFormValid ? &apos;pointer&apos; : &apos;not-allowed&apos;,
+            fontSize: &apos;16px&apos;,
+            marginBottom: &apos;20px&apos;
+          }}
+        &gt;
+          &#x63D0;&#x4EA4;&#x8A3B;&#x518A;
+        &lt;/button&gt;
+
+        &lt;div style={{ padding: &apos;15px&apos;, backgroundColor: &apos;#f5f5f5&apos;, borderRadius: &apos;4px&apos; }}&gt;
+          &lt;h4&gt;&#x8868;&#x55AE;&#x72C0;&#x614B;:&lt;/h4&gt;
+          &lt;p&gt;&lt;strong&gt;&#x8868;&#x55AE;&#x6709;&#x6548;:&lt;/strong&gt; {isFormValid ? &apos;&#x2713; &#x662F;&apos; : &apos;&#x2717; &#x5426;&apos;}&lt;/p&gt;
+          &lt;p&gt;&lt;strong&gt;&#x932F;&#x8AA4;&#x6578;&#x91CF;:&lt;/strong&gt; {Object.keys(errors).filter(key =&gt; errors[key]).length}&lt;/p&gt;
+          &lt;p&gt;&lt;strong&gt;&#x5DF2;&#x9A57;&#x8B49;&#x6B04;&#x4F4D;:&lt;/strong&gt; {Object.keys(touched).filter(key =&gt; touched[key]).length}/{Object.keys(formData).length}&lt;/p&gt;
+        &lt;/div&gt;
+      &lt;/form&gt;
+    &lt;/div&gt;
+  );
+}
+
+export default FormValidation;
+</code></pre>
+<h3 id="114-&#x8907;&#x96DC;&#x8868;&#x55AE;&#x8655;&#x7406;">11.4 &#x8907;&#x96DC;&#x8868;&#x55AE;&#x8655;&#x7406;</h3>
+<h4 id="1141-&#x591A;&#x6B65;&#x9A5F;&#x8868;&#x55AE;">11.4.1 &#x591A;&#x6B65;&#x9A5F;&#x8868;&#x55AE;</h4>
+<pre><code class="lang-javascript"><span class="hljs-keyword">import</span> React, { useState } <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;react&apos;</span>;
+
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">MultiStepForm</span>(<span class="hljs-params"></span>) </span>{
+  <span class="hljs-keyword">const</span> [currentStep, setCurrentStep] = useState(<span class="hljs-number">1</span>);
+  <span class="hljs-keyword">const</span> [formData, setFormData] = useState({
+    <span class="hljs-comment">// &#x6B65;&#x9A5F; 1: &#x500B;&#x4EBA;&#x8CC7;&#x8A0A;</span>
+    personalInfo: {
+      firstName: <span class="hljs-string">&apos;&apos;</span>,
+      lastName: <span class="hljs-string">&apos;&apos;</span>,
+      email: <span class="hljs-string">&apos;&apos;</span>,
+      phone: <span class="hljs-string">&apos;&apos;</span>
+    },
+    <span class="hljs-comment">// &#x6B65;&#x9A5F; 2: &#x5730;&#x5740;&#x8CC7;&#x8A0A;</span>
+    addressInfo: {
+      street: <span class="hljs-string">&apos;&apos;</span>,
+      city: <span class="hljs-string">&apos;&apos;</span>,
+      state: <span class="hljs-string">&apos;&apos;</span>,
+      zipCode: <span class="hljs-string">&apos;&apos;</span>,
+      country: <span class="hljs-string">&apos;tw&apos;</span>
+    },
+    <span class="hljs-comment">// &#x6B65;&#x9A5F; 3: &#x504F;&#x597D;&#x8A2D;&#x5B9A;</span>
+    preferences: {
+      newsletter: <span class="hljs-literal">false</span>,
+      notifications: <span class="hljs-string">&apos;email&apos;</span>,
+      language: <span class="hljs-string">&apos;zh-TW&apos;</span>,
+      interests: []
+    }
+  });
+
+  <span class="hljs-keyword">const</span> totalSteps = <span class="hljs-number">3</span>;
+
+  <span class="hljs-keyword">const</span> updateFormData = (section, field, value) =&gt; {
+    setFormData(prev =&gt; ({
+      ...prev,
+      [section]: {
+        ...prev[section],
+        [field]: value
+      }
+    }));
+  };
+
+  <span class="hljs-keyword">const</span> handleNext = () =&gt; {
+    <span class="hljs-keyword">if</span> (currentStep &lt; totalSteps) {
+      setCurrentStep(currentStep + <span class="hljs-number">1</span>);
+    }
+  };
+
+  <span class="hljs-keyword">const</span> handlePrev = () =&gt; {
+    <span class="hljs-keyword">if</span> (currentStep &gt; <span class="hljs-number">1</span>) {
+      setCurrentStep(currentStep - <span class="hljs-number">1</span>);
+    }
+  };
+
+  <span class="hljs-keyword">const</span> handleSubmit = () =&gt; {
+    <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&apos;&#x5B8C;&#x6574;&#x8868;&#x55AE;&#x8CC7;&#x6599;:&apos;</span>, formData);
+    alert(<span class="hljs-string">&apos;&#x8868;&#x55AE;&#x63D0;&#x4EA4;&#x6210;&#x529F;&#xFF01;&apos;</span>);
+  };
+
+  <span class="hljs-keyword">const</span> isStepValid = (step) =&gt; {
+    <span class="hljs-keyword">switch</span> (step) {
+      <span class="hljs-keyword">case</span> <span class="hljs-number">1</span>:
+        <span class="hljs-keyword">return</span> formData.personalInfo.firstName &amp;&amp; 
+               formData.personalInfo.lastName &amp;&amp; 
+               formData.personalInfo.email;
+      <span class="hljs-keyword">case</span> <span class="hljs-number">2</span>:
+        <span class="hljs-keyword">return</span> formData.addressInfo.street &amp;&amp; 
+               formData.addressInfo.city &amp;&amp; 
+               formData.addressInfo.zipCode;
+      <span class="hljs-keyword">case</span> <span class="hljs-number">3</span>:
+        <span class="hljs-keyword">return</span> <span class="hljs-literal">true</span>; <span class="hljs-comment">// &#x504F;&#x597D;&#x8A2D;&#x5B9A;&#x90FD;&#x662F;&#x9078;&#x586B;</span>
+      <span class="hljs-keyword">default</span>:
+        <span class="hljs-keyword">return</span> <span class="hljs-literal">false</span>;
+    }
+  };
+
+  <span class="hljs-keyword">const</span> renderStepIndicator = () =&gt; (
+    <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">style</span>=<span class="hljs-string">{{</span> <span class="hljs-attr">display:</span> &apos;<span class="hljs-attr">flex</span>&apos;, <span class="hljs-attr">marginBottom:</span> &apos;<span class="hljs-attr">30px</span>&apos; }}&gt;</span>
+      {[1, 2, 3].map(step =&gt; (
+        <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">key</span>=<span class="hljs-string">{step}</span> <span class="hljs-attr">style</span>=<span class="hljs-string">{{</span> <span class="hljs-attr">flex:</span> <span class="hljs-attr">1</span>, <span class="hljs-attr">textAlign:</span> &apos;<span class="hljs-attr">center</span>&apos; }}&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">style</span>=<span class="hljs-string">{{</span>
+            <span class="hljs-attr">width:</span> &apos;<span class="hljs-attr">30px</span>&apos;,
+            <span class="hljs-attr">height:</span> &apos;<span class="hljs-attr">30px</span>&apos;,
+            <span class="hljs-attr">borderRadius:</span> &apos;<span class="hljs-attr">50</span>%&apos;,
+            <span class="hljs-attr">backgroundColor:</span> <span class="hljs-attr">step</span> &lt;= <span class="hljs-attr">currentStep</span> ? &apos;#<span class="hljs-attr">4CAF50</span>&apos; <span class="hljs-attr">:</span> &apos;#<span class="hljs-attr">ddd</span>&apos;,
+            <span class="hljs-attr">color:</span> <span class="hljs-attr">step</span> &lt;= <span class="hljs-attr">currentStep</span> ? &apos;<span class="hljs-attr">white</span>&apos; <span class="hljs-attr">:</span> &apos;#<span class="hljs-attr">666</span>&apos;,
+            <span class="hljs-attr">display:</span> &apos;<span class="hljs-attr">flex</span>&apos;,
+            <span class="hljs-attr">alignItems:</span> &apos;<span class="hljs-attr">center</span>&apos;,
+            <span class="hljs-attr">justifyContent:</span> &apos;<span class="hljs-attr">center</span>&apos;,
+            <span class="hljs-attr">margin:</span> &apos;<span class="hljs-attr">0</span> <span class="hljs-attr">auto</span> <span class="hljs-attr">10px</span>&apos;,
+            <span class="hljs-attr">fontSize:</span> &apos;<span class="hljs-attr">14px</span>&apos;,
+            <span class="hljs-attr">fontWeight:</span> &apos;<span class="hljs-attr">bold</span>&apos;
+          }}&gt;</span>
+            {step}
+          <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">style</span>=<span class="hljs-string">{{</span> <span class="hljs-attr">fontSize:</span> &apos;<span class="hljs-attr">12px</span>&apos;, <span class="hljs-attr">color:</span> &apos;#<span class="hljs-attr">666</span>&apos; }}&gt;</span>
+            {step === 1 &amp;&amp; &apos;&#x500B;&#x4EBA;&#x8CC7;&#x8A0A;&apos;}
+            {step === 2 &amp;&amp; &apos;&#x5730;&#x5740;&#x8CC7;&#x8A0A;&apos;}
+            {step === 3 &amp;&amp; &apos;&#x504F;&#x597D;&#x8A2D;&#x5B9A;&apos;}
+          <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+      ))}
+    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></span>
+  );
+
+  <span class="hljs-keyword">const</span> renderStep1 = () =&gt; (
+    &lt;div&gt;
+      &lt;h3&gt;&#x6B65;&#x9A5F; 1: &#x500B;&#x4EBA;&#x8CC7;&#x8A0A;&lt;/h3&gt;
+      &lt;div style={{ display: &apos;grid&apos;, gridTemplateColumns: &apos;1fr 1fr&apos;, gap: &apos;15px&apos;, marginBottom: &apos;15px&apos; }}&gt;
+        &lt;div&gt;
+          &lt;label&gt;&#x540D;&#x5B57; *:&lt;/label&gt;
+          &lt;input
+            type=&quot;text&quot;
+            value={formData.personalInfo.firstName}
+            onChange={(e) =&gt; updateFormData(&apos;personalInfo&apos;, &apos;firstName&apos;, e.target.value)}
+            style={{
+              width: &apos;100%&apos;,
+              padding: &apos;8px&apos;,
+              marginTop: &apos;5px&apos;,
+              border: &apos;1px solid #ddd&apos;,
+              borderRadius: &apos;4px&apos;
+            }}
+          /&gt;
+        &lt;/div&gt;
+        &lt;div&gt;
+          &lt;label&gt;&#x59D3;&#x6C0F; *:&lt;/label&gt;
+          &lt;input
+            type=&quot;text&quot;
+            value={formData.personalInfo.lastName}
+            onChange={(e) =&gt; updateFormData(&apos;personalInfo&apos;, &apos;lastName&apos;, e.target.value)}
+            style={{
+              width: &apos;100%&apos;,
+              padding: &apos;8px&apos;,
+              marginTop: &apos;5px&apos;,
+              border: &apos;1px solid #ddd&apos;,
+              borderRadius: &apos;4px&apos;
+            }}
+          /&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+      &lt;div style={{ marginBottom: &apos;15px&apos; }}&gt;
+        &lt;label&gt;&#x96FB;&#x5B50;&#x4FE1;&#x7BB1; *:&lt;/label&gt;
+        &lt;input
+          type=&quot;email&quot;
+          value={formData.personalInfo.email}
+          onChange={(e) =&gt; updateFormData(&apos;personalInfo&apos;, &apos;email&apos;, e.target.value)}
+          style={{
+            width: &apos;100%&apos;,
+            padding: &apos;8px&apos;,
+            marginTop: &apos;5px&apos;,
+            border: &apos;1px solid #ddd&apos;,
+            borderRadius: &apos;4px&apos;
+          }}
+        /&gt;
+      &lt;/div&gt;
+      &lt;div style={{ marginBottom: &apos;15px&apos; }}&gt;
+        &lt;label&gt;&#x96FB;&#x8A71;&#x865F;&#x78BC;:&lt;/label&gt;
+        &lt;input
+          type=&quot;tel&quot;
+          value={formData.personalInfo.phone}
+          onChange={(e) =&gt; updateFormData(&apos;personalInfo&apos;, &apos;phone&apos;, e.target.value)}
+          style={{
+            width: &apos;100%&apos;,
+            padding: &apos;8px&apos;,
+            marginTop: &apos;5px&apos;,
+            border: &apos;1px solid #ddd&apos;,
+            borderRadius: &apos;4px&apos;
+          }}
+        /&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  );
+
+  const renderStep2 = () =&gt; (
+    &lt;div&gt;
+      &lt;h3&gt;&#x6B65;&#x9A5F; 2: &#x5730;&#x5740;&#x8CC7;&#x8A0A;&lt;/h3&gt;
+      &lt;div style={{ marginBottom: &apos;15px&apos; }}&gt;
+        &lt;label&gt;&#x8857;&#x9053;&#x5730;&#x5740; *:&lt;/label&gt;
+        &lt;input
+          type=&quot;text&quot;
+          value={formData.addressInfo.street}
+          onChange={(e) =&gt; updateFormData(&apos;addressInfo&apos;, &apos;street&apos;, e.target.value)}
+          style={{
+            width: &apos;100%&apos;,
+            padding: &apos;8px&apos;,
+            marginTop: &apos;5px&apos;,
+            border: &apos;1px solid #ddd&apos;,
+            borderRadius: &apos;4px&apos;
+          }}
+        /&gt;
+      &lt;/div&gt;
+      &lt;div style={{ display: &apos;grid&apos;, gridTemplateColumns: &apos;1fr 1fr&apos;, gap: &apos;15px&apos;, marginBottom: &apos;15px&apos; }}&gt;
+        &lt;div&gt;
+          &lt;label&gt;&#x57CE;&#x5E02; *:&lt;/label&gt;
+          &lt;input
+            type=&quot;text&quot;
+            value={formData.addressInfo.city}
+            onChange={(e) =&gt; updateFormData(&apos;addressInfo&apos;, &apos;city&apos;, e.target.value)}
+            style={{
+              width: &apos;100%&apos;,
+              padding: &apos;8px&apos;,
+              marginTop: &apos;5px&apos;,
+              border: &apos;1px solid #ddd&apos;,
+              borderRadius: &apos;4px&apos;
+            }}
+          /&gt;
+        &lt;/div&gt;
+        &lt;div&gt;
+          &lt;label&gt;&#x5DDE;/&#x7701;:&lt;/label&gt;
+          &lt;input
+            type=&quot;text&quot;
+            value={formData.addressInfo.state}
+            onChange={(e) =&gt; updateFormData(&apos;addressInfo&apos;, &apos;state&apos;, e.target.value)}
+            style={{
+              width: &apos;100%&apos;,
+              padding: &apos;8px&apos;,
+              marginTop: &apos;5px&apos;,
+              border: &apos;1px solid #ddd&apos;,
+              borderRadius: &apos;4px&apos;
+            }}
+          /&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+      &lt;div style={{ display: &apos;grid&apos;, gridTemplateColumns: &apos;1fr 1fr&apos;, gap: &apos;15px&apos; }}&gt;
+        &lt;div&gt;
+          &lt;label&gt;&#x90F5;&#x905E;&#x5340;&#x865F; *:&lt;/label&gt;
+          &lt;input
+            type=&quot;text&quot;
+            value={formData.addressInfo.zipCode}
+            onChange={(e) =&gt; updateFormData(&apos;addressInfo&apos;, &apos;zipCode&apos;, e.target.value)}
+            style={{
+              width: &apos;100%&apos;,
+              padding: &apos;8px&apos;,
+              marginTop: &apos;5px&apos;,
+              border: &apos;1px solid #ddd&apos;,
+              borderRadius: &apos;4px&apos;
+            }}
+          /&gt;
+        &lt;/div&gt;
+        &lt;div&gt;
+          &lt;label&gt;&#x570B;&#x5BB6;:&lt;/label&gt;
+          &lt;select
+            value={formData.addressInfo.country}
+            onChange={(e) =&gt; updateFormData(&apos;addressInfo&apos;, &apos;country&apos;, e.target.value)}
+            style={{
+              width: &apos;100%&apos;,
+              padding: &apos;8px&apos;,
+              marginTop: &apos;5px&apos;,
+              border: &apos;1px solid #ddd&apos;,
+              borderRadius: &apos;4px&apos;
+            }}
+          &gt;
+            &lt;option value=&quot;tw&quot;&gt;&#x53F0;&#x7063;&lt;/option&gt;
+            &lt;option value=&quot;cn&quot;&gt;&#x4E2D;&#x570B;&lt;/option&gt;
+            &lt;option value=&quot;jp&quot;&gt;&#x65E5;&#x672C;&lt;/option&gt;
+            &lt;option value=&quot;us&quot;&gt;&#x7F8E;&#x570B;&lt;/option&gt;
+          &lt;/select&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  );
+
+  const renderStep3 = () =&gt; (
+    &lt;div&gt;
+      &lt;h3&gt;&#x6B65;&#x9A5F; 3: &#x504F;&#x597D;&#x8A2D;&#x5B9A;&lt;/h3&gt;
+      &lt;div style={{ marginBottom: &apos;20px&apos; }}&gt;
+        &lt;label&gt;&#x901A;&#x77E5;&#x65B9;&#x5F0F;:&lt;/label&gt;
+        &lt;div style={{ marginTop: &apos;10px&apos; }}&gt;
+          &lt;label style={{ display: &apos;block&apos;, marginBottom: &apos;5px&apos; }}&gt;
+            &lt;input
+              type=&quot;radio&quot;
+              name=&quot;notifications&quot;
+              value=&quot;email&quot;
+              checked={formData.preferences.notifications === &apos;email&apos;}
+              onChange={(e) =&gt; updateFormData(&apos;preferences&apos;, &apos;notifications&apos;, e.target.value)}
+              style={{ marginRight: &apos;8px }}
+            /&gt;
+            &#x96FB;&#x5B50;&#x90F5;&#x4EF6;
+          &lt;/label&gt;
+          &lt;label style={{ display: &apos;block&apos;, marginBottom: &apos;5px&apos; }}&gt;
+            &lt;input
+              type=&quot;radio&quot;
+              name=&quot;notifications&quot;
+              value=&quot;sms&quot;
+              checked={formData.preferences.notifications === &apos;sms&apos;}
+              onChange={(e) =&gt; updateFormData(&apos;preferences&apos;, &apos;notifications&apos;, e.target.value)}
+              style={{ marginRight: &apos;8px }}
+            /&gt;
+            &#x7C21;&#x8A0A;
+          &lt;/label&gt;
+          &lt;label style={{ display: &apos;block&apos; }}&gt;
+            &lt;input
+              type=&quot;radio&quot;
+              name=&quot;notifications&quot;
+              value=&quot;none&quot;
+              checked={formData.preferences.notifications === &apos;none&apos;}
+              onChange={(e) =&gt; updateFormData(&apos;preferences&apos;, &apos;notifications&apos;, e.target.value)}
+              style={{ marginRight: &apos;8px }}
+            /&gt;
+            &#x4E0D;&#x63A5;&#x6536;&#x901A;&#x77E5;
+          &lt;/label&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+
+      &lt;div style={{ marginBottom: &apos;20px&apos; }}&gt;
+        &lt;label&gt;&#x8A9E;&#x8A00;&#x504F;&#x597D;:&lt;/label&gt;
+        &lt;select
+          value={formData.preferences.language}
+          onChange={(e) =&gt; updateFormData(&apos;preferences&apos;, &apos;language&apos;, e.target.value)}
+          style={{
+            width: &apos;100%&apos;,
+            padding: &apos;8px&apos;,
+            marginTop: &apos;5px&apos;,
+            border: &apos;1px solid #ddd&apos;,
+            borderRadius: &apos;4px&apos;
+          }}
+        &gt;
+          &lt;option value=&quot;zh-TW&quot;&gt;&#x7E41;&#x9AD4;&#x4E2D;&#x6587;&lt;/option&gt;
+          &lt;option value=&quot;zh-CN&quot;&gt;&#x7C21;&#x9AD4;&#x4E2D;&#x6587;&lt;/option&gt;
+          &lt;option value=&quot;en&quot;&gt;English&lt;/option&gt;
+          &lt;option value=&quot;ja&quot;&gt;&#x65E5;&#x672C;&#x8A9E;&lt;/option&gt;
+        &lt;/select&gt;
+      &lt;/div&gt;
+
+      &lt;div style={{ marginBottom: &apos;20px&apos; }}&gt;
+        &lt;label style={{ display: &apos;flex&apos;, alignItems: &apos;center&apos; }}&gt;
+          &lt;input
+            type=&quot;checkbox&quot;
+            checked={formData.preferences.newsletter}
+            onChange={(e) =&gt; updateFormData(&apos;preferences&apos;, &apos;newsletter&apos;, e.target.checked)}
+            style={{ marginRight: &apos;8px }}
+          /&gt;
+          &#x8A02;&#x95B1;&#x96FB;&#x5B50;&#x5831;
+        &lt;/label&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  );
+
+  return (
+    &lt;div style={{ maxWidth: &apos;600px&apos;, margin: &apos;0 auto&apos;, padding: &apos;20px&apos; }}&gt;
+      &lt;h2&gt;&#x591A;&#x6B65;&#x9A5F;&#x8A3B;&#x518A;&#x8868;&#x55AE;&lt;/h2&gt;
+
+      {renderStepIndicator()}
+
+      &lt;div style={{ 
+        border: &apos;1px solid #ddd&apos;, 
+        borderRadius: &apos;8px&apos;, 
+        padding: &apos;30px&apos;,
+        minHeight: &apos;400px&apos;
+      }}&gt;
+        {currentStep === 1 &amp;&amp; renderStep1()}
+        {currentStep === 2 &amp;&amp; renderStep2()}
+        {currentStep === 3 &amp;&amp; renderStep3()}
+
+        &lt;div style={{ 
+          display: &apos;flex&apos;, 
+          justifyContent: &apos;space-between&apos;, 
+          marginTop: &apos;30px&apos;,
+          paddingTop: &apos;20px&apos;,
+          borderTop: &apos;1px solid #eee&apos;
+        }}&gt;
+          &lt;button
+            onClick={handlePrev}
+            disabled={currentStep === 1}
+            style={{
+              padding: &apos;10px 20px&apos;,
+              backgroundColor: currentStep === 1 ? &apos;#ccc&apos; : &apos;#2196F3&apos;,
+              color: &apos;white&apos;,
+              border: &apos;none&apos;,
+              borderRadius: &apos;4px&apos;,
+              cursor: currentStep === 1 ? &apos;not-allowed&apos; : &apos;pointer&apos;
+            }}
+          &gt;
+            &#x4E0A;&#x4E00;&#x6B65;
+          &lt;/button&gt;
+
+          {currentStep &lt; totalSteps ? (
+            &lt;button
+              onClick={handleNext}
+              disabled={!isStepValid(currentStep)}
+              style={{
+                padding: &apos;10px 20px&apos;,
+                backgroundColor: isStepValid(currentStep) ? &apos;#4CAF50&apos; : &apos;#ccc&apos;,
+                color: &apos;white&apos;,
+                border: &apos;none&apos;,
+                borderRadius: &apos;4px&apos;,
+                cursor: isStepValid(currentStep) ? &apos;pointer&apos; : &apos;not-allowed&apos;
+              }}
+            &gt;
+              &#x4E0B;&#x4E00;&#x6B65;
+            &lt;/button&gt;
+          ) : (
+            &lt;button
+              onClick={handleSubmit}
+              style={{
+                padding: &apos;10px 20px&apos;,
+                backgroundColor: &apos;#FF5722&apos;,
+                color: &apos;white&apos;,
+                border: &apos;none&apos;,
+                borderRadius: &apos;4px&apos;,
+                cursor: &apos;pointer&apos;
+              }}
+            &gt;
+              &#x63D0;&#x4EA4;&#x8A3B;&#x518A;
+            &lt;/button&gt;
+          )}
+        &lt;/div&gt;
+      &lt;/div&gt;
+
+      &lt;div style={{ marginTop: &apos;20px&apos;, fontSize: &apos;0.9em&apos;, color: &apos;#666&apos; }}&gt;
+        &#x9032;&#x5EA6;: {currentStep}/{totalSteps} 
+        ({Math.round((currentStep / totalSteps) * 100)}%)
+      &lt;/div&gt;
+    &lt;/div&gt;
+  );
+}
+
+export default MultiStepForm;
+</code></pre>
+<h4 id="1142-&#x8868;&#x55AE;&#x8655;&#x7406;&#x7684;&#x81EA;&#x8A02;-hook">11.4.2 &#x8868;&#x55AE;&#x8655;&#x7406;&#x7684;&#x81EA;&#x8A02; Hook</h4>
+<pre><code class="lang-javascript"><span class="hljs-comment">// hooks/useForm.js</span>
+<span class="hljs-keyword">import</span> { useState, useCallback } <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;react&apos;</span>;
+
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">useForm</span>(<span class="hljs-params">initialValues, validationRules = {}</span>) </span>{
+  <span class="hljs-keyword">const</span> [values, setValues] = useState(initialValues);
+  <span class="hljs-keyword">const</span> [errors, setErrors] = useState({});
+  <span class="hljs-keyword">const</span> [touched, setTouched] = useState({});
+
+  <span class="hljs-keyword">const</span> validate = useCallback((name, value) =&gt; {
+    <span class="hljs-keyword">if</span> (validationRules[name]) {
+      <span class="hljs-keyword">return</span> validationRules[name](value, values);
+    }
+    <span class="hljs-keyword">return</span> <span class="hljs-string">&apos;&apos;</span>;
+  }, [validationRules, values]);
+
+  <span class="hljs-keyword">const</span> setValue = useCallback((name, value) =&gt; {
+    setValues(prev =&gt; ({
+      ...prev,
+      [name]: value
+    }));
+
+    <span class="hljs-comment">// &#x5982;&#x679C;&#x6B04;&#x4F4D;&#x5DF2;&#x7D93;&#x88AB;&#x89F8;&#x6478;&#x904E;&#xFF0C;&#x7ACB;&#x5373;&#x9A57;&#x8B49;</span>
+    <span class="hljs-keyword">if</span> (touched[name]) {
+      <span class="hljs-keyword">const</span> error = validate(name, value);
+      setErrors(prev =&gt; ({
+        ...prev,
+        [name]: error
+      }));
+    }
+  }, [touched, validate]);
+
+  <span class="hljs-keyword">const</span> handleChange = useCallback((e) =&gt; {
+    <span class="hljs-keyword">const</span> { name, value, type, checked } = e.target;
+    <span class="hljs-keyword">const</span> fieldValue = type === <span class="hljs-string">&apos;checkbox&apos;</span> ? checked : value;
+    setValue(name, fieldValue);
+  }, [setValue]);
+
+  <span class="hljs-keyword">const</span> handleBlur = useCallback((e) =&gt; {
+    <span class="hljs-keyword">const</span> { name, value } = e.target;
+
+    setTouched(prev =&gt; ({
+      ...prev,
+      [name]: <span class="hljs-literal">true</span>
+    }));
+
+    <span class="hljs-keyword">const</span> error = validate(name, value);
+    setErrors(prev =&gt; ({
+      ...prev,
+      [name]: error
+    }));
+  }, [validate]);
+
+  <span class="hljs-keyword">const</span> validateAll = useCallback(() =&gt; {
+    <span class="hljs-keyword">const</span> newErrors = {};
+    <span class="hljs-keyword">const</span> newTouched = {};
+
+    <span class="hljs-built_in">Object</span>.keys(values).forEach(key =&gt; {
+      newTouched[key] = <span class="hljs-literal">true</span>;
+      <span class="hljs-keyword">const</span> error = validate(key, values[key]);
+      <span class="hljs-keyword">if</span> (error) newErrors[key] = error;
+    });
+
+    setTouched(newTouched);
+    setErrors(newErrors);
+
+    <span class="hljs-keyword">return</span> <span class="hljs-built_in">Object</span>.keys(newErrors).length === <span class="hljs-number">0</span>;
+  }, [values, validate]);
+
+  <span class="hljs-keyword">const</span> reset = useCallback(() =&gt; {
+    setValues(initialValues);
+    setErrors({});
+    setTouched({});
+  }, [initialValues]);
+
+  <span class="hljs-keyword">const</span> isValid = <span class="hljs-built_in">Object</span>.keys(errors).every(key =&gt; !errors[key]);
+
+  <span class="hljs-keyword">return</span> {
+    values,
+    errors,
+    touched,
+    handleChange,
+    handleBlur,
+    setValue,
+    validateAll,
+    reset,
+    isValid
+  };
+}
+
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> useForm;
+</code></pre>
+<p><strong>&#x4F7F;&#x7528;&#x81EA;&#x8A02; Hook &#x7684;&#x7BC4;&#x4F8B;&#xFF1A;</strong></p>
+<pre><code class="lang-javascript"><span class="hljs-comment">// components/LoginForm.js</span>
+<span class="hljs-keyword">import</span> React <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;react&apos;</span>;
+<span class="hljs-keyword">import</span> useForm <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;../hooks/useForm&apos;</span>;
+
+<span class="hljs-keyword">const</span> validationRules = {
+  email: (value) =&gt; {
+    <span class="hljs-keyword">if</span> (!value) <span class="hljs-keyword">return</span> <span class="hljs-string">&apos;&#x96FB;&#x5B50;&#x4FE1;&#x7BB1;&#x70BA;&#x5FC5;&#x586B;&#x6B04;&#x4F4D;&apos;</span>;
+    <span class="hljs-keyword">if</span> (!<span class="hljs-regexp">/^[^\s@]+@[^\s@]+\.[^\s@]+$/</span>.test(value)) <span class="hljs-keyword">return</span> <span class="hljs-string">&apos;&#x8ACB;&#x8F38;&#x5165;&#x6709;&#x6548;&#x7684;&#x96FB;&#x5B50;&#x4FE1;&#x7BB1;&apos;</span>;
+    <span class="hljs-keyword">return</span> <span class="hljs-string">&apos;&apos;</span>;
+  },
+  password: (value) =&gt; {
+    <span class="hljs-keyword">if</span> (!value) <span class="hljs-keyword">return</span> <span class="hljs-string">&apos;&#x5BC6;&#x78BC;&#x70BA;&#x5FC5;&#x586B;&#x6B04;&#x4F4D;&apos;</span>;
+    <span class="hljs-keyword">if</span> (value.length &lt; <span class="hljs-number">6</span>) <span class="hljs-keyword">return</span> <span class="hljs-string">&apos;&#x5BC6;&#x78BC;&#x81F3;&#x5C11;&#x9700;&#x8981; 6 &#x500B;&#x5B57;&#x5143;&apos;</span>;
+    <span class="hljs-keyword">return</span> <span class="hljs-string">&apos;&apos;</span>;
+  }
+};
+
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">LoginForm</span>(<span class="hljs-params"></span>) </span>{
+  <span class="hljs-keyword">const</span> {
+    values,
+    errors,
+    touched,
+    handleChange,
+    handleBlur,
+    validateAll,
+    reset,
+    isValid
+  } = useForm(
+    { email: <span class="hljs-string">&apos;&apos;</span>, password: <span class="hljs-string">&apos;&apos;</span>, rememberMe: <span class="hljs-literal">false</span> },
+    validationRules
+  );
+
+  <span class="hljs-keyword">const</span> handleSubmit = (e) =&gt; {
+    e.preventDefault();
+
+    <span class="hljs-keyword">if</span> (validateAll()) {
+      <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&apos;&#x767B;&#x5165;&#x8CC7;&#x6599;:&apos;</span>, values);
+      alert(<span class="hljs-string">&apos;&#x767B;&#x5165;&#x6210;&#x529F;&#xFF01;&apos;</span>);
+      reset();
+    }
+  };
+
+  <span class="hljs-keyword">const</span> getFieldStyle = (fieldName) =&gt; ({
+    width: <span class="hljs-string">&apos;100%&apos;</span>,
+    padding: <span class="hljs-string">&apos;10px&apos;</span>,
+    marginTop: <span class="hljs-string">&apos;5px&apos;</span>,
+    border: <span class="hljs-string">`1px solid <span class="hljs-subst">${errors[fieldName] &amp;&amp; touched[fieldName] ? &apos;#f44336&apos; : &apos;#ddd&apos;}</span>`</span>,
+    borderRadius: <span class="hljs-string">&apos;4px&apos;</span>,
+    fontSize: <span class="hljs-string">&apos;16px&apos;</span>
+  });
+
+  <span class="hljs-keyword">return</span> (
+    &lt;div style={{ maxWidth: &apos;400px&apos;, margin: &apos;0 auto&apos;, padding: &apos;20px&apos; }}&gt;
+      &lt;h2&gt;&#x767B;&#x5165;&lt;/h2&gt;
+      &lt;form onSubmit={handleSubmit}&gt;
+        &lt;div style={{ marginBottom: &apos;20px&apos; }}&gt;
+          &lt;label&gt;&#x96FB;&#x5B50;&#x4FE1;&#x7BB1;:&lt;/label&gt;
+          &lt;input
+            type=&quot;email&quot;
+            name=&quot;email&quot;
+            value={values.email}
+            onChange={handleChange}
+            onBlur={handleBlur}
+            style={getFieldStyle(&apos;email&apos;)}
+            placeholder=&quot;&#x8ACB;&#x8F38;&#x5165;&#x60A8;&#x7684;&#x96FB;&#x5B50;&#x4FE1;&#x7BB1;&quot;
+          /&gt;
+          {errors.email &amp;&amp; touched.email &amp;&amp; (
+            &lt;small style={{ color: &apos;#f44336&apos;, display: &apos;block&apos;, marginTop: &apos;5px&apos; }}&gt;
+              {errors.email}
+            &lt;/small&gt;
+          )}
+        &lt;/div&gt;
+
+        &lt;div style={{ marginBottom: &apos;20px&apos; }}&gt;
+          &lt;label&gt;&#x5BC6;&#x78BC;:&lt;/label&gt;
+          &lt;input
+            type=&quot;password&quot;
+            name=&quot;password&quot;
+            value={values.password}
+            onChange={handleChange}
+            onBlur={handleBlur}
+            style={getFieldStyle(&apos;password&apos;)}
+            placeholder=&quot;&#x8ACB;&#x8F38;&#x5165;&#x60A8;&#x7684;&#x5BC6;&#x78BC;&quot;
+          /&gt;
+          {errors.password &amp;&amp; touched.password &amp;&amp; (
+            &lt;small style={{ color: &apos;#f44336&apos;, display: &apos;block&apos;, marginTop: &apos;5px&apos; }}&gt;
+              {errors.password}
+            &lt;/small&gt;
+          )}
+        &lt;/div&gt;
+
+        &lt;div style={{ marginBottom: &apos;20px&apos; }}&gt;
+          &lt;label style={{ display: &apos;flex&apos;, alignItems: &apos;center&apos; }}&gt;
+            &lt;input
+              type=&quot;checkbox&quot;
+              name=&quot;rememberMe&quot;
+              checked={values.rememberMe}
+              onChange={handleChange}
+              style={{ marginRight: &apos;8px&apos; }}
+            /&gt;
+            &#x8A18;&#x4F4F;&#x6211;
+          &lt;/label&gt;
+        &lt;/div&gt;
+
+        &lt;button
+          type=&quot;submit&quot;
+          style={{
+            width: &apos;100%&apos;,
+            padding: &apos;12px&apos;,
+            backgroundColor: &apos;#2196F3&apos;,
+            color: &apos;white&apos;,
+            border: &apos;none&apos;,
+            borderRadius: &apos;4px&apos;,
+            fontSize: &apos;16px&apos;,
+            cursor: &apos;pointer&apos;,
+            marginBottom: &apos;10px&apos;
+          }}
+        &gt;
+          &#x767B;&#x5165;
+        &lt;/button&gt;
+
+        &lt;button
+          type=&quot;button&quot;
+          onClick={reset}
+          style={{
+            width: &apos;100%&apos;,
+            padding: &apos;8px&apos;,
+            backgroundColor: &apos;transparent&apos;,
+            color: &apos;#666&apos;,
+            border: &apos;1px solid #ddd&apos;,
+            borderRadius: &apos;4px&apos;,
+            cursor: &apos;pointer&apos;
+          }}
+        &gt;
+          &#x6E05;&#x9664;&#x8868;&#x55AE;
+        &lt;/button&gt;
+      &lt;/form&gt;
+
+      &lt;div style={{ marginTop: &apos;20px&apos;, fontSize: &apos;0.9em&apos;, color: &apos;#666&apos; }}&gt;
+        &#x8868;&#x55AE;&#x72C0;&#x614B;: {isValid ? &apos;&#x2713; &#x6709;&#x6548;&apos; : &apos;&#x2717; &#x6709;&#x932F;&#x8AA4;&apos;}
+      &lt;/div&gt;
+    &lt;/div&gt;
+  );
+}
+
+export default LoginForm;
+</code></pre>
+<h3 id="115-&#x8868;&#x55AE;&#x8655;&#x7406;&#x7684;&#x6700;&#x4F73;&#x5BE6;&#x8E10;">11.5 &#x8868;&#x55AE;&#x8655;&#x7406;&#x7684;&#x6700;&#x4F73;&#x5BE6;&#x8E10;</h3>
+<h4 id="1151-&#x6548;&#x80FD;&#x512A;&#x5316;">11.5.1 &#x6548;&#x80FD;&#x512A;&#x5316;</h4>
+<ol>
+<li><strong>&#x4F7F;&#x7528; useCallback &#x7A69;&#x5B9A;&#x4E8B;&#x4EF6;&#x8655;&#x7406;&#x51FD;&#x5F0F;</strong></li>
+<li><strong>&#x907F;&#x514D;&#x5728;&#x6BCF;&#x6B21;&#x6E32;&#x67D3;&#x6642;&#x5275;&#x5EFA;&#x65B0;&#x7684;&#x7269;&#x4EF6;</strong></li>
+<li><strong>&#x8003;&#x616E;&#x4F7F;&#x7528; React.memo &#x512A;&#x5316;&#x8868;&#x55AE;&#x5143;&#x4EF6;</strong></li>
+</ol>
+<h4 id="1152-&#x4F7F;&#x7528;&#x8005;&#x9AD4;&#x9A57;">11.5.2 &#x4F7F;&#x7528;&#x8005;&#x9AD4;&#x9A57;</h4>
+<ol>
+<li><strong>&#x63D0;&#x4F9B;&#x5373;&#x6642;&#x9A57;&#x8B49;&#x56DE;&#x994B;</strong></li>
+<li><strong>&#x6E05;&#x695A;&#x7684;&#x932F;&#x8AA4;&#x8A0A;&#x606F;</strong></li>
+<li><strong>&#x8F09;&#x5165;&#x72C0;&#x614B;&#x6307;&#x793A;</strong></li>
+<li><strong>&#x9069;&#x7576;&#x7684;&#x8868;&#x55AE;&#x6A19;&#x7C64;&#x548C; placeholder</strong></li>
+<li><strong>&#x9375;&#x76E4;&#x5C0E;&#x822A;&#x652F;&#x63F4;</strong></li>
+</ol>
+<h4 id="1153-&#x7121;&#x969C;&#x7919;&#x8A2D;&#x8A08;">11.5.3 &#x7121;&#x969C;&#x7919;&#x8A2D;&#x8A08;</h4>
+<pre><code class="lang-javascript"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">AccessibleForm</span>(<span class="hljs-params"></span>) </span>{
+  <span class="hljs-keyword">const</span> [formData, setFormData] = useState({
+    name: <span class="hljs-string">&apos;&apos;</span>,
+    email: <span class="hljs-string">&apos;&apos;</span>
+  });
+  <span class="hljs-keyword">const</span> [errors, setErrors] = useState({});
+
+  <span class="hljs-keyword">return</span> (
+    <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">form</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">htmlFor</span>=<span class="hljs-string">&quot;name&quot;</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;name-label&quot;</span>&gt;</span>
+          &#x59D3;&#x540D; <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">aria-label</span>=<span class="hljs-string">&quot;&#x5FC5;&#x586B;&#x6B04;&#x4F4D;&quot;</span>&gt;</span>*<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">input</span>
+          <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;text&quot;</span>
+          <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;name&quot;</span>
+          <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;name&quot;</span>
+          <span class="hljs-attr">value</span>=<span class="hljs-string">{formData.name}</span>
+          <span class="hljs-attr">onChange</span>=<span class="hljs-string">{handleChange}</span>
+          <span class="hljs-attr">aria-labelledby</span>=<span class="hljs-string">&quot;name-label&quot;</span>
+          <span class="hljs-attr">aria-describedby</span>=<span class="hljs-string">{errors.name</span> ? &quot;<span class="hljs-attr">name-error</span>&quot; <span class="hljs-attr">:</span> <span class="hljs-attr">undefined</span>}
+          <span class="hljs-attr">aria-invalid</span>=<span class="hljs-string">{errors.name</span> ? &quot;<span class="hljs-attr">true</span>&quot; <span class="hljs-attr">:</span> &quot;<span class="hljs-attr">false</span>&quot;}
+          <span class="hljs-attr">required</span>
+        /&gt;</span>
+        {errors.name &amp;&amp; (
+          <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;name-error&quot;</span> <span class="hljs-attr">role</span>=<span class="hljs-string">&quot;alert&quot;</span> <span class="hljs-attr">style</span>=<span class="hljs-string">{{</span> <span class="hljs-attr">color:</span> &apos;#<span class="hljs-attr">f44336</span>&apos; }}&gt;</span>
+            {errors.name}
+          <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+        )}
+      <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">form</span>&gt;</span>
+  );
+}
+</span></code></pre>
+<h3 id="116-&#x7E3D;&#x7D50;">11.6 &#x7E3D;&#x7D50;</h3>
+<p>&#x8868;&#x55AE;&#x8655;&#x7406;&#x662F; React &#x61C9;&#x7528;&#x7A0B;&#x5F0F;&#x4E2D;&#x7684;&#x91CD;&#x8981;&#x4E3B;&#x984C;&#xFF0C;&#x6D89;&#x53CA;&#x4F7F;&#x7528;&#x8005;&#x4E92;&#x52D5;&#x3001;&#x8CC7;&#x6599;&#x9A57;&#x8B49;&#x548C;&#x72C0;&#x614B;&#x7BA1;&#x7406;&#x7B49;&#x591A;&#x500B;&#x5C64;&#x9762;&#x3002;</p>
+<p><strong>&#x672C;&#x7AE0;&#x91CD;&#x9EDE;&#xFF1A;</strong></p>
+<ul>
+<li><strong>&#x53D7;&#x63A7; vs &#x4E0D;&#x53D7;&#x63A7;&#x5143;&#x4EF6;</strong>&#xFF1A;&#x7406;&#x89E3;&#x5169;&#x7A2E;&#x8868;&#x55AE;&#x8655;&#x7406;&#x65B9;&#x5F0F;&#x7684;&#x5DEE;&#x7570;&#x548C;&#x9069;&#x7528;&#x5834;&#x666F;</li>
+<li><strong>&#x4E0D;&#x540C;&#x8868;&#x55AE;&#x5143;&#x7D20;</strong>&#xFF1A;&#x638C;&#x63E1;&#x6587;&#x5B57;&#x8F38;&#x5165;&#x3001;&#x9078;&#x64C7;&#x5143;&#x7D20;&#x3001;&#x6A94;&#x6848;&#x4E0A;&#x50B3;&#x7684;&#x8655;&#x7406;&#x65B9;&#x6CD5;</li>
+<li><strong>&#x8868;&#x55AE;&#x9A57;&#x8B49;</strong>&#xFF1A;&#x5BE6;&#x73FE;&#x5373;&#x6642;&#x548C;&#x63D0;&#x4EA4;&#x6642;&#x7684;&#x9A57;&#x8B49;&#x6A5F;&#x5236;</li>
+<li><strong>&#x8907;&#x96DC;&#x8868;&#x55AE;</strong>&#xFF1A;&#x591A;&#x6B65;&#x9A5F;&#x8868;&#x55AE;&#x548C;&#x52D5;&#x614B;&#x8868;&#x55AE;&#x7684;&#x5BE6;&#x73FE;</li>
+<li><strong>&#x81EA;&#x8A02; Hook</strong>&#xFF1A;&#x62BD;&#x8C61;&#x8868;&#x55AE;&#x908F;&#x8F2F;&#xFF0C;&#x63D0;&#x9AD8;&#x7A0B;&#x5F0F;&#x78BC;&#x91CD;&#x7528;&#x6027;</li>
+<li><strong>&#x6700;&#x4F73;&#x5BE6;&#x8E10;</strong>&#xFF1A;&#x6548;&#x80FD;&#x512A;&#x5316;&#x3001;&#x4F7F;&#x7528;&#x8005;&#x9AD4;&#x9A57;&#x548C;&#x7121;&#x969C;&#x7919;&#x8A2D;&#x8A08;</li>
+</ul>
+<p><strong>&#x9078;&#x64C7;&#x8868;&#x55AE;&#x8655;&#x7406;&#x65B9;&#x5F0F;&#x7684;&#x5EFA;&#x8B70;&#xFF1A;</strong></p>
+<ol>
+<li><strong>&#x5927;&#x591A;&#x6578;&#x60C5;&#x6CC1;&#x4E0B;&#x4F7F;&#x7528;&#x53D7;&#x63A7;&#x5143;&#x4EF6;</strong>&#xFF1A;&#x66F4;&#x597D;&#x7684;&#x63A7;&#x5236;&#x548C;&#x9A57;&#x8B49;</li>
+<li><strong>&#x7C21;&#x55AE;&#x8868;&#x55AE;&#x53EF;&#x8003;&#x616E;&#x4E0D;&#x53D7;&#x63A7;&#x5143;&#x4EF6;</strong>&#xFF1A;&#x6E1B;&#x5C11;&#x91CD;&#x65B0;&#x6E32;&#x67D3;</li>
+<li><strong>&#x8907;&#x96DC;&#x8868;&#x55AE;&#x4F7F;&#x7528;&#x81EA;&#x8A02; Hook</strong>&#xFF1A;&#x63D0;&#x9AD8;&#x7A0B;&#x5F0F;&#x78BC;&#x7D44;&#x7E54;&#x6027;</li>
+<li><strong>&#x8003;&#x616E;&#x4F7F;&#x7528;&#x7B2C;&#x4E09;&#x65B9;&#x5EAB;</strong>&#xFF1A;&#x5982; Formik&#x3001;React Hook Form&#xFF0C;&#x964D;&#x4F4E;&#x958B;&#x767C;&#x8907;&#x96DC;&#x5EA6;</li>
+</ol>
+<p><strong>&#x8868;&#x55AE;&#x8A2D;&#x8A08;&#x539F;&#x5247;&#xFF1A;</strong></p>
+<ol>
+<li><strong>&#x4FDD;&#x6301;&#x7C21;&#x6F54;</strong>&#xFF1A;&#x907F;&#x514D;&#x904E;&#x591A;&#x7684;&#x5FC5;&#x586B;&#x6B04;&#x4F4D;</li>
+<li><strong>&#x63D0;&#x4F9B;&#x6E05;&#x6670;&#x7684;&#x6307;&#x5C0E;</strong>&#xFF1A;&#x4F7F;&#x7528; placeholder &#x548C;&#x8AAA;&#x660E;&#x6587;&#x5B57;</li>
+<li><strong>&#x5373;&#x6642;&#x56DE;&#x994B;</strong>&#xFF1A;&#x8B93;&#x4F7F;&#x7528;&#x8005;&#x77E5;&#x9053;&#x8F38;&#x5165;&#x662F;&#x5426;&#x6B63;&#x78BA;</li>
+<li><strong>&#x932F;&#x8AA4;&#x8655;&#x7406;</strong>&#xFF1A;&#x53CB;&#x5584;&#x7684;&#x932F;&#x8AA4;&#x8A0A;&#x606F;&#x548C;&#x6062;&#x5FA9;&#x6A5F;&#x5236;</li>
+<li><strong>&#x7121;&#x969C;&#x7919;&#x8A2D;&#x8A08;</strong>&#xFF1A;&#x652F;&#x63F4;&#x87A2;&#x5E55;&#x95B1;&#x8B80;&#x5668;&#x548C;&#x9375;&#x76E4;&#x64CD;&#x4F5C;</li>
+</ol>
+<p>&#x638C;&#x63E1;&#x8868;&#x55AE;&#x8655;&#x7406;&#x6280;&#x80FD;&#x5C0D;&#x65BC;&#x5EFA;&#x7ACB;&#x512A;&#x79C0;&#x7684;&#x4F7F;&#x7528;&#x8005;&#x4E92;&#x52D5;&#x9AD4;&#x9A57;&#x81F3;&#x95DC;&#x91CD;&#x8981;&#x3002;&#x5728;&#x4E0B;&#x4E00;&#x7AE0;&#x4E2D;&#xFF0C;&#x6211;&#x5011;&#x5C07;&#x5B78;&#x7FD2; Context API&#xFF0C;&#x9019;&#x662F; React &#x4E2D;&#x8655;&#x7406;&#x8DE8;&#x5143;&#x4EF6;&#x72C0;&#x614B;&#x5171;&#x4EAB;&#x7684;&#x91CD;&#x8981;&#x5DE5;&#x5177;&#x3002;</p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="chapter10.html" class="navigation navigation-prev " aria-label="Previous page: 第10章：列表與 Keys (Lists and Keys)">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="chapter12.html" class="navigation navigation-next " aria-label="Next page: 第12章：狀態提升 (Lifting State Up)">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"第11章：表單處理 (Forms)","level":"1.12","depth":1,"next":{"title":"第12章：狀態提升 (Lifting State Up)","level":"1.13","depth":1,"path":"chapter12.md","ref":"chapter12.md","articles":[]},"previous":{"title":"第10章：列表與 Keys (Lists and Keys)","level":"1.11","depth":1,"path":"chapter10.md","ref":"chapter10.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css","website":"styles/website.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css","website":"styles/website.css"}},"file":{"path":"chapter11.md","mtime":"2025-06-02T16:30:39.473Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2025-06-02T17:15:06.817Z"},"basePath":".","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="gitbook/gitbook.js"></script>
+    <script src="gitbook/theme.js"></script>
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

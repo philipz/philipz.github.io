@@ -1,0 +1,695 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>第5章：State (狀態) 的介紹與使用 · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="chapter6.html" />
+    
+    
+    <link rel="prev" href="chapter4.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    教程目錄
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="chapter1.html">
+            
+                <a href="chapter1.html">
+            
+                    
+                    第1章：React 簡介與前端開發環境回顧
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="chapter2.html">
+            
+                <a href="chapter2.html">
+            
+                    
+                    第2章：JSX 深度解析
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="chapter3.html">
+            
+                <a href="chapter3.html">
+            
+                    
+                    第3章：React 元件詳解
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="chapter4.html">
+            
+                <a href="chapter4.html">
+            
+                    
+                    第4章：Props (屬性) 的運用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.6" data-path="chapter5.html">
+            
+                <a href="chapter5.html">
+            
+                    
+                    第5章：State (狀態) 的介紹與使用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="chapter6.html">
+            
+                <a href="chapter6.html">
+            
+                    
+                    第6章：元件生命週期與 useEffect Hook
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="chapter7.html">
+            
+                <a href="chapter7.html">
+            
+                    
+                    第7章：自訂 Hooks (Custom Hooks)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="chapter8.html">
+            
+                <a href="chapter8.html">
+            
+                    
+                    第8章：事件處理 (Handling Events)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10" data-path="chapter9.html">
+            
+                <a href="chapter9.html">
+            
+                    
+                    第9章：條件渲染 (Conditional Rendering)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11" data-path="chapter10.html">
+            
+                <a href="chapter10.html">
+            
+                    
+                    第10章：列表與 Keys (Lists and Keys)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12" data-path="chapter11.html">
+            
+                <a href="chapter11.html">
+            
+                    
+                    第11章：表單處理 (Forms)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13" data-path="chapter12.html">
+            
+                <a href="chapter12.html">
+            
+                    
+                    第12章：狀態提升 (Lifting State Up)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14" data-path="chapter13.html">
+            
+                <a href="chapter13.html">
+            
+                    
+                    第13章：組合 vs 繼承
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15" data-path="chapter14.html">
+            
+                <a href="chapter14.html">
+            
+                    
+                    第14章：React 哲學與最佳實踐
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="." >第5章：State (狀態) 的介紹與使用</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="&#x7B2C;-5-&#x7AE0;&#xFF1A;state-&#x72C0;&#x614B;-&#x7684;&#x4ECB;&#x7D39;&#x8207;&#x4F7F;&#x7528;">&#x7B2C; 5 &#x7AE0;&#xFF1A;State (&#x72C0;&#x614B;) &#x7684;&#x4ECB;&#x7D39;&#x8207;&#x4F7F;&#x7528;</h1>
+<p>&#x5728;&#x4E0A;&#x4E00;&#x7AE0;&#x4E2D;&#xFF0C;&#x6211;&#x5011;&#x5B78;&#x7FD2;&#x4E86; Props&#xFF0C;&#x5B83;&#x5011;&#x5141;&#x8A31;&#x7236;&#x5143;&#x4EF6;&#x5C07;&#x8CC7;&#x6599;&#x50B3;&#x905E;&#x7D66;&#x5B50;&#x5143;&#x4EF6;&#x3002;&#x7136;&#x800C;&#xFF0C;Props &#x662F;&#x552F;&#x8B80;&#x7684;&#x3002;&#x5982;&#x679C;&#x4E00;&#x500B;&#x5143;&#x4EF6;&#x9700;&#x8981;&#x7BA1;&#x7406;&#x5176;&#x5167;&#x90E8;&#x7684;&#x3001;&#x6703;&#x96A8;&#x6642;&#x9593;&#x6216;&#x4F7F;&#x7528;&#x8005;&#x4E92;&#x52D5;&#x800C;&#x6539;&#x8B8A;&#x7684;&#x8CC7;&#x6599;&#xFF0C;&#x6211;&#x5011;&#x5C31;&#x9700;&#x8981;&#x4F7F;&#x7528; State&#x3002;</p>
+<p>State &#x4EE3;&#x8868;&#x4E86;&#x5143;&#x4EF6;&#x5167;&#x90E8;&#x96A8;&#x6642;&#x9593;&#x8B8A;&#x5316;&#x7684;&#x8CC7;&#x6599;&#x3002;&#x8207; Props &#x4E0D;&#x540C;&#xFF0C;State &#x662F;&#x7531;&#x5143;&#x4EF6;&#x81EA;&#x5DF1;&#x7BA1;&#x7406;&#x548C;&#x63A7;&#x5236;&#x7684;&#xFF0C;&#x4E26;&#x4E14;&#x7576; State &#x6539;&#x8B8A;&#x6642;&#xFF0C;React &#x6703;&#x81EA;&#x52D5;&#x91CD;&#x65B0;&#x6E32;&#x67D3;&#x5143;&#x4EF6;&#x4EE5;&#x53CD;&#x6620;&#x9019;&#x4E9B;&#x8B8A;&#x5316;&#x3002;</p>
+<h3 id="51-&#x4EC0;&#x9EBC;&#x662F;-state&#xFF1F;">5.1 &#x4EC0;&#x9EBC;&#x662F; State&#xFF1F;</h3>
+<p>&#x60F3;&#x50CF;&#x4E00;&#x500B;&#x958B;&#x95DC;&#x5143;&#x4EF6;&#xFF0C;&#x5B83;&#x6709;&#x5169;&#x7A2E;&#x72C0;&#x614B;&#xFF1A;&#x300C;&#x958B;&#x300D;&#x548C;&#x300C;&#x95DC;&#x300D;&#x3002;&#x6216;&#x8005;&#x4E00;&#x500B;&#x8A08;&#x6578;&#x5668;&#x5143;&#x4EF6;&#xFF0C;&#x5B83;&#x9700;&#x8981;&#x8A18;&#x9304;&#x76EE;&#x524D;&#x7684;&#x8A08;&#x6578;&#x503C;&#x3002;&#x9019;&#x4E9B;&#x6703;&#x6539;&#x8B8A;&#x7684;&#x503C;&#x5C31;&#x662F;&#x5143;&#x4EF6;&#x7684; State&#x3002;</p>
+<ul>
+<li><strong>State &#x662F;&#x79C1;&#x6709;&#x7684;</strong>&#xFF1A;&#x5B83;&#x5B8C;&#x5168;&#x7531;&#x5143;&#x4EF6;&#x81EA;&#x5DF1;&#x63A7;&#x5236;&#x3002;</li>
+<li><strong>State &#x662F;&#x53EF;&#x8B8A;&#x7684;</strong>&#xFF1A;&#x8207;&#x552F;&#x8B80;&#x7684; Props &#x4E0D;&#x540C;&#xFF0C;State &#x53EF;&#x4EE5;&#x88AB;&#x4FEE;&#x6539;&#x3002;</li>
+<li><strong>State &#x7684;&#x6539;&#x8B8A;&#x6703;&#x89F8;&#x767C;&#x91CD;&#x65B0;&#x6E32;&#x67D3;</strong>&#xFF1A;&#x9019;&#x662F; React &#x7684;&#x6838;&#x5FC3;&#x6A5F;&#x5236;&#x4E4B;&#x4E00;&#x3002;&#x7576;&#x4F60;&#x66F4;&#x65B0;&#x4E00;&#x500B;&#x5143;&#x4EF6;&#x7684; State &#x6642;&#xFF0C;React &#x6703;&#x5B89;&#x6392;&#x8A72;&#x5143;&#x4EF6;&#x53CA;&#x5176;&#x5B50;&#x5143;&#x4EF6;&#x7684;&#x91CD;&#x65B0;&#x6E32;&#x67D3;&#x3002;</li>
+</ul>
+<h3 id="52-props-vs-state">5.2 Props vs. State</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">&#x7279;&#x6027;</th>
+<th style="text-align:left">Props (&#x5C6C;&#x6027;)</th>
+<th style="text-align:left">State (&#x72C0;&#x614B;)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left"><strong>&#x8CC7;&#x6599;&#x4F86;&#x6E90;</strong></td>
+<td style="text-align:left">&#x7531;&#x7236;&#x5143;&#x4EF6;&#x50B3;&#x905E;</td>
+<td style="text-align:left">&#x7531;&#x5143;&#x4EF6;&#x81EA;&#x8EAB;&#x7BA1;&#x7406;</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>&#x53EF;&#x8B8A;&#x6027;</strong></td>
+<td style="text-align:left">&#x552F;&#x8B80; (&#x5B50;&#x5143;&#x4EF6;&#x4E0D;&#x80FD;&#x4FEE;&#x6539;)</td>
+<td style="text-align:left">&#x53EF;&#x8B8A; (&#x5143;&#x4EF6;&#x53EF;&#x4EE5;&#x4FEE;&#x6539;&#x81EA;&#x5DF1;&#x7684; State)</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>&#x751F;&#x547D;&#x9031;&#x671F;</strong></td>
+<td style="text-align:left">&#x5728;&#x5143;&#x4EF6;&#x7684;&#x6574;&#x500B;&#x751F;&#x547D;&#x9031;&#x671F;&#x4E2D;&#x901A;&#x5E38;&#x4FDD;&#x6301;&#x4E0D;&#x8B8A; (&#x9664;&#x975E;&#x7236;&#x5143;&#x4EF6;&#x50B3;&#x905E;&#x65B0;&#x7684; Props)</td>
+<td style="text-align:left">&#x53EF;&#x4EE5;&#x5728;&#x5143;&#x4EF6;&#x7684;&#x751F;&#x547D;&#x9031;&#x671F;&#x4E2D;&#x6539;&#x8B8A;&#xFF0C;&#x901A;&#x5E38;&#x97FF;&#x61C9;&#x4F7F;&#x7528;&#x8005;&#x4E92;&#x52D5;&#x6216;&#x7DB2;&#x8DEF;&#x8ACB;&#x6C42;</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>&#x7528;&#x9014;</strong></td>
+<td style="text-align:left">&#x7528;&#x65BC;&#x914D;&#x7F6E;&#x548C;&#x81EA;&#x8A02;&#x5316;&#x5143;&#x4EF6;&#x7684;&#x884C;&#x70BA;&#x548C;&#x5916;&#x89C0;</td>
+<td style="text-align:left">&#x7528;&#x65BC;&#x5132;&#x5B58;&#x548C;&#x7BA1;&#x7406;&#x5143;&#x4EF6;&#x5167;&#x90E8;&#x7684;&#x52D5;&#x614B;&#x8CC7;&#x6599;&#xFF0C;&#x63A7;&#x5236;&#x5143;&#x4EF6;&#x7684;&#x884C;&#x70BA;</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>&#x8AB0;&#x64C1;&#x6709;&#x8CC7;&#x6599;</strong></td>
+<td style="text-align:left">&#x7236;&#x5143;&#x4EF6;&#x64C1;&#x6709;&#x8CC7;&#x6599;&#xFF0C;&#x5B50;&#x5143;&#x4EF6;&#x63A5;&#x6536;&#x8CC7;&#x6599;</td>
+<td style="text-align:left">&#x5143;&#x4EF6;&#x81EA;&#x8EAB;&#x64C1;&#x6709;&#x548C;&#x7BA1;&#x7406;&#x8CC7;&#x6599;</td>
+</tr>
+</tbody>
+</table>
+<p>&#x7C21;&#x55AE;&#x4F86;&#x8AAA;&#xFF1A;Props &#x662F;&#x5143;&#x4EF6;&#x7684;&#x300C;&#x8A2D;&#x5B9A;&#x300D;&#xFF0C;&#x800C; State &#x662F;&#x5143;&#x4EF6;&#x7684;&#x300C;&#x8A18;&#x61B6;&#x9AD4;&#x300D;&#x3002;</p>
+<h3 id="53-&#x5728;&#x51FD;&#x5F0F;&#x5143;&#x4EF6;&#x4E2D;&#x4F7F;&#x7528;-state&#xFF1A;usestate-hook">5.3 &#x5728;&#x51FD;&#x5F0F;&#x5143;&#x4EF6;&#x4E2D;&#x4F7F;&#x7528; State&#xFF1A;<code>useState</code> Hook</h3>
+<p>&#x5728; React 16.8 &#x7248;&#x672C;&#x4E4B;&#x5F8C;&#xFF0C;Hooks &#x7684;&#x5F15;&#x5165;&#x5FB9;&#x5E95;&#x6539;&#x8B8A;&#x4E86;&#x51FD;&#x5F0F;&#x5143;&#x4EF6;&#x7684;&#x7DE8;&#x5BEB;&#x65B9;&#x5F0F;&#x3002;<code>useState</code> Hook &#x8B93;&#x6211;&#x5011;&#x53EF;&#x4EE5;&#x5728;&#x51FD;&#x5F0F;&#x5143;&#x4EF6;&#x4E2D;&#x4F7F;&#x7528; State&#x3002;</p>
+<p><strong>&#x5982;&#x4F55;&#x5F15;&#x5165; <code>useState</code>&#xFF1A;</strong></p>
+<pre><code class="lang-javascript"><span class="hljs-keyword">import</span> React, { useState } <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;react&apos;</span>;
+</code></pre>
+<p><strong><code>useState</code> &#x7684;&#x57FA;&#x672C;&#x8A9E;&#x6CD5;&#xFF1A;</strong></p>
+<p><code>useState</code> &#x662F;&#x4E00;&#x500B;&#x51FD;&#x5F0F;&#xFF0C;&#x5B83;&#x63A5;&#x6536;&#x4E00;&#x500B;&#x53C3;&#x6578;&#x4F5C;&#x70BA; State &#x7684;&#x521D;&#x59CB;&#x503C;&#xFF0C;&#x4E26;&#x8FD4;&#x56DE;&#x4E00;&#x500B;&#x5305;&#x542B;&#x5169;&#x500B;&#x5143;&#x7D20;&#x7684;&#x9663;&#x5217;&#xFF1A;</p>
+<ol>
+<li><strong>&#x76EE;&#x524D; State &#x7684;&#x503C;</strong> (current state value)&#x3002;</li>
+<li><strong>&#x4E00;&#x500B;&#x66F4;&#x65B0;&#x8A72; State &#x7684;&#x51FD;&#x5F0F;</strong> (updater function)&#x3002;</li>
+</ol>
+<pre><code class="lang-javascript"><span class="hljs-keyword">const</span> [stateVariable, setStateVariable] = useState(initialValue);
+</code></pre>
+<ul>
+<li><code>stateVariable</code>&#xFF1A;&#x4F60;&#x70BA; State &#x9078;&#x64C7;&#x7684;&#x540D;&#x7A31;&#x3002;</li>
+<li><code>setStateVariable</code>&#xFF1A;&#x4E00;&#x500B;&#x51FD;&#x5F0F;&#xFF0C;&#x901A;&#x5E38;&#x547D;&#x540D;&#x70BA; <code>set</code> &#x52A0;&#x4E0A; State &#x8B8A;&#x6578;&#x7684;&#x540D;&#x7A31; (&#x4F8B;&#x5982; <code>setCount</code>, <code>setName</code>)&#x3002;&#x547C;&#x53EB;&#x6B64;&#x51FD;&#x5F0F;&#x5C07;&#x66F4;&#x65B0; State &#x4E26;&#x89F8;&#x767C;&#x91CD;&#x65B0;&#x6E32;&#x67D3;&#x3002;</li>
+<li><code>initialValue</code>&#xFF1A;State &#x7684;&#x521D;&#x59CB;&#x503C;&#x3002;&#x5B83;&#x53EF;&#x4EE5;&#x662F;&#x4EFB;&#x4F55; JavaScript &#x8CC7;&#x6599;&#x578B;&#x5225; (&#x6578;&#x5B57;&#x3001;&#x5B57;&#x4E32;&#x3001;&#x5E03;&#x6797;&#x503C;&#x3001;&#x9663;&#x5217;&#x3001;&#x7269;&#x4EF6;&#x7B49;)&#x3002;&#x9019;&#x500B;&#x521D;&#x59CB;&#x503C;&#x53EA;&#x5728;&#x5143;&#x4EF6;&#x9996;&#x6B21;&#x6E32;&#x67D3;&#x6642;&#x4F7F;&#x7528;&#x3002;</li>
+</ul>
+<p><strong>&#x7BC4;&#x4F8B;&#xFF1A;&#x4E00;&#x500B;&#x7C21;&#x55AE;&#x7684;&#x8A08;&#x6578;&#x5668;&#x5143;&#x4EF6;</strong></p>
+<pre><code class="lang-javascript"><span class="hljs-comment">// Counter.js</span>
+<span class="hljs-keyword">import</span> React, { useState } <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;react&apos;</span>;
+
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">Counter</span>(<span class="hljs-params"></span>) </span>{
+  <span class="hljs-comment">// &#x4F7F;&#x7528; useState Hook &#x4F86;&#x5BA3;&#x544A;&#x4E00;&#x500B;&#x540D;&#x70BA; count &#x7684; state &#x8B8A;&#x6578;&#xFF0C;&#x521D;&#x59CB;&#x503C;&#x70BA; 0</span>
+  <span class="hljs-comment">// count &#x662F;&#x76EE;&#x524D;&#x7684; state &#x503C;</span>
+  <span class="hljs-comment">// setCount &#x662F;&#x66F4;&#x65B0; count &#x7684;&#x51FD;&#x5F0F;</span>
+  <span class="hljs-keyword">const</span> [count, setCount] = useState(<span class="hljs-number">0</span>);
+
+  <span class="hljs-comment">// &#x4E8B;&#x4EF6;&#x8655;&#x7406;&#x51FD;&#x5F0F;&#xFF0C;&#x7528;&#x65BC;&#x589E;&#x52A0;&#x8A08;&#x6578;</span>
+  <span class="hljs-keyword">const</span> handleIncrement = () =&gt; {
+    setCount(count + <span class="hljs-number">1</span>); <span class="hljs-comment">// &#x66F4;&#x65B0; count &#x7684;&#x503C;</span>
+  };
+
+  <span class="hljs-comment">// &#x4E8B;&#x4EF6;&#x8655;&#x7406;&#x51FD;&#x5F0F;&#xFF0C;&#x7528;&#x65BC;&#x6E1B;&#x5C11;&#x8A08;&#x6578;</span>
+  <span class="hljs-keyword">const</span> handleDecrement = () =&gt; {
+    setCount(count - <span class="hljs-number">1</span>); <span class="hljs-comment">// &#x66F4;&#x65B0; count &#x7684;&#x503C;</span>
+  };
+
+  <span class="hljs-keyword">return</span> (
+    <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">h2</span>&gt;</span>&#x8A08;&#x6578;&#x5668;<span class="hljs-tag">&lt;/<span class="hljs-name">h2</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>&#x76EE;&#x524D;&#x7684;&#x8A08;&#x6578;: {count}<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">onClick</span>=<span class="hljs-string">{handleIncrement}</span>&gt;</span>&#x589E;&#x52A0; (+)<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">onClick</span>=<span class="hljs-string">{handleDecrement}</span>&gt;</span>&#x6E1B;&#x5C11; (-)<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">onClick</span>=<span class="hljs-string">{()</span> =&gt;</span> setCount(0)}&gt;&#x91CD;&#x8A2D;<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span> {/* &#x76F4;&#x63A5;&#x5728; JSX &#x4E2D;&#x4F7F;&#x7528;&#x7BAD;&#x982D;&#x51FD;&#x5F0F;&#x66F4;&#x65B0; state */}
+    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></span>
+  );
+}
+
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> Counter;
+</code></pre>
+<p>&#x5728;&#x9019;&#x500B;&#x4F8B;&#x5B50;&#x4E2D;&#xFF1A;</p>
+<ol>
+<li><code>useState(0)</code> &#x521D;&#x59CB;&#x5316; <code>count</code> &#x70BA; <code>0</code>&#x3002;</li>
+<li>&#x7576;&#x4F7F;&#x7528;&#x8005;&#x9EDE;&#x64CA;&#x300C;&#x589E;&#x52A0; (+)&#x300D;&#x6309;&#x9215;&#x6642;&#xFF0C;<code>handleIncrement</code> &#x51FD;&#x5F0F;&#x88AB;&#x547C;&#x53EB;&#x3002;</li>
+<li><code>setCount(count + 1)</code> &#x66F4;&#x65B0; <code>count</code> &#x7684;&#x503C;&#x3002;React &#x6703;&#x5075;&#x6E2C;&#x5230; State &#x7684;&#x8B8A;&#x5316;&#xFF0C;&#x4E26;&#x91CD;&#x65B0;&#x6E32;&#x67D3; <code>Counter</code> &#x5143;&#x4EF6;&#xFF0C;&#x986F;&#x793A;&#x65B0;&#x7684;&#x8A08;&#x6578;&#x503C;&#x3002;</li>
+</ol>
+<p><strong>&#x4F7F;&#x7528;&#x591A;&#x500B; State &#x8B8A;&#x6578;&#xFF1A;</strong></p>
+<p>&#x4E00;&#x500B;&#x51FD;&#x5F0F;&#x5143;&#x4EF6;&#x53EF;&#x4EE5;&#x64C1;&#x6709;&#x591A;&#x500B; State &#x8B8A;&#x6578;&#xFF0C;&#x53EA;&#x9700;&#x591A;&#x6B21;&#x547C;&#x53EB; <code>useState</code> &#x5373;&#x53EF;&#x3002;</p>
+<pre><code class="lang-javascript"><span class="hljs-keyword">import</span> React, { useState } <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;react&apos;</span>;
+
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">UserProfile</span>(<span class="hljs-params"></span>) </span>{
+  <span class="hljs-keyword">const</span> [name, setName] = useState(<span class="hljs-string">&apos;&#x8A2A;&#x5BA2;&apos;</span>);
+  <span class="hljs-keyword">const</span> [age, setAge] = useState(<span class="hljs-literal">null</span>);
+  <span class="hljs-keyword">const</span> [isLoggedIn, setIsLoggedIn] = useState(<span class="hljs-literal">false</span>);
+
+  <span class="hljs-keyword">const</span> handleLogin = () =&gt; {
+    setIsLoggedIn(<span class="hljs-literal">true</span>);
+    setName(<span class="hljs-string">&apos;React &#x4F7F;&#x7528;&#x8005;&apos;</span>);
+    setAge(<span class="hljs-number">3</span>); <span class="hljs-comment">// &#x5047;&#x8A2D; React &#x4F7F;&#x7528;&#x8005; 3 &#x6B72;</span>
+  };
+
+  <span class="hljs-keyword">const</span> handleLogout = () =&gt; {
+    setIsLoggedIn(<span class="hljs-literal">false</span>);
+    setName(<span class="hljs-string">&apos;&#x8A2A;&#x5BA2;&apos;</span>);
+    setAge(<span class="hljs-literal">null</span>);
+  };
+
+  <span class="hljs-keyword">return</span> (
+    <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">h2</span>&gt;</span>&#x4F7F;&#x7528;&#x8005;&#x8A2D;&#x5B9A;&#x6A94;<span class="hljs-tag">&lt;/<span class="hljs-name">h2</span>&gt;</span>
+      {isLoggedIn ? (
+        <span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>&#x59D3;&#x540D;: {name}<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>&#x5E74;&#x9F61;: {age !== null ? age : &apos;&#x672A;&#x77E5;&apos;}<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">onClick</span>=<span class="hljs-string">{handleLogout}</span>&gt;</span>&#x767B;&#x51FA;<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+      ) : (
+        <span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>&#x8ACB;&#x5148;&#x767B;&#x5165;&#x3002;<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">onClick</span>=<span class="hljs-string">{handleLogin}</span>&gt;</span>&#x767B;&#x5165;<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+      )}
+    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></span>
+  );
+}
+
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> UserProfile;
+</code></pre>
+<p><strong>State &#x66F4;&#x65B0;&#x51FD;&#x5F0F;&#x7684;&#x884C;&#x70BA; (Setter Function Behavior):</strong></p>
+<ul>
+<li><p><strong>&#x53D6;&#x4EE3; State</strong>&#xFF1A;&#x7576;&#x4F60;&#x4F7F;&#x7528; <code>useState</code> &#x7684;&#x66F4;&#x65B0;&#x51FD;&#x5F0F; (&#x4F8B;&#x5982; <code>setCount</code>) &#x6642;&#xFF0C;&#x5B83;&#x6703; <em>&#x53D6;&#x4EE3;</em> &#x820A;&#x7684; State &#x503C;&#xFF0C;&#x800C;&#x4E0D;&#x662F;&#x50CF;&#x985E;&#x5225;&#x5143;&#x4EF6;&#x4E2D;&#x7684; <code>this.setState()</code> &#x90A3;&#x6A23;&#x9032;&#x884C;&#x5408;&#x4F75; (&#x7279;&#x5225;&#x662F;&#x7576; State &#x662F;&#x7269;&#x4EF6;&#x6642;)&#x3002;&#x5982;&#x679C;&#x4F60;&#x5E0C;&#x671B;&#x4FDD;&#x7559;&#x7269;&#x4EF6;&#x4E2D;&#x7684;&#x5176;&#x4ED6;&#x90E8;&#x5206;&#xFF0C;&#x4F60;&#x9700;&#x8981;&#x624B;&#x52D5;&#x5408;&#x4F75;&#x3002;</p>
+<pre><code class="lang-javascript"><span class="hljs-keyword">const</span> [user, setUser] = useState({ name: <span class="hljs-string">&apos;Alice&apos;</span>, age: <span class="hljs-number">30</span> });
+
+<span class="hljs-keyword">const</span> updateUserName = (newName) =&gt; {
+  <span class="hljs-comment">// &#x5982;&#x679C; State &#x662F;&#x7269;&#x4EF6;&#xFF0C;&#x66F4;&#x65B0;&#x6642;&#x9700;&#x8981;&#x624B;&#x52D5;&#x5408;&#x4F75;</span>
+  setUser(prevUser =&gt; ({ ...prevUser, name: newName }));
+};
+</code></pre>
+</li>
+<li><p><strong>&#x51FD;&#x5F0F;&#x66F4;&#x65B0; (Functional Updates)</strong>&#xFF1A;&#x5982;&#x679C;&#x65B0;&#x7684; State &#x9700;&#x8981;&#x57FA;&#x65BC;&#x5148;&#x524D;&#x7684; State &#x8A08;&#x7B97;&#x5F97;&#x51FA;&#xFF0C;&#x4F60;&#x53EF;&#x4EE5;&#x5411;&#x66F4;&#x65B0;&#x51FD;&#x5F0F;&#x50B3;&#x905E;&#x4E00;&#x500B;&#x51FD;&#x5F0F;&#x3002;&#x9019;&#x500B;&#x51FD;&#x5F0F;&#x6703;&#x63A5;&#x6536;&#x5148;&#x524D;&#x7684; State &#x503C;&#x4F5C;&#x70BA;&#x53C3;&#x6578;&#xFF0C;&#x4E26;&#x8FD4;&#x56DE;&#x65B0;&#x7684; State &#x503C;&#x3002;&#x9019;&#x5728; State &#x66F4;&#x65B0;&#x4F9D;&#x8CF4;&#x65BC;&#x5148;&#x524D;&#x503C;&#x6642;&#x975E;&#x5E38;&#x6709;&#x7528;&#xFF0C;&#x5C24;&#x5176;&#x662F;&#x5728;&#x8655;&#x7406;&#x975E;&#x540C;&#x6B65;&#x64CD;&#x4F5C;&#x6642;&#xFF0C;&#x53EF;&#x4EE5;&#x907F;&#x514D;&#x56E0;&#x70BA;&#x9589;&#x5305;&#x5C0E;&#x81F4;&#x7684;&#x820A; State &#x503C;&#x554F;&#x984C;&#x3002;</p>
+<pre><code class="lang-javascript"><span class="hljs-keyword">const</span> handleIncrementFiveTimes = () =&gt; {
+  <span class="hljs-keyword">for</span> (<span class="hljs-keyword">let</span> i = <span class="hljs-number">0</span>; i &lt; <span class="hljs-number">5</span>; i++) {
+    <span class="hljs-comment">// &#x5982;&#x679C;&#x9019;&#x6A23;&#x5BEB;&#xFF0C;count &#x53EF;&#x80FD;&#x4E0D;&#x6703;&#x5982;&#x9810;&#x671F;&#x589E;&#x52A0; 5 &#x6B21;&#xFF0C;&#x56E0;&#x70BA; setCount &#x662F;&#x975E;&#x540C;&#x6B65;&#x7684;</span>
+    <span class="hljs-comment">// setCount(count + 1);</span>
+
+    <span class="hljs-comment">// &#x4F7F;&#x7528;&#x51FD;&#x5F0F;&#x66F4;&#x65B0;&#x53EF;&#x4EE5;&#x78BA;&#x4FDD;&#x6BCF;&#x6B21;&#x90FD;&#x662F;&#x57FA;&#x65BC;&#x6700;&#x65B0;&#x7684; state</span>
+    setCount(prevCount =&gt; prevCount + <span class="hljs-number">1</span>);
+  }
+};
+</code></pre>
+</li>
+</ul>
+<h3 id="54-&#x5728;&#x985E;&#x5225;&#x5143;&#x4EF6;&#x4E2D;&#x4F7F;&#x7528;-state-&#x7C21;&#x4ECB;">5.4 &#x5728;&#x985E;&#x5225;&#x5143;&#x4EF6;&#x4E2D;&#x4F7F;&#x7528; State (&#x7C21;&#x4ECB;)</h3>
+<p>&#x96D6;&#x7136;&#x73FE;&#x4EE3; React &#x66F4;&#x63A8;&#x85A6;&#x4F7F;&#x7528;&#x51FD;&#x5F0F;&#x5143;&#x4EF6;&#x548C; Hooks&#xFF0C;&#x4F46;&#x4E86;&#x89E3;&#x985E;&#x5225;&#x5143;&#x4EF6;&#x5982;&#x4F55;&#x8655;&#x7406; State &#x4ECD;&#x7136;&#x6709;&#x52A9;&#x65BC;&#x7406;&#x89E3;&#x820A;&#x6709;&#x7A0B;&#x5F0F;&#x78BC;&#x6216;&#x67D0;&#x4E9B;&#x7279;&#x5B9A;&#x5834;&#x666F;&#x3002;</p>
+<p>&#x5728;&#x985E;&#x5225;&#x5143;&#x4EF6;&#x4E2D;&#xFF0C;State &#x662F;&#x4E00;&#x500B;&#x7269;&#x4EF6;&#xFF0C;&#x5132;&#x5B58;&#x5728; <code>this.state</code> &#x4E2D;&#x3002;</p>
+<p><strong>1. &#x521D;&#x59CB;&#x5316; State&#xFF1A;</strong></p>
+<p>&#x901A;&#x5E38;&#x5728;&#x5EFA;&#x69CB;&#x51FD;&#x5F0F; (<code>constructor</code>) &#x4E2D;&#x521D;&#x59CB;&#x5316; State&#x3002;</p>
+<pre><code class="lang-javascript"><span class="hljs-keyword">import</span> React <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;react&apos;</span>;
+
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">ClassCounter</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">React</span>.<span class="hljs-title">Component</span> </span>{
+  <span class="hljs-keyword">constructor</span>(props) {
+    <span class="hljs-keyword">super</span>(props); <span class="hljs-comment">// &#x5FC5;&#x9808;&#x5148;&#x547C;&#x53EB; super(props)</span>
+    <span class="hljs-comment">// &#x521D;&#x59CB;&#x5316; state</span>
+    <span class="hljs-keyword">this</span>.state = {
+      count: <span class="hljs-number">0</span>,
+      message: <span class="hljs-string">&quot;&#x4F60;&#x597D;&quot;</span>
+    };
+  }
+
+  <span class="hljs-comment">// ...</span>
+}
+</code></pre>
+<p><strong>2. &#x8B80;&#x53D6; State&#xFF1A;</strong></p>
+<p>&#x900F;&#x904E; <code>this.state.propertyName</code> &#x4F86;&#x8B80;&#x53D6; State&#x3002;</p>
+<pre><code class="lang-javascript">render() {
+  <span class="hljs-keyword">return</span> (
+    <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>&#x8A08;&#x6578;: {this.state.count}<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>&#x8A0A;&#x606F;: {this.state.message}<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></span>
+  );
+}
+</code></pre>
+<p><strong>3. &#x66F4;&#x65B0; State&#xFF1A;<code>this.setState()</code></strong></p>
+<p>&#x4F7F;&#x7528; <code>this.setState()</code> &#x65B9;&#x6CD5;&#x4F86;&#x66F4;&#x65B0; State&#x3002;<code>this.setState()</code> &#x6703;&#x5C07;&#x50B3;&#x5165;&#x7684;&#x7269;&#x4EF6;&#x8207;&#x76EE;&#x524D;&#x7684; State &#x9032;&#x884C;&#x300C;&#x6DFA;&#x5408;&#x4F75;&#x300D;(shallow merge)&#x3002;</p>
+<pre><code class="lang-javascript">handleIncrement = () =&gt; {
+  <span class="hljs-comment">// &#x66F4;&#x65B0; count&#xFF0C;message &#x4FDD;&#x6301;&#x4E0D;&#x8B8A;</span>
+  <span class="hljs-keyword">this</span>.setState({ count: <span class="hljs-keyword">this</span>.state.count + <span class="hljs-number">1</span> });
+};
+
+handleChangeMessage = (newMessage) =&gt; {
+  <span class="hljs-keyword">this</span>.setState({ message: newMessage });
+};
+</code></pre>
+<p><strong><code>this.setState()</code> &#x7684;&#x91CD;&#x8981;&#x7279;&#x6027;&#xFF1A;</strong></p>
+<ul>
+<li><strong>&#x4E0D;&#x8981;&#x76F4;&#x63A5;&#x4FEE;&#x6539; State</strong>&#xFF1A;&#x6C38;&#x9060;&#x4E0D;&#x8981;&#x50CF; <code>this.state.count = 10;</code> &#x9019;&#x6A23;&#x76F4;&#x63A5;&#x4FEE;&#x6539; State&#xFF0C;&#x56E0;&#x70BA;&#x9019;&#x4E0D;&#x6703;&#x89F8;&#x767C;&#x91CD;&#x65B0;&#x6E32;&#x67D3;&#xFF0C;&#x4E14;&#x53EF;&#x80FD;&#x5C0E;&#x81F4;&#x975E;&#x9810;&#x671F;&#x884C;&#x70BA;&#x3002;</li>
+<li><strong>State &#x66F4;&#x65B0;&#x53EF;&#x80FD;&#x662F;&#x975E;&#x540C;&#x6B65;&#x7684;</strong>&#xFF1A;React &#x53EF;&#x80FD;&#x6703;&#x5C07;&#x591A;&#x500B; <code>setState()</code> &#x547C;&#x53EB;&#x6279;&#x6B21;&#x8655;&#x7406;&#x4EE5;&#x63D0;&#x9AD8;&#x6548;&#x80FD;&#x3002;&#x56E0;&#x6B64;&#xFF0C;&#x4F60;&#x4E0D;&#x61C9;&#x8A72;&#x4F9D;&#x8CF4; <code>this.state</code> &#x548C; <code>this.props</code> &#x4F86;&#x8A08;&#x7B97;&#x4E0B;&#x4E00;&#x500B; State&#x3002;</li>
+<li><p><strong>&#x51FD;&#x5F0F;&#x66F4;&#x65B0;</strong>&#xFF1A;&#x8207; <code>useState</code> &#x985E;&#x4F3C;&#xFF0C;&#x5982;&#x679C;&#x65B0;&#x7684; State &#x4F9D;&#x8CF4;&#x65BC;&#x5148;&#x524D;&#x7684; State &#x6216; Props&#xFF0C;&#x4F60;&#x53EF;&#x4EE5;&#x5411; <code>this.setState()</code> &#x50B3;&#x905E;&#x4E00;&#x500B;&#x51FD;&#x5F0F;&#xFF0C;&#x800C;&#x4E0D;&#x662F;&#x4E00;&#x500B;&#x7269;&#x4EF6;&#x3002;&#x9019;&#x500B;&#x51FD;&#x5F0F;&#x6703;&#x63A5;&#x6536; <code>prevState</code> &#x548C; <code>prevProps</code> (&#x6216; <code>props</code>) &#x4F5C;&#x70BA;&#x53C3;&#x6578;&#x3002;</p>
+<pre><code class="lang-javascript"><span class="hljs-keyword">this</span>.setState((prevState, props) =&gt; ({
+  count: prevState.count + props.incrementStep
+}));
+</code></pre>
+</li>
+<li><p><strong>&#x56DE;&#x547C;&#x51FD;&#x5F0F;</strong>&#xFF1A;<code>this.setState()</code> &#x63A5;&#x53D7;&#x4E00;&#x500B;&#x53EF;&#x9078;&#x7684;&#x7B2C;&#x4E8C;&#x500B;&#x53C3;&#x6578;&#xFF0C;&#x5B83;&#x662F;&#x4E00;&#x500B;&#x56DE;&#x547C;&#x51FD;&#x5F0F;&#xFF0C;&#x6703;&#x5728; <code>setState</code> &#x5B8C;&#x6210;&#x4E26;&#x4E14;&#x5143;&#x4EF6;&#x91CD;&#x65B0;&#x6E32;&#x67D3;&#x4E4B;&#x5F8C;&#x57F7;&#x884C;&#x3002;</p>
+<pre><code class="lang-javascript"><span class="hljs-keyword">this</span>.setState({ count: <span class="hljs-number">10</span> }, () =&gt; {
+  <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&apos;State &#x66F4;&#x65B0;&#x5B8C;&#x6210;&#xFF0C;&#x65B0;&#x7684; count &#x662F;:&apos;</span>, <span class="hljs-keyword">this</span>.state.count); <span class="hljs-comment">// &#x9019;&#x88E1;&#x6703;&#x662F; 10</span>
+});
+</code></pre>
+</li>
+</ul>
+<h3 id="55-state-&#x4F7F;&#x7528;&#x898F;&#x5247;">5.5 State &#x4F7F;&#x7528;&#x898F;&#x5247;</h3>
+<p>&#x7121;&#x8AD6;&#x662F;&#x4F7F;&#x7528; <code>useState</code> &#x9084;&#x662F; <code>this.setState</code>&#xFF0C;&#x90FD;&#x6709;&#x4E00;&#x4E9B;&#x91CD;&#x8981;&#x7684;&#x898F;&#x5247;&#x9700;&#x8981;&#x9075;&#x5B88;&#xFF1A;</p>
+<ol>
+<li><p><strong>&#x4E0D;&#x8981;&#x76F4;&#x63A5;&#x4FEE;&#x6539; State (Do Not Modify State Directly)</strong></p>
+<ul>
+<li>&#x5C0D;&#x65BC; <code>useState</code>&#xFF1A;&#x7E3D;&#x662F;&#x4F7F;&#x7528; <code>setXxx</code> &#x51FD;&#x5F0F;&#x4F86;&#x66F4;&#x65B0;&#x3002;</li>
+<li>&#x5C0D;&#x65BC; <code>this.state</code>&#xFF1A;&#x7E3D;&#x662F;&#x4F7F;&#x7528; <code>this.setState()</code>&#x3002;
+&#x76F4;&#x63A5;&#x4FEE;&#x6539; State (&#x4F8B;&#x5982; <code>count = 5;</code> &#x6216; <code>this.state.value = 5;</code>) &#x4E0D;&#x6703;&#x89F8;&#x767C;&#x91CD;&#x65B0;&#x6E32;&#x67D3;&#xFF0C;&#x4E26;&#x4E14;&#x53EF;&#x80FD;&#x5728;&#x5F8C;&#x7E8C;&#x66F4;&#x65B0;&#x4E2D;&#x88AB;&#x8986;&#x84CB;&#x3002;</li>
+</ul>
+</li>
+<li><p><strong>State &#x66F4;&#x65B0;&#x53EF;&#x80FD;&#x662F;&#x975E;&#x540C;&#x6B65;&#x7684; (State Updates May Be Asynchronous)</strong>
+React &#x70BA;&#x4E86;&#x6548;&#x80FD;&#x8003;&#x91CF;&#xFF0C;&#x53EF;&#x80FD;&#x6703;&#x5C07;&#x591A;&#x6B21; State &#x66F4;&#x65B0;&#x6279;&#x6B21;&#x8655;&#x7406;&#x3002;&#x56E0;&#x6B64;&#xFF0C;&#x5982;&#x679C;&#x4F60;&#x9700;&#x8981;&#x5728;&#x66F4;&#x65B0;&#x5F8C;&#x7ACB;&#x5373;&#x8B80;&#x53D6; State &#x7684;&#x503C;&#xFF0C;&#x5B83;&#x53EF;&#x80FD;&#x9084;&#x4E0D;&#x662F;&#x6700;&#x65B0;&#x7684;&#x3002;</p>
+<ul>
+<li>&#x5C0D;&#x65BC; <code>useState</code>&#xFF1A;&#x5982;&#x679C;&#x65B0; State &#x4F9D;&#x8CF4;&#x820A; State&#xFF0C;&#x4F7F;&#x7528;&#x51FD;&#x5F0F;&#x66F4;&#x65B0;&#x5F62;&#x5F0F; <code>setXxx(prevState =&gt; ...)</code>&#x3002;</li>
+<li>&#x5C0D;&#x65BC; <code>this.state</code>&#xFF1A;&#x5982;&#x679C;&#x65B0; State &#x4F9D;&#x8CF4;&#x820A; State&#xFF0C;&#x4F7F;&#x7528;&#x51FD;&#x5F0F;&#x66F4;&#x65B0;&#x5F62;&#x5F0F; <code>this.setState((prevState, props) =&gt; ...)</code>&#x3002;&#x5982;&#x679C;&#x9700;&#x8981;&#x5728;&#x66F4;&#x65B0;&#x5F8C;&#x57F7;&#x884C;&#x64CD;&#x4F5C;&#xFF0C;&#x4F7F;&#x7528; <code>setState</code> &#x7684;&#x56DE;&#x547C;&#x51FD;&#x5F0F;&#x3002;</li>
+</ul>
+</li>
+<li><p><strong>State &#x66F4;&#x65B0;&#x662F;&#x5408;&#x4F75;&#x7684; (State Updates are Merged - &#x4E3B;&#x8981;&#x91DD;&#x5C0D;&#x985E;&#x5225;&#x5143;&#x4EF6;&#x7684;&#x7269;&#x4EF6; State)</strong></p>
+<ul>
+<li>&#x7576;&#x4F60;&#x4F7F;&#x7528; <code>this.setState()</code> &#x66F4;&#x65B0;&#x4E00;&#x500B;&#x5305;&#x542B;&#x591A;&#x500B;&#x5C6C;&#x6027;&#x7684;&#x7269;&#x4EF6; State &#x6642;&#xFF0C;React &#x6703;&#x5C07;&#x4F60;&#x50B3;&#x905E;&#x7684;&#x7269;&#x4EF6;&#x8207;&#x73FE;&#x6709; State &#x9032;&#x884C;&#x6DFA;&#x5408;&#x4F75;&#x3002;&#x4F8B;&#x5982;&#xFF0C;&#x5982;&#x679C; <code>this.state</code> &#x662F; <code>{ count: 0, theme: &apos;dark&apos; }</code>&#xFF0C;&#x547C;&#x53EB; <code>this.setState({ count: 1 })</code> &#x6703;&#x4F7F; <code>this.state</code> &#x8B8A;&#x6210; <code>{ count: 1, theme: &apos;dark&apos; }</code> (theme &#x5C6C;&#x6027;&#x88AB;&#x4FDD;&#x7559;)&#x3002;</li>
+<li>&#x5C0D;&#x65BC; <code>useState</code>&#xFF0C;&#x5982;&#x679C; State &#x662F;&#x4E00;&#x500B;&#x7269;&#x4EF6;&#xFF0C;&#x66F4;&#x65B0;&#x51FD;&#x5F0F; (&#x5982; <code>setUser</code>) &#x6703; <em>&#x53D6;&#x4EE3;</em> &#x6574;&#x500B;&#x7269;&#x4EF6;&#x3002;&#x4F60;&#x9700;&#x8981;&#x81EA;&#x5DF1;&#x8655;&#x7406;&#x5408;&#x4F75;&#x908F;&#x8F2F;&#xFF0C;&#x901A;&#x5E38;&#x4F7F;&#x7528;&#x5C55;&#x958B;&#x904B;&#x7B97;&#x5B50; (<code>...</code>)&#xFF1A;<pre><code class="lang-javascript"><span class="hljs-keyword">const</span> [user, setUser] = useState({ name: <span class="hljs-string">&apos;A&apos;</span>, role: <span class="hljs-string">&apos;admin&apos;</span> });
+setUser(prevUser =&gt; ({ ...prevUser, name: <span class="hljs-string">&apos;B&apos;</span> })); <span class="hljs-comment">// role &#x88AB;&#x4FDD;&#x7559;</span>
+<span class="hljs-comment">// setUser({ name: &apos;B&apos; }); // &#x9019;&#x6A23;&#x6703;&#x5C0E;&#x81F4; role &#x6D88;&#x5931;</span>
+</code></pre>
+</li>
+</ul>
+</li>
+</ol>
+<h3 id="56-&#x4F55;&#x6642;&#x4F7F;&#x7528;-state&#xFF1F;">5.6 &#x4F55;&#x6642;&#x4F7F;&#x7528; State&#xFF1F;</h3>
+<p>&#x7576;&#x5143;&#x4EF6;&#x9700;&#x8981;&#x8A18;&#x4F4F;&#x67D0;&#x4E9B;&#x8CC7;&#x8A0A;&#xFF0C;&#x4E26;&#x4E14;&#x9019;&#x4E9B;&#x8CC7;&#x8A0A;&#x6703;&#x96A8;&#x8457;&#x6642;&#x9593;&#x6216;&#x4F7F;&#x7528;&#x8005;&#x4E92;&#x52D5;&#x800C;&#x6539;&#x8B8A;&#x6642;&#xFF0C;&#x5C31;&#x61C9;&#x8A72;&#x4F7F;&#x7528; State&#x3002;&#x4F8B;&#x5982;&#xFF1A;</p>
+<ul>
+<li>&#x8868;&#x55AE;&#x8F38;&#x5165;&#x7684;&#x503C;</li>
+<li>&#x958B;&#x95DC;&#x7684;&#x958B;/&#x95DC;&#x72C0;&#x614B;</li>
+<li>&#x8A08;&#x6642;&#x5668;&#x7684;&#x76EE;&#x524D;&#x6642;&#x9593;</li>
+<li>&#x5F9E; API &#x7372;&#x53D6;&#x7684;&#x8CC7;&#x6599;</li>
+<li>&#x4E0B;&#x62C9;&#x5F0F;&#x9078;&#x55AE;&#x662F;&#x5426;&#x5C55;&#x958B;</li>
+<li>&#x76EE;&#x524D;&#x9078;&#x64C7;&#x7684;&#x9805;&#x76EE;</li>
+</ul>
+<p>&#x5982;&#x679C;&#x4E00;&#x500B;&#x503C;&#x4E0D;&#x9700;&#x8981;&#x6539;&#x8B8A;&#xFF0C;&#x6216;&#x8005;&#x53EF;&#x4EE5;&#x5F9E; Props &#x6216;&#x5176;&#x4ED6; State &#x8A08;&#x7B97;&#x5F97;&#x51FA;&#xFF0C;&#x90A3;&#x9EBC;&#x5B83;&#x53EF;&#x80FD;&#x4E0D;&#x9700;&#x8981;&#x6210;&#x70BA;&#x4E00;&#x500B;&#x7368;&#x7ACB;&#x7684; State&#x3002;</p>
+<h3 id="57-&#x72C0;&#x614B;&#x63D0;&#x5347;-lifting-state-up">5.7 &#x72C0;&#x614B;&#x63D0;&#x5347; (Lifting State Up)</h3>
+<p>&#x6709;&#x6642;&#x5019;&#xFF0C;&#x591A;&#x500B;&#x5143;&#x4EF6;&#x9700;&#x8981;&#x5171;&#x4EAB;&#x548C;&#x64CD;&#x4F5C;&#x76F8;&#x540C;&#x7684; State&#x3002;&#x5728;&#x9019;&#x7A2E;&#x60C5;&#x6CC1;&#x4E0B;&#xFF0C;React &#x7684;&#x5E38;&#x898B;&#x6A21;&#x5F0F;&#x662F;&#x5C07;&#x5171;&#x4EAB;&#x7684; State&#x300C;&#x63D0;&#x5347;&#x300D;&#x5230;&#x5B83;&#x5011;&#x6700;&#x63A5;&#x8FD1;&#x7684;&#x5171;&#x540C;&#x7236;&#x5143;&#x4EF6;&#x4E2D;&#x3002;&#x7136;&#x5F8C;&#xFF0C;&#x7236;&#x5143;&#x4EF6;&#x900F;&#x904E; Props &#x5C07; State &#x548C;&#x4FEE;&#x6539; State &#x7684;&#x51FD;&#x5F0F;&#x50B3;&#x905E;&#x7D66;&#x76F8;&#x95DC;&#x7684;&#x5B50;&#x5143;&#x4EF6;&#x3002;</p>
+<p>&#x6211;&#x5011;&#x5C07;&#x5728;&#x5F8C;&#x7E8C;&#x7AE0;&#x7BC0;&#x66F4;&#x8A73;&#x7D30;&#x5730;&#x63A2;&#x8A0E;&#x9019;&#x500B;&#x91CD;&#x8981;&#x7684;&#x6982;&#x5FF5;&#xFF0C;&#x56E0;&#x70BA;&#x5B83;&#x662F;&#x69CB;&#x5EFA;&#x8907;&#x96DC; React &#x61C9;&#x7528;&#x7684;&#x95DC;&#x9375;&#x3002;</p>
+<h3 id="58-&#x7E3D;&#x7D50;">5.8 &#x7E3D;&#x7D50;</h3>
+<p>State &#x4F7F;&#x5F97;&#x6211;&#x5011;&#x7684; React &#x5143;&#x4EF6;&#x80FD;&#x5920;&#x64C1;&#x6709;&#x300C;&#x8A18;&#x61B6;&#x300D;&#x4E26;&#x5C0D;&#x4E92;&#x52D5;&#x505A;&#x51FA;&#x53CD;&#x61C9;&#x3002;</p>
+<ul>
+<li>State &#x662F;&#x5143;&#x4EF6;&#x79C1;&#x6709;&#x7684;&#x3001;&#x53EF;&#x8B8A;&#x7684;&#x8CC7;&#x6599;&#x3002;</li>
+<li>&#x5728;&#x51FD;&#x5F0F;&#x5143;&#x4EF6;&#x4E2D;&#xFF0C;&#x6211;&#x5011;&#x4F7F;&#x7528; <code>useState</code> Hook &#x4F86;&#x7BA1;&#x7406; State&#x3002;</li>
+<li><code>useState</code> &#x8FD4;&#x56DE;&#x76EE;&#x524D; State &#x548C;&#x4E00;&#x500B;&#x66F4;&#x65B0;&#x5B83;&#x7684;&#x51FD;&#x5F0F;&#x3002;</li>
+<li>&#x5728;&#x985E;&#x5225;&#x5143;&#x4EF6;&#x4E2D;&#xFF0C;State &#x5132;&#x5B58;&#x5728; <code>this.state</code> &#x4E2D;&#xFF0C;&#x4E26;&#x900F;&#x904E; <code>this.setState()</code> &#x66F4;&#x65B0;&#x3002;</li>
+<li>&#x6C38;&#x9060;&#x4E0D;&#x8981;&#x76F4;&#x63A5;&#x4FEE;&#x6539; State&#xFF1B;State &#x66F4;&#x65B0;&#x53EF;&#x80FD;&#x662F;&#x975E;&#x540C;&#x6B65;&#x7684;&#x3002;</li>
+<li>&#x7576;&#x5143;&#x4EF6;&#x9700;&#x8981;&#x8FFD;&#x8E64;&#x96A8;&#x6642;&#x9593;&#x8B8A;&#x5316;&#x7684;&#x8CC7;&#x6599;&#x6642;&#xFF0C;&#x4F7F;&#x7528; State&#x3002;</li>
+<li>&#x300C;&#x72C0;&#x614B;&#x63D0;&#x5347;&#x300D;&#x662F;&#x4E00;&#x7A2E;&#x5728;&#x591A;&#x500B;&#x5143;&#x4EF6;&#x9593;&#x5171;&#x4EAB; State &#x7684;&#x91CD;&#x8981;&#x6A21;&#x5F0F;&#x3002;</li>
+</ul>
+<p>&#x638C;&#x63E1; Props &#x548C; State &#x662F;&#x7406;&#x89E3; React &#x7684;&#x6838;&#x5FC3;&#x3002;&#x5B83;&#x5011;&#x5171;&#x540C;&#x69CB;&#x6210;&#x4E86; React &#x5143;&#x4EF6;&#x7684;&#x8CC7;&#x6599;&#x7BA1;&#x7406;&#x57FA;&#x790E;&#x3002;&#x5728;&#x63A5;&#x4E0B;&#x4F86;&#x7684;&#x7AE0;&#x7BC0;&#x4E2D;&#xFF0C;&#x6211;&#x5011;&#x5C07;&#x5B78;&#x7FD2;&#x66F4;&#x591A;&#x95DC;&#x65BC;&#x5143;&#x4EF6;&#x751F;&#x547D;&#x9031;&#x671F;&#x548C;&#x5982;&#x4F55;&#x8655;&#x7406;&#x4F7F;&#x7528;&#x8005;&#x4E8B;&#x4EF6;&#x7684;&#x77E5;&#x8B58;&#x3002;</p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="chapter4.html" class="navigation navigation-prev " aria-label="Previous page: 第4章：Props (屬性) 的運用">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="chapter6.html" class="navigation navigation-next " aria-label="Next page: 第6章：元件生命週期與 useEffect Hook">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"第5章：State (狀態) 的介紹與使用","level":"1.6","depth":1,"next":{"title":"第6章：元件生命週期與 useEffect Hook","level":"1.7","depth":1,"path":"chapter6.md","ref":"chapter6.md","articles":[]},"previous":{"title":"第4章：Props (屬性) 的運用","level":"1.5","depth":1,"path":"chapter4.md","ref":"chapter4.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css","website":"styles/website.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css","website":"styles/website.css"}},"file":{"path":"chapter5.md","mtime":"2025-06-02T11:49:15.091Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2025-06-02T17:15:06.817Z"},"basePath":".","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="gitbook/gitbook.js"></script>
+    <script src="gitbook/theme.js"></script>
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

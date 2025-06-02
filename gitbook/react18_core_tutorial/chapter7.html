@@ -1,0 +1,1016 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>第7章：自訂 Hooks (Custom Hooks) · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="chapter8.html" />
+    
+    
+    <link rel="prev" href="chapter6.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    教程目錄
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="chapter1.html">
+            
+                <a href="chapter1.html">
+            
+                    
+                    第1章：React 簡介與前端開發環境回顧
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="chapter2.html">
+            
+                <a href="chapter2.html">
+            
+                    
+                    第2章：JSX 深度解析
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="chapter3.html">
+            
+                <a href="chapter3.html">
+            
+                    
+                    第3章：React 元件詳解
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="chapter4.html">
+            
+                <a href="chapter4.html">
+            
+                    
+                    第4章：Props (屬性) 的運用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="chapter5.html">
+            
+                <a href="chapter5.html">
+            
+                    
+                    第5章：State (狀態) 的介紹與使用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="chapter6.html">
+            
+                <a href="chapter6.html">
+            
+                    
+                    第6章：元件生命週期與 useEffect Hook
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.8" data-path="chapter7.html">
+            
+                <a href="chapter7.html">
+            
+                    
+                    第7章：自訂 Hooks (Custom Hooks)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="chapter8.html">
+            
+                <a href="chapter8.html">
+            
+                    
+                    第8章：事件處理 (Handling Events)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10" data-path="chapter9.html">
+            
+                <a href="chapter9.html">
+            
+                    
+                    第9章：條件渲染 (Conditional Rendering)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11" data-path="chapter10.html">
+            
+                <a href="chapter10.html">
+            
+                    
+                    第10章：列表與 Keys (Lists and Keys)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12" data-path="chapter11.html">
+            
+                <a href="chapter11.html">
+            
+                    
+                    第11章：表單處理 (Forms)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13" data-path="chapter12.html">
+            
+                <a href="chapter12.html">
+            
+                    
+                    第12章：狀態提升 (Lifting State Up)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14" data-path="chapter13.html">
+            
+                <a href="chapter13.html">
+            
+                    
+                    第13章：組合 vs 繼承
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15" data-path="chapter14.html">
+            
+                <a href="chapter14.html">
+            
+                    
+                    第14章：React 哲學與最佳實踐
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="." >第7章：自訂 Hooks (Custom Hooks)</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="&#x7B2C;-7-&#x7AE0;&#xFF1A;&#x81EA;&#x8A02;-hooks-custom-hooks">&#x7B2C; 7 &#x7AE0;&#xFF1A;&#x81EA;&#x8A02; Hooks (Custom Hooks)</h1>
+<p>&#x5728;&#x524D;&#x9762;&#x7684;&#x7AE0;&#x7BC0;&#x4E2D;&#xFF0C;&#x6211;&#x5011;&#x5B78;&#x7FD2;&#x4E86; React &#x5167;&#x5EFA;&#x7684; Hooks&#xFF0C;&#x5982; <code>useState</code> &#x548C; <code>useEffect</code>&#x3002;&#x4F46;&#x662F;&#xFF0C;React &#x6700;&#x5F37;&#x5927;&#x7684;&#x529F;&#x80FD;&#x4E4B;&#x4E00;&#x662F;&#x5141;&#x8A31;&#x6211;&#x5011;&#x5EFA;&#x7ACB;&#x81EA;&#x5DF1;&#x7684; Hooks&#x3002;&#x81EA;&#x8A02; Hooks &#x8B93;&#x6211;&#x5011;&#x53EF;&#x4EE5;&#x63D0;&#x53D6;&#x5143;&#x4EF6;&#x908F;&#x8F2F;&#x5230;&#x53EF;&#x91CD;&#x7528;&#x7684;&#x51FD;&#x5F0F;&#x4E2D;&#xFF0C;&#x5728;&#x4E0D;&#x540C;&#x7684;&#x5143;&#x4EF6;&#x4E4B;&#x9593;&#x5171;&#x4EAB;&#x72C0;&#x614B;&#x908F;&#x8F2F;&#x3002;</p>
+<h3 id="71-&#x4EC0;&#x9EBC;&#x662F;&#x81EA;&#x8A02;-hooks&#xFF1F;">7.1 &#x4EC0;&#x9EBC;&#x662F;&#x81EA;&#x8A02; Hooks&#xFF1F;</h3>
+<p>&#x81EA;&#x8A02; Hook &#x662F;&#x4E00;&#x500B; JavaScript &#x51FD;&#x5F0F;&#xFF0C;&#x5B83;&#x7684;&#x540D;&#x7A31;&#x4EE5; &quot;use&quot; &#x958B;&#x982D;&#xFF0C;&#x4E26;&#x4E14;&#x53EF;&#x4EE5;&#x547C;&#x53EB;&#x5176;&#x4ED6;&#x7684; Hooks&#x3002;&#x9019;&#x4E0D;&#x50C5;&#x50C5;&#x662F;&#x4E00;&#x500B;&#x547D;&#x540D;&#x6163;&#x4F8B;&#xFF0C;&#x5B83;&#x9084;&#x8B93; React &#x77E5;&#x9053;&#x9019;&#x500B;&#x51FD;&#x5F0F;&#x9075;&#x5FAA; Hooks &#x7684;&#x898F;&#x5247;&#x3002;</p>
+<p><strong>&#x81EA;&#x8A02; Hooks &#x7684;&#x7279;&#x9EDE;&#xFF1A;</strong></p>
+<ul>
+<li><strong>&#x51FD;&#x5F0F;&#x540D;&#x7A31;&#x4EE5; &quot;use&quot; &#x958B;&#x982D;</strong>&#xFF1A;&#x9019;&#x662F;&#x5FC5;&#x9808;&#x7684;&#xFF0C;&#x8B93; React &#x8B58;&#x5225;&#x9019;&#x662F;&#x4E00;&#x500B; Hook</li>
+<li><strong>&#x53EF;&#x4EE5;&#x547C;&#x53EB;&#x5176;&#x4ED6; Hooks</strong>&#xFF1A;&#x53EF;&#x4EE5;&#x4F7F;&#x7528; <code>useState</code>&#x3001;<code>useEffect</code> &#x7B49;&#x5167;&#x5EFA; Hooks</li>
+<li><strong>&#x908F;&#x8F2F;&#x91CD;&#x7528;</strong>&#xFF1A;&#x53EF;&#x4EE5;&#x5728;&#x591A;&#x500B;&#x5143;&#x4EF6;&#x4E4B;&#x9593;&#x5171;&#x4EAB;&#x72C0;&#x614B;&#x908F;&#x8F2F;</li>
+<li><strong>&#x62BD;&#x8C61;&#x8907;&#x96DC;&#x6027;</strong>&#xFF1A;&#x5C07;&#x8907;&#x96DC;&#x7684;&#x908F;&#x8F2F;&#x5C01;&#x88DD;&#x5728;&#x4E00;&#x500B;&#x6613;&#x65BC;&#x4F7F;&#x7528;&#x7684;&#x4ECB;&#x9762;&#x4E2D;</li>
+</ul>
+<h3 id="72-&#x5EFA;&#x7ACB;&#x7B2C;&#x4E00;&#x500B;&#x81EA;&#x8A02;-hook">7.2 &#x5EFA;&#x7ACB;&#x7B2C;&#x4E00;&#x500B;&#x81EA;&#x8A02; Hook</h3>
+<p>&#x8B93;&#x6211;&#x5011;&#x5F9E;&#x4E00;&#x500B;&#x7C21;&#x55AE;&#x7684;&#x4F8B;&#x5B50;&#x958B;&#x59CB;&#xFF0C;&#x5EFA;&#x7ACB;&#x4E00;&#x500B;&#x7BA1;&#x7406;&#x8A08;&#x6578;&#x5668;&#x7684;&#x81EA;&#x8A02; Hook&#x3002;</p>
+<pre><code class="lang-javascript"><span class="hljs-comment">// hooks/useCounter.js</span>
+<span class="hljs-keyword">import</span> { useState } <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;react&apos;</span>;
+
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">useCounter</span>(<span class="hljs-params">initialValue = 0</span>) </span>{
+  <span class="hljs-keyword">const</span> [count, setCount] = useState(initialValue);
+
+  <span class="hljs-keyword">const</span> increment = () =&gt; setCount(count + <span class="hljs-number">1</span>);
+  <span class="hljs-keyword">const</span> decrement = () =&gt; setCount(count - <span class="hljs-number">1</span>);
+  <span class="hljs-keyword">const</span> reset = () =&gt; setCount(initialValue);
+
+  <span class="hljs-keyword">return</span> {
+    count,
+    increment,
+    decrement,
+    reset
+  };
+}
+
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> useCounter;
+</code></pre>
+<p><strong>&#x4F7F;&#x7528;&#x81EA;&#x8A02; Hook&#xFF1A;</strong></p>
+<pre><code class="lang-javascript"><span class="hljs-comment">// components/Counter.js</span>
+<span class="hljs-keyword">import</span> React <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;react&apos;</span>;
+<span class="hljs-keyword">import</span> useCounter <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;../hooks/useCounter&apos;</span>;
+
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">Counter</span>(<span class="hljs-params"></span>) </span>{
+  <span class="hljs-keyword">const</span> { count, increment, decrement, reset } = useCounter(<span class="hljs-number">0</span>);
+
+  <span class="hljs-keyword">return</span> (
+    <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">h2</span>&gt;</span>&#x8A08;&#x6578;&#x5668;: {count}<span class="hljs-tag">&lt;/<span class="hljs-name">h2</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">onClick</span>=<span class="hljs-string">{increment}</span>&gt;</span>&#x589E;&#x52A0;<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">onClick</span>=<span class="hljs-string">{decrement}</span>&gt;</span>&#x6E1B;&#x5C11;<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">onClick</span>=<span class="hljs-string">{reset}</span>&gt;</span>&#x91CD;&#x8A2D;<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></span>
+  );
+}
+
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> Counter;
+</code></pre>
+<p><strong>&#x5728;&#x53E6;&#x4E00;&#x500B;&#x5143;&#x4EF6;&#x4E2D;&#x91CD;&#x7528;&#x76F8;&#x540C;&#x7684;&#x908F;&#x8F2F;&#xFF1A;</strong></p>
+<pre><code class="lang-javascript"><span class="hljs-comment">// components/ScoreBoard.js</span>
+<span class="hljs-keyword">import</span> React <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;react&apos;</span>;
+<span class="hljs-keyword">import</span> useCounter <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;../hooks/useCounter&apos;</span>;
+
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">ScoreBoard</span>(<span class="hljs-params"></span>) </span>{
+  <span class="hljs-keyword">const</span> player1 = useCounter(<span class="hljs-number">0</span>);
+  <span class="hljs-keyword">const</span> player2 = useCounter(<span class="hljs-number">0</span>);
+
+  <span class="hljs-keyword">return</span> (
+    <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">h2</span>&gt;</span>&#x8A08;&#x5206;&#x677F;<span class="hljs-tag">&lt;/<span class="hljs-name">h2</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">h3</span>&gt;</span>&#x73A9;&#x5BB6; 1: {player1.count}<span class="hljs-tag">&lt;/<span class="hljs-name">h3</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">onClick</span>=<span class="hljs-string">{player1.increment}</span>&gt;</span>&#x5F97;&#x5206;<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">onClick</span>=<span class="hljs-string">{player1.reset}</span>&gt;</span>&#x91CD;&#x8A2D;<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">h3</span>&gt;</span>&#x73A9;&#x5BB6; 2: {player2.count}<span class="hljs-tag">&lt;/<span class="hljs-name">h3</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">onClick</span>=<span class="hljs-string">{player2.increment}</span>&gt;</span>&#x5F97;&#x5206;<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">onClick</span>=<span class="hljs-string">{player2.reset}</span>&gt;</span>&#x91CD;&#x8A2D;<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></span>
+  );
+}
+
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> ScoreBoard;
+</code></pre>
+<h3 id="73-&#x66F4;&#x8907;&#x96DC;&#x7684;&#x81EA;&#x8A02;-hook-&#x7BC4;&#x4F8B;">7.3 &#x66F4;&#x8907;&#x96DC;&#x7684;&#x81EA;&#x8A02; Hook &#x7BC4;&#x4F8B;</h3>
+<h4 id="731-uselocalstorage---&#x8207;&#x672C;&#x5730;&#x5B58;&#x5132;&#x540C;&#x6B65;">7.3.1 <code>useLocalStorage</code> - &#x8207;&#x672C;&#x5730;&#x5B58;&#x5132;&#x540C;&#x6B65;</h4>
+<pre><code class="lang-javascript"><span class="hljs-comment">// hooks/useLocalStorage.js</span>
+<span class="hljs-keyword">import</span> { useState, useEffect } <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;react&apos;</span>;
+
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">useLocalStorage</span>(<span class="hljs-params">key, initialValue</span>) </span>{
+  <span class="hljs-comment">// &#x5F9E; localStorage &#x8B80;&#x53D6;&#x521D;&#x59CB;&#x503C;</span>
+  <span class="hljs-keyword">const</span> [storedValue, setStoredValue] = useState(() =&gt; {
+    <span class="hljs-keyword">try</span> {
+      <span class="hljs-keyword">const</span> item = <span class="hljs-built_in">window</span>.localStorage.getItem(key);
+      <span class="hljs-keyword">return</span> item ? <span class="hljs-built_in">JSON</span>.parse(item) : initialValue;
+    } <span class="hljs-keyword">catch</span> (error) {
+      <span class="hljs-built_in">console</span>.log(error);
+      <span class="hljs-keyword">return</span> initialValue;
+    }
+  });
+
+  <span class="hljs-comment">// &#x8A2D;&#x5B9A;&#x503C;&#x7684;&#x51FD;&#x5F0F;</span>
+  <span class="hljs-keyword">const</span> setValue = (value) =&gt; {
+    <span class="hljs-keyword">try</span> {
+      <span class="hljs-comment">// &#x5141;&#x8A31;&#x503C;&#x662F;&#x4E00;&#x500B;&#x51FD;&#x5F0F;&#xFF0C;&#x4EE5;&#x4FBF;&#x6211;&#x5011;&#x6709;&#x548C; useState &#x76F8;&#x540C;&#x7684; API</span>
+      <span class="hljs-keyword">const</span> valueToStore = value <span class="hljs-keyword">instanceof</span> <span class="hljs-built_in">Function</span> ? value(storedValue) : value;
+      setStoredValue(valueToStore);
+      <span class="hljs-built_in">window</span>.localStorage.setItem(key, <span class="hljs-built_in">JSON</span>.stringify(valueToStore));
+    } <span class="hljs-keyword">catch</span> (error) {
+      <span class="hljs-built_in">console</span>.log(error);
+    }
+  };
+
+  <span class="hljs-comment">// &#x76E3;&#x807D; localStorage &#x7684;&#x8B8A;&#x5316;&#xFF08;&#x9069;&#x7528;&#x65BC;&#x591A;&#x500B;&#x6A19;&#x7C64;&#x9801;&#xFF09;</span>
+  useEffect(() =&gt; {
+    <span class="hljs-keyword">const</span> handleStorageChange = (e) =&gt; {
+      <span class="hljs-keyword">if</span> (e.key === key) {
+        setStoredValue(e.newValue ? <span class="hljs-built_in">JSON</span>.parse(e.newValue) : initialValue);
+      }
+    };
+
+    <span class="hljs-built_in">window</span>.addEventListener(<span class="hljs-string">&apos;storage&apos;</span>, handleStorageChange);
+    <span class="hljs-keyword">return</span> () =&gt; <span class="hljs-built_in">window</span>.removeEventListener(<span class="hljs-string">&apos;storage&apos;</span>, handleStorageChange);
+  }, [key, initialValue]);
+
+  <span class="hljs-keyword">return</span> [storedValue, setValue];
+}
+
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> useLocalStorage;
+</code></pre>
+<p><strong>&#x4F7F;&#x7528; <code>useLocalStorage</code>&#xFF1A;</strong></p>
+<pre><code class="lang-javascript"><span class="hljs-comment">// components/Settings.js</span>
+<span class="hljs-keyword">import</span> React <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;react&apos;</span>;
+<span class="hljs-keyword">import</span> useLocalStorage <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;../hooks/useLocalStorage&apos;</span>;
+
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">Settings</span>(<span class="hljs-params"></span>) </span>{
+  <span class="hljs-keyword">const</span> [theme, setTheme] = useLocalStorage(<span class="hljs-string">&apos;theme&apos;</span>, <span class="hljs-string">&apos;light&apos;</span>);
+  <span class="hljs-keyword">const</span> [fontSize, setFontSize] = useLocalStorage(<span class="hljs-string">&apos;fontSize&apos;</span>, <span class="hljs-number">16</span>);
+
+  <span class="hljs-keyword">return</span> (
+    <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">h2</span>&gt;</span>&#x8A2D;&#x5B9A;<span class="hljs-tag">&lt;/<span class="hljs-name">h2</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">label</span>&gt;</span>&#x4E3B;&#x984C;: <span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">select</span> <span class="hljs-attr">value</span>=<span class="hljs-string">{theme}</span> <span class="hljs-attr">onChange</span>=<span class="hljs-string">{(e)</span> =&gt;</span> setTheme(e.target.value)}&gt;
+          <span class="hljs-tag">&lt;<span class="hljs-name">option</span> <span class="hljs-attr">value</span>=<span class="hljs-string">&quot;light&quot;</span>&gt;</span>&#x6DFA;&#x8272;<span class="hljs-tag">&lt;/<span class="hljs-name">option</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-name">option</span> <span class="hljs-attr">value</span>=<span class="hljs-string">&quot;dark&quot;</span>&gt;</span>&#x6DF1;&#x8272;<span class="hljs-tag">&lt;/<span class="hljs-name">option</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">select</span>&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">label</span>&gt;</span>&#x5B57;&#x9AD4;&#x5927;&#x5C0F;: <span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">input</span>
+          <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;range&quot;</span>
+          <span class="hljs-attr">min</span>=<span class="hljs-string">&quot;12&quot;</span>
+          <span class="hljs-attr">max</span>=<span class="hljs-string">&quot;24&quot;</span>
+          <span class="hljs-attr">value</span>=<span class="hljs-string">{fontSize}</span>
+          <span class="hljs-attr">onChange</span>=<span class="hljs-string">{(e)</span> =&gt;</span> setFontSize(Number(e.target.value))}
+        /&gt;
+        <span class="hljs-tag">&lt;<span class="hljs-name">span</span>&gt;</span>{fontSize}px<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">style</span>=<span class="hljs-string">{{</span> 
+        <span class="hljs-attr">backgroundColor:</span> <span class="hljs-attr">theme</span> =<span class="hljs-string">==</span> &apos;<span class="hljs-attr">dark</span>&apos; ? &apos;#<span class="hljs-attr">333</span>&apos; <span class="hljs-attr">:</span> &apos;#<span class="hljs-attr">fff</span>&apos;,
+        <span class="hljs-attr">color:</span> <span class="hljs-attr">theme</span> =<span class="hljs-string">==</span> &apos;<span class="hljs-attr">dark</span>&apos; ? &apos;#<span class="hljs-attr">fff</span>&apos; <span class="hljs-attr">:</span> &apos;#<span class="hljs-attr">333</span>&apos;,
+        <span class="hljs-attr">fontSize:</span> `${<span class="hljs-attr">fontSize</span>}<span class="hljs-attr">px</span>`,
+        <span class="hljs-attr">padding:</span> &apos;<span class="hljs-attr">20px</span>&apos;,
+        <span class="hljs-attr">marginTop:</span> &apos;<span class="hljs-attr">20px</span>&apos;
+      }}&gt;</span>
+        &#x9810;&#x89BD;&#x6587;&#x5B57; - &#x8A2D;&#x5B9A;&#x6703;&#x81EA;&#x52D5;&#x5132;&#x5B58;&#x5230;&#x672C;&#x5730;&#x5B58;&#x5132;
+      <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+  );
+}
+
+export default Settings;
+</span></code></pre>
+<h4 id="732-usefetch---&#x8CC7;&#x6599;&#x7372;&#x53D6;-hook">7.3.2 <code>useFetch</code> - &#x8CC7;&#x6599;&#x7372;&#x53D6; Hook</h4>
+<pre><code class="lang-javascript"><span class="hljs-comment">// hooks/useFetch.js</span>
+<span class="hljs-keyword">import</span> { useState, useEffect } <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;react&apos;</span>;
+
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">useFetch</span>(<span class="hljs-params">url, options = {}</span>) </span>{
+  <span class="hljs-keyword">const</span> [data, setData] = useState(<span class="hljs-literal">null</span>);
+  <span class="hljs-keyword">const</span> [loading, setLoading] = useState(<span class="hljs-literal">true</span>);
+  <span class="hljs-keyword">const</span> [error, setError] = useState(<span class="hljs-literal">null</span>);
+
+  useEffect(() =&gt; {
+    <span class="hljs-keyword">const</span> abortController = <span class="hljs-keyword">new</span> AbortController();
+    <span class="hljs-keyword">const</span> signal = abortController.signal;
+
+    <span class="hljs-keyword">const</span> fetchData = <span class="hljs-keyword">async</span> () =&gt; {
+      <span class="hljs-keyword">try</span> {
+        setLoading(<span class="hljs-literal">true</span>);
+        setError(<span class="hljs-literal">null</span>);
+
+        <span class="hljs-keyword">const</span> response = <span class="hljs-keyword">await</span> fetch(url, {
+          ...options,
+          signal, <span class="hljs-comment">// &#x652F;&#x63F4;&#x53D6;&#x6D88;&#x8ACB;&#x6C42;</span>
+        });
+
+        <span class="hljs-keyword">if</span> (!response.ok) {
+          <span class="hljs-keyword">throw</span> <span class="hljs-keyword">new</span> <span class="hljs-built_in">Error</span>(<span class="hljs-string">`HTTP error! status: <span class="hljs-subst">${response.status}</span>`</span>);
+        }
+
+        <span class="hljs-keyword">const</span> result = <span class="hljs-keyword">await</span> response.json();
+
+        <span class="hljs-keyword">if</span> (!signal.aborted) {
+          setData(result);
+        }
+      } <span class="hljs-keyword">catch</span> (err) {
+        <span class="hljs-keyword">if</span> (!signal.aborted) {
+          setError(err.message);
+        }
+      } <span class="hljs-keyword">finally</span> {
+        <span class="hljs-keyword">if</span> (!signal.aborted) {
+          setLoading(<span class="hljs-literal">false</span>);
+        }
+      }
+    };
+
+    fetchData();
+
+    <span class="hljs-comment">// &#x6E05;&#x7406;&#x51FD;&#x6578;&#xFF1A;&#x53D6;&#x6D88;&#x8ACB;&#x6C42;</span>
+    <span class="hljs-keyword">return</span> () =&gt; {
+      abortController.abort();
+    };
+  }, [url]); <span class="hljs-comment">// &#x7576; URL &#x6539;&#x8B8A;&#x6642;&#x91CD;&#x65B0;&#x7372;&#x53D6;</span>
+
+  <span class="hljs-comment">// &#x91CD;&#x65B0;&#x7372;&#x53D6;&#x8CC7;&#x6599;&#x7684;&#x51FD;&#x5F0F;</span>
+  <span class="hljs-keyword">const</span> refetch = () =&gt; {
+    setLoading(<span class="hljs-literal">true</span>);
+    setError(<span class="hljs-literal">null</span>);
+    <span class="hljs-comment">// &#x89F8;&#x767C; useEffect &#x91CD;&#x65B0;&#x57F7;&#x884C;</span>
+    <span class="hljs-comment">// &#x6CE8;&#x610F;&#xFF1A;&#x9019;&#x88E1;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;&#x5176;&#x4ED6;&#x65B9;&#x5F0F;&#x4F86;&#x89F8;&#x767C;&#x91CD;&#x65B0;&#x7372;&#x53D6;</span>
+  };
+
+  <span class="hljs-keyword">return</span> { data, loading, error, refetch };
+}
+
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> useFetch;
+</code></pre>
+<p><strong>&#x4F7F;&#x7528; <code>useFetch</code>&#xFF1A;</strong></p>
+<pre><code class="lang-javascript"><span class="hljs-comment">// components/PostList.js</span>
+<span class="hljs-keyword">import</span> React <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;react&apos;</span>;
+<span class="hljs-keyword">import</span> useFetch <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;../hooks/useFetch&apos;</span>;
+
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">PostList</span>(<span class="hljs-params"></span>) </span>{
+  <span class="hljs-keyword">const</span> { data: posts, loading, error, refetch } = useFetch(<span class="hljs-string">&apos;/api/posts&apos;</span>);
+
+  <span class="hljs-keyword">if</span> (loading) <span class="hljs-keyword">return</span> <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>&#x8F09;&#x5165;&#x4E2D;...<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></span>;
+  <span class="hljs-keyword">if</span> (error) <span class="hljs-keyword">return</span> <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>&#x932F;&#x8AA4;: {error} <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">onClick</span>=<span class="hljs-string">{refetch}</span>&gt;</span>&#x91CD;&#x8A66;<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></span>;
+
+  <span class="hljs-keyword">return</span> (
+    <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">h2</span>&gt;</span>&#x6587;&#x7AE0;&#x5217;&#x8868;<span class="hljs-tag">&lt;/<span class="hljs-name">h2</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">onClick</span>=<span class="hljs-string">{refetch}</span>&gt;</span>&#x91CD;&#x65B0;&#x8F09;&#x5165;<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+      {posts &amp;&amp; posts.map(post =&gt; (
+        <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">key</span>=<span class="hljs-string">{post.id}</span> <span class="hljs-attr">style</span>=<span class="hljs-string">{{</span> <span class="hljs-attr">border:</span> &apos;<span class="hljs-attr">1px</span> <span class="hljs-attr">solid</span> #<span class="hljs-attr">ccc</span>&apos;, <span class="hljs-attr">margin:</span> &apos;<span class="hljs-attr">10px</span>&apos;, <span class="hljs-attr">padding:</span> &apos;<span class="hljs-attr">10px</span>&apos; }}&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-name">h3</span>&gt;</span>{post.title}<span class="hljs-tag">&lt;/<span class="hljs-name">h3</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>{post.body}<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+      ))}
+    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></span>
+  );
+}
+
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> PostList;
+</code></pre>
+<h4 id="733-usedebounce---&#x9632;&#x6296;-hook">7.3.3 <code>useDebounce</code> - &#x9632;&#x6296; Hook</h4>
+<pre><code class="lang-javascript"><span class="hljs-comment">// hooks/useDebounce.js</span>
+<span class="hljs-keyword">import</span> { useState, useEffect } <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;react&apos;</span>;
+
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">useDebounce</span>(<span class="hljs-params">value, delay</span>) </span>{
+  <span class="hljs-keyword">const</span> [debouncedValue, setDebouncedValue] = useState(value);
+
+  useEffect(() =&gt; {
+    <span class="hljs-comment">// &#x8A2D;&#x5B9A;&#x5B9A;&#x6642;&#x5668;&#x4F86;&#x66F4;&#x65B0; debounced value</span>
+    <span class="hljs-keyword">const</span> handler = setTimeout(() =&gt; {
+      setDebouncedValue(value);
+    }, delay);
+
+    <span class="hljs-comment">// &#x6E05;&#x7406;&#x51FD;&#x6578;&#xFF1A;&#x5982;&#x679C; value &#x5728; delay &#x671F;&#x9593;&#x5167;&#x518D;&#x6B21;&#x6539;&#x8B8A;&#xFF0C;&#x6E05;&#x9664;&#x4E4B;&#x524D;&#x7684;&#x5B9A;&#x6642;&#x5668;</span>
+    <span class="hljs-keyword">return</span> () =&gt; {
+      clearTimeout(handler);
+    };
+  }, [value, delay]);
+
+  <span class="hljs-keyword">return</span> debouncedValue;
+}
+
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> useDebounce;
+</code></pre>
+<p><strong>&#x914D;&#x5408; <code>useFetch</code> &#x5BE6;&#x73FE;&#x9632;&#x6296;&#x641C;&#x5C0B;&#xFF1A;</strong></p>
+<pre><code class="lang-javascript"><span class="hljs-comment">// components/SearchPosts.js</span>
+<span class="hljs-keyword">import</span> React, { useState } <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;react&apos;</span>;
+<span class="hljs-keyword">import</span> useDebounce <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;../hooks/useDebounce&apos;</span>;
+<span class="hljs-keyword">import</span> useFetch <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;../hooks/useFetch&apos;</span>;
+
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">SearchPosts</span>(<span class="hljs-params"></span>) </span>{
+  <span class="hljs-keyword">const</span> [searchTerm, setSearchTerm] = useState(<span class="hljs-string">&apos;&apos;</span>);
+  <span class="hljs-keyword">const</span> debouncedSearchTerm = useDebounce(searchTerm, <span class="hljs-number">500</span>);
+
+  <span class="hljs-comment">// &#x53EA;&#x6709;&#x7576; debouncedSearchTerm &#x4E0D;&#x70BA;&#x7A7A;&#x6642;&#x624D;&#x9032;&#x884C;&#x641C;&#x5C0B;</span>
+  <span class="hljs-keyword">const</span> searchUrl = debouncedSearchTerm 
+    ? <span class="hljs-string">`/api/posts/search?q=<span class="hljs-subst">${encodeURIComponent(debouncedSearchTerm)}</span>`</span>
+    : <span class="hljs-literal">null</span>;
+
+  <span class="hljs-keyword">const</span> { data: results, loading, error } = useFetch(searchUrl);
+
+  <span class="hljs-keyword">return</span> (
+    <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">h2</span>&gt;</span>&#x641C;&#x5C0B;&#x6587;&#x7AE0;<span class="hljs-tag">&lt;/<span class="hljs-name">h2</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">input</span>
+        <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;text&quot;</span>
+        <span class="hljs-attr">placeholder</span>=<span class="hljs-string">&quot;&#x8F38;&#x5165;&#x641C;&#x5C0B;&#x95DC;&#x9375;&#x5B57;...&quot;</span>
+        <span class="hljs-attr">value</span>=<span class="hljs-string">{searchTerm}</span>
+        <span class="hljs-attr">onChange</span>=<span class="hljs-string">{(e)</span> =&gt;</span> setSearchTerm(e.target.value)}
+      /&gt;
+
+      {loading &amp;&amp; <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>&#x641C;&#x5C0B;&#x4E2D;...<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>}
+      {error &amp;&amp; <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>&#x641C;&#x5C0B;&#x932F;&#x8AA4;: {error}<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>}
+
+      {results &amp;&amp; results.length &gt; 0 &amp;&amp; (
+        <span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-name">h3</span>&gt;</span>&#x641C;&#x5C0B;&#x7D50;&#x679C;:<span class="hljs-tag">&lt;/<span class="hljs-name">h3</span>&gt;</span>
+          {results.map((result, index) =&gt; (
+            <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">key</span>=<span class="hljs-string">{index}</span> <span class="hljs-attr">style</span>=<span class="hljs-string">{{</span> <span class="hljs-attr">border:</span> &apos;<span class="hljs-attr">1px</span> <span class="hljs-attr">solid</span> #<span class="hljs-attr">ddd</span>&apos;, <span class="hljs-attr">margin:</span> &apos;<span class="hljs-attr">5px</span>&apos;, <span class="hljs-attr">padding:</span> &apos;<span class="hljs-attr">10px</span>&apos; }}&gt;</span>
+              <span class="hljs-tag">&lt;<span class="hljs-name">h4</span>&gt;</span>{result.title}<span class="hljs-tag">&lt;/<span class="hljs-name">h4</span>&gt;</span>
+              <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>{result.excerpt}<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+            <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+          ))}
+        <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+      )}
+
+      {results &amp;&amp; results.length === 0 &amp;&amp; debouncedSearchTerm &amp;&amp; (
+        <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>&#x6C92;&#x6709;&#x627E;&#x5230;&#x5339;&#x914D;&#x7684;&#x7D50;&#x679C;<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+      )}
+    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+  );
+}
+
+export default SearchPosts;
+</span></code></pre>
+<h3 id="74-&#x4F7F;&#x7528;&#x5176;&#x4ED6;-react-hooks-&#x7684;&#x81EA;&#x8A02;-hooks">7.4 &#x4F7F;&#x7528;&#x5176;&#x4ED6; React Hooks &#x7684;&#x81EA;&#x8A02; Hooks</h3>
+<h4 id="741-usetoggle---&#x5E03;&#x6797;&#x503C;&#x5207;&#x63DB;">7.4.1 <code>useToggle</code> - &#x5E03;&#x6797;&#x503C;&#x5207;&#x63DB;</h4>
+<pre><code class="lang-javascript"><span class="hljs-comment">// hooks/useToggle.js</span>
+<span class="hljs-keyword">import</span> { useState, useCallback } <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;react&apos;</span>;
+
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">useToggle</span>(<span class="hljs-params">initialValue = false</span>) </span>{
+  <span class="hljs-keyword">const</span> [value, setValue] = useState(initialValue);
+
+  <span class="hljs-keyword">const</span> toggle = useCallback(() =&gt; setValue(v =&gt; !v), []);
+  <span class="hljs-keyword">const</span> setTrue = useCallback(() =&gt; setValue(<span class="hljs-literal">true</span>), []);
+  <span class="hljs-keyword">const</span> setFalse = useCallback(() =&gt; setValue(<span class="hljs-literal">false</span>), []);
+
+  <span class="hljs-keyword">return</span> [value, { toggle, setTrue, setFalse }];
+}
+
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> useToggle;
+</code></pre>
+<p><strong>&#x4F7F;&#x7528; <code>useToggle</code>&#xFF1A;</strong></p>
+<pre><code class="lang-javascript"><span class="hljs-comment">// components/Modal.js</span>
+<span class="hljs-keyword">import</span> React <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;react&apos;</span>;
+<span class="hljs-keyword">import</span> useToggle <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;../hooks/useToggle&apos;</span>;
+
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">Modal</span>(<span class="hljs-params"></span>) </span>{
+  <span class="hljs-keyword">const</span> [isOpen, { toggle, setFalse }] = useToggle(<span class="hljs-literal">false</span>);
+
+  <span class="hljs-keyword">return</span> (
+    <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">onClick</span>=<span class="hljs-string">{toggle}</span>&gt;</span>
+        {isOpen ? &apos;&#x95DC;&#x9589;&apos; : &apos;&#x958B;&#x555F;&apos;} &#x6A21;&#x614B;&#x6846;
+      <span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+
+      {isOpen &amp;&amp; (
+        <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">style</span>=<span class="hljs-string">{{</span>
+          <span class="hljs-attr">position:</span> &apos;<span class="hljs-attr">fixed</span>&apos;,
+          <span class="hljs-attr">top:</span> <span class="hljs-attr">0</span>,
+          <span class="hljs-attr">left:</span> <span class="hljs-attr">0</span>,
+          <span class="hljs-attr">right:</span> <span class="hljs-attr">0</span>,
+          <span class="hljs-attr">bottom:</span> <span class="hljs-attr">0</span>,
+          <span class="hljs-attr">backgroundColor:</span> &apos;<span class="hljs-attr">rgba</span>(<span class="hljs-attr">0</span>,<span class="hljs-attr">0</span>,<span class="hljs-attr">0</span>,<span class="hljs-attr">0.5</span>)&apos;,
+          <span class="hljs-attr">display:</span> &apos;<span class="hljs-attr">flex</span>&apos;,
+          <span class="hljs-attr">justifyContent:</span> &apos;<span class="hljs-attr">center</span>&apos;,
+          <span class="hljs-attr">alignItems:</span> &apos;<span class="hljs-attr">center</span>&apos;
+        }}&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">style</span>=<span class="hljs-string">{{</span>
+            <span class="hljs-attr">backgroundColor:</span> &apos;<span class="hljs-attr">white</span>&apos;,
+            <span class="hljs-attr">padding:</span> &apos;<span class="hljs-attr">20px</span>&apos;,
+            <span class="hljs-attr">borderRadius:</span> &apos;<span class="hljs-attr">8px</span>&apos;,
+            <span class="hljs-attr">minWidth:</span> &apos;<span class="hljs-attr">300px</span>&apos;
+          }}&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">h3</span>&gt;</span>&#x6A21;&#x614B;&#x6846;&#x6A19;&#x984C;<span class="hljs-tag">&lt;/<span class="hljs-name">h3</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>&#x9019;&#x662F;&#x6A21;&#x614B;&#x6846;&#x7684;&#x5167;&#x5BB9;&#x3002;<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">onClick</span>=<span class="hljs-string">{setFalse}</span>&gt;</span>&#x95DC;&#x9589;<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+          <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+      )}
+    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></span>
+  );
+}
+
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> Modal;
+</code></pre>
+<h4 id="742-usewindowsize---&#x8996;&#x7A97;&#x5927;&#x5C0F;&#x8FFD;&#x8E64;">7.4.2 <code>useWindowSize</code> - &#x8996;&#x7A97;&#x5927;&#x5C0F;&#x8FFD;&#x8E64;</h4>
+<pre><code class="lang-javascript"><span class="hljs-comment">// hooks/useWindowSize.js</span>
+<span class="hljs-keyword">import</span> { useState, useEffect } <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;react&apos;</span>;
+
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">useWindowSize</span>(<span class="hljs-params"></span>) </span>{
+  <span class="hljs-keyword">const</span> [windowSize, setWindowSize] = useState({
+    width: <span class="hljs-literal">undefined</span>,
+    height: <span class="hljs-literal">undefined</span>,
+  });
+
+  useEffect(() =&gt; {
+    <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">handleResize</span>(<span class="hljs-params"></span>) </span>{
+      setWindowSize({
+        width: <span class="hljs-built_in">window</span>.innerWidth,
+        height: <span class="hljs-built_in">window</span>.innerHeight,
+      });
+    }
+
+    <span class="hljs-comment">// &#x7ACB;&#x5373;&#x8A2D;&#x5B9A;&#x7576;&#x524D;&#x8996;&#x7A97;&#x5927;&#x5C0F;</span>
+    handleResize();
+
+    <span class="hljs-built_in">window</span>.addEventListener(<span class="hljs-string">&apos;resize&apos;</span>, handleResize);
+    <span class="hljs-keyword">return</span> () =&gt; <span class="hljs-built_in">window</span>.removeEventListener(<span class="hljs-string">&apos;resize&apos;</span>, handleResize);
+  }, []);
+
+  <span class="hljs-keyword">return</span> windowSize;
+}
+
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> useWindowSize;
+</code></pre>
+<p><strong>&#x4F7F;&#x7528; <code>useWindowSize</code>&#xFF1A;</strong></p>
+<pre><code class="lang-javascript"><span class="hljs-comment">// components/ResponsiveComponent.js</span>
+<span class="hljs-keyword">import</span> React <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;react&apos;</span>;
+<span class="hljs-keyword">import</span> useWindowSize <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;../hooks/useWindowSize&apos;</span>;
+
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">ResponsiveComponent</span>(<span class="hljs-params"></span>) </span>{
+  <span class="hljs-keyword">const</span> { width, height } = useWindowSize();
+
+  <span class="hljs-keyword">const</span> isMobile = width &lt; <span class="hljs-number">768</span>;
+  <span class="hljs-keyword">const</span> isTablet = width &gt;= <span class="hljs-number">768</span> &amp;&amp; width &lt; <span class="hljs-number">1024</span>;
+  <span class="hljs-keyword">const</span> isDesktop = width &gt;= <span class="hljs-number">1024</span>;
+
+  <span class="hljs-keyword">return</span> (
+    <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">h2</span>&gt;</span>&#x97FF;&#x61C9;&#x5F0F;&#x5143;&#x4EF6;<span class="hljs-tag">&lt;/<span class="hljs-name">h2</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>&#x8996;&#x7A97;&#x5927;&#x5C0F;: {width} x {height}<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>
+        &#x76EE;&#x524D;&#x88DD;&#x7F6E;&#x985E;&#x578B;: {&apos; &apos;}
+        {isMobile &amp;&amp; &apos;&#x624B;&#x6A5F;&apos;}
+        {isTablet &amp;&amp; &apos;&#x5E73;&#x677F;&apos;}
+        {isDesktop &amp;&amp; &apos;&#x684C;&#x9762;&apos;}
+      <span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+
+      <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">style</span>=<span class="hljs-string">{{</span>
+        <span class="hljs-attr">display:</span> &apos;<span class="hljs-attr">grid</span>&apos;,
+        <span class="hljs-attr">gridTemplateColumns:</span> <span class="hljs-attr">isMobile</span> ? &apos;<span class="hljs-attr">1fr</span>&apos; <span class="hljs-attr">:</span> <span class="hljs-attr">isTablet</span> ? &apos;<span class="hljs-attr">1fr</span> <span class="hljs-attr">1fr</span>&apos; <span class="hljs-attr">:</span> &apos;<span class="hljs-attr">1fr</span> <span class="hljs-attr">1fr</span> <span class="hljs-attr">1fr</span>&apos;,
+        <span class="hljs-attr">gap:</span> &apos;<span class="hljs-attr">10px</span>&apos;,
+        <span class="hljs-attr">marginTop:</span> &apos;<span class="hljs-attr">20px</span>&apos;
+      }}&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">style</span>=<span class="hljs-string">{{</span> <span class="hljs-attr">padding:</span> &apos;<span class="hljs-attr">20px</span>&apos;, <span class="hljs-attr">backgroundColor:</span> &apos;#<span class="hljs-attr">f0f0f0</span>&apos; }}&gt;</span>&#x9805;&#x76EE; 1<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">style</span>=<span class="hljs-string">{{</span> <span class="hljs-attr">padding:</span> &apos;<span class="hljs-attr">20px</span>&apos;, <span class="hljs-attr">backgroundColor:</span> &apos;#<span class="hljs-attr">e0e0e0</span>&apos; }}&gt;</span>&#x9805;&#x76EE; 2<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">style</span>=<span class="hljs-string">{{</span> <span class="hljs-attr">padding:</span> &apos;<span class="hljs-attr">20px</span>&apos;, <span class="hljs-attr">backgroundColor:</span> &apos;#<span class="hljs-attr">d0d0d0</span>&apos; }}&gt;</span>&#x9805;&#x76EE; 3<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></span>
+  );
+}
+
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> ResponsiveComponent;
+</code></pre>
+<h3 id="75-&#x81EA;&#x8A02;-hooks-&#x7684;&#x6700;&#x4F73;&#x5BE6;&#x8E10;">7.5 &#x81EA;&#x8A02; Hooks &#x7684;&#x6700;&#x4F73;&#x5BE6;&#x8E10;</h3>
+<h4 id="751-&#x547D;&#x540D;&#x6163;&#x4F8B;">7.5.1 &#x547D;&#x540D;&#x6163;&#x4F8B;</h4>
+<ul>
+<li><strong>&#x7E3D;&#x662F;&#x4EE5; &quot;use&quot; &#x958B;&#x982D;</strong>&#xFF1A;&#x9019;&#x4E0D;&#x50C5;&#x662F;&#x6163;&#x4F8B;&#xFF0C;&#x4E5F;&#x662F; React &#x8B58;&#x5225; Hook &#x7684;&#x65B9;&#x5F0F;</li>
+<li><strong>&#x4F7F;&#x7528;&#x63CF;&#x8FF0;&#x6027;&#x540D;&#x7A31;</strong>&#xFF1A;&#x6E05;&#x695A;&#x5730;&#x63CF;&#x8FF0; Hook &#x7684;&#x529F;&#x80FD;&#xFF0C;&#x5982; <code>useLocalStorage</code>&#x3001;<code>useFetch</code>&#x3001;<code>useToggle</code></li>
+<li><strong>&#x4FDD;&#x6301;&#x4E00;&#x81F4;&#x6027;</strong>&#xFF1A;&#x5728;&#x6574;&#x500B;&#x5C08;&#x6848;&#x4E2D;&#x4F7F;&#x7528;&#x4E00;&#x81F4;&#x7684;&#x547D;&#x540D;&#x98A8;&#x683C;</li>
+</ul>
+<h4 id="752-&#x55AE;&#x4E00;&#x8077;&#x8CAC;&#x539F;&#x5247;">7.5.2 &#x55AE;&#x4E00;&#x8077;&#x8CAC;&#x539F;&#x5247;</h4>
+<p>&#x6BCF;&#x500B;&#x81EA;&#x8A02; Hook &#x61C9;&#x8A72;&#x5C08;&#x6CE8;&#x65BC;&#x4E00;&#x500B;&#x7279;&#x5B9A;&#x7684;&#x529F;&#x80FD;&#xFF1A;</p>
+<pre><code class="lang-javascript"><span class="hljs-comment">// &#x597D;&#x7684;&#xFF1A;&#x5C08;&#x6CE8;&#x65BC;&#x4E00;&#x500B;&#x529F;&#x80FD;</span>
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">useCounter</span>(<span class="hljs-params">initialValue = 0</span>) </span>{
+  <span class="hljs-comment">// &#x53EA;&#x8655;&#x7406;&#x8A08;&#x6578;&#x5668;&#x908F;&#x8F2F;</span>
+}
+
+<span class="hljs-comment">// &#x4E0D;&#x597D;&#x7684;&#xFF1A;&#x6DF7;&#x5408;&#x4E86;&#x591A;&#x500B;&#x529F;&#x80FD;</span>
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">useCounterAndTimer</span>(<span class="hljs-params">initialValue = 0</span>) </span>{
+  <span class="hljs-comment">// &#x65E2;&#x8655;&#x7406;&#x8A08;&#x6578;&#x5668;&#x53C8;&#x8655;&#x7406;&#x8A08;&#x6642;&#x5668;&#xFF0C;&#x8077;&#x8CAC;&#x904E;&#x65BC;&#x8907;&#x96DC;</span>
+}
+</code></pre>
+<h4 id="753-&#x8FD4;&#x56DE;&#x4E00;&#x81F4;&#x7684;&#x8CC7;&#x6599;&#x7D50;&#x69CB;">7.5.3 &#x8FD4;&#x56DE;&#x4E00;&#x81F4;&#x7684;&#x8CC7;&#x6599;&#x7D50;&#x69CB;</h4>
+<p>&#x70BA;&#x4E86;&#x8B93; Hook &#x6613;&#x65BC;&#x4F7F;&#x7528;&#xFF0C;&#x8FD4;&#x56DE;&#x7684;&#x8CC7;&#x6599;&#x7D50;&#x69CB;&#x61C9;&#x8A72;&#x4FDD;&#x6301;&#x4E00;&#x81F4;&#xFF1A;</p>
+<pre><code class="lang-javascript"><span class="hljs-comment">// &#x597D;&#x7684;&#xFF1A;&#x8FD4;&#x56DE;&#x7269;&#x4EF6;&#xFF0C;&#x6E05;&#x695A;&#x5730;&#x6A19;&#x793A;&#x6BCF;&#x500B;&#x503C;&#x7684;&#x7528;&#x9014;</span>
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">useAuth</span>(<span class="hljs-params"></span>) </span>{
+  <span class="hljs-keyword">return</span> {
+    user,
+    isAuthenticated,
+    login,
+    logout,
+    loading,
+    error
+  };
+}
+
+<span class="hljs-comment">// &#x6216;&#x8005;&#x8FD4;&#x56DE;&#x9663;&#x5217;&#xFF08;&#x9069;&#x7528;&#x65BC;&#x7C21;&#x55AE;&#x7684;&#x60C5;&#x6CC1;&#xFF09;</span>
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">useToggle</span>(<span class="hljs-params">initialValue = false</span>) </span>{
+  <span class="hljs-keyword">return</span> [value, toggle];
+}
+</code></pre>
+<h4 id="754-&#x8655;&#x7406;&#x4F9D;&#x8CF4;&#x9805;">7.5.4 &#x8655;&#x7406;&#x4F9D;&#x8CF4;&#x9805;</h4>
+<p>&#x6B63;&#x78BA;&#x5730;&#x8655;&#x7406;&#x4F9D;&#x8CF4;&#x9805;&#xFF0C;&#x907F;&#x514D;&#x4E0D;&#x5FC5;&#x8981;&#x7684;&#x91CD;&#x65B0;&#x6E32;&#x67D3;&#xFF1A;</p>
+<pre><code class="lang-javascript"><span class="hljs-comment">// &#x4F7F;&#x7528; useCallback &#x4F86;&#x7A69;&#x5B9A;&#x51FD;&#x5F0F;&#x5F15;&#x7528;</span>
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">useApiCall</span>(<span class="hljs-params"></span>) </span>{
+  <span class="hljs-keyword">const</span> [data, setData] = useState(<span class="hljs-literal">null</span>);
+
+  <span class="hljs-keyword">const</span> fetchData = useCallback(<span class="hljs-keyword">async</span> (url) =&gt; {
+    <span class="hljs-keyword">const</span> response = <span class="hljs-keyword">await</span> fetch(url);
+    <span class="hljs-keyword">const</span> result = <span class="hljs-keyword">await</span> response.json();
+    setData(result);
+  }, []); <span class="hljs-comment">// &#x6C92;&#x6709;&#x4F9D;&#x8CF4;&#x9805;&#xFF0C;&#x51FD;&#x5F0F;&#x5F15;&#x7528;&#x7A69;&#x5B9A;</span>
+
+  <span class="hljs-keyword">return</span> { data, fetchData };
+}
+</code></pre>
+<h3 id="76-&#x81EA;&#x8A02;-hooks-&#x7684;&#x6E2C;&#x8A66;">7.6 &#x81EA;&#x8A02; Hooks &#x7684;&#x6E2C;&#x8A66;</h3>
+<p>&#x81EA;&#x8A02; Hooks &#x53EF;&#x4EE5;&#x50CF;&#x666E;&#x901A;&#x51FD;&#x5F0F;&#x4E00;&#x6A23;&#x9032;&#x884C;&#x6E2C;&#x8A66;&#x3002;React &#x63D0;&#x4F9B;&#x4E86; <code>@testing-library/react-hooks</code> &#x4F86;&#x5E6B;&#x52A9;&#x6E2C;&#x8A66; Hooks&#xFF1A;</p>
+<pre><code class="lang-javascript"><span class="hljs-comment">// __tests__/useCounter.test.js</span>
+<span class="hljs-keyword">import</span> { renderHook, act } <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;@testing-library/react-hooks&apos;</span>;
+<span class="hljs-keyword">import</span> useCounter <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;../hooks/useCounter&apos;</span>;
+
+describe(<span class="hljs-string">&apos;useCounter&apos;</span>, () =&gt; {
+  test(<span class="hljs-string">&apos;&#x61C9;&#x8A72;&#x6B63;&#x78BA;&#x521D;&#x59CB;&#x5316;&#x8A08;&#x6578;&#x5668;&apos;</span>, () =&gt; {
+    <span class="hljs-keyword">const</span> { result } = renderHook(() =&gt; useCounter(<span class="hljs-number">5</span>));
+    expect(result.current.count).toBe(<span class="hljs-number">5</span>);
+  });
+
+  test(<span class="hljs-string">&apos;&#x61C9;&#x8A72;&#x6B63;&#x78BA;&#x589E;&#x52A0;&#x8A08;&#x6578;&apos;</span>, () =&gt; {
+    <span class="hljs-keyword">const</span> { result } = renderHook(() =&gt; useCounter(<span class="hljs-number">0</span>));
+
+    act(() =&gt; {
+      result.current.increment();
+    });
+
+    expect(result.current.count).toBe(<span class="hljs-number">1</span>);
+  });
+
+  test(<span class="hljs-string">&apos;&#x61C9;&#x8A72;&#x6B63;&#x78BA;&#x91CD;&#x8A2D;&#x8A08;&#x6578;&apos;</span>, () =&gt; {
+    <span class="hljs-keyword">const</span> { result } = renderHook(() =&gt; useCounter(<span class="hljs-number">5</span>));
+
+    act(() =&gt; {
+      result.current.increment();
+      result.current.reset();
+    });
+
+    expect(result.current.count).toBe(<span class="hljs-number">5</span>);
+  });
+});
+</code></pre>
+<h3 id="77-&#x8207;&#x7B2C;&#x4E09;&#x65B9;&#x5EAB;&#x6574;&#x5408;&#x7684;&#x81EA;&#x8A02;-hooks">7.7 &#x8207;&#x7B2C;&#x4E09;&#x65B9;&#x5EAB;&#x6574;&#x5408;&#x7684;&#x81EA;&#x8A02; Hooks</h3>
+<h4 id="771-&#x8207;-react-router-&#x6574;&#x5408;&#x7684;-userouter">7.7.1 &#x8207; React Router &#x6574;&#x5408;&#x7684; <code>useRouter</code></h4>
+<pre><code class="lang-javascript"><span class="hljs-comment">// hooks/useRouter.js</span>
+<span class="hljs-keyword">import</span> { useHistory, useLocation, useParams } <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;react-router-dom&apos;</span>;
+<span class="hljs-keyword">import</span> { useMemo } <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;react&apos;</span>;
+
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">useRouter</span>(<span class="hljs-params"></span>) </span>{
+  <span class="hljs-keyword">const</span> history = useHistory();
+  <span class="hljs-keyword">const</span> location = useLocation();
+  <span class="hljs-keyword">const</span> params = useParams();
+
+  <span class="hljs-keyword">return</span> useMemo(() =&gt; ({
+    <span class="hljs-comment">// &#x4FBF;&#x6377;&#x7684;&#x5C0E;&#x822A;&#x65B9;&#x6CD5;</span>
+    push: history.push,
+    replace: history.replace,
+    go: history.go,
+    goBack: history.goBack,
+    goForward: history.goForward,
+
+    <span class="hljs-comment">// &#x76EE;&#x524D;&#x8DEF;&#x7531;&#x8CC7;&#x8A0A;</span>
+    pathname: location.pathname,
+    search: location.search,
+    hash: location.hash,
+    state: location.state,
+    params,
+
+    <span class="hljs-comment">// &#x4FBF;&#x6377;&#x7684;&#x67E5;&#x8A62;&#x53C3;&#x6578;&#x8655;&#x7406;</span>
+    query: <span class="hljs-keyword">new</span> URLSearchParams(location.search),
+  }), [history, location, params]);
+}
+
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> useRouter;
+</code></pre>
+<h3 id="78-&#x7E3D;&#x7D50;">7.8 &#x7E3D;&#x7D50;</h3>
+<p>&#x81EA;&#x8A02; Hooks &#x662F; React &#x4E2D;&#x4E00;&#x500B;&#x6975;&#x5176;&#x5F37;&#x5927;&#x7684;&#x529F;&#x80FD;&#xFF0C;&#x5B83;&#x5011;&#x8B93;&#x6211;&#x5011;&#x80FD;&#x5920;&#xFF1A;</p>
+<ul>
+<li><strong>&#x91CD;&#x7528;&#x908F;&#x8F2F;</strong>&#xFF1A;&#x5728;&#x4E0D;&#x540C;&#x5143;&#x4EF6;&#x4E4B;&#x9593;&#x5171;&#x4EAB;&#x72C0;&#x614B;&#x908F;&#x8F2F;</li>
+<li><strong>&#x62BD;&#x8C61;&#x8907;&#x96DC;&#x6027;</strong>&#xFF1A;&#x5C07;&#x8907;&#x96DC;&#x7684;&#x908F;&#x8F2F;&#x5C01;&#x88DD;&#x5728;&#x7C21;&#x55AE;&#x7684;&#x4ECB;&#x9762;&#x4E2D;</li>
+<li><strong>&#x5206;&#x96E2;&#x95DC;&#x6CE8;&#x9EDE;</strong>&#xFF1A;&#x5C07;&#x7279;&#x5B9A;&#x7684;&#x529F;&#x80FD;&#x908F;&#x8F2F;&#x5F9E;&#x5143;&#x4EF6;&#x4E2D;&#x5206;&#x96E2;&#x51FA;&#x4F86;</li>
+<li><strong>&#x63D0;&#x9AD8;&#x53EF;&#x6E2C;&#x8A66;&#x6027;</strong>&#xFF1A;&#x7368;&#x7ACB;&#x6E2C;&#x8A66;&#x908F;&#x8F2F;&#xFF0C;&#x4E0D;&#x4F9D;&#x8CF4;&#x65BC;&#x7279;&#x5B9A;&#x7684;&#x5143;&#x4EF6;</li>
+</ul>
+<p><strong>&#x81EA;&#x8A02; Hooks &#x7684;&#x95DC;&#x9375;&#x539F;&#x5247;&#xFF1A;</strong></p>
+<ol>
+<li><strong>&#x9075;&#x5FAA; Hooks &#x898F;&#x5247;</strong>&#xFF1A;&#x53EA;&#x5728;&#x51FD;&#x5F0F;&#x7684;&#x9802;&#x5C64;&#x547C;&#x53EB; Hooks</li>
+<li><strong>&#x4EE5; &quot;use&quot; &#x958B;&#x982D;&#x547D;&#x540D;</strong>&#xFF1A;&#x8B93; React &#x548C;&#x958B;&#x767C;&#x8005;&#x77E5;&#x9053;&#x9019;&#x662F;&#x4E00;&#x500B; Hook</li>
+<li><strong>&#x55AE;&#x4E00;&#x8077;&#x8CAC;</strong>&#xFF1A;&#x6BCF;&#x500B; Hook &#x5C08;&#x6CE8;&#x65BC;&#x4E00;&#x500B;&#x7279;&#x5B9A;&#x7684;&#x529F;&#x80FD;</li>
+<li><strong>&#x8FD4;&#x56DE;&#x4E00;&#x81F4;&#x7684;&#x4ECB;&#x9762;</strong>&#xFF1A;&#x4F7F;&#x7528;&#x7269;&#x4EF6;&#x6216;&#x9663;&#x5217;&#x8FD4;&#x56DE;&#x503C;&#xFF0C;&#x4FDD;&#x6301;&#x4E00;&#x81F4;&#x6027;</li>
+<li><strong>&#x9069;&#x7576;&#x8655;&#x7406;&#x4F9D;&#x8CF4;&#x9805;</strong>&#xFF1A;&#x6B63;&#x78BA;&#x4F7F;&#x7528;&#x4F9D;&#x8CF4;&#x9663;&#x5217;&#xFF0C;&#x907F;&#x514D;&#x4E0D;&#x5FC5;&#x8981;&#x7684;&#x91CD;&#x65B0;&#x57F7;&#x884C;</li>
+</ol>
+<p>&#x900F;&#x904E;&#x5B78;&#x7FD2;&#x548C;&#x4F7F;&#x7528;&#x81EA;&#x8A02; Hooks&#xFF0C;&#x4F60;&#x53EF;&#x4EE5;&#x5EFA;&#x7ACB;&#x66F4;&#x52A0;&#x6A21;&#x7D44;&#x5316;&#x3001;&#x53EF;&#x91CD;&#x7528;&#x548C;&#x6613;&#x65BC;&#x7DAD;&#x8B77;&#x7684; React &#x61C9;&#x7528;&#x7A0B;&#x5F0F;&#x3002;&#x5728;&#x4E0B;&#x4E00;&#x7AE0;&#x4E2D;&#xFF0C;&#x6211;&#x5011;&#x5C07;&#x5B78;&#x7FD2;&#x66F4;&#x591A;&#x9AD8;&#x7D1A;&#x7684; React &#x6982;&#x5FF5;&#xFF0C;&#x5982; Context API &#x548C;&#x72C0;&#x614B;&#x7BA1;&#x7406;&#x6A21;&#x5F0F;&#x3002;</p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="chapter6.html" class="navigation navigation-prev " aria-label="Previous page: 第6章：元件生命週期與 useEffect Hook">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="chapter8.html" class="navigation navigation-next " aria-label="Next page: 第8章：事件處理 (Handling Events)">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"第7章：自訂 Hooks (Custom Hooks)","level":"1.8","depth":1,"next":{"title":"第8章：事件處理 (Handling Events)","level":"1.9","depth":1,"path":"chapter8.md","ref":"chapter8.md","articles":[]},"previous":{"title":"第6章：元件生命週期與 useEffect Hook","level":"1.7","depth":1,"path":"chapter6.md","ref":"chapter6.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css","website":"styles/website.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css","website":"styles/website.css"}},"file":{"path":"chapter7.md","mtime":"2025-06-02T12:00:56.160Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2025-06-02T17:15:06.817Z"},"basePath":".","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="gitbook/gitbook.js"></script>
+    <script src="gitbook/theme.js"></script>
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
